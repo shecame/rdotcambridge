@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CTRAX — UX Case Study · Rashetda Cambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="rdot-casestudy-system.css"/>
+
+<style>
+.si{display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;color:currentColor}
+:root{--page-accent:#1B5E35}
+.section-label{font-size:16px;font-weight:400;letter-spacing:0.04em;text-transform:none;color:#004e7c;margin-bottom:16px}
+.dark-band .section-label,.findings-section .section-label{color:var(--yellow)}
+.blockquote-pull{border-left-color:var(--page-accent)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
+.hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
+.hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
+.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
+.meta-item{flex:1;padding-right:24px}.meta-item+.meta-item{padding-left:24px;border-left:1px solid var(--border)}
+.meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
+.meta-item span{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--ink);font-weight:600}
+.hero-right{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('cultivation-cannabis-natural-environment-created-with-help-generative-ai-technology.jpg') no-repeat center center;background-size:cover,cover;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden;min-height:100vh}
+.hero .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:transparent}
+.hero .stat-cell{padding:44px 32px;background:transparent;border-right:1px solid rgba(255,255,255,0.25);transition:opacity .3s}
+.hero .stat-cell:last-child{border-right:none}
+.hero .stat-cell:hover{background:transparent;opacity:0.8}.hero .stat-cell.accent:hover{background:#FEDB00!important;opacity:1}.stat-cell.accent:hover{background:#FEDB00!important;opacity:1}
+.hero .stat-cell .stat-num{font-family:'Montserrat',sans-serif;font-size:48px;font-weight:800;line-height:1;color:#ffffff;margin-bottom:8px;letter-spacing:-0.03em}
+.hero .stat-cell .stat-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);line-height:1.5}
+.hero .stat-cell.accent{background:#add3f1}
+.hero .stat-cell.accent .stat-num{color:#0C0C0C}
+.hero .stat-cell.accent .stat-label{color:#0C0C0C}
+@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
+.pull-quote{border-left-color:var(--page-accent)}
+.solution-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:40px}
+.outcome-item::before{display:none}
+@media(max-width:768px){.solution-layout{grid-template-columns:1fr}}
+/* ── Brand Personality Spectrum ── */
+.brand-right-plain{display:flex;flex-direction:column}
+.bp-wrap{background:var(--white);border:1px solid var(--border);padding:24px 20px 20px}
+.bp-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-align:center;color:var(--page-accent);margin-bottom:32px}
+.bp-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.bp-box{width:96px;flex-shrink:0;border:1px solid var(--border);background:var(--surface);padding:8px 6px;text-align:center;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink)}
+.bp-track{flex:1;position:relative;height:22px;display:flex;align-items:center}
+.bp-line{position:absolute;left:0;right:0;top:50%;height:0;border-top:2px dotted var(--border);transform:translateY(-50%)}
+.bp-dot{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--page-accent);transform:translateX(-50%);z-index:1}
+@media(max-width:640px){.bp-wrap{padding:32px 20px}.bp-box{width:80px;font-size:8px;padding:8px 4px}.bp-dot{width:7px;height:7px}}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+
+<!-- ══ NAV ══ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="https://rdotcambridge.com" class="nav-wordmark">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" aria-label="rdot"><path fill="#fedb00" d="M46.74,20.4h-26.34v59.07h1.39c3.37,0,6.11-2.74,6.11-6.11V27.9h14.12c3.37,0,6.11-2.74,6.11-6.11v-1.39h-1.39Z"/><path fill="#78b8e9" d="M78.21,20.4h-26.7v1.39c0,3.37,2.74,6.11,6.11,6.11h14.48v44.2h-24.46c-3.37,0-6.11,2.74-6.11,6.11v1.39h38.08V20.4h-1.4Z"/><path class="rc-dot" fill="#0C0C0C" d="M34.91,72.1c-2.07,0-3.75,1.68-3.75,3.75s1.68,3.75,3.75,3.75,3.75-1.68,3.75-3.75-1.69-3.75-3.75-3.75Z"/></svg>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-panel" id="navPanel">
+  <p class="nav-panel-label">Work</p>
+  <div class="nav-panel-work">
+    <a href="andela-casestudy-rdot.html">Andela</a>
+    <a href="att-casestudy-rdot.html">AT&amp;T</a>
+    <a href="boa-casestudy-rdot.html">Bank of America</a>
+    <a href="btki-casestudy-rdot.html">BTKi Education</a>
+    <a href="ctrax-casestudy-rdot.html" class="current">CTRAX</a>
+    <a href="ehe-casestudy-rdot.html">EHE</a>
+    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-links">
+    <a href="rdot-home.html">Home</a>
+    <a href="about-rdot.html">About</a>
+    <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+    <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-label">CTRAX &nbsp;·&nbsp; Brand &amp; Systems Design</p>
+    <h1>Cannabis<br/>in a Suit<br/><em>and Tie</em></h1>
+    <div class="hero-meta">
+      <div class="meta-item"><label>Role</label><span>Brand &amp; Experience Design Direction</span></div>
+      <div class="meta-item"><label>Scope</label><span>E-commerce, Brand Identity &amp; Visual Guidelines</span></div>
+      <div class="meta-item"><label>Impact</label><span>Brand Development &amp; Experience Design</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-grid">
+      <div class="stat-cell accent">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Products Unified Under One Brand</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">3</div>
+        <div class="stat-label">User Segments Served</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Cohesive Design System</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OVERVIEW ══ -->
+<section id="overview">
+  <div class="container">
+    <p class="section-label fade-up">Overview</p>
+    <h2 class="section-title fade-up">A Brand That<br/><span class="section-title-italic">Had to Work Three Ways</span></h2>
+    <p class="section-subtitle fade-up">Most platforms look either like a dispensary menu or a generic SaaS dashboard. Neither builds the kind of trust that moves operators, retailers, and first-time customers through the same front door. CTRAX needed a brand and a product experience that could speak to all three without losing any of them.</p>
+
+    <div class="three-col fade-up">
+      <div class="card">
+        <div style="font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:var(--blue);line-height:1;margin-bottom:16px;letter-spacing:-0.02em;">01</div>
+        <h4>Operators</h4>
+        <p>Evaluating an inventory management and seed-to-sale POS platform. They needed credibility signals before anything else.</p>
+      </div>
+      <div class="card">
+        <div style="font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:var(--blue);line-height:1;margin-bottom:16px;letter-spacing:-0.02em;">02</div>
+        <h4>Retailers</h4>
+        <p>Assessing fit and pricing. Their decision process was different in pace and depth from operators, but just as deliberate.</p>
+      </div>
+      <div class="card">
+        <div style="font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:var(--blue);line-height:1;margin-bottom:16px;letter-spacing:-0.02em;">03</div>
+        <h4>New Customers</h4>
+        <p>Entering the purchase flow for the first time. They needed guidance, not a feature tour.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ BRAND DISCOVERY ══ -->
+<section id="brand-discovery" class="surface-bg">
+  <div class="container">
+    <div class="solution-layout fade-up">
+      <div>
+        <p class="section-label">Brand Discovery</p>
+        <h2 class="section-title">Finding the Voice<br/><span class="section-title-italic">Before Building the System</span></h2>
+        <p class="section-body" style="margin-top:24px;">Before any visual decisions were made, I ran a brand discovery workshop with the CTRAX team. A brand spectrum exercise mapped where the brand needed to sit between competing tensions: credible vs. approachable, precise vs. warm, enterprise vs. accessible.</p>
+        <p class="section-body" style="margin-top:24px;">The insight that shaped everything: CTRAX needed to feel credible and precise without feeling cold. Cannabis in a suit and tie &#8212; but one that fits.</p>
+      </div>
+      <div>
+        <div class="bp-wrap">
+          <p class="bp-title">Brand Personality Spectrum</p>
+          <div class="bp-row"><div class="bp-box">Friendly</div><div class="bp-track"><div class="bp-line"></div><div class="bp-dot" style="left:55%"></div><div class="bp-dot" style="left:63%"></div><div class="bp-dot" style="left:71%"></div></div><div class="bp-box">Formal</div></div>
+          <div class="bp-row"><div class="bp-box">Quirky</div><div class="bp-track"><div class="bp-line"></div><div class="bp-dot" style="left:22%"></div><div class="bp-dot" style="left:30%"></div><div class="bp-dot" style="left:38%"></div></div><div class="bp-box">Conventional</div></div>
+          <div class="bp-row"><div class="bp-box">Modern</div><div class="bp-track"><div class="bp-line"></div><div class="bp-dot" style="left:32%"></div><div class="bp-dot" style="left:40%"></div><div class="bp-dot" style="left:48%"></div></div><div class="bp-box">Classic</div></div>
+          <div class="bp-row"><div class="bp-box">Fun</div><div class="bp-track"><div class="bp-line"></div><div class="bp-dot" style="left:52%"></div><div class="bp-dot" style="left:60%"></div><div class="bp-dot" style="left:68%"></div></div><div class="bp-box">Functional</div></div>
+          <div class="bp-row"><div class="bp-box">Inclusive</div><div class="bp-track"><div class="bp-line"></div><div class="bp-dot" style="left:28%"></div><div class="bp-dot" style="left:36%"></div><div class="bp-dot" style="left:44%"></div></div><div class="bp-box">Exclusive</div></div>
+          <div class="bp-row"><div class="bp-box">Warm</div><div class="bp-track"><div class="bp-line"></div><div class="bp-dot" style="left:20%"></div><div class="bp-dot" style="left:28%"></div><div class="bp-dot" style="left:36%"></div></div><div class="bp-box">Cool</div></div>
+          <div class="bp-row"><div class="bp-box">Innovative</div><div class="bp-track"><div class="bp-line"></div><div class="bp-dot" style="left:30%"></div><div class="bp-dot" style="left:38%"></div><div class="bp-dot" style="left:46%"></div></div><div class="bp-box">Familiar</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ INFORMATION ARCHITECTURE ══ -->
+<section id="information-architecture">
+  <div class="container">
+    <p class="section-label fade-up">Information Architecture</p>
+    <h2 class="section-title fade-up">Mapping the System<br/><span class="section-title-italic">Before Building It</span></h2>
+    <p class="section-subtitle fade-up">Before any screens were designed, the product structure needed to be mapped. Two distinct products — POS and inventory management — serving three different user segments required a clear architecture to define how content, navigation, and user flows would connect across the platform.</p>
+    <p class="section-body fade-up" style="margin-top:24px;">The IA work established the hierarchy of information across both products, identified shared patterns that could be unified under one design system, and defined the entry points for each user segment without creating friction between them.</p>
+    <div class="fade-up" style="margin-top:48px;">
+      <img src="c-trax-IA.png" alt="CTRAX Information Architecture" style="width:100%;display:block;">
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOLUTION ══ -->
+<section id="solution">
+  <div class="container">
+    <p class="section-label fade-up">Solution</p>
+    <h2 class="section-title fade-up">Two Products,<br/><span class="section-title-italic">One Personality</span></h2>
+    <div class="fade-up" style="margin:40px 0;">
+      <img src="Cann-Laptop.png" alt="CTRAX design" style="width:100%;display:block;mix-blend-mode:normal;"/>
+    </div>
+    <div class="solution-layout fade-up">
+      <div>
+        <p class="section-body">The homepage hero needed to bridge two distinct products &#8212; POS and inventory management &#8212; without making the platform feel like two separate things bolted together. The design system was the answer to that problem before a single screen was designed.</p>
+        <p class="section-body" style="margin-top:24px;">The visual language was built to work across brand, product, and marketing as one cohesive system. Bitter Regular anchored headlines and accents, bringing structure and authority. Open Sans handled body copy across three weights, keeping everything readable at every level. The color palette balanced trust and energy: Navy and Sky Blue for credibility, Cannabis Green and Teal for industry identity, neutral grays holding the system together at scale.</p>
+      </div>
+      <div>
+        <p class="section-body" style="margin-bottom:20px;">Three styling directions were explored before the final system came together:</p>
+        <ul style="padding-left:0;list-style:none;display:flex;flex-direction:column;gap:16px;">
+          <li style="padding-left:24px;position:relative;font-family:'PT Sans',sans-serif;font-size:16px;line-height:1.6;color:var(--ink);"><span style="position:absolute;left:0;color:var(--page-accent);font-weight:700;">&#8212;</span><strong>The Connection</strong> &#8212; halftone dot patterns generating depth and a sense of network</li>
+          <li style="padding-left:24px;position:relative;font-family:'PT Sans',sans-serif;font-size:16px;line-height:1.6;color:var(--ink);"><span style="position:absolute;left:0;color:var(--page-accent);font-weight:700;">&#8212;</span><strong>The Engagement</strong> &#8212; real merchant and customer photography grounding the platform in actual use</li>
+          <li style="padding-left:24px;position:relative;font-family:'PT Sans',sans-serif;font-size:16px;line-height:1.6;color:var(--ink);"><span style="position:absolute;left:0;color:var(--page-accent);font-weight:700;">&#8212;</span><strong>The Mathematics</strong> &#8212; geometric shapes communicating stability, totality, and precision</li>
+        </ul>
+        <p class="section-body" style="margin-top:24px;">The final system drew from all three. That range is what allowed CTRAX to show up consistently whether it was a product dashboard, a marketing page, or a sales asset &#8212; without any of it feeling like a different brand.</p>
+      </div>
+    </div>
+    <div class="fade-up" style="margin-top:56px;">
+      <img src="Cann-2.png" alt="CTRAX website before and after" style="width:100%;display:block;mix-blend-mode:normal;"/>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OUTCOMES ══ -->
+<section id="outcomes" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Outcomes</p>
+    <h2 class="section-title fade-up">What the System<br/><span class="section-title-italic">Delivered</span></h2>
+
+    <div class="outcome-grid fade-up">
+      <div class="outcome-item fade-up">
+        <h4>Structured Entry Funnels</h4>
+        <p>Distinct pathways aligned to operator, retailer, and customer intent &#8212; each with its own starting point and progression logic.</p>
+      </div>
+      <div class="outcome-item fade-up stagger-1">
+        <h4>Sticky Navigation</h4>
+        <p>Orientation reinforced at every scroll depth across the full experience &#8212; users always knew where they were.</p>
+      </div>
+      <div class="outcome-item fade-up">
+        <h4>Resource Hub</h4>
+        <p>Built for trust-building with operators and retailers &#8212; educational content structured as deliberate credibility-building, not marketing copy.</p>
+      </div>
+      <div class="outcome-item fade-up stagger-1">
+        <h4>Cart &amp; Checkout</h4>
+        <p>Streamlined with advanced payment handling &#8212; a non-trivial problem in cannabis commerce given payment processing constraints.</p>
+      </div>
+      <div class="outcome-item fade-up">
+        <h4>Cohesive Interaction Language</h4>
+        <p>Consistent across both POS and inventory modules &#8212; micro-interactions handled state changes, progress indicators, and transition cues.</p>
+      </div>
+      <div class="outcome-item fade-up stagger-1">
+        <h4>Brand Identity</h4>
+        <p>Professional enough for enterprise conversations, distinct enough to signal this isn&#8217;t another generic SaaS platform. Cannabis in a suit and tie &#8212; but one that fits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-work-section">
+      <p class="footer-label">Work</p>
+      <div class="footer-grid">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="btki-casestudy-rdot.html">BTKi Education</a>        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html">EHE</a>
+        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+        <a href="#">Nickelodeon</a>      </div>
+    </div>
+    <div class="footer-pages-col">
+      <a href="rdot-home.html">Home</a>
+      <a href="about-rdot.html">About</a>
+      <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+      <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav       = document.getElementById('siteNav');
+  var hamburger = document.getElementById('hamburger');
+  var panel     = document.getElementById('navPanel');
+
+  hamburger.addEventListener('click', function(){
+    var open = panel.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    nav.classList.toggle('panel-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  window.addEventListener('scroll', function(){
+    var max = document.body.scrollHeight - window.innerHeight;
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fade-up').forEach(function(el){ observer.observe(el); });
+})();
+</script>
+</body>
+</html>

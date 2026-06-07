@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Andela — UX Case Study · Rashetda Cambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<style>
+:root{--yellow:#FEDB00;--blue:#006699;--ink:#0C0C0C;--ink-mid:#3D3D3D;--ink-muted:#6B6B6B;--white:#FFFFFF;--surface:#FBFBFB;--border:#E2E2DC}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'PT Sans',sans-serif;background:var(--white);color:var(--ink);line-height:1.65;font-size:16px}
+
+/* ── NAV ── */
+.site-nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background .35s ease,border-color .35s ease}
+.site-nav.panel-open{background:var(--ink);border-color:transparent}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:64px}
+.nav-wordmark{text-decoration:none;display:flex;align-items:center;line-height:0;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink)}
+.site-nav.panel-open .nav-wordmark{color:var(--white)}
+.nav-dot{width:8px;height:8px;border-radius:50%;background:var(--yellow);display:inline-block;margin-right:8px;flex-shrink:0}
+.nav-hamburger{display:flex;flex-direction:column;justify-content:center;gap:5px;padding:8px;background:none;border:none;cursor:pointer;z-index:300;position:relative}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s ease,opacity .3s ease,width .3s ease,background .35s ease}
+.site-nav.panel-open .nav-hamburger span{background:var(--white)}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;width:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ── NAV PANEL ── */
+.nav-panel{position:fixed;inset:0;background:var(--ink);z-index:250;opacity:0;pointer-events:none;transition:opacity .35s ease;display:flex;flex-direction:column;padding:120px 80px 64px;overflow-y:auto}
+.nav-panel.open{opacity:1;pointer-events:all}
+.nav-panel-label{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:700;margin-bottom:16px;margin-top:40px}
+.nav-panel-label:first-of-type{margin-top:0}
+.nav-panel-work{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.nav-panel-work a{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.45);text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .2s,padding-left .2s}
+.nav-panel-work a:hover{color:var(--white);padding-left:8px}
+.nav-panel-work a.current{color:var(--yellow)}
+.nav-panel-links{display:flex;flex-direction:row;align-items:center;gap:16px;margin-top:auto;flex-wrap:wrap;padding-top:48px}
+.nav-panel-links a{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);text-decoration:none;padding:12px 16px;transition:color .15s}
+.nav-panel-links a:hover{color:var(--white)}
+.nav-panel-links a.linkedin-btn{background:#0A66C2;color:#fff;border-radius:4px;font-weight:700}
+.nav-panel-links a.linkedin-btn:hover{background:#0856a8}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
+.hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);margin-bottom:28px;font-weight:700}
+.hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:600px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
+.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
+.meta-item{flex:1;padding-right:24px}
+.meta-item+.meta-item{padding-left:24px;border-left:1px solid var(--border)}
+.meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#004e7c;margin-bottom:6px;font-weight:700}
+.meta-item span{font-family:'Montserrat',sans-serif;font-size:13px;color:#0C0C0C;font-weight:600}
+.hero-right{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('And-hero.png') no-repeat center center;background-size:cover,cover;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden;min-height:100vh}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.stat-cell{padding:44px 32px;background:transparent;border-right:1px solid rgba(255,255,255,0.25);transition:opacity .3s}
+.stat-cell:last-child{border-right:none}
+.stat-cell:hover{opacity:0.85}.stat-cell.accent:hover{background:#FEDB00!important;opacity:1}
+.stat-cell.accent{background:#add3f1}
+.stat-num{font-family:'Montserrat',sans-serif;font-size:48px;font-weight:800;line-height:1;color:#ffffff;margin-bottom:8px;letter-spacing:-0.03em}
+.stat-cell.accent .stat-num{color:#0C0C0C}
+.stat-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);line-height:1.5}
+.stat-cell.accent .stat-label{color:#0C0C0C}
+
+/* ── LAYOUT ── */
+.container{max-width:960px;margin:0 auto;padding:0 48px}
+section{padding:80px 0}
+.section-label{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:none;color:var(--blue);margin-bottom:16px}
+.section-title{font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:24px;color:var(--ink)}
+.section-body{font-family:'PT Sans',sans-serif;font-size:16px;color:var(--ink-mid);max-width:680px;line-height:1.85}
+.section-body+.section-body{margin-top:16px}
+
+/* ── STATS ── */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border:1px solid var(--border)}
+.stat{background:var(--white);padding:36px 28px;text-align:center;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+
+
+/* ── CARDS ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.card{background:var(--surface);padding:32px;border:1px solid var(--border)}
+.card h3{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;color:var(--blue)}
+.card p{font-family:'PT Sans',sans-serif;font-size:14.5px;color:var(--ink-mid);line-height:1.75}
+
+/* ── 4-UP DELIVERABLES ── */
+.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:48px}
+.brand-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.brand-right{display:flex;flex-direction:column;gap:0}
+.brand-right .deliverable-item{display:flex;flex-direction:row;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)}
+.brand-right .deliverable-item:first-child{border-top:1px solid var(--border)}
+.brand-right .deliverable-item svg{flex-shrink:0;margin-bottom:0;margin-top:2px}
+.brand-right .deliverable-item h4{margin-bottom:6px}
+.deliverable-item svg{display:block;margin-bottom:16px;color:var(--blue)}
+.deliverable-item h4{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.deliverable-item p{font-family:'PT Sans',sans-serif;font-size:14.5px;color:var(--ink-mid);line-height:1.7}
+
+/* ── PULL QUOTE ── */
+.pull-quote{border-left:3px solid var(--yellow);padding:24px 32px;margin:48px 0;background:rgba(254,219,0,0.04)}
+.pull-quote p{font-family:'PT Sans',sans-serif;font-size:20px;font-style:italic;color:var(--ink);line-height:1.6;font-weight:700}
+
+/* ── OUTCOMES ── */
+.outcome-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.outcome-item{padding:28px;border:1px solid var(--border);background:var(--white);position:relative;transition:transform .2s,box-shadow .2s,border-color .2s}
+
+.outcome-item:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.08);border-color:var(--blue)}
+.outcome-item h4{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.outcome-item p{font-family:'PT Sans',sans-serif;font-size:14px;color:var(--ink-mid);line-height:1.65}
+
+/* ── DARK BAND ── */
+.dark-band{background:var(--ink);padding:80px 0;color:var(--white)}
+.dark-band .section-label{color:var(--yellow)}
+.dark-band .section-title{color:var(--white)}
+.dark-band .section-body{color:rgba(255,255,255,0.65)}
+.dark-band .section-body+.section-body{margin-top:16px}
+.dark-band-quote{margin-top:48px;padding:24px 32px;background:rgba(254,219,0,0.06)}
+.dark-band-quote p{font-family:'PT Sans',sans-serif;font-size:20px;font-style:italic;color:var(--white);line-height:1.6;font-weight:700}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:80px 80px 64px;border-top:1px solid rgba(255,255,255,0.12)}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px}
+.footer-work-section{flex:1}
+.footer-label{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:700;margin:0 0 16px;max-width:none}
+.footer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.footer-grid a{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.45);text-decoration:none;padding:16px 0;display:block;transition:color .2s,padding-left .2s}
+.footer-grid a:hover{color:#fff;padding-left:8px}
+.footer-grid a.current{color:var(--yellow)}
+.footer-pages-col a{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;padding:10px 0;display:block;transition:color .2s,padding-left .2s}
+.footer-pages-col a:hover{color:#fff;padding-left:8px}
+.footer-pages-col a.current{color:var(--yellow)}
+.footer-pages-col{display:flex;flex-direction:column;min-width:180px}
+.footer-pages-col a.linkedin-btn{background:#0A66C2;color:#fff;border-radius:4px;border-bottom:none;padding:12px 16px;margin-top:8px;width:fit-content;text-transform:none;letter-spacing:0}
+.footer-pages-col a.linkedin-btn:hover{background:#0856a8;padding-left:16px}
+footer a{text-decoration:none}
+@media(max-width:768px){footer{padding:60px 40px 48px}.footer-top{flex-direction:column;gap:48px}.footer-grid{grid-template-columns:1fr 1fr}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .nav-inner{padding:0 24px}
+  .hero{grid-template-columns:1fr;padding-top:64px;min-height:auto}
+  .hero-left{padding:60px 24px 48px}
+  .hero-right{padding:48px 24px;display:none}
+  .hero-left h1{font-size:clamp(32px,8vw,48px);margin-bottom:32px}
+  .hero-meta{flex-direction:column;gap:0}
+  .meta-item{padding-right:0!important;padding-left:0!important;border-left:none!important;border-top:1px solid var(--border);padding-top:16px;margin-top:4px}
+  .meta-item:first-child{border-top:none;padding-top:0}
+  .container{padding:0 24px}
+  section{padding:56px 0}
+  .stats-row{grid-template-columns:1fr}
+  .stat{border-right:none;border-bottom:1px solid var(--border)}
+  .two-col,.four-col,.brand-layout{grid-template-columns:1fr}
+  .outcome-grid{grid-template-columns:1fr}
+  .nav-panel{padding:100px 24px 48px}
+  .nav-panel-work{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero h1{font-size:clamp(28px,9vw,40px)}
+  .section-title{font-size:32px}
+}
+</style>
+
+<style>
+.si{display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;color:currentColor}
+</style>
+</head>
+<body>
+
+
+<!-- ══ NAV ══ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="https://rdotcambridge.com" class="nav-wordmark">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" aria-label="rdot"><path fill="#fedb00" d="M46.74,20.4h-26.34v59.07h1.39c3.37,0,6.11-2.74,6.11-6.11V27.9h14.12c3.37,0,6.11-2.74,6.11-6.11v-1.39h-1.39Z"/><path fill="#78b8e9" d="M78.21,20.4h-26.7v1.39c0,3.37,2.74,6.11,6.11,6.11h14.48v44.2h-24.46c-3.37,0-6.11,2.74-6.11,6.11v1.39h38.08V20.4h-1.4Z"/><path class="rc-dot" fill="#0C0C0C" d="M34.91,72.1c-2.07,0-3.75,1.68-3.75,3.75s1.68,3.75,3.75,3.75,3.75-1.68,3.75-3.75-1.69-3.75-3.75-3.75Z"/></svg>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Nav Panel -->
+<div class="nav-panel" id="navPanel">
+  <p class="nav-panel-label">Work</p>
+  <div class="nav-panel-work">
+    <a class="current" href="andela-casestudy-rdot.html">Andela</a>
+    <a href="att-casestudy-rdot.html">AT&amp;T</a>
+    <a href="boa-casestudy-rdot.html">Bank of America</a>
+    <a href="btki-casestudy-rdot.html">BTKi Education</a>
+    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+    <a href="ehe-casestudy-rdot.html">EHE</a>
+    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-links">
+    <a href="rdot-home.html">Home</a>
+    <a href="about-rdot.html">About</a>
+    <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+    <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-label">Andela &nbsp;·&nbsp; Brand &amp; Systems Design</p>
+    <h1>Two design<br/>problems.<br/><em>One</em><br/>system logic.</h1>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <label>Role</label>
+        <span>Art Director &amp; Design Systems Lead</span>
+      </div>
+      <div class="meta-item">
+        <label>Scope</label>
+        <span>Brand System, Design Strategy &amp; Product Design</span>
+      </div>
+      <div class="meta-item">
+        <label>Impact</label>
+        <span>Markets unified</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-grid">
+      <div class="stat-cell accent">
+        <div class="stat-num">$100M+</div>
+        <div class="stat-label">Series D Raised</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">40+</div>
+        <div class="stat-label">Markets Unified Under One Brand System</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">28%</div>
+        <div class="stat-label">Increase in Qualified Engineer Applications</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OVERVIEW ══ -->
+<section id="overview">
+  <div class="container">
+    <p class="section-label">Overview</p>
+    <h2 class="section-title">When Your Market<br/>Is Everywhere</h2>
+    <p class="section-body">
+      Andela operates at a unique intersection: businesses outsourcing engineering needs, and engineers from rigorous bootcamp graduates to senior level talent looking to place their skills globally. One brand had to speak credibly to both without flattening either.
+    </p>
+    <p class="section-body" style="margin-top:16px;">
+      Add to that a global footprint spanning Lagos, Nairobi, and New York, and the real problem becomes clear: how do you build a brand that travels across cultural contexts without losing meaning in any of them?
+    </p>
+
+  </div>
+</section>
+
+<!-- ══ BRAND SYSTEM ══ -->
+<section id="brand">
+  <div class="container">
+    <div class="brand-layout">
+      <div class="brand-left">
+        <p class="section-label">Brand System</p>
+        <h2 class="section-title">Shades of<br/>Brilliance</h2>
+        <p class="section-body">
+          Before any visual work began, I mapped the brand architecture: positioning, system components, market rollout strategy. That foundation determined whether the system would scale or stall the moment it hit a new region.
+        </p>
+        <p class="section-body" style="margin-top:16px;">
+          I directed the full brand refresh covering creative direction, system architecture, and stakeholder alignment across a cross-functional team of six spanning brand designers, content designers, UX practitioners, and production leads across a global span ensuring consistency across every market.
+        </p>
+        <p class="section-body" style="margin-top:16px;">
+          The refresh touched everything. Color, typography, tone of voice, illustration, and photography were all anchored to Andela&#8217;s core mission of connecting brilliance to opportunity.
+        </p>
+        <p class="section-body" style="margin-top:16px;">
+          The naming gave the palette its own language. Colors like Talented Teal, Mighty Magenta, and Luminous Lime captured the energy and range of the people the brand represents. Illustrations used hue variation for depth. Photography put real people in real locations. Graphic elements activated headlines and anchored imagery rather than decorating the page.
+        </p>
+      </div>
+      <div class="brand-right">
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="22" cy="22" r="16"/><circle cx="22" cy="22" r="6"/>
+            <path d="M22 6v4M22 34v4M6 22h4M34 22h4"/>
+          </svg>
+          <div>
+            <h4>Color Architecture</h4>
+            <p>A personality-driven palette that modernized Andela&#8217;s brand and gave regional teams a consistent, deployable foundation.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 36l6-2 20-20-4-4-20 20-2 6z"/><path d="M30 10l4 4"/><path d="M14 34l-4 1 1-4"/>
+          </svg>
+          <div>
+            <h4>Illustration Language</h4>
+            <p>A scalable system built on intentional hue variation — expressive enough to feel human, systematic enough to localize.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="10" width="32" height="24" rx="2"/>
+            <circle cx="22" cy="22" r="6"/>
+            <circle cx="34" cy="14" r="2" fill="currentColor" stroke="none"/>
+          </svg>
+          <div>
+            <h4>Photography Library</h4>
+            <p>On-site shoots across Nigeria and Kenya — replacing stock imagery with authentic representation from real communities.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="22" cy="22" r="16"/>
+            <path d="M6 22h32"/>
+            <path d="M22 6c-4 4-6 10-6 16s2 12 6 16"/>
+            <path d="M22 6c4 4 6 10 6 16s-2 12-6 16"/>
+          </svg>
+          <div>
+            <h4>Marketing Site</h4>
+            <p>Redesigned to communicate universal connection and convert senior engineering talent into applicants at global scale.</p>
+          </div>
+        </div>
+      <img src="And-illustration.png" alt="Andela Illustration System" style="width:100%;display:block;margin-top:32px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTENT ECOSYSTEM ══ -->
+<section id="ecosystem" style="background:var(--surface);">
+  <div class="container">
+    <p class="section-label">Content Strategy</p>
+    <h2 class="section-title">Creating the<br/>Ecosystem</h2>
+    <p class="section-body">
+      The brand system needed proof of range. I built a campaign around a single client case study — one story told three ways, each built for a different moment in the consideration journey. A launch video for awareness, a landing page for context, and a downloadable ebook for the leaders ready to go deeper. Enterprise engineering leaders and CTOs don't respond to broad strokes so every asset was built to be specific, credible, and consistent with the same system logic governing everything else Andela put in market.
+    </p>
+    <img src="And-eco.png" alt="Andela Content Ecosystem" style="width:100%;display:block;margin-top:48px;">
+  </div>
+</section>
+
+<!-- ══ PRODUCT DESIGN ══ -->
+<section id="product">
+  <div class="container">
+    <p class="section-label">Website Redesign</p>
+    <h2 class="section-title">Credibility Doesn&#8217;t<br/>Translate Itself</h2>
+    <p class="section-body">
+      The site had to serve two distinct audiences simultaneously: clients evaluating whether to trust Andela with their engineering pipeline, and engineers deciding whether Andela was worth their ambition.
+    </p>
+    <p class="section-body" style="margin-top:16px;">
+      For clients that meant surfacing credibility fast &#8212; what Andela does, who they work with, and why the talent quality holds. The site functioned as the top of the sales funnel: converting skepticism into a conversation, and a conversation into a contract. Every content decision was made with that conversion path in mind.
+    </p>
+    <p class="section-body" style="margin-top:16px;">
+      For engineers it meant communicating opportunity, rigor, and growth. A place that takes their career as seriously as they do. That audience required a different funnel entirely &#8212; one built on aspiration and trust rather than ROI and capability proof.
+    </p>
+    <p class="section-body" style="margin-top:16px;font-weight:700;font-family:'Montserrat',sans-serif;font-size:15px;letter-spacing:0.01em;">
+      Two audiences, two conversion goals, one cohesive system.
+    </p>
+    <img src="And-webhome.png" alt="Andela Website Redesign" style="width:100%;display:block;margin-top:48px;">
+
+  </div>
+</section>
+
+<!-- ══ OUTCOMES ══ -->
+<section id="outcomes" style="background:var(--surface);">
+  <div class="container">
+    <p class="section-label">Outcomes</p>
+    <h2 class="section-title">Results across<br/>both workstreams</h2>
+    <p class="section-body">The rebrand and analytics platform delivered measurable impact across both the talent acquisition and client retention workstreams — validating the unified system logic that underpinned the entire engagement.</p>
+    <div class="outcome-grid">
+      <div class="outcome-item">
+        <h4>Series D raised</h4>
+        <p style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:800;color:var(--ink);line-height:1;margin:12px 0;">$100M+</p>
+        <p>Brand system contributed directly to investor confidence and market readiness.</p>
+      </div>
+      <div class="outcome-item">
+        <h4>Talent pipeline reached</h4>
+        <p style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:800;color:var(--ink);line-height:1;margin:12px 0;">100K+</p>
+        <p>Applicants screened across Africa — the pipeline the brand was built to make legible at enterprise scale.</p>
+      </div>
+      <div class="outcome-item">
+        <h4>Market opportunity addressed</h4>
+        <p style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:800;color:var(--ink);line-height:1;margin:12px 0;">1.4M</p>
+        <p>Unfilled software jobs — the core problem anchoring every campaign and sales asset in the system.</p>
+      </div>
+    </div>
+    <img src="Gortex-Generation-Announcement.gif" alt="Andela Generation Announcement" style="width:100%;display:block;margin-top:48px;">
+
+  </div>
+</section>
+
+<!-- ══ REFLECTION ══ -->
+<div class="dark-band">
+  <div class="container">
+    <p class="section-label">Leading a Global Team</p>
+    <h2 class="section-title" style="max-width:600px;">The coordination challenge was as significant as the design challenge</h2>
+    <p class="section-body">Across both workstreams, I directed a team of 6 — brand designers, UX practitioners, illustrators, and production leads operating across Lagos, Nairobi, and New York. I owned the creative brief, design system governance, cross-functional stakeholder alignment, and final quality review across every deliverable.</p>
+    <p class="section-body" style="margin-top:16px;">Keeping a distributed team aligned on system standards, managing creative review across time zones, and ensuring business strategy translated into coherent design decisions at every level — that's the work that made the system actually deployable at scale.</p>
+    <div class="dark-band-quote">
+      <p>What I built wasn't just a brand or a dashboard. It was a design infrastructure that a global organization could operate, extend, and trust.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-work-section">
+      <p class="footer-label">Work</p>
+      <div class="footer-grid">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="btki-casestudy-rdot.html">BTKi Education</a>        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html">EHE</a>
+        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+        <a href="#">Nickelodeon</a>      </div>
+    </div>
+    <div class="footer-pages-col">
+      <a href="rdot-home.html">Home</a>
+      <a href="about-rdot.html">About</a>
+      <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+      <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const nav = document.getElementById('siteNav');
+  const hamburger = document.getElementById('hamburger');
+  const panel = document.getElementById('navPanel');
+
+  hamburger.addEventListener('click', function(){
+    const open = panel.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    nav.classList.toggle('panel-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  window.addEventListener('scroll', function(){
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+  });
+
+  const fades = document.querySelectorAll('.fade-up');
+  if('IntersectionObserver' in window){
+    const obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    },{threshold:0.15});
+    fades.forEach(function(el){ obs.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

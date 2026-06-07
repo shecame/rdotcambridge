@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EHE — UX Case Study · Rashetda Cambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="rdot-casestudy-system.css"/>
+
+<style>
+.si{display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;color:currentColor}
+.outcome-item::before{display:none}
+blockquote{border-left:none!important;padding-left:0!important}
+.card::before,.finding-card::before{display:none!important}
+/* Andela-style brand layout */
+.ehe-split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:40px}
+.ehe-right{display:flex;flex-direction:column;gap:0}
+.ehe-right .di{display:flex;flex-direction:row;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)}
+.ehe-right .di:first-child{border-top:1px solid var(--border)}
+.ehe-right .di svg{flex-shrink:0;color:var(--page-accent);margin-top:2px}
+.ehe-right .di h4{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+.ehe-right .di p{font-family:'PT Sans',sans-serif;font-size:14.5px;color:var(--ink-mid);line-height:1.7}
+/* Brand 3-up */
+.brand-three{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:40px}
+.brand-card{background:var(--white);padding:32px 28px}
+.brand-card svg{display:block;color:var(--page-accent);margin-bottom:20px}
+.brand-card h4{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);margin-bottom:10px}
+.brand-card p{font-family:'PT Sans',sans-serif;font-size:14.5px;color:var(--ink-mid);line-height:1.75}
+/* Bullet list */
+.ehe-bullets{margin-top:24px;list-style:none;border-top:1px solid var(--border)}
+.ehe-bullets li{font-family:'PT Sans',sans-serif;font-size:15px;color:var(--ink-mid);line-height:1.65;padding:14px 0 14px 24px;border-bottom:1px solid var(--border);position:relative}
+.ehe-bullets li::before{content:'—';position:absolute;left:0;color:var(--page-accent);font-weight:700}
+/* Web Application dark header */
+.webapp-header{background:var(--ink);padding:80px 0}
+.webapp-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--page-accent);margin-bottom:24px}
+.webapp-title{font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;text-transform:uppercase;color:var(--white);margin:0}
+.webapp-title em{font-style:normal;color:rgba(255,255,255,0.35);font-weight:300;letter-spacing:-0.025em}
+.webapp-intro{max-width:680px;margin-bottom:56px}
+.webapp-intro p{font-family:'PT Sans',sans-serif;font-size:16px;color:var(--ink-mid);line-height:1.85}
+.webapp-feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
+.webapp-feature{background:var(--white);padding:40px 36px;transition:background .2s}
+.webapp-feature:hover{background:var(--surface)}
+.webapp-feature svg{display:block;color:var(--page-accent);margin-bottom:20px}
+.webapp-feature h4{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);margin-bottom:12px}
+.webapp-feature p{font-family:'PT Sans',sans-serif;font-size:14px;color:var(--ink-mid);line-height:1.7;margin:0}
+/* Marketing Site split layout */
+.mktsite-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.mktsite-left{}
+.mktsite-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
+.mktsite-card{background:var(--white);padding:32px 28px;transition:background .2s}
+.mktsite-card:hover{background:#f5f5f3}
+.mktsite-num{font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:var(--yellow);line-height:1;margin-bottom:12px;letter-spacing:-0.03em}
+.mktsite-card h4{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);margin-bottom:10px}
+.mktsite-card p{font-family:'PT Sans',sans-serif;font-size:13.5px;color:var(--ink-mid);line-height:1.65;margin:0}
+/* Dark outcomes section — BOA reflection style */
+.ehe-reflection-section{background:var(--ink)}
+.ehe-reflection-section .section-label{color:var(--yellow)}
+.ehe-reflection-section .section-title{color:var(--white)}
+.ehe-reflection-section .section-title-italic{color:var(--yellow)}
+.ehe-takeaway-list{list-style:none;padding:0}
+.ehe-takeaway-list li{font-family:'PT Sans',sans-serif;font-size:15px;font-weight:400;color:rgba(255,255,255,0.85);line-height:1.7;padding:20px 0 20px 20px;border-top:1px solid rgba(255,255,255,0.08);position:relative}
+.ehe-takeaway-list li strong{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--white);display:block;margin-bottom:4px}
+.ehe-takeaway-list li::before{content:'';position:absolute;left:0;top:28px;width:6px;height:6px;border-radius:50%;background:var(--yellow)}
+/* BOA-style outcome grid */
+.boa-outcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:56px}
+.boa-outcome-card{padding:44px 36px;background:var(--white);transition:background .25s}
+.boa-outcome-card:hover{background:var(--surface)}
+.boa-outcome-headline{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
+.boa-outcome-body{font-family:'PT Sans',sans-serif;font-size:14px;font-weight:400;color:var(--ink-mid);line-height:1.7;margin:0}
+/* Dark research stat grid */
+.dark-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.12);align-self:start}
+.dark-stat-card{background:rgba(255,255,255,0.05);padding:36px 32px}
+.dark-stat-num{font-family:'Montserrat',sans-serif;font-size:48px;font-weight:800;color:var(--yellow);line-height:1;margin-bottom:12px}
+.dark-stat-label{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);margin-bottom:8px}
+.dark-stat-body{font-family:'PT Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.65);line-height:1.65;margin:0}
+/* Dark metric pct row */
+.dark-metric-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.12)}
+.dark-metric-card{background:rgba(255,255,255,0.05);padding:56px 48px;text-align:center}
+.dark-metric-pct{font-family:'Montserrat',sans-serif;font-size:80px;font-weight:800;color:var(--yellow);line-height:1;margin-bottom:20px}
+.dark-metric-label{font-family:'PT Sans',sans-serif;font-size:16px;color:rgba(255,255,255,0.75);line-height:1.6;max-width:280px;margin:0 auto}
+/* Dark sub-divider */
+.dark-sub-divider{margin-top:80px;padding-top:64px;border-top:1px solid rgba(255,255,255,0.10)}
+/* Hero right stat grid — EHE isolated classes (no system CSS conflict) */
+.ehe-hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:transparent}
+.ehe-hero-cell{padding:44px 32px;background:transparent;border-right:1px solid rgba(255,255,255,0.25)}
+.ehe-hero-cell:last-child{border-right:none}
+.ehe-hero-cell.accent{background:#add3f1}
+.ehe-hero-cell.accent:hover{background:#FEDB00}
+.ehe-hero-num{font-family:'Montserrat',sans-serif;font-size:48px;font-weight:800;line-height:1;color:#ffffff;margin-bottom:8px;letter-spacing:-0.03em}
+.ehe-hero-cell.accent .ehe-hero-num{color:#0C0C0C}
+.ehe-hero-lbl{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#ffffff;line-height:1.5}
+.ehe-hero-cell.accent .ehe-hero-lbl{color:#0C0C0C}
+/* Donut chart grid (kept for legacy) */
+.donut-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.donut-wrap{text-align:center}
+.donut-label{font-family:'PT Sans',sans-serif;font-size:15px;color:rgba(255,255,255,0.75);line-height:1.6;max-width:200px;margin:20px auto 0}
+/* Stacked donut list */
+.donut-stack{margin-top:56px;max-width:620px}
+.donut-stack-item{display:flex;align-items:center;gap:32px;padding:24px 0;border-top:1px solid rgba(255,255,255,0.08)}
+.donut-stack-item:last-child{border-bottom:1px solid rgba(255,255,255,0.08)}
+.donut-stack-num{display:block;font-family:'Montserrat',sans-serif;font-size:44px;font-weight:800;color:#FFFFFF;line-height:1;margin-bottom:6px}
+.donut-stack-sub{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:rgba(255,255,255,0.5);vertical-align:super;line-height:1}
+.donut-stack-label{display:block;font-family:'PT Sans',sans-serif;font-size:16px;color:rgba(255,255,255,0.65);line-height:1.55;max-width:240px}
+@media(max-width:768px){.ehe-split{grid-template-columns:1fr;gap:32px}.brand-three{grid-template-columns:1fr}.webapp-feature-grid{grid-template-columns:1fr}.boa-outcome-grid{grid-template-columns:1fr}.mktsite-layout{grid-template-columns:1fr;gap:40px}.mktsite-grid{grid-template-columns:1fr}.dark-stat-grid{grid-template-columns:1fr}.dark-metric-row{grid-template-columns:1fr}.donut-grid{grid-template-columns:1fr;gap:32px}}
+:root{--page-accent:#1A6B44}
+.section-label{color:#004e7c}
+.dark-band .section-label,.findings-section .section-label{color:var(--yellow)}
+.hero{background:linear-gradient(145deg,#060C09 55%,#091A10 100%)}
+.blockquote-pull{border-left-color:var(--page-accent)}
+.pull-quote{border-left-color:var(--page-accent)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
+.hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
+.hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
+.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
+.meta-item{flex:1;padding-right:24px}.meta-item+.meta-item{padding-left:24px;border-left:1px solid var(--border)}
+.meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
+.meta-item span{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--ink);font-weight:600}
+.hero-right{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('EHE-hero2.png') no-repeat center center;background-size:cover,cover;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden;min-height:100vh}
+@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+
+<!-- ══ NAV ══ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="https://rdotcambridge.com" class="nav-wordmark">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" aria-label="rdot"><path fill="#fedb00" d="M46.74,20.4h-26.34v59.07h1.39c3.37,0,6.11-2.74,6.11-6.11V27.9h14.12c3.37,0,6.11-2.74,6.11-6.11v-1.39h-1.39Z"/><path fill="#78b8e9" d="M78.21,20.4h-26.7v1.39c0,3.37,2.74,6.11,6.11,6.11h14.48v44.2h-24.46c-3.37,0-6.11,2.74-6.11,6.11v1.39h38.08V20.4h-1.4Z"/><path class="rc-dot" fill="#0C0C0C" d="M34.91,72.1c-2.07,0-3.75,1.68-3.75,3.75s1.68,3.75,3.75,3.75,3.75-1.68,3.75-3.75-1.69-3.75-3.75-3.75Z"/></svg>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-panel" id="navPanel">
+  <p class="nav-panel-label">Work</p>
+  <div class="nav-panel-work">
+    <a href="andela-casestudy-rdot.html">Andela</a>
+    <a href="att-casestudy-rdot.html">AT&amp;T</a>
+    <a href="boa-casestudy-rdot.html">Bank of America</a>
+    <a href="btki-casestudy-rdot.html">BTKi Education</a>
+    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+    <a href="ehe-casestudy-rdot.html" class="current">EHE</a>
+    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-links">
+    <a href="rdot-home.html">Home</a>
+    <a href="about-rdot.html">About</a>
+    <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+    <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-label">EHE &nbsp;·&nbsp; Case Study</p>
+    <h1>The Art<br/><em>of Health</em></h1>
+    <div class="hero-meta">
+      <div class="meta-item"><label>Role</label><span>Art Director &amp; Design Systems Lead</span></div>
+      <div class="meta-item"><label>Scope</label><span>Brand System, Design Strategy &amp; Product Design</span></div>
+      <div class="meta-item"><label>Impact</label><span>Markets Unified</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="ehe-hero-grid">
+      <div class="ehe-hero-cell accent">
+        <div class="ehe-hero-num">84</div>
+        <div class="ehe-hero-lbl">Net Promoter Score</div>
+      </div>
+      <div class="ehe-hero-cell">
+        <div class="ehe-hero-num">95%</div>
+        <div class="ehe-hero-lbl">Felt they had just the right amount of time with the doctor</div>
+      </div>
+      <div class="ehe-hero-cell">
+        <div class="ehe-hero-num">98%</div>
+        <div class="ehe-hero-lbl">Say their results were communicated clearly</div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</div>
+<!-- ══ OVERVIEW ══ -->
+<section id="overview">
+  <div class="container">
+    <p class="section-label fade-up">Overview</p>
+    <h2 class="section-title fade-up">Everything<br/><span class="section-title-italic">Needed to Change</span></h2>
+    <p class="section-subtitle fade-up">EHE Health is a 100-year-old preventive care company operating in a category where trust, warmth, and clinical credibility have to coexist. The existing brand and website had aged out of that balance. The visual identity felt institutional. The content was dense. The experience communicated obligation, not care. In a market where employers are spending real money and employees are making decisions about their own health, neither audience was being met where they were.</p>
+    <p class="section-subtitle fade-up" style="margin-top:20px;">The deeper problem was structural. EHE&#8217;s value flows through two completely different people — the employer who funds access and the employee who uses it. Those two people have nothing in common in how they evaluate, decide, or engage. The existing platform treated them as variations of the same user. They are not.</p>
+  </div>
+</section>
+
+<!-- ══ RESEARCH ══ -->
+<section id="research" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Research</p>
+    <div class="ehe-split fade-up">
+      <div>
+        <h2 class="section-title" style="margin-top:0">Understanding the<br/><span class="section-title-italic">Service First</span></h2>
+        <p class="section-subtitle">Before any design decisions were made, I ran stakeholder studies with nine participants to understand how the service actually operated — where it worked, where it broke down, and what each audience needed from a digital experience.</p>
+      </div>
+      <div class="ehe-right">
+        <div class="di">
+          <svg width="36" height="36" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 6C13.16 6 6 13.16 6 22s7.16 16 16 16 16-7.16 16-16S30.84 6 22 6z"/>
+            <path d="M22 14v8l5 5"/>
+          </svg>
+          <div>
+            <h4>Employer Decision Points</h4>
+            <p>Where employers were making decisions and what information they needed to act — mapped to specific moments in the evaluation journey.</p>
+          </div>
+        </div>
+        <div class="di">
+          <svg width="36" height="36" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 22h8M28 22h8"/>
+            <circle cx="22" cy="22" r="6"/>
+            <path d="M16 22c0-3.31 2.69-6 6-6M22 16V8M22 36v-8"/>
+          </svg>
+          <div>
+            <h4>Employee Drop-Off</h4>
+            <p>Where employees were dropping off and what friction was preventing engagement — behavioral triggers, not feature gaps.</p>
+          </div>
+        </div>
+        <div class="di">
+          <svg width="36" height="36" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="6" width="14" height="14" rx="2"/>
+            <rect x="24" y="6" width="14" height="14" rx="2"/>
+            <rect x="6" y="24" width="14" height="14" rx="2"/>
+            <rect x="24" y="24" width="14" height="14" rx="2"/>
+          </svg>
+          <div>
+            <h4>Dual-Audience Logic</h4>
+            <p>How the platform needed to behave differently depending on who was using it — the architecture had to hold two fundamentally different motivations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <blockquote class="fade-up">The service blueprint became the foundation the entire product was designed against &#8212; every architecture decision tied back to it.</blockquote>
+
+    <div class="fade-up" style="margin-top:56px;">
+      <p style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--page-accent);margin-bottom:6px;">Service Blueprint</p>
+      <p style="font-family:'PT Sans',sans-serif;font-size:14px;color:var(--ink-mid);margin-bottom:24px;">Two journeys: employer plan purchase and employee preventive care enrollment and delivery</p>
+
+      <div style="width:100%;overflow-x:auto;">
+        <table style="border-collapse:separate;border-spacing:0;width:100%;min-width:800px;">
+          <thead>
+            <tr>
+              <th style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:10px 8px;background:var(--ink);color:#fff;width:100px;">Layer</th>
+              <th style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:10px 8px;background:var(--ink);color:#fff;">Awareness</th>
+              <th style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:10px 8px;background:var(--ink);color:#fff;">Evaluation</th>
+              <th style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:10px 8px;background:var(--ink);color:#fff;">Purchase</th>
+              <th style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:10px 8px;background:var(--ink);color:#fff;">Enrollment</th>
+              <th style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:10px 8px;background:var(--ink);color:#fff;">Ongoing Care</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);padding:10px 12px;vertical-align:middle;white-space:nowrap;background:var(--surface);border-right:1px solid var(--border);border-bottom:1px solid var(--border);">Physical evidence</td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;font-family:'PT Sans',sans-serif;font-size:12px;line-height:1.5;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;display:block;margin-bottom:2px;">Website</strong><span style="color:var(--ink-mid);font-size:11px;">Sales materials</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;font-family:'PT Sans',sans-serif;font-size:12px;line-height:1.5;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;display:block;margin-bottom:2px;">Case studies</strong><span style="color:var(--ink-mid);font-size:11px;">Proposals / decks</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;font-family:'PT Sans',sans-serif;font-size:12px;line-height:1.5;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;display:block;margin-bottom:2px;">Contract</strong><span style="color:var(--ink-mid);font-size:11px;">Welcome kit</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;font-family:'PT Sans',sans-serif;font-size:12px;line-height:1.5;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;display:block;margin-bottom:2px;">Portal</strong><span style="color:var(--ink-mid);font-size:11px;">Email invite</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;font-family:'PT Sans',sans-serif;font-size:12px;line-height:1.5;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;display:block;margin-bottom:2px;">Clinic + lunch</strong><span style="color:var(--ink-mid);font-size:11px;">App / health report</span></div></td>
+            </tr>
+
+            <!-- Employer lane header -->
+            <tr><td colspan="6" style="background:#1A3A6B;padding:6px 12px;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff;">Employer Journey</td></tr>
+
+            <tr>
+              <td style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);padding:10px 12px;vertical-align:middle;white-space:nowrap;background:var(--surface);border-right:1px solid var(--border);border-bottom:1px solid var(--border);">Employer actions</td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#EEF2FA;border:1px solid #B0BFD8;padding:8px 10px;font-family:'PT Sans',sans-serif;font-size:12px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A3A6B;display:block;margin-bottom:2px;">Discovers EHE</strong><span style="color:#2D5089;font-size:11px;">Referral or ads</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#EEF2FA;border:1px solid #B0BFD8;padding:8px 10px;font-family:'PT Sans',sans-serif;font-size:12px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A3A6B;display:block;margin-bottom:2px;">Reviews program</strong><span style="color:#2D5089;font-size:11px;">ROI data and outcomes</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#EEF2FA;border:1px solid #B0BFD8;padding:8px 10px;font-family:'PT Sans',sans-serif;font-size:12px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A3A6B;display:block;margin-bottom:2px;">Signs contract</strong><span style="color:#2D5089;font-size:11px;">Sets up plan</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#EEF2FA;border:1px solid #B0BFD8;padding:8px 10px;font-family:'PT Sans',sans-serif;font-size:12px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A3A6B;display:block;margin-bottom:2px;">Communicates benefit</strong><span style="color:#2D5089;font-size:11px;">Internal staff comms</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-bottom:1px solid var(--border);"><div style="background:#EEF2FA;border:1px solid #B0BFD8;padding:8px 10px;font-family:'PT Sans',sans-serif;font-size:12px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A3A6B;display:block;margin-bottom:2px;">Monitors utilization</strong><span style="color:#2D5089;font-size:11px;">Renewal decision</span></div></td>
+            </tr>
+            <tr><td style="font-family:'PT Sans',sans-serif;font-size:10px;font-style:italic;color:var(--ink-muted);padding:4px 12px;background:var(--surface);border-right:1px solid var(--border);">↕ Line of interaction</td><td colspan="5" style="border-bottom:2px solid var(--ink);"></td></tr>
+            <tr>
+              <td style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);padding:10px 12px;vertical-align:middle;white-space:nowrap;background:var(--surface);border-right:1px solid var(--border);border-bottom:1px solid var(--border);">Frontstage (EHE)</td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A6B44;display:block;margin-bottom:2px;">Sales outreach</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#1A6B44;">Marketing content</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A6B44;display:block;margin-bottom:2px;">Stakeholder consult</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#1A6B44;">9-person study + demo</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A6B44;display:block;margin-bottom:2px;">Account setup</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#1A6B44;">Onboarding call</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A6B44;display:block;margin-bottom:2px;">Portal access</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#1A6B44;">Employee comms kit</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-bottom:1px solid var(--border);"><div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A6B44;display:block;margin-bottom:2px;">Account mgmt</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#1A6B44;">Utilization reports</span></div></td>
+            </tr>
+            <tr><td style="font-family:'PT Sans',sans-serif;font-size:10px;font-style:italic;color:var(--ink-muted);padding:4px 12px;background:var(--surface);border-right:1px solid var(--border);">↕ Line of visibility</td><td colspan="5" style="border-bottom:2px dashed var(--border);"></td></tr>
+            <tr>
+              <td style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);padding:10px 12px;vertical-align:middle;white-space:nowrap;background:var(--surface);border-right:1px solid var(--border);border-bottom:1px solid var(--border);">Backstage (EHE)</td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A6B44;display:block;margin-bottom:2px;">Lead generation</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#1A6B44;">Marketing ops</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A6B44;display:block;margin-bottom:2px;">Research synthesis</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#1A6B44;">Service blueprint</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A6B44;display:block;margin-bottom:2px;">Legal and billing</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#1A6B44;">Plan configuration</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A6B44;display:block;margin-bottom:2px;">IT provisioning</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#1A6B44;">Data security</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-bottom:1px solid var(--border);"><div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#1A6B44;display:block;margin-bottom:2px;">Lab processing</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#1A6B44;">Results system</span></div></td>
+            </tr>
+            <tr>
+              <td style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);padding:10px 12px;vertical-align:middle;white-space:nowrap;background:var(--surface);border-right:1px solid var(--border);border-bottom:1px solid var(--border);">Support systems</td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--ink);display:block;margin-bottom:2px;">CRM</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);">Content platform</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--ink);display:block;margin-bottom:2px;">Research findings</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);">Journey mapping</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--ink);display:block;margin-bottom:2px;">Payment infra</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);">Plan management</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--ink);display:block;margin-bottom:2px;">Web app</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);">Identity management</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--ink);display:block;margin-bottom:2px;">EHR system</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);">Care scheduling</span></div></td>
+            </tr>
+
+            <!-- Employee lane header -->
+            <tr><td colspan="6" style="background:#7B3A2A;padding:6px 12px;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff;">Employee Journey</td></tr>
+
+            <tr>
+              <td style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);padding:10px 12px;vertical-align:middle;white-space:nowrap;background:var(--surface);border-right:1px solid var(--border);border-bottom:1px solid var(--border);">Employee actions</td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="min-height:48px;"></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#FAEDE8;border:1px solid #D4A090;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#7B3A2A;display:block;margin-bottom:2px;">Learns about benefit</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#7B3A2A;">Via HR or employer comms</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#FAEDE8;border:1px solid #D4A090;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#7B3A2A;display:block;margin-bottom:2px;">Registers</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#7B3A2A;">Portal or email invite</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#FAEDE8;border:1px solid #D4A090;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#7B3A2A;display:block;margin-bottom:2px;">Books assessment</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#7B3A2A;">Schedules 4-hr clinic</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-bottom:1px solid var(--border);"><div style="background:#FAEDE8;border:1px solid #D4A090;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#7B3A2A;display:block;margin-bottom:2px;">Attends clinic</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#7B3A2A;">Full assessment + lunch</span></div></td>
+            </tr>
+            <tr><td style="font-family:'PT Sans',sans-serif;font-size:10px;font-style:italic;color:var(--ink-muted);padding:4px 12px;background:var(--surface);border-right:1px solid var(--border);">↕ Line of interaction</td><td colspan="5" style="border-bottom:2px solid var(--ink);"></td></tr>
+            <tr>
+              <td style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);padding:10px 12px;vertical-align:middle;white-space:nowrap;background:var(--surface);border-right:1px solid var(--border);border-bottom:1px solid var(--border);">Frontstage (employee)</td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="min-height:48px;"></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#FAEDE8;border:1px solid #D4A090;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#7B3A2A;display:block;margin-bottom:2px;">HR comms</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#7B3A2A;">Benefit portal</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#FAEDE8;border:1px solid #D4A090;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#7B3A2A;display:block;margin-bottom:2px;">Web app</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#7B3A2A;">Onboarding flow</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:#FAEDE8;border:1px solid #D4A090;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#7B3A2A;display:block;margin-bottom:2px;">Scheduling tool</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#7B3A2A;">Reminder emails</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-bottom:1px solid var(--border);"><div style="background:#FAEDE8;border:1px solid #D4A090;padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#7B3A2A;display:block;margin-bottom:2px;">Clinic staff</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:#7B3A2A;">Health report delivery</span></div></td>
+            </tr>
+            <tr><td style="font-family:'PT Sans',sans-serif;font-size:10px;font-style:italic;color:var(--ink-muted);padding:4px 12px;background:var(--surface);border-right:1px solid var(--border);">↕ Line of visibility</td><td colspan="5" style="border-bottom:2px dashed var(--border);"></td></tr>
+            <tr>
+              <td style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);padding:10px 12px;vertical-align:middle;white-space:nowrap;background:var(--surface);border-right:1px solid var(--border);border-bottom:1px solid var(--border);">Backstage (employee)</td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="min-height:48px;"></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--ink);display:block;margin-bottom:2px;">Identity mgmt</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);">Access control</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--ink);display:block;margin-bottom:2px;">Dashboard</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);">Goal tracking</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--ink);display:block;margin-bottom:2px;">Calendar API</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);">Mentor matching</span></div></td>
+              <td style="padding:6px;vertical-align:top;border-bottom:1px solid var(--border);"><div style="background:var(--surface);border:1px solid var(--border);padding:8px 10px;min-height:48px;"><strong style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--ink);display:block;margin-bottom:2px;">EHR and labs</strong><span style="font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);">Apple Watch API</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Legend -->
+      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:16px;padding:14px 16px;background:var(--surface);border:1px solid var(--border);">
+        <div style="display:flex;align-items:center;gap:8px;font-family:'PT Sans',sans-serif;font-size:12px;color:var(--ink-mid);"><div style="width:12px;height:12px;background:#EEF2FA;border:1px solid #B0BFD8;flex-shrink:0;"></div>Employer journey</div>
+        <div style="display:flex;align-items:center;gap:8px;font-family:'PT Sans',sans-serif;font-size:12px;color:var(--ink-mid);"><div style="width:12px;height:12px;background:#FAEDE8;border:1px solid #D4A090;flex-shrink:0;"></div>Employee journey</div>
+        <div style="display:flex;align-items:center;gap:8px;font-family:'PT Sans',sans-serif;font-size:12px;color:var(--ink-mid);"><div style="width:12px;height:12px;background:#E6F4EE;border:1px solid #A3CEBC;flex-shrink:0;"></div>EHE team (frontstage + backstage)</div>
+        <div style="display:flex;align-items:center;gap:8px;font-family:'PT Sans',sans-serif;font-size:12px;color:var(--ink-mid);"><div style="width:12px;height:12px;background:var(--surface);border:1px solid var(--border);flex-shrink:0;"></div>Systems &amp; support</div>
+      </div>
+
+      <!-- Key drop-off risks -->
+      <div style="margin-top:24px;">
+        <p style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-mid);margin-bottom:12px;">Key Drop-off Risks</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+          <div style="background:#FEF3E2;border:1px solid #E8C87A;padding:10px 12px;font-family:'PT Sans',sans-serif;font-size:12px;font-weight:600;color:#7A4A08;">Portal friction<div style="font-size:10px;font-weight:400;color:#A06010;margin-top:3px;">Enrollment phase</div></div>
+          <div style="background:#FEE8E8;border:1px solid #E8A0A0;padding:10px 12px;font-family:'PT Sans',sans-serif;font-size:12px;font-weight:600;color:#8B2020;">Low enrollment<div style="font-size:10px;font-weight:400;color:#B03030;margin-top:3px;">Evaluation → Purchase</div></div>
+          <div style="background:#FEE8E8;border:1px solid #E8A0A0;padding:10px 12px;font-family:'PT Sans',sans-serif;font-size:12px;font-weight:600;color:#8B2020;">No-show risk<div style="font-size:10px;font-weight:400;color:#B03030;margin-top:3px;">Assessment booking</div></div>
+          <div style="background:#FEF3E2;border:1px solid #E8C87A;padding:10px 12px;font-family:'PT Sans',sans-serif;font-size:12px;font-weight:600;color:#7A4A08;">Re-engagement gap<div style="font-size:10px;font-weight:400;color:#A06010;margin-top:3px;">Post-assessment</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BRAND ══ -->
+<section id="brand">
+  <div class="container">
+    <p class="section-label fade-up">Brand</p>
+    <h2 class="section-title fade-up">The Art of Health<br/><span class="section-title-italic">as Strategic Platform</span></h2>
+    <p class="section-subtitle fade-up">&#8220;The Art of Health&#8221; wasn&#8217;t just a tagline &#8212; it was the strategic platform the entire brand was built from. It pushed back against how most preventive health companies position themselves: data-heavy, compliance-driven, institutional.</p>
+
+    <div class="brand-three fade-up">
+      <div class="brand-card">
+        <svg width="40" height="40" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="6" y="10" width="32" height="24" rx="2"/>
+          <circle cx="22" cy="22" r="6"/>
+          <circle cx="34" cy="14" r="2" fill="currentColor" stroke="none"/>
+        </svg>
+        <h4>Photography Direction</h4>
+        <p>Curated direction toward warm, real, human imagery — deliberately avoiding the clinical stock photography standard in the category.</p>
+      </div>
+      <div class="brand-card">
+        <svg width="40" height="40" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 36l6-2 20-20-4-4-20 20-2 6z"/>
+          <path d="M30 10l4 4"/>
+          <path d="M14 34l-4 1 1-4"/>
+          <path d="M26 14l4 4"/>
+        </svg>
+        <h4>Illustration System</h4>
+        <p>Redesigned to complement the photography rather than compete with it — supporting the warmth of the brand, not contradicting it.</p>
+      </div>
+      <div class="brand-card">
+        <svg width="40" height="40" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 14h24M10 22h18M10 30h12"/>
+        </svg>
+        <h4>Supportive Tone</h4>
+        <p>Visual hierarchy and copy calibrated to feel supportive across every surface — something people wanted to engage with, not something HR mandated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRODUCT ══ -->
+<section id="product" class="surface-bg">
+  <div class="container">
+    <div class="mktsite-layout fade-up">
+
+      <!-- Left: label + title + blurb -->
+      <div class="mktsite-left">
+        <p class="section-label">The Marketing Site</p>
+        <h2 class="section-title" style="margin-bottom:24px;">Restructuring the<br/><span class="section-title-italic">Employer Funnel</span></h2>
+        <p class="section-subtitle">I directed a full redesign of ehe.health — reorienting the site around how a benefits decision-maker actually moves, not around EHE's service offering. The site serves two audiences through one brand without either experience feeling like a compromise.</p>
+      </div>
+
+      <!-- Right: 2×2 decision cards -->
+      <div class="mktsite-grid">
+        <div class="mktsite-card">
+          <div class="mktsite-num">01</div>
+          <h4>Journey First</h4>
+          <p>Restructured IA around the employer evaluation journey: awareness → proof of value → commitment</p>
+        </div>
+        <div class="mktsite-card">
+          <div class="mktsite-num">02</div>
+          <h4>Clinical → Business</h4>
+          <p>200+ biomarkers, 17%→91% early detection — translated into ROI, cost reduction, and risk mitigation language</p>
+        </div>
+        <div class="mktsite-card">
+          <div class="mktsite-num">03</div>
+          <h4>Mandate → Choice</h4>
+          <p>Designed member-facing content to shift employee perception from HR obligation to personal decision</p>
+        </div>
+        <div class="mktsite-card">
+          <div class="mktsite-num">04</div>
+          <h4>One Brand System</h4>
+          <p>Maintained a single cohesive brand across two fundamentally different audience entry points</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ WEB APPLICATION ══ -->
+<section id="webapp">
+  <div class="container">
+    <p class="section-label fade-up">The Web Application</p>
+    <h2 class="section-title fade-up">Designing the<br/><span class="section-title-italic">Member Relationship</span></h2>
+
+    <div class="webapp-intro fade-up">
+      <p>The marketing site created the case for EHE. myEHE is where members lived it. Before this work, there was no unified patient-facing application — medical results existed across disconnected portals, and there was no coherent thread connecting benefit awareness to exam booking to results to ongoing care.</p>
+      <p style="margin-top:16px;">I directed and executed the UX for myEHE — designing every surface around a single goal: make the member's relationship with their own health continuous, not episodic.</p>
+    </div>
+
+    <div class="webapp-feature-grid fade-up">
+      <div class="webapp-feature">
+        <svg width="32" height="32" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="8" y="6" width="28" height="32" rx="2"/>
+          <path d="M14 16h16M14 22h16M14 28h10"/>
+        </svg>
+        <h4>Exam Booking</h4>
+        <p>Members schedule their annual Pulse Exam directly in the application — ending the fragmented experience of navigating separate systems.</p>
+      </div>
+      <div class="webapp-feature">
+        <svg width="32" height="32" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="22" cy="22" r="16"/>
+          <path d="M22 16v6h6"/>
+        </svg>
+        <h4>Results and Health Records</h4>
+        <p>Lab results, biomarker data, and physician notes in one place — readable, contextual, and actionable for a non-clinician.</p>
+      </div>
+      <div class="webapp-feature">
+        <svg width="32" height="32" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="6" y="6" width="32" height="32" rx="2"/>
+          <path d="M14 28l6-6 5 5 9-10"/>
+        </svg>
+        <h4>Personalized Health Dashboard</h4>
+        <p>Goal tracking scoped to each member's individual screening results — not generic wellness content.</p>
+      </div>
+      <div class="webapp-feature">
+        <svg width="32" height="32" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="14" cy="22" r="6"/>
+          <circle cx="30" cy="14" r="6"/>
+          <circle cx="30" cy="30" r="6"/>
+          <path d="M20 22h4M24 14H20M24 30H20"/>
+        </svg>
+        <h4>Follow-Up Care and Referrals</h4>
+        <p>Specialist referrals and ongoing health coaching built into the core flow — not buried in a separate portal.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ OUTCOMES ══ -->
+<section id="outcomes" class="ehe-reflection-section">
+  <div class="container">
+    <p class="section-label fade-up">Outcomes</p>
+    <h2 class="section-title fade-up">From Clinical<br/><span class="section-title-italic">to Human</span></h2>
+    <!-- Two-column: bullets left · donuts right -->
+    <div class="ehe-split fade-up" style="margin-top:48px;align-items:start;">
+
+      <!-- LEFT: body copy + bullets -->
+      <div>
+        <p style="font-family:'PT Sans',sans-serif;font-size:16px;color:rgba(255,255,255,0.65);line-height:1.85;margin-bottom:0;">Two audiences. One redesigned platform. The work landed differently for each — and both had to be true at the same time.</p>
+        <ul class="ehe-takeaway-list">
+          <li><strong>Employer Clarity</strong> — Employers reported clearer understanding of program value during the evaluation process. The IA aligned to how they actually decide.</li>
+          <li><strong>Employee Engagement</strong> — Platform engagement increased meaningfully after launch, particularly on mobile, where behavioral triggers were built in from the start.</li>
+          <li><strong>Reduced Friction</strong> — The dual-journey structure reduced friction for both audiences — employers moved through decisions more confidently, employees returned more consistently.</li>
+          <li><strong>Brand Landed</strong> — Stakeholder feedback confirmed the shift from clinical to human landed as intended. The strategic platform translated into perceived experience.</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: stacked donut metrics -->
+      <div class="donut-stack" style="margin-top:0;max-width:none;">
+
+      <!-- 84 NPS -->
+      <div class="donut-stack-item">
+        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Net Promoter Score: 84" flex-shrink="0" style="flex-shrink:0">
+          <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="7"/>
+          <circle cx="50" cy="50" r="42" fill="none" stroke="#FEDB00" stroke-width="7"
+            stroke-dasharray="221.67 263.89" stroke-linecap="round"
+            transform="rotate(-90 50 50)"/>
+          <text x="50" y="54" text-anchor="middle" font-family="Montserrat,sans-serif"
+            font-size="22" font-weight="800" fill="#FFFFFF">84</text>
+        </svg>
+        <div>
+          <span class="donut-stack-label">Net Promoter Score</span>
+        </div>
+      </div>
+
+      <!-- 95% -->
+      <div class="donut-stack-item">
+        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="95%" style="flex-shrink:0">
+          <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="7"/>
+          <circle cx="50" cy="50" r="42" fill="none" stroke="#FEDB00" stroke-width="7"
+            stroke-dasharray="250.70 263.89" stroke-linecap="round"
+            transform="rotate(-90 50 50)"/>
+          <text x="50" y="54" text-anchor="middle" font-family="Montserrat,sans-serif"
+            font-size="20" font-weight="800" fill="#FFFFFF">95%</text>
+        </svg>
+        <div>
+          <span class="donut-stack-label">Felt they had just the right amount of time with the doctor</span>
+        </div>
+      </div>
+
+      <!-- 98% -->
+      <div class="donut-stack-item">
+        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="98%" style="flex-shrink:0">
+          <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="7"/>
+          <circle cx="50" cy="50" r="42" fill="none" stroke="#FEDB00" stroke-width="7"
+            stroke-dasharray="258.61 263.89" stroke-linecap="round"
+            transform="rotate(-90 50 50)"/>
+          <text x="50" y="54" text-anchor="middle" font-family="Montserrat,sans-serif"
+            font-size="20" font-weight="800" fill="#FFFFFF">98%</text>
+        </svg>
+        <div>
+          <span class="donut-stack-label">Say their results were communicated clearly</span>
+        </div>
+      </div>
+
+      </div><!-- /donut-stack = right col -->
+    </div><!-- /ehe-split -->
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-work-section">
+      <p class="footer-label">Work</p>
+      <div class="footer-grid">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="btki-casestudy-rdot.html">BTKi Education</a>        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html">EHE</a>
+        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+        <a href="#">Nickelodeon</a>      </div>
+    </div>
+    <div class="footer-pages-col">
+      <a href="rdot-home.html">Home</a>
+      <a href="about-rdot.html">About</a>
+      <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+      <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav       = document.getElementById('siteNav');
+  var hamburger = document.getElementById('hamburger');
+  var panel     = document.getElementById('navPanel');
+
+  hamburger.addEventListener('click', function(){
+    var open = panel.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    nav.classList.toggle('panel-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  window.addEventListener('scroll', function(){
+    var max = document.body.scrollHeight - window.innerHeight;
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fade-up').forEach(function(el){ observer.observe(el); });
+})();
+</script>
+</body>
+</html>

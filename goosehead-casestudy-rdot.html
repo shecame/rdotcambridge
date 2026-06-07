@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Goosehead — UX Case Study · Rashetda Cambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="rdot-casestudy-system.css"/>
+
+<style>
+.si{display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;color:currentColor}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
+.hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
+.hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
+.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
+.meta-item{flex:1;padding-right:24px}.meta-item+.meta-item{padding-left:24px;border-left:1px solid var(--border)}
+.meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
+.meta-item span{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--ink);font-weight:600}
+.hero-right{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('Goose-hero.png') no-repeat center center;background-size:cover,cover;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden;min-height:100vh}
+@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
+
+/* ── FINDING CARDS → light style ── */
+#design .findings-grid{background:transparent;gap:24px}
+#design .finding-card{background:var(--surface);border:1px solid var(--border);padding:32px}
+#design .finding-card h4{color:var(--blue);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px}
+#design .finding-card p{color:var(--ink-mid);font-size:14.5px;line-height:1.75}
+
+/* ── OUTCOME ITEMS → no yellow bar ── */
+#outcomes .outcome-item::before{display:none}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+
+<!-- ══ NAV ══ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="https://rdotcambridge.com" class="nav-wordmark">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" aria-label="rdot"><path fill="#fedb00" d="M46.74,20.4h-26.34v59.07h1.39c3.37,0,6.11-2.74,6.11-6.11V27.9h14.12c3.37,0,6.11-2.74,6.11-6.11v-1.39h-1.39Z"/><path fill="#78b8e9" d="M78.21,20.4h-26.7v1.39c0,3.37,2.74,6.11,6.11,6.11h14.48v44.2h-24.46c-3.37,0-6.11,2.74-6.11,6.11v1.39h38.08V20.4h-1.4Z"/><path class="rc-dot" fill="#0C0C0C" d="M34.91,72.1c-2.07,0-3.75,1.68-3.75,3.75s1.68,3.75,3.75,3.75,3.75-1.68,3.75-3.75-1.69-3.75-3.75-3.75Z"/></svg>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-panel" id="navPanel">
+  <p class="nav-panel-label">Work</p>
+  <div class="nav-panel-work">
+    <a href="andela-casestudy-rdot.html">Andela</a>
+    <a href="att-casestudy-rdot.html">AT&amp;T</a>
+    <a href="boa-casestudy-rdot.html">Bank of America</a>
+    <a href="btki-casestudy-rdot.html">BTKi Education</a>
+    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+    <a href="ehe-casestudy-rdot.html">EHE</a>
+    <a href="goosehead-casestudy-rdot.html" class="current">Goosehead</a>    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-links">
+    <a href="rdot-home.html">Home</a>
+    <a href="about-rdot.html">About</a>
+    <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+    <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-label">Goosehead &nbsp;·&nbsp; Case Study</p>
+    <h1>When the Model<br/>Changes,<br/><em>the Site Has To</em></h1>
+    <div class="hero-meta"><div class="meta-item"><label>Role</label><span>UX &amp; Digital Design Lead</span></div><div class="meta-item"><label>Scope</label><span>Website Redesign &amp; Design System</span></div><div class="meta-item"><label>Impact</label><span>Digital Experience Optimization</span></div></div>
+  </div>
+  <div class="hero-right"></div>
+</section>
+  </div>
+</div>
+<!-- ══ OVERVIEW ══ -->
+<section id="overview">
+  <div class="container">
+    <p class="section-label fade-up">Overview</p>
+    <h2 class="section-title fade-up">A Business Model Transformation<br/><span class="section-title-italic">the Website Hadn&#8217;t Caught Up To</span></h2>
+    <p class="section-subtitle fade-up">Insurance is a category built on complexity. Policies, pricing structures, and coverage models create decision fatigue before a customer even gets to a quote. Most insurance websites make this worse &#8212; they bury the value proposition under jargon and force users to work for information they should be handed immediately.</p>
+
+    <div class="two-col fade-up" style="margin-top:40px;">
+      <div class="card">
+        <h4>The Business Was Evolving</h4>
+        <p>Goosehead was rethinking how insurance should work for clients &#8212; clearer, more transparent, less opaque. Giving clients clearer visibility into services, pricing, and value.</p>
+      </div>
+      <div class="card">
+        <h4>The Website Wasn&#8217;t Keeping Up</h4>
+        <p>There was a gap between what the business was becoming and what the website was communicating. The digital experience wasn&#8217;t reflecting the shift in the model.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ APPROACH ══ -->
+<section id="approach" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Approach</p>
+    <h2 class="section-title fade-up">Structure<br/><span class="section-title-italic">Before Surface</span></h2>
+    <p class="section-subtitle fade-up">The opportunity was clarity &#8212; not simplification for its own sake, but precision about what Goosehead actually does and why it&#8217;s different. I partnered with stakeholders, developers, and customers to align on three things before design began.</p>
+
+    <div class="three-col fade-up" style="margin-top:40px;">
+      <div class="card">
+        <h4>The Model, Plainly</h4>
+        <p>What the model actually was and how to explain it without industry jargon &#8212; legible within the first scroll.</p>
+      </div>
+      <div class="card">
+        <h4>The Drop-Off Points</h4>
+        <p>Where users were losing confidence or dropping off &#8212; what was preventing them from moving forward.</p>
+      </div>
+      <div class="card">
+        <h4>The IA Gap</h4>
+        <p>What the information architecture needed to do to close the gap between what users needed to understand and what they were finding.</p>
+      </div>
+    </div>
+
+    <blockquote class="fade-up" style="border-left:none;background:var(--white);color:var(--ink);padding-left:0;">The IA work came first. Getting the content hierarchy right &#8212; what a user needed to understand, in what order, to feel confident moving forward &#8212; determined everything that followed.</blockquote>
+    <img src="Gooshead-IA.png" alt="Goosehead Information Architecture" style="width:100%;display:block;margin-top:48px;">
+  </div>
+</section>
+
+<!-- ══ DESIGN DECISIONS ══ -->
+<section id="design">
+  <div class="container">
+    <p class="section-label fade-up">Design</p>
+    <h2 class="section-title fade-up">Decisions Grounded<br/><span class="section-title-italic">in Research</span></h2>
+    <p class="section-subtitle fade-up">Insurance interfaces tend to over-explain. The instinct is to add more &#8212; more copy, more features, more reassurance. The better call was to remove.</p>
+
+    <div class="findings-grid fade-up" style="margin-top:40px;">
+      <div class="finding-card">
+        <h4>Value Proposition First</h4>
+        <p>Clarified the service model so the value proposition was legible within the first scroll &#8212; no hunting required.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Transparency by Structure</h4>
+        <p>Pricing and coverage logic surfaced early rather than buried in fine print &#8212; built into the architecture, not added as an afterthought.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Progressive Disclosure</h4>
+        <p>Guided decision-making by revealing information at the right moment &#8212; rather than presenting everything at once and creating overwhelm.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OUTCOMES ══ -->
+<section id="outcomes" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Outcome</p>
+    <h2 class="section-title fade-up">Closing the Gap Between<br/><span class="section-title-italic">Business and Experience</span></h2>
+    <p class="section-subtitle fade-up">The result wasn&#8217;t just a functional website. It was a clearer expression of what Goosehead was becoming &#8212; a brand that trusted its customers to make good decisions when given good information.</p>
+
+    <div class="outcome-grid fade-up" style="grid-template-columns:repeat(2,1fr)">
+      <div class="outcome-item fade-up">
+        <h4>Aligned IA</h4>
+        <p>Architecture restructured around how users build confidence — right information, right order.</p>
+      </div>
+      <div class="outcome-item fade-up stagger-1">
+        <h4>Legible Value Proposition</h4>
+        <p>Model explained plainly and surfaced immediately — no jargon, no buried feature lists.</p>
+      </div>
+      <div class="outcome-item fade-up">
+        <h4>Scalable Patterns</h4>
+        <p>Interaction patterns designed for the roadmap, not just the launch — built to absorb future growth.</p>
+      </div>
+      <div class="outcome-item fade-up stagger-1">
+        <h4>Brand Credibility</h4>
+        <p>Closed the gap between business model and experience — where trust is the only differentiator that matters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-work-section">
+      <p class="footer-label">Work</p>
+      <div class="footer-grid">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="btki-casestudy-rdot.html">BTKi Education</a>        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html">EHE</a>
+        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+        <a href="#">Nickelodeon</a>      </div>
+    </div>
+    <div class="footer-pages-col">
+      <a href="rdot-home.html">Home</a>
+      <a href="about-rdot.html">About</a>
+      <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+      <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav       = document.getElementById('siteNav');
+  var hamburger = document.getElementById('hamburger');
+  var panel     = document.getElementById('navPanel');
+
+  hamburger.addEventListener('click', function(){
+    var open = panel.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    nav.classList.toggle('panel-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  window.addEventListener('scroll', function(){
+    var max = document.body.scrollHeight - window.innerHeight;
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fade-up').forEach(function(el){ observer.observe(el); });
+})();
+</script>
+</body>
+</html>

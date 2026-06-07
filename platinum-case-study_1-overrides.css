@@ -1,0 +1,193 @@
+/* ═══════════════════════════════════════════════════════════════
+   platinum-case-study_1-overrides.css
+   Page-specific component extensions for Liberty Mutual / Platinum.
+   All tokens reference vars defined in rdot-casestudy-system.css.
+   Nothing here overrides shared system rules — only adds new classes.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── APPROACH: text + sidebar layout ─────────────────────────── */
+.approach-text-layout {
+  display: flex; flex-direction: row; gap: 64px;
+  align-items: flex-start; margin-top: 32px;
+}
+.approach-text-main { flex: 1; min-width: 0; }
+.approach-text-main p {
+  font-size: 16px; line-height: 1.8; color: var(--ink-mid); margin-bottom: 20px;
+  max-width: none;
+}
+
+.objectives-sidebar { flex: 0 0 280px; }
+.objectives-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  font-weight: 700; color: var(--blue); margin-bottom: 16px; display: block;
+}
+.objectives-list { list-style: disc; padding-left: 18px; margin: 0; }
+.objectives-list li {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14.5px; color: var(--ink-mid); line-height: 1.75; margin-bottom: 8px;
+}
+
+/* ── AGENT PAIN POINTS (overview inline list) ─────────────────── */
+.pain-points-wrap { margin-top: 24px; }
+.pain-points-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  font-weight: 700; color: var(--blue); margin-bottom: 12px; display: block;
+}
+.pain-points-list { list-style: disc; padding-left: 18px; margin: 0; }
+.pain-points-list li {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14.5px; color: var(--ink-mid); line-height: 1.75; margin-bottom: 6px;
+}
+.pain-points-list li:last-child { margin-bottom: 0; }
+
+/* ── STYLED LIST (numbered design principles) ─────────────────── */
+.styled-list {
+  list-style: none; margin-top: 24px; padding: 0;
+  counter-reset: principles;
+}
+.styled-list li {
+  padding: 16px 0 16px 52px; position: relative;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px; color: var(--ink-mid);
+  border-bottom: 1px solid var(--border); line-height: 1.6;
+  counter-increment: principles;
+}
+.styled-list li:last-child { border-bottom: none; }
+.styled-list li::before {
+  content: '0' counter(principles);
+  position: absolute; left: 0; top: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px; font-weight: 800; color: var(--blue); line-height: 1;
+}
+.styled-list li strong {
+  font-weight: 700; color: var(--ink);
+}
+
+/* ── ANATOMY INNER BAND ───────────────────────────────────────── */
+.anatomy-inner {
+  background: transparent; padding: 48px 0; margin-top: 48px;
+}
+.anatomy-inner h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 32px;
+}
+
+.panel-row {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border);
+}
+.panel-item { padding: 28px 24px; background: var(--white); }
+.panel-item h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 12px; font-weight: 700;
+}
+.panel-item p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13.5px; color: var(--ink-mid); line-height: 1.7;
+  max-width: none; margin-bottom: 0;
+}
+
+/* ── SCREEN SHOWCASE ──────────────────────────────────────────── */
+.screen-showcase { margin-top: 40px; }
+.desktop-img { width: 100%; height: 600px; object-fit: contain; display: block; }
+.mobile-img  { width: 100%; height: 420px; object-fit: contain; display: block; }
+.screen-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-muted); margin-bottom: 8px; text-align: left; font-weight: 600;
+}
+
+/* ── FEATURE SECTION ──────────────────────────────────────────── */
+.feature-blocks { margin-top: 48px; }
+.feature-block {
+  display: block; padding: 32px 0; border-bottom: 1px solid var(--border);
+  position: relative; background: var(--white);
+}
+.feature-content { background: var(--white); }
+.feature-block:last-child { border-bottom: none; }
+
+.tag {
+  display: inline-block; background: none; color: var(--blue);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 0; margin-bottom: 10px; font-weight: 700;
+}
+
+.feature-content h3 {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px; font-weight: 700; margin-bottom: 8px;
+  color: var(--blue); text-transform: none; letter-spacing: 0;
+}
+.feature-content p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px; color: var(--ink-mid); line-height: 1.75;
+  max-width: none; margin-bottom: 0;
+}
+.feature-img {
+  margin-top: 24px; display: block; width: 100%; max-width: 640px;
+}
+
+/* ── IMAGE SLIDER ─────────────────────────────────────────────── */
+.img-slider { margin-top: 24px; position: relative; user-select: none; }
+.img-slider-track { overflow: hidden; }
+.img-slide { display: none; }
+.img-slide.active { display: block; }
+.img-slide img { width: 100%; max-width: 540px; display: block; }
+#verSlider .img-slide img { max-width: 100%; }
+.slide-caption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-muted); margin-top: 10px; font-weight: 600;
+  max-width: none; margin-bottom: 0;
+}
+.slider-controls {
+  display: flex; align-items: center; gap: 16px; margin-top: 16px;
+}
+.slider-btn {
+  background: none; border: 1px solid var(--border);
+  width: 32px; height: 32px; cursor: pointer; font-size: 14px;
+  display: flex; align-items: center; justify-content: center; color: var(--ink);
+  transition: border-color .15s, color .15s;
+}
+.slider-btn:hover { border-color: var(--ink); }
+.slider-dots { display: flex; gap: 8px; }
+.sdot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--border); cursor: pointer; display: inline-block;
+  transition: background .2s;
+}
+.sdot.active { background: var(--ink); }
+.slide-counter {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px; color: var(--ink-muted); letter-spacing: 0.08em; font-weight: 600;
+}
+
+/* ── VERIFICATION SCREENS ─────────────────────────────────────── */
+.verification-screens { margin-top: 24px; display: flex; flex-direction: column; gap: 24px; }
+.v-col img { width: 100%; display: block; }
+
+/* ── OUTCOME GRID 2-COL (platinum uses 2 columns) ─────────────── */
+.outcome-grid-2col {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px;
+}
+
+/* ── OUTCOME STAT LINE (financial callout inside outcome-item) ── */
+.outcome-stat-line {
+  margin-top: 10px; font-family: 'Montserrat', sans-serif;
+  font-size: 13px; font-weight: 700; color: var(--blue);
+  max-width: none;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .approach-text-layout { flex-direction: column !important; gap: 32px !important; }
+  .objectives-sidebar { flex: 1 1 auto !important; width: 100% !important; }
+  .panel-row { grid-template-columns: 1fr; }
+  .outcome-grid-2col { grid-template-columns: 1fr; }
+  .screen-showcase .desktop-img { height: auto; }
+  .feature-content h3 { font-size: 16px; }
+}

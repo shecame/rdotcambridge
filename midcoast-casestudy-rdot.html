@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Midcoast Energy — Case Study · Rashetda Cambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="rdot-casestudy-system.css"/>
+
+<style>
+.si{display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;color:currentColor}
+:root{--page-accent:#1B5276}
+.section-label{font-size:16px;font-weight:400;letter-spacing:0.04em;text-transform:none;color:#004e7c;margin-bottom:16px}
+.dark-band .section-label{color:var(--yellow)}
+.blockquote-pull{border-left-color:var(--page-accent)}
+.pull-quote{border-left-color:var(--page-accent)}
+.outcome-item::before{display:none}
+.brand-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.brand-right{display:flex;flex-direction:column;gap:0}
+.brand-right .deliverable-item{display:flex;flex-direction:row;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)}
+.brand-right .deliverable-item:first-child{border-top:1px solid var(--border)}
+@media(max-width:768px){.brand-layout{grid-template-columns:1fr}}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
+.hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
+.hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
+.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
+.meta-item{flex:1;padding-right:24px}.meta-item+.meta-item{padding-left:24px;border-left:1px solid var(--border)}
+.meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
+.meta-item span{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--ink);font-weight:600}
+.hero-right{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('Mid-hero.png') no-repeat center center;background-size:cover,cover;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden;min-height:100vh}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.stat-cell{padding:44px 32px;background:transparent;border-right:1px solid rgba(255,255,255,0.25);transition:opacity .3s}
+.stat-cell:last-child{border-right:none}
+.stat-cell:hover{opacity:0.85}
+.stat-cell.accent{background:#add3f1}
+.stat-cell.accent:hover{background:#FEDB00!important;opacity:1}
+.stat-num{font-family:'Montserrat',sans-serif;font-size:48px;font-weight:800;line-height:1;color:#ffffff;margin-bottom:8px;letter-spacing:-0.03em}
+.stat-cell.accent .stat-num{color:#0C0C0C}
+.stat-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);line-height:1.5}
+.stat-cell.accent .stat-label{color:#0C0C0C}
+@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="https://rdotcambridge.com" class="nav-wordmark">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" aria-label="rdot"><path fill="#fedb00" d="M46.74,20.4h-26.34v59.07h1.39c3.37,0,6.11-2.74,6.11-6.11V27.9h14.12c3.37,0,6.11-2.74,6.11-6.11v-1.39h-1.39Z"/><path fill="#78b8e9" d="M78.21,20.4h-26.7v1.39c0,3.37,2.74,6.11,6.11,6.11h14.48v44.2h-24.46c-3.37,0-6.11,2.74-6.11,6.11v1.39h38.08V20.4h-1.4Z"/><path class="rc-dot" fill="#0C0C0C" d="M34.91,72.1c-2.07,0-3.75,1.68-3.75,3.75s1.68,3.75,3.75,3.75,3.75-1.68,3.75-3.75-1.69-3.75-3.75-3.75Z"/></svg>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-panel" id="navPanel">
+  <p class="nav-panel-label">Work</p>
+  <div class="nav-panel-work">
+    <a href="andela-casestudy-rdot.html">Andela</a>
+    <a href="att-casestudy-rdot.html">AT&amp;T</a>
+    <a href="boa-casestudy-rdot.html">Bank of America</a>
+    <a href="btki-casestudy-rdot.html">BTKi Education</a>
+    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+    <a href="ehe-casestudy-rdot.html">EHE</a>
+    <a href="goosehead-casestudy-rdot.html">Goosehead</a>    <a href="midcoast-casestudy-rdot.html" class="current">Midcoast Energy</a>  </div>
+  <div class="nav-panel-links">
+    <a href="rdot-home.html">Home</a>
+    <a href="about-rdot.html">About</a>
+    <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+    <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-label">Midcoast Energy &nbsp;·&nbsp; Brand &amp; Digital Design</p>
+    <h1>Brand Evolution<br/><em>in Motion.</em></h1>
+    <div class="hero-meta"><div class="meta-item"><label>Role</label><span>Brand &amp; Digital Design Lead</span></div><div class="meta-item"><label>Scope</label><span>Brand Identity &amp; Web Design</span></div><div class="meta-item"><label>Impact</label><span>Regional Brand Unification</span></div></div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-grid">
+      <div class="stat-cell accent">
+        <div class="stat-num">95%</div>
+        <div class="stat-label">Stakeholder Alignment</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">3×</div>
+        <div class="stat-label">Faster Navigation to Key Content</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">Zero</div>
+        <div class="stat-label">User Drop-Off at Launch</div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</div>
+<!-- ══ OVERVIEW ══ -->
+<section id="overview">
+  <div class="container">
+    <p class="section-label fade-up">Overview</p>
+    <h2 class="section-title fade-up">One Microsite.<br/><span class="section-title-italic">Two Jobs to Do.</span></h2>
+    <p class="section-subtitle fade-up">A microsite built to boost awareness and guide stakeholders through a brand evolution &#8212; all while keeping the design clear and intuitive. The goal was to balance continuity and growth in one seamless experience.</p>
+
+    <div class="two-col fade-up" style="margin-top:40px;">
+      <div class="card">
+        <h4>The Continuity Challenge</h4>
+        <p>Stakeholders needed to see the brand they already trusted &#8212; not a replacement, a progression. Every design decision had to feel earned, not imposed.</p>
+      </div>
+      <div class="card">
+        <h4>The Clarity Requirement</h4>
+        <p>Complex organizational change needed to read simply. The experience had to guide users through a transformation story without making them work for it.</p>
+      </div>
+    </div>
+    <img src="mid-wireframe.png" alt="Midcoast Wireframe" style="width:100%;display:block;margin-top:48px;">
+  </div>
+</section>
+
+<!-- ══ APPROACH ══ -->
+<section id="approach" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Approach</p>
+    <h2 class="section-title fade-up">Scroll for<br/><span class="section-title-italic">Change</span></h2>
+    <div class="brand-layout fade-up">
+      <div class="brand-left">
+        <p class="section-body">When it comes to digital design, it all starts with information architecture. Building a solid framework before diving into the visual execution is non-negotiable. After testing several iterations, infinite scroll emerged as the right pattern &#8212; its smooth jump-to links make it easy to move between sections, and users glide through content without hitting roadblocks.</p>
+        <p class="section-body" style="margin-top:24px;">With a fluid layout, clear content flow, and intuitive interaction patterns, users never have to second-guess their next move. Every section was defined so that as they scrolled, they effortlessly absorbed updates and key information in the right order.</p>
+      </div>
+      <div class="brand-right">
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--page-accent)">
+            <rect x="8" y="6" width="28" height="32" rx="2"/>
+            <path d="M14 16h16M14 22h12M14 28h8"/>
+            <path d="M22 34v4M18 38h8"/>
+          </svg>
+          <div>
+            <h4>Information Architecture First</h4>
+            <p>Content hierarchy mapped before any visual decisions, ensuring each section served a clear purpose in the transformation story.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--page-accent)">
+            <path d="M22 8v28M14 28l8 8 8-8"/>
+            <path d="M10 18h6M28 18h6"/>
+          </svg>
+          <div>
+            <h4>Infinite Scroll Pattern</h4>
+            <p>Jump-to navigation anchors let stakeholders move freely while maintaining orientation throughout the experience.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--page-accent)">
+            <circle cx="22" cy="22" r="16"/>
+            <path d="M16 22l4 4 8-8"/>
+          </svg>
+          <div>
+            <h4>Zero Friction Progression</h4>
+            <p>Fluid layout and consistent interaction patterns kept users moving through the content without confusion or dead ends.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOLUTION ══ -->
+<section id="solution">
+  <div class="container">
+    <p class="section-label fade-up">Solution</p>
+    <h2 class="section-title fade-up">Seamless<br/><span class="section-title-italic">Transformation</span></h2>
+    <p class="section-body fade-up">The brief was clear: create a design that feels forward-thinking, progressive, and dynamic. Photography with depth of field drew users in and set the tone for the site&#8217;s vision. Illustrations were minimal and clean &#8212; just enough to support the message without overpowering it.</p>
+    <p class="section-body fade-up" style="margin-top:24px;">Every navigational touchpoint was chosen to reveal a transformational milestone as users moved through the site. The result was an experience where the act of scrolling itself felt like participating in the brand&#8217;s evolution &#8212; not just reading about it.</p>
+    <img src="Mid-home.png" alt="Midcoast Website" style="width:100%;display:block;margin-top:48px;">
+  </div>
+</section>
+
+<!-- ══ OUTCOMES ══ -->
+<section id="outcomes" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Outcomes</p>
+    <div class="brand-layout fade-up">
+      <div class="brand-left">
+        <h2 class="section-title">What the Microsite<br/><span class="section-title-italic">Delivered</span></h2>
+      </div>
+      <div class="brand-right">
+        <div class="deliverable-item">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
+          <div>
+            <h4>Stakeholder Clarity</h4>
+            <p>Complex brand evolution communicated clearly &#8212; stakeholders could follow the transformation story without friction.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
+          <div>
+            <h4>Intuitive Navigation</h4>
+            <p>Infinite scroll with jump-to anchors gave users full control over how they moved through the content.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
+          <div>
+            <h4>Visual Cohesion</h4>
+            <p>Photography and minimal illustration worked as a system &#8212; depth and clarity in the same frame.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
+          <div>
+            <h4>Brand Continuity</h4>
+            <p>The design felt like a progression, not a replacement &#8212; trust in the existing brand carried forward into the new direction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-work-section">
+      <p class="footer-label">Work</p>
+      <div class="footer-grid">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="btki-casestudy-rdot.html">BTKi Education</a>        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html">EHE</a>
+        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+        <a href="#">Nickelodeon</a>      </div>
+    </div>
+    <div class="footer-pages-col">
+      <a href="rdot-home.html">Home</a>
+      <a href="about-rdot.html">About</a>
+      <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+      <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav       = document.getElementById('siteNav');
+  var hamburger = document.getElementById('hamburger');
+  var panel     = document.getElementById('navPanel');
+
+  hamburger.addEventListener('click', function(){
+    var open = panel.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    nav.classList.toggle('panel-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fade-up').forEach(function(el){ observer.observe(el); });
+})();
+</script>
+</body>
+</html>

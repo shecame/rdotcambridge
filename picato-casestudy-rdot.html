@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Picato — Case Study · Rashetda Cambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="rdot-casestudy-system.css"/>
+
+<style>
+.si{display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;color:currentColor}
+:root{--page-accent:#2E6DA4}
+.section-label{font-size:16px;font-weight:400;letter-spacing:0.04em;text-transform:none;color:#004e7c;margin-bottom:16px}
+.dark-band .section-label{color:var(--yellow)}
+.blockquote-pull{border-left-color:var(--page-accent)}
+.pull-quote{border-left-color:var(--page-accent)}
+.outcome-item::before{display:none}
+.brand-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.brand-right{display:flex;flex-direction:column;gap:0}
+.brand-right .deliverable-item{display:flex;flex-direction:row;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)}
+.brand-right .deliverable-item:first-child{border-top:1px solid var(--border)}
+@media(max-width:768px){.brand-layout{grid-template-columns:1fr}}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
+.hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
+.hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
+.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
+.meta-item{flex:1;padding:28px 20px;border-right:1px solid var(--border)}
+.meta-item:last-child{border-right:none}
+.meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
+.meta-item span{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--ink);font-weight:600}
+.hero-right{background:#1a1a1a;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden}
+@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
+</style>
+</head>
+<body>
+<!-- ══ DRAFT BANNER ══ -->
+<div style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#FEDB00;color:#0C0C0C;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-align:center;padding:10px 16px;display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+  <span>&#9679; Draft — Picato — Not Published &nbsp;·&nbsp; Hidden from navigation &amp; footer &nbsp;·&nbsp; Remove this banner before publishing</span>
+</div>
+<div style="height:40px;"></div>
+<!-- ══ END DRAFT BANNER ══ -->
+
+
+<!-- ══ NAV ══ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="https://rdotcambridge.com" class="nav-wordmark">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" aria-label="rdot"><path fill="#fedb00" d="M46.74,20.4h-26.34v59.07h1.39c3.37,0,6.11-2.74,6.11-6.11V27.9h14.12c3.37,0,6.11-2.74,6.11-6.11v-1.39h-1.39Z"/><path fill="#78b8e9" d="M78.21,20.4h-26.7v1.39c0,3.37,2.74,6.11,6.11,6.11h14.48v44.2h-24.46c-3.37,0-6.11,2.74-6.11,6.11v1.39h38.08V20.4h-1.4Z"/><path class="rc-dot" fill="#0C0C0C" d="M34.91,72.1c-2.07,0-3.75,1.68-3.75,3.75s1.68,3.75,3.75,3.75,3.75-1.68,3.75-3.75-1.69-3.75-3.75-3.75Z"/></svg>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-panel" id="navPanel">
+  <p class="nav-panel-label">Work</p>
+  <div class="nav-panel-work">
+    <a href="andela-casestudy-rdot.html">Andela</a>
+    <a href="att-casestudy-rdot.html">AT&amp;T</a>
+    <a href="boa-casestudy-rdot.html">Bank of America</a>
+    <a href="btki-casestudy-rdot.html">BTKi Education</a>
+    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+    <a href="ehe-casestudy-rdot.html">EHE</a>
+    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-links">
+    <a href="rdot-home.html">Home</a>
+    <a href="about-rdot.html">About</a>
+    <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+    <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-label">Picato &nbsp;·&nbsp; Experience &amp; Website Design</p>
+    <h1>Patient First.<br/><em>Everything Else Follows.</em></h1>
+    <div class="hero-meta"></div>
+  </div>
+  <div class="hero-right"></div>
+</section>
+  </div>
+</div>
+
+<!-- ══ OVERVIEW ══ -->
+<section id="overview">
+  <div class="container">
+    <p class="section-label fade-up">Overview</p>
+    <h2 class="section-title fade-up">A Redesigned Platform<br/><span class="section-title-italic">For Better Outcomes.</span></h2>
+    <p class="section-subtitle fade-up">A redesigned patient management and engagement platform that improves access to critical medical resources and supports better patient outcomes. The challenge was balancing detailed safety and regulatory information with a digital experience that still felt intuitive.</p>
+
+    <div class="two-col fade-up" style="margin-top:40px;">
+      <div class="card">
+        <h4>Compliance Without Friction</h4>
+        <p>Important safety information had to remain clearly visible at all times &#8212; without overwhelming the interface or burying the content patients actually needed.</p>
+      </div>
+      <div class="card">
+        <h4>Mobile-First Clarity</h4>
+        <p>Content restructured to read clearly on smaller devices &#8212; a non-trivial problem when ISI requirements limit how much can be collapsed or hidden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ APPROACH ══ -->
+<section id="approach" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Approach</p>
+    <h2 class="section-title fade-up">Balancing Design<br/><span class="section-title-italic">and Compliance</span></h2>
+    <div class="brand-layout fade-up">
+      <div class="brand-left">
+        <p class="section-body">The challenge wasn&#8217;t just visual &#8212; it was structural. Pharma digital experiences carry regulatory obligations that constrain layout, hierarchy, and interaction in ways most design problems don&#8217;t. Important safety information needed to be present and legible without becoming the first thing every user bounced from.</p>
+        <p class="section-body" style="margin-top:24px;">The approach was to treat compliance as a design input, not a layer applied after the fact. ISI placement, type sizing, and content sequencing were planned from the start &#8212; which meant the experience could be built around real user needs rather than retrofitted around legal requirements.</p>
+      </div>
+      <div class="brand-right">
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--page-accent)">
+            <rect x="6" y="6" width="64" height="64" rx="3"/>
+            <path d="M14 16h16M14 22h10"/>
+            <path d="M28 26l4 4-4 4" stroke-width="1.75"/>
+          </svg>
+          <div>
+            <h4>ISI Integration</h4>
+            <p>Safety information positioned within the content flow &#8212; visible without dominating, compliant without being disruptive.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--page-accent)">
+            <rect x="10" y="6" width="24" height="32" rx="3"/>
+            <path d="M16 16h12M16 22h8M16 28h10"/>
+          </svg>
+          <div>
+            <h4>Content Restructuring</h4>
+            <p>Hierarchy rebuilt for mobile &#8212; content reads clearly at every screen size without sacrificing regulatory requirements.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--page-accent)">
+            <circle cx="22" cy="14" r="6"/>
+            <path d="M10 38c0-6.627 5.373-12 12-12s12 5.373 12 12"/>
+          </svg>
+          <div>
+            <h4>Patient-Centered Pathways</h4>
+            <p>Clearer journeys to the resources patients actually needed &#8212; fewer dead ends, more direct access to support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOLUTION ══ -->
+<section id="solution">
+  <div class="container">
+    <p class="section-label fade-up">Solution</p>
+    <h2 class="section-title fade-up">Effortless Engagement,<br/><span class="section-title-italic">Amplified Visibility</span></h2>
+    <p class="section-body fade-up">Instructional design principles shaped how content was sequenced and visualized throughout the experience. Data visualization made clinical information digestible without losing accuracy. The redesign produced measurable results: improved Google ranking and organic search visibility, higher traffic and stronger conversion rates, and enhanced patient engagement through clearer pathways.</p>
+    <p class="section-body fade-up" style="margin-top:24px;">Enhanced SEO performance came from fixing content hierarchy issues that had been suppressing organic visibility. Technical improvements and a cleaner content structure addressed both user experience and search performance simultaneously &#8212; the same structural decisions that made the experience clearer for patients made it more legible for search engines.</p>
+  </div>
+</section>
+
+<!-- ══ OUTCOMES ══ -->
+<section id="outcomes" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Outcomes</p>
+    <h2 class="section-title fade-up">Results Across<br/><span class="section-title-italic">Every Measure</span></h2>
+
+    <div class="outcome-grid fade-up">
+      <div class="outcome-item fade-up">
+        <h4>Improved Patient Experience</h4>
+        <p>Clearer pathways and better content hierarchy across both mobile and desktop &#8212; patients reached what they needed faster.</p>
+      </div>
+      <div class="outcome-item fade-up stagger-1">
+        <h4>Higher Search Ranking</h4>
+        <p>Increased Google ranking and organic search visibility after technical fixes addressed structural SEO issues.</p>
+      </div>
+      <div class="outcome-item fade-up">
+        <h4>Traffic &amp; Conversions</h4>
+        <p>Higher traffic and stronger conversion rates driven by improved content clarity and user flow.</p>
+      </div>
+      <div class="outcome-item fade-up stagger-1">
+        <h4>Patient Engagement</h4>
+        <p>Stronger engagement through clearer pathways to critical medical resources and support tools.</p>
+      </div>
+      <div class="outcome-item fade-up">
+        <h4>Accessibility Improvements</h4>
+        <p>Refined content hierarchy improved accessibility &#8212; compliance requirements and accessibility goals aligned, not in tension.</p>
+      </div>
+      <div class="outcome-item fade-up stagger-1">
+        <h4>Business Performance</h4>
+        <p>Stronger business results downstream of a better patient experience &#8212; trust and usability translated directly to outcomes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-work-section">
+      <p class="footer-label">Work</p>
+      <div class="footer-grid">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="btki-casestudy-rdot.html">BTKi Education</a>        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html">EHE</a>
+        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+        <a href="#">Nickelodeon</a>      </div>
+    </div>
+    <div class="footer-pages-col">
+      <a href="rdot-home.html">Home</a>
+      <a href="about-rdot.html">About</a>
+      <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+      <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav       = document.getElementById('siteNav');
+  var hamburger = document.getElementById('hamburger');
+  var panel     = document.getElementById('navPanel');
+
+  hamburger.addEventListener('click', function(){
+    var open = panel.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    nav.classList.toggle('panel-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fade-up').forEach(function(el){ observer.observe(el); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rdotcambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=Oswald:wght@300;400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="rdot-casestudy-system.css"/>
+
+<style>
+html, body { margin:0; padding:0; overflow-x:hidden; }
+
+/* ── HOME WRAPPER ────────────────────────────────────────────── */
+.home-wrapper {
+  position: relative;
+  padding-top: 64px;
+}
+
+/* ── LEFT: Text panel — fixed to viewport ───────────────────── */
+.home_right {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  background: #fff;
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+/* ── STICKY HERO TEXT ────────────────────────────────────────── */
+.sticky_item {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 56px 0 75px;
+  padding-top: 64px;
+  box-sizing: border-box;
+}
+
+/* ── RIGHT: Image panel — scrolls normally ──────────────────── */
+/* Background applied directly on the element, exactly like the live site.
+   background-size:auto fills the full element height.
+   background-repeat:repeat tiles if content exceeds one gradient cycle. */
+.home_left {
+  margin-left: 50%;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding-top: 18vh;
+  padding-bottom: 15vh;
+  box-sizing: border-box;
+  background: linear-gradient(
+    #add3f1, #add3f1,
+    #deedf9, #deedf9,
+    #add3f1, #add3f1,
+    #deedf9, #deedf9,
+    #add3f1
+  );
+  background-size: auto;
+  background-repeat: repeat;
+}
+
+/* ── COLLECTION LIST ─────────────────────────────────────────── */
+.collection-list-wrapper { width: 100%; }
+
+.collection-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5vw;
+}
+
+.collection-item {
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 15vh;
+  overflow: visible;
+}
+.collection-item:last-child { margin-bottom: 0; }
+
+/* ── PROJECT LINK WRAPPER ────────────────────────────────────── */
+.project-link {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  height: 49em;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+/* ── PROJECT IMAGES ───────────────────────────────────────────── */
+.project_img {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: 50% center;
+  background-repeat: no-repeat;
+}
+
+.img1 { background-image: url('https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6011d26d7c192a4610e144bb_home-Mid.png'); }
+.img2 { background-image: url('https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6011d1a63578c69ff0ae116c_home-Picato.png'); }
+.img3 { background-image: url('https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6011d29647cf4eece6f13190_home-Goosehead.png'); }
+.img4 { background-image: url('https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/60abd967c60551b73ab722f4_home-CTrax.png'); }
+.img5 { background-image: url('https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/60bad882d769c94638e6378e_home-Andela.png'); }
+.img6 { background-image: url('https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6011d2d72a416c5952cffb53_home-Comast.png'); }
+.collection-item:not(:nth-child(2)) .project-link { height: 39.2em; }
+
+/* ── TYPOGRAPHY — Andela style ───────────────────────────────── */
+.home-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(44px, 4.6vw, 66px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.0;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* Accent words — italic light, coloured (matches Andela em style) */
+.home-title .accent-blue {
+  font-style: italic;
+  font-weight: 300;
+  color: rgb(130, 172, 206);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.home-title .accent-gold {
+  font-style: italic;
+  font-weight: 300;
+  color: #f1d002;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .home_right { position: relative; width: 100%; height: auto; }
+  .home_left  { display: none; }
+  .sticky_item { height: auto; padding: 80px 32px 56px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ────────────────────────────────────────────────────── -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="rdot-home.html" class="nav-wordmark">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" aria-label="rdot"><path fill="#fedb00" d="M46.74,20.4h-26.34v59.07h1.39c3.37,0,6.11-2.74,6.11-6.11V27.9h14.12c3.37,0,6.11-2.74,6.11-6.11v-1.39h-1.39Z"/><path fill="#78b8e9" d="M78.21,20.4h-26.7v1.39c0,3.37,2.74,6.11,6.11,6.11h14.48v44.2h-24.46c-3.37,0-6.11,2.74-6.11,6.11v1.39h38.08V20.4h-1.4Z"/><path class="rc-dot" fill="#0C0C0C" d="M34.91,72.1c-2.07,0-3.75,1.68-3.75,3.75s1.68,3.75,3.75,3.75,3.75-1.68,3.75-3.75-1.69-3.75-3.75-3.75Z"/></svg>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-panel" id="navPanel">
+  <p class="nav-panel-label">Work</p>
+  <div class="nav-panel-work">
+    <a href="andela-casestudy-rdot.html">Andela</a>
+    <a href="att-casestudy-rdot.html">AT&amp;T</a>
+    <a href="boa-casestudy-rdot.html">Bank of America</a>
+    <a href="btki-casestudy-rdot.html">BTKi Education</a>
+    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+    <a href="ehe-casestudy-rdot.html">EHE</a>
+    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-links">
+    <a href="rdot-home.html" class="current">Home</a>
+    <a href="about-rdot.html">About</a>
+    <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+    <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ── MAIN LAYOUT ──────────────────────────────────────────────── -->
+<div class="home-wrapper">
+
+  <!-- LEFT: Fixed text — never moves -->
+  <div class="home_right">
+    <div class="sticky_item">
+      <h1 class="home-title">
+        Engaging<br>
+        Brand<br>
+        <em class="accent-blue">Solutions,</em><br>
+        Inventive<br>
+        Experience<br>
+        <em class="accent-blue">Design</em>
+      </h1>
+    </div>
+  </div>
+
+  <!-- RIGHT: Scrolling images over gradient background -->
+  <div class="home_left">
+    <div class="collection-list-wrapper">
+      <div class="collection-list">
+        <div class="collection-item"><a class="project-link" href="midcoast-casestudy-rdot.html"><div class="project_img img1"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="picato-casestudy-rdot.html"><div class="project_img img2"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="goosehead-casestudy-rdot.html"><div class="project_img img3"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="ctrax-casestudy-rdot.html"><div class="project_img img4"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="andela-casestudy-rdot.html"><div class="project_img img5"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="boa-casestudy-rdot.html"><div class="project_img img6"></div></a></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+
+  /* ── Nav toggle ──────────────────────────────────────────── */
+  var hamburger = document.getElementById('hamburger');
+  var navPanel  = document.getElementById('navPanel');
+  var siteNav   = document.getElementById('siteNav');
+  var open = false;
+
+  hamburger.addEventListener('click', function(){
+    open = !open;
+    hamburger.classList.toggle('open', open);
+    navPanel.classList.toggle('open', open);
+    siteNav.classList.toggle('panel-open', open);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && open) hamburger.click();
+  });
+
+  /* ── Scroll-driven 3D tilt ───────────────────────────────────
+     Uses .collection-item (untransformed) for accurate position.
+     CSS rotate/translate — clearly visible range of motion.      */
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+  function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+
+  var items = document.querySelectorAll('.collection-item');
+
+  function updateTilts() {
+    var vph = window.innerHeight;
+    items.forEach(function(item) {
+      var link = item.querySelector('.project-link');
+      if (!link) return;
+
+      // Rect of the untransformed parent — always accurate
+      var rect = item.getBoundingClientRect();
+
+      // 0 = bottom of item just reached viewport bottom (entering)
+      // 1 = top of item has reached viewport top (exiting)
+      var progress = clamp((vph - rect.top) / (vph + rect.height), 0, 1);
+      var t = ease(progress);
+
+      // compress animation: fully settled by the time progress reaches 0.4
+      var animT = ease(clamp(t / 0.4, 0, 1));
+      var tx = lerp(-480, 0, animT);
+      var opacity = clamp(animT * 1.5, 0, 1);
+
+      link.style.transform = 'translate3d(' + tx.toFixed(1) + 'px, 0, 0)';
+      link.style.opacity = opacity.toFixed(3);
+    });
+  }
+
+  window.addEventListener('scroll', updateTilts, { passive: true });
+  window.addEventListener('resize', updateTilts);
+  updateTilts();
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BTKi Education — UX Case Study · Rashetda Cambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="rdot-casestudy-system.css"/>
+
+<style>
+.si{display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;color:currentColor}
+:root{--page-accent:#5A5A5A}
+.section-label{font-size:16px;font-weight:400;letter-spacing:0.04em;text-transform:none;color:#004e7c;margin-bottom:16px}
+.dark-band .section-label,.findings-section .section-label{color:var(--yellow)}
+.blockquote-pull{border-left-color:var(--yellow)}
+.pull-quote{border-left-color:var(--yellow)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
+.hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
+.hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
+.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
+.meta-item{flex:1;padding:28px 20px;border-right:1px solid var(--border)}
+.meta-item:last-child{border-right:none}
+.meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
+.meta-item span{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--ink);font-weight:600}
+.hero-right{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('BTKi.png') no-repeat center center;background-size:cover,cover;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden;min-height:100vh}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:transparent}
+.stat-cell{padding:44px 32px;background:transparent;border-right:1px solid rgba(255,255,255,0.25);transition:opacity .3s}
+.stat-cell:last-child{border-right:none}
+.stat-cell:hover{background:transparent;opacity:0.8}.stat-cell.accent:hover{background:#FEDB00!important;opacity:1}
+.stat-cell .stat-num{font-family:'Montserrat',sans-serif;font-size:48px;font-weight:800;line-height:1;color:#ffffff;margin-bottom:8px;letter-spacing:-0.03em}
+.stat-cell .stat-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);line-height:1.5}
+.stat-cell.accent{background:#add3f1}
+.stat-cell.accent .stat-num{color:#0C0C0C}
+.stat-cell.accent .stat-label{color:#0C0C0C}
+@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
+#outcomes .brand-right .deliverable-item:first-child{border-top-color:rgba(255,255,255,0.12)}
+.brand-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.brand-right{display:flex;flex-direction:column;gap:0}
+.brand-right .deliverable-item{display:flex;flex-direction:row;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)}
+.brand-right .deliverable-item:first-child{border-top:1px solid var(--border)}
+.brand-right .deliverable-item svg{flex-shrink:0;margin-top:2px}
+.brand-right .deliverable-item h4{margin-bottom:6px}
+@media(max-width:768px){.brand-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+
+<!-- ══ NAV ══ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="https://rdotcambridge.com" class="nav-wordmark">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" aria-label="rdot"><path fill="#fedb00" d="M46.74,20.4h-26.34v59.07h1.39c3.37,0,6.11-2.74,6.11-6.11V27.9h14.12c3.37,0,6.11-2.74,6.11-6.11v-1.39h-1.39Z"/><path fill="#78b8e9" d="M78.21,20.4h-26.7v1.39c0,3.37,2.74,6.11,6.11,6.11h14.48v44.2h-24.46c-3.37,0-6.11,2.74-6.11,6.11v1.39h38.08V20.4h-1.4Z"/><path class="rc-dot" fill="#0C0C0C" d="M34.91,72.1c-2.07,0-3.75,1.68-3.75,3.75s1.68,3.75,3.75,3.75,3.75-1.68,3.75-3.75-1.69-3.75-3.75-3.75Z"/></svg>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-panel" id="navPanel">
+  <p class="nav-panel-label">Work</p>
+  <div class="nav-panel-work">
+    <a href="andela-casestudy-rdot.html">Andela</a>
+    <a href="att-casestudy-rdot.html">AT&amp;T</a>
+    <a href="boa-casestudy-rdot.html">Bank of America</a>
+    <a href="btki-casestudy-rdot.html" class="current">BTKi Education</a>
+    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+    <a href="ehe-casestudy-rdot.html">EHE</a>
+    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-links">
+    <a href="rdot-home.html">Home</a>
+    <a href="about-rdot.html">About</a>
+    <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+    <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-label">BTKi Education &nbsp;·&nbsp; Brand &amp; Systems Design</p>
+    <h1>The Science<br/>Stays.<br/><em>The Friction<br/>Goes.</em></h1>
+    <div class="hero-meta">
+      <div class="meta-item"><label>Role</label><span>Group Art Supervisor</span></div>
+      <div class="meta-item"><label>Scope</label><span>Display Campaign &amp; Microsite Design</span></div>
+      <div class="meta-item"><label>Impact</label><span>HCP Support</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-grid">
+      <div class="stat-cell accent">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">MLR Compliance Maintained</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">18+</div>
+        <div class="stat-label">Ad Unit Variations in Dynamic Campaign</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Compliance Gates Cleared Per Deliverable</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OVERVIEW ══ -->
+<section id="overview">
+  <div class="container">
+    <p class="section-label fade-up">Overview</p>
+    <h2 class="section-title fade-up">Dense Science<br/><span class="section-title-italic">to a Clear Experience.</span></h2>
+    <p class="section-subtitle fade-up">BTK inhibitors are central to treating certain cancers and autoimmune diseases &#8212; but the underlying biology is dense and the treatment pathways aren&#8217;t intuitive. Healthcare professionals needed a clearer way to understand BTK&#8217;s role in B-cell malignancies without wading through material that read like a research paper.</p>
+
+    <div class="two-col fade-up" style="margin-top:40px;">
+      <div class="card">
+        <h4>The Science Challenge</h4>
+        <p>BTK&#8217;s role in B-cell malignancies involves mechanisms that can&#8217;t be simplified without losing clinical accuracy. The design problem was sequencing and framing &#8212; not dumbing down.</p>
+      </div>
+      <div class="card">
+        <h4>The Compliance Constraint</h4>
+        <p>Everything had to clear medical, legal, and regulatory review. That limits options fast &#8212; every creative decision had a compliance gate attached to it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STRATEGY ══ -->
+<section id="strategy" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Strategy</p>
+    <h2 class="section-title fade-up">Staying Unbranded</h2>
+    <p class="fade-up" style="font-family:'Montserrat',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:300;font-style:normal;color:var(--blue);letter-spacing:-0.025em;text-transform:uppercase;margin-bottom:40px;line-height:1.1;">Educate Without Advocating</p>
+    <div class="brand-layout fade-up">
+      <div class="brand-left">
+        <p class="section-body">Staying unbranded was not just a compliance requirement. It shaped every creative decision. The experience had to educate without selling and inform without advocating.</p>
+        <p class="section-body" style="margin-top:24px;">The microsite was designed around how an HCP actually moves through information: scanning before reading, looking for hierarchy, absorbing quickly between patients.</p>
+        <p class="section-body" style="margin-top:24px;">Content was structured around learning milestones rather than linear scroll so HCPs could enter at the right point for their level of understanding. Visual hierarchy broke complex mechanisms into discrete learning moments. Spacing, sequencing, and deliberate use of white space managed density without making users feel led through the material.</p>
+      </div>
+      <div class="brand-right">
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--blue)">
+            <path d="M22 10v24M10 22h24"/>
+            <rect x="6" y="6" width="64" height="64" rx="3"/>
+          </svg>
+          <div>
+            <h4>Compliant by Default</h4>
+            <p>Every element cleared medical, legal, and regulatory review at every stage.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--blue)">
+            <rect x="6" y="10" width="32" height="24" rx="2"/>
+            <circle cx="22" cy="22" r="5"/>
+            <path d="M6 17h32"/>
+          </svg>
+          <div>
+            <h4>Scientific Artwork Integration</h4>
+            <p>Scientific artwork translated into a cohesive interactive system, designed as part of the experience rather than dropped in as illustration.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--blue)">
+            <circle cx="22" cy="22" r="16"/>
+            <path d="M16 18l6 8 6-8"/>
+          </svg>
+          <div>
+            <h4>Educate, Don&#8217;t Advocate</h4>
+            <p>BTK&#8217;s role clarified through structured visuals that inform without making arguments for the HCP.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="BTKi-home.png" alt="BTKi Microsite" style="width:100%;display:block;margin-top:48px;">
+  </div>
+</section>
+
+<!-- ══ MICROSITE ══ -->
+<section id="microsite">
+  <div class="container">
+    <p class="section-label fade-up">Microsite</p>
+    <h2 class="section-title fade-up">Built for the<br/><span class="section-title-italic">Clinical Moment</span></h2>
+    <p class="section-subtitle fade-up">The microsite was the primary educational destination — a self-contained experience designed to deliver BTK mechanism education without the noise of a branded environment. Every design decision was made with one user in mind: an HCP between patients, scanning for information they could act on.</p>
+    <div class="two-col fade-up" style="margin-top:40px;">
+      <div class="card">
+        <h4>Learning Milestones</h4>
+        <p>Content structured around how HCPs actually process information — scanning before reading, absorbing hierarchy before detail, entering at the right point for their level of understanding.</p>
+      </div>
+      <div class="card">
+        <h4>No Brand Noise</h4>
+        <p>The unbranded environment removed the incentive to discount the content. Clinical education delivered without the sales layer — allowing the science to speak without an argument attached.</p>
+      </div>
+    </div>
+    <img src="BTKi-display.png" alt="BTKi Microsite" style="width:100%;display:block;margin-top:48px;">
+  </div>
+</section>
+
+<!-- ══ DISPLAY ══ -->
+<section id="display" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Display Campaign</p>
+    <h2 class="section-title fade-up">Breaking<br/><span class="section-title-italic">Banner Blindness</span></h2>
+    <p class="section-subtitle fade-up">Display ads in clinical and pharmaceutical environments are easy to ignore. HCPs have seen enough static placements to filter them out entirely. The strategy was motion, variation, and a clear message: drive HCPs to the microsite where the science could do the real work.</p>
+    <div class="two-col fade-up" style="margin-top:40px;">
+      <div class="card">
+        <h4>Dynamic Ad Units</h4>
+        <p>18+ ad unit variations built to interrupt banner blindness through motion and message variation — designed to stand out in clinical placements without breaking the compliance framework.</p>
+      </div>
+      <div class="card">
+        <h4>Microsite as Destination</h4>
+        <p>Every ad unit had one job: move the HCP to the microsite. The campaign wasn't trying to educate in the banner — it was creating enough curiosity to earn the click into the deeper experience.</p>
+      </div>
+    </div>
+    <img src="BTKI-banner.png" alt="BTKi Display Banner Campaign" style="width:100%;display:block;margin-top:48px;">
+  </div>
+</section>
+
+<!-- ══ OUTCOMES ══ -->
+<section id="outcomes" style="background:var(--ink);padding:96px 0;">
+  <div class="container">
+    <p class="section-label fade-up" style="color:var(--yellow);text-transform:none;letter-spacing:0.04em;font-size:16px;font-weight:400;">Outcomes</p>
+    <div class="brand-layout fade-up">
+      <div class="brand-left">
+        <h2 class="section-title" style="color:var(--white);">Clarity at the<br/><span class="section-title-italic" style="color:rgba(255,255,255,0.55);">Point of Decision</span></h2>
+        <p class="section-body" style="color:rgba(255,255,255,0.65);margin-top:24px;">HCPs don&#8217;t have time to search for understanding. The experience delivered what they needed at the right moment: accurate science, clear hierarchy, and no noise between them and the information.</p>
+      </div>
+      <div class="brand-right">
+        <div class="deliverable-item" style="border-bottom-color:rgba(255,255,255,0.12);">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--yellow);margin-top:8px;"></div>
+          <div>
+            <h4 style="color:var(--white);">Faster Comprehension</h4>
+            <p style="color:rgba(255,255,255,0.6);">Complex mechanisms digestible without losing clinical accuracy.</p>
+          </div>
+        </div>
+        <div class="deliverable-item" style="border-bottom-color:rgba(255,255,255,0.12);">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--yellow);margin-top:8px;"></div>
+          <div>
+            <h4 style="color:var(--white);">Higher Engagement</h4>
+            <p style="color:rgba(255,255,255,0.6);">Structured learning milestones kept HCPs in the experience longer than linear scroll would have.</p>
+          </div>
+        </div>
+        <div class="deliverable-item" style="border-bottom-color:rgba(255,255,255,0.12);">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--yellow);margin-top:8px;"></div>
+          <div>
+            <h4 style="color:var(--white);">Compliance Maintained</h4>
+            <p style="color:rgba(255,255,255,0.6);">Zero unbranded violations across medical, legal, and regulatory review.</p>
+          </div>
+        </div>
+        <div class="deliverable-item" style="border-bottom-color:rgba(255,255,255,0.12);">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--yellow);margin-top:8px;"></div>
+          <div>
+            <h4 style="color:var(--white);">Ad Performance</h4>
+            <p style="color:rgba(255,255,255,0.6);">Dynamic units outperformed static formats across clinical placements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-work-section">
+      <p class="footer-label">Work</p>
+      <div class="footer-grid">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="btki-casestudy-rdot.html">BTKi Education</a>        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html">EHE</a>
+        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+        <a href="#">Nickelodeon</a>      </div>
+    </div>
+    <div class="footer-pages-col">
+      <a href="rdot-home.html">Home</a>
+      <a href="about-rdot.html">About</a>
+      <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+      <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav       = document.getElementById('siteNav');
+  var hamburger = document.getElementById('hamburger');
+  var panel     = document.getElementById('navPanel');
+
+  hamburger.addEventListener('click', function(){
+    var open = panel.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    nav.classList.toggle('panel-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  window.addEventListener('scroll', function(){
+    var max = document.body.scrollHeight - window.innerHeight;
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fade-up').forEach(function(el){ observer.observe(el); });
+})();
+</script>
+</body>
+</html>

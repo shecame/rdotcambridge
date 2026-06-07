@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Rdotcambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=Oswald:wght@300;400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="rdot-casestudy-system.css"/>
+
+<style>
+html, body { margin: 0; padding: 0; overflow-x: hidden; }
+
+/* ── PAGE WRAPPER ─────────────────────────────────────────── */
+.about-page { padding-top: 64px; }
+
+/* ── CONTAINER ────────────────────────────────────────────── */
+.about-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 72px;
+  box-sizing: border-box;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SECTION 1 — HERO
+   ══════════════════════════════════════════════════════════ */
+.about-hero {
+  padding: 72px 0 56px;
+  /* border removed */
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: flex-end;
+}
+
+.about-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #004e7c;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.about-location {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(44px, 4.6vw, 66px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.0;
+  color: var(--ink);
+  margin: 0;
+}
+
+.about-location .accent-blue {
+  font-style: italic;
+  font-weight: 300;
+  color: rgb(130, 172, 206);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.about-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(18px, 1.9vw, 26px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  color: rgb(35, 35, 51);
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SECTION 2 — CONTENT
+   ══════════════════════════════════════════════════════════ */
+.about-content { padding: 48px 0 0; }
+
+.about-content-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 42px;
+  align-items: flex-start;
+}
+
+/* ── LEFT COLUMN ──────────────────────────────────────────── */
+.disciplines-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+  padding-bottom: 48px;
+}
+
+.discipline-item {
+  border-top: 1px solid var(--border);
+  padding: 20px 0 24px;
+}
+
+.discipline-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(35, 35, 51);
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+}
+
+.discipline-desc {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  color: rgb(35, 35, 51);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Portrait — 25% smaller */
+.about-portrait { position: relative; width: 75%; overflow: hidden; }
+
+.portrait-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transition: opacity 0.5s ease;
+}
+
+.portrait-img.portrait-up {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  opacity: 0;
+}
+
+.about-portrait:hover .portrait-img.portrait-down { opacity: 0; }
+.about-portrait:hover .portrait-img.portrait-up   { opacity: 1; }
+
+/* ── RIGHT COLUMN ─────────────────────────────────────────── */
+
+/* Logo slider — no grey box, no grid gaps */
+.logo-slider-wrap { margin-bottom: 48px; }
+
+.logo-slider-pages { overflow: hidden; }
+
+.logo-page {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 32px;
+}
+.logo-page.active { display: grid; }
+
+.logo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  min-height: 110px;
+  background: transparent;
+  border: 1px solid #E2E2DC;
+}
+
+.logo-cell img {
+  max-width: 100%;
+  max-height: 90px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+/* Slider controls */
+.logo-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.logo-btn {
+  background: none;
+  border: 1px solid var(--border);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  transition: border-color .15s;
+}
+.logo-btn:hover { border-color: var(--ink); }
+
+.logo-dots { display: flex; gap: 8px; }
+.logo-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--border); cursor: pointer;
+  transition: background .2s;
+}
+.logo-dot.active { background: var(--ink); }
+
+/* Bio */
+.about-bio-headline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(18px, 1.9vw, 26px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  color: rgb(35, 35, 51);
+  margin-bottom: 24px;
+}
+
+.about-bio p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 17px;
+  color: rgb(35, 35, 51);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  max-width: none;
+}
+.about-bio p:last-child { margin-bottom: 0; }
+
+/* ══════════════════════════════════════════════════════════
+   SECTION 3 — CTA BAND  (margin-top removed)
+   ══════════════════════════════════════════════════════════ */
+.about-cta-band {
+  display: block;
+  background: rgb(130, 172, 206);
+  padding: 72px 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.about-cta-band:hover { background: #fedb00; }
+
+.about-cta-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 72px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.about-cta-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: inherit;
+}
+
+.about-cta-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin-top: 0;
+}
+.about-cta-arrow svg {
+  width: 28px; height: 28px; fill: none;
+  stroke: rgb(51, 51, 51); stroke-width: 2.5;
+  transition: stroke 0.2s;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .about-container { padding: 0 40px; }
+  .about-hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .about-content-cols { grid-template-columns: 1fr; gap: 40px; }
+  .about-cta-band { padding: 56px 0; }
+  .about-cta-inner { padding: 0 40px; }
+}
+
+@media (max-width: 600px) {
+  .about-container { padding: 0 24px; }
+  .disciplines-grid { grid-template-columns: 1fr; }
+  .logo-page { grid-template-columns: 1fr 1fr; }
+  .about-cta-text { font-size: clamp(28px, 7vw, 40px); }
+  .about-cta-band { padding: 48px 0; }
+  .about-cta-inner { padding: 0 24px; }
+}
+
+/* ── FOOTER: handled by rdot-casestudy-system.css ── */
+</style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────────────── -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="rdot-home.html" class="nav-wordmark">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" aria-label="rdot"><path fill="#fedb00" d="M46.74,20.4h-26.34v59.07h1.39c3.37,0,6.11-2.74,6.11-6.11V27.9h14.12c3.37,0,6.11-2.74,6.11-6.11v-1.39h-1.39Z"/><path fill="#78b8e9" d="M78.21,20.4h-26.7v1.39c0,3.37,2.74,6.11,6.11,6.11h14.48v44.2h-24.46c-3.37,0-6.11,2.74-6.11,6.11v1.39h38.08V20.4h-1.4Z"/><path class="rc-dot" fill="#0C0C0C" d="M34.91,72.1c-2.07,0-3.75,1.68-3.75,3.75s1.68,3.75,3.75,3.75,3.75-1.68,3.75-3.75-1.69-3.75-3.75-3.75Z"/></svg>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-panel" id="navPanel">
+  <p class="nav-panel-label">Work</p>
+  <div class="nav-panel-work">
+    <a href="andela-casestudy-rdot.html">Andela</a>
+    <a href="att-casestudy-rdot.html">AT&amp;T</a>
+    <a href="boa-casestudy-rdot.html">Bank of America</a>
+    <a href="btki-casestudy-rdot.html">BTKi Education</a>
+    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+    <a href="ehe-casestudy-rdot.html">EHE</a>
+    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-links">
+    <a href="rdot-home.html">Home</a>
+    <a href="about-rdot.html" class="current">About</a>
+    <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+    <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ── PAGE ──────────────────────────────────────────────────── -->
+<div class="about-page">
+
+  <!-- ── HERO ───────────────────────────────────────────────── -->
+  <div class="about-container">
+    <section class="about-hero">
+      <div class="about-hero-grid">
+        <div class="about-hero-left">
+          <span class="about-eyebrow">Rashetda Cambridge</span>
+          <h1 class="about-location">Created in<br><em class="accent-blue">Brooklyn</em></h1>
+        </div>
+        <div class="about-hero-right">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── CONTENT ─────────────────────────────────────────────── -->
+  <div class="about-container">
+    <section class="about-content">
+      <div class="about-content-cols">
+
+        <!-- LEFT: Disciplines + Portrait -->
+        <div class="about-col-left">
+          <div class="disciplines-grid">
+            <div class="discipline-item">
+              <h5 class="discipline-title">Art Direction</h5>
+              <p class="discipline-desc">Establishing emotional connections and shaping design visions</p>
+            </div>
+            <div class="discipline-item">
+              <h5 class="discipline-title">User Experience</h5>
+              <p class="discipline-desc">Embracing the intersection between User, Business and Technology</p>
+            </div>
+            <div class="discipline-item">
+              <h5 class="discipline-title">Design Strategy</h5>
+              <p class="discipline-desc">Creating a cohesive, functional, and visually impactful experience</p>
+            </div>
+            <div class="discipline-item">
+              <h5 class="discipline-title">User Research</h5>
+              <p class="discipline-desc">Discovering user behaviors, needs, and motivations</p>
+            </div>
+            <div class="discipline-item">
+              <h5 class="discipline-title">Type &amp;<br>Iconography</h5>
+              <p class="discipline-desc">Designing deeper meanings in simplified representations</p>
+            </div>
+            <div class="discipline-item">
+              <h5 class="discipline-title">User Interface Design</h5>
+              <p class="discipline-desc">Maximizing usability and experience design</p>
+            </div>
+          </div>
+
+          <div class="about-portrait">
+            <img class="portrait-img portrait-down"
+              src="https://cdn.prod.website-files.com/5ffe013aec2089b70932d9c4/5ffe0d70f52edc08a8c21611_portraitdownnew-min.jpg"
+              alt="Rashetda Cambridge" />
+            <img class="portrait-img portrait-up"
+              src="https://cdn.prod.website-files.com/5ffe013aec2089b70932d9c4/5ffe0d70984b5343178a1933_portraitupnew-min.jpg"
+              alt="Rashetda Cambridge" />
+          </div>
+        </div>
+
+        <!-- RIGHT: Client Logos (slider, 6 per page) + Bio -->
+        <div class="about-col-right">
+
+          <div class="logo-slider-wrap">
+            <div class="logo-slider-pages">
+
+              <!-- Page 1: 6 logos -->
+              <div class="logo-page active" id="logoPage0">
+                <div class="logo-cell"><img src="https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6006b7f1a9167a638dd58648_Client-logos_Pfizer.svg" alt="Pfizer"/></div>
+                <div class="logo-cell"><img src="https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6006b7e3f1b67d42c3f9c169_Client-logos_P57.svg" alt="Physique 57"/></div>
+                <div class="logo-cell"><img src="https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6006b7b91d0b064346b27eb9_Client-logos_Ogilvy.svg" alt="Ogilvy"/></div>
+                <div class="logo-cell"><img src="https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6006b7a70281d0583dbe8393_Client-logos_Nickelodeon.svg" alt="Nickelodeon"/></div>
+                <div class="logo-cell"><img src="https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6006b79a808235a3ccb1159e_Client-logos_Movantik.svg" alt="Movantik"/></div>
+                <div class="logo-cell"><img src="https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6006b789924342ae79eb6b78_Client-logos_Midcoast%20Energy.svg" alt="Midcoast Energy"/></div>
+              </div>
+
+              <!-- Page 2: remaining 3 logos -->
+              <div class="logo-page" id="logoPage1">
+                <div class="logo-cell"><img src="https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6006b76f89f788588c476549_Client-logos_Comcast.svg" alt="Comcast"/></div>
+                <div class="logo-cell"><img src="https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/69a4f0e8f1bbddbf489ea599_ATT-logo.png" alt="AT&T"/></div>
+                <div class="logo-cell"><img src="https://cdn.prod.website-files.com/5ffe013b4ba2cc04235417b4/6006b736e93e29ec86853fe9_Client-logos_Andela.svg" alt="Andela"/></div>
+              </div>
+
+            </div>
+
+            <div class="logo-controls">
+              <button class="logo-btn" id="logoPrev" aria-label="Previous">&#8592;</button>
+              <div class="logo-dots">
+                <span class="logo-dot active" data-page="0"></span>
+                <span class="logo-dot" data-page="1"></span>
+              </div>
+              <button class="logo-btn" id="logoNext" aria-label="Next">&#8594;</button>
+            </div>
+          </div>
+
+          <!-- Bio -->
+          <div class="about-bio">
+            <h2 class="about-bio-headline">I am fascinated by human behavior, it is what pulled me into design and what keeps me here.</h2>
+            <p>I have worked across industries and scales, from brand systems and campaign ecosystems to enterprise product and service design, always focused on the same problem, how do you make something that actually works for the person using it.</p>
+            <p>I have led end to end research, strategy, concept, and execution across creative direction, experience design, and systems thinking. I help organizations understand not just what to build, but why it will matter to the people they are building it for.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── CTA BAND ─────────────────────────────────────────────── -->
+  <a href="mailto:rashetda@rdotcambridge.com" class="about-cta-band">
+    <div class="about-cta-inner">
+      <span class="about-cta-text">Let's Design<br>Something!</span>
+      <span class="about-cta-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg>
+      </span>
+    </div>
+  </a>
+
+</div>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-work-section">
+      <p class="footer-label">Work</p>
+      <div class="footer-grid">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="btki-casestudy-rdot.html">BTKi Education</a>        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html">EHE</a>
+        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+        <a href="#">Nickelodeon</a>      </div>
+    </div>
+    <div class="footer-pages-col">
+      <a href="rdot-home.html">Home</a>
+      <a href="about-rdot.html">About</a>
+      <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+      <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ── Nav ─────────────────────────────── */
+  var hamburger = document.getElementById('hamburger');
+  var navPanel  = document.getElementById('navPanel');
+  var siteNav   = document.getElementById('siteNav');
+  var open = false;
+  hamburger.addEventListener('click', function(){
+    open = !open;
+    hamburger.classList.toggle('open', open);
+    navPanel.classList.toggle('open', open);
+    siteNav.classList.toggle('panel-open', open);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && open) hamburger.click();
+  });
+
+  /* ── Logo slider ─────────────────────── */
+  var pages   = document.querySelectorAll('.logo-page');
+  var dots    = document.querySelectorAll('.logo-dot');
+  var current = 0;
+  var total   = pages.length;
+
+  function goTo(n) {
+    pages[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + total) % total;
+    pages[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  document.getElementById('logoPrev').addEventListener('click', function(){ goTo(current - 1); });
+  document.getElementById('logoNext').addEventListener('click', function(){ goTo(current + 1); });
+  dots.forEach(function(dot){
+    dot.addEventListener('click', function(){ goTo(parseInt(dot.dataset.page)); });
+  });
+})();
+</script>
+</body>
+</html>

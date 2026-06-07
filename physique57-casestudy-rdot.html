@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Physique 57 — Case Study · Rashetda Cambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="rdot-casestudy-system.css"/>
+
+<style>
+.si{display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;color:currentColor}
+:root{--page-accent:#C0392B}
+.section-label{font-size:16px;font-weight:400;letter-spacing:0.04em;text-transform:none;color:#004e7c;margin-bottom:16px}
+.dark-band .section-label{color:var(--yellow)}
+.blockquote-pull{border-left-color:var(--page-accent)}
+.pull-quote{border-left-color:var(--page-accent)}
+.outcome-item::before{display:none}
+.brand-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.brand-right{display:flex;flex-direction:column;gap:0}
+.brand-right .deliverable-item{display:flex;flex-direction:row;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)}
+.brand-right .deliverable-item:first-child{border-top:1px solid var(--border)}
+@media(max-width:768px){.brand-layout{grid-template-columns:1fr}}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
+.hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
+.hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
+.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
+.meta-item{flex:1;padding:28px 20px;border-right:1px solid var(--border)}
+.meta-item:last-child{border-right:none}
+.meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
+.meta-item span{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--ink);font-weight:600}
+.hero-right{background:#1a1a1a;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden}
+@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
+</style>
+</head>
+<body>
+<!-- ══ DRAFT BANNER ══ -->
+<div style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#FEDB00;color:#0C0C0C;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-align:center;padding:10px 16px;display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+  <span>&#9679; Draft — Physique 57 — Not Published &nbsp;·&nbsp; Hidden from navigation &amp; footer &nbsp;·&nbsp; Remove this banner before publishing</span>
+</div>
+<div style="height:40px;"></div>
+<!-- ══ END DRAFT BANNER ══ -->
+
+
+<!-- ══ NAV ══ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="https://rdotcambridge.com" class="nav-wordmark">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" aria-label="rdot"><path fill="#fedb00" d="M46.74,20.4h-26.34v59.07h1.39c3.37,0,6.11-2.74,6.11-6.11V27.9h14.12c3.37,0,6.11-2.74,6.11-6.11v-1.39h-1.39Z"/><path fill="#78b8e9" d="M78.21,20.4h-26.7v1.39c0,3.37,2.74,6.11,6.11,6.11h14.48v44.2h-24.46c-3.37,0-6.11,2.74-6.11,6.11v1.39h38.08V20.4h-1.4Z"/><path class="rc-dot" fill="#0C0C0C" d="M34.91,72.1c-2.07,0-3.75,1.68-3.75,3.75s1.68,3.75,3.75,3.75,3.75-1.68,3.75-3.75-1.69-3.75-3.75-3.75Z"/></svg>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-panel" id="navPanel">
+  <p class="nav-panel-label">Work</p>
+  <div class="nav-panel-work">
+    <a href="andela-casestudy-rdot.html">Andela</a>
+    <a href="att-casestudy-rdot.html">AT&amp;T</a>
+    <a href="boa-casestudy-rdot.html">Bank of America</a>
+    <a href="btki-casestudy-rdot.html">BTKi Education</a>
+    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+    <a href="ehe-casestudy-rdot.html">EHE</a>
+    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-links">
+    <a href="rdot-home.html">Home</a>
+    <a href="about-rdot.html">About</a>
+    <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+    <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-label">Physique 57 &nbsp;·&nbsp; Brand Development &amp; UX Design</p>
+    <h1>Glow With<br/><em>the Flow.</em></h1>
+    <div class="hero-meta"></div>
+  </div>
+  <div class="hero-right"></div>
+</section>
+  </div>
+</div>
+
+<!-- ══ OVERVIEW ══ -->
+<section id="overview">
+  <div class="container">
+    <p class="section-label fade-up">Overview</p>
+    <h2 class="section-title fade-up">From Studio<br/><span class="section-title-italic">to Screen.</span></h2>
+    <p class="section-subtitle fade-up">Brand revitalization, transitioning from in-studio sessions to virtual classes. Physique 57 needed a visual system that could carry the energy of a live workout into a digital product &#8212; without losing what made the studio feel like the studio.</p>
+
+    <div class="two-col fade-up" style="margin-top:40px;">
+      <div class="card">
+        <h4>The Transition Challenge</h4>
+        <p>A pandemic-driven shift to live streaming required an entirely new asset set and product experience &#8212; built on top of an existing brand identity rather than replacing it.</p>
+      </div>
+      <div class="card">
+        <h4>The Brand Constraint</h4>
+        <p>The refresh had to feel energetic and modern without abandoning the signature studio personality that loyal members already connected with.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ APPROACH ══ -->
+<section id="approach" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Approach</p>
+    <h2 class="section-title fade-up">Glow With<br/><span class="section-title-italic">the Flow</span></h2>
+    <div class="brand-layout fade-up">
+      <div class="brand-left">
+        <p class="section-body">Inspired by the studio&#8217;s signature ambiance lighting, the refresh was themed &#8220;Glow With The Flow&#8221; &#8212; capturing the energy of the trainees and the glow of sweat and heat generated during intense workouts.</p>
+        <p class="section-body" style="margin-top:24px;">The design direction employed clean, modern lines throughout the visual system to unify the overall redesign and bridge physical and virtual experiences. Rather than reinventing the wheel, the emphasis was on creating the necessary assets to white-label an existing industry-standard tech solution &#8212; building around what already worked.</p>
+        <p class="section-body" style="margin-top:24px;">Mobile and live streaming were the primary surfaces. The brand refresh was designed to address the significant shift in how members were accessing content, with every touchpoint reconsidered for smaller screens and streaming contexts.</p>
+      </div>
+      <div class="brand-right">
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--page-accent)">
+            <circle cx="22" cy="22" r="16"/>
+            <path d="M22 14v8l5 5"/>
+            <path d="M14 8l2 4M30 8l-2 4M8 14l4 2M36 14l-4 2"/>
+          </svg>
+          <div>
+            <h4>Refined Color Palette</h4>
+            <p>Modernized to carry the signature studio energy across digital surfaces &#8212; vibrant without being harsh, refined without losing heat.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--page-accent)">
+            <rect x="6" y="6" width="14" height="14" rx="2"/>
+            <rect x="24" y="6" width="14" height="14" rx="2"/>
+            <rect x="6" y="24" width="14" height="14" rx="2"/>
+            <rect x="24" y="24" width="14" height="14" rx="2"/>
+          </svg>
+          <div>
+            <h4>New Icon System</h4>
+            <p>A consistent icon set built for cross-platform use &#8212; app, web, and streaming surfaces all speaking the same visual language.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--page-accent)">
+            <path d="M10 34c0-6.627 5.373-12 12-12s12 5.373 12 12"/>
+            <circle cx="22" cy="16" r="6"/>
+            <path d="M32 20c3.314 0 6 2.686 6 6"/>
+            <path d="M12 20c-3.314 0-6 2.686-6 6"/>
+          </svg>
+          <div>
+            <h4>Custom Illustrations</h4>
+            <p>Elevated storytelling across the product and brand &#8212; illustrations designed to feel personal and energetic, not generic.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;color:var(--page-accent)">
+            <rect x="6" y="6" width="64" height="64" rx="3"/>
+            <path d="M14 16h16M14 22h12M14 28h8"/>
+          </svg>
+          <div>
+            <h4>Updated Brand Guidelines</h4>
+            <p>Documented for clarity and scalability &#8212; a system the team could hand off, extend, and apply consistently across every channel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOLUTION ══ -->
+<section id="solution">
+  <div class="container">
+    <p class="section-label fade-up">Solution</p>
+    <h2 class="section-title fade-up">Refreshing<br/><span class="section-title-italic">a Brand</span></h2>
+    <p class="section-body fade-up">The brand update delivered complete visual system revitalization. The new identity felt energetic, cohesive, and reflected the studio&#8217;s core personality &#8212; adapted for the digital-first world members were now living in.</p>
+    <p class="section-body fade-up" style="margin-top:24px;">Clean, modern lines unified the overall redesign across every surface. The white-label streaming integration meant working within technical constraints &#8212; the design system was built to be flexible enough to apply consistently whether inside a custom-built product or wrapped around a third-party platform.</p>
+  </div>
+</section>
+
+<!-- ══ OUTCOMES ══ -->
+<section id="outcomes" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Outcomes</p>
+    <div class="brand-layout fade-up">
+      <div class="brand-left">
+        <h2 class="section-title">What the Refresh<br/><span class="section-title-italic">Delivered</span></h2>
+      </div>
+      <div class="brand-right">
+        <div class="deliverable-item">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
+          <div>
+            <h4>Visual System Revitalization</h4>
+            <p>Complete brand refresh &#8212; energetic, cohesive, and aligned with the studio&#8217;s core personality across all digital touchpoints.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
+          <div>
+            <h4>Cross-Platform Icon System</h4>
+            <p>Consistent iconography deployed across app, web, and streaming surfaces &#8212; one language across every product surface.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
+          <div>
+            <h4>Mobile-First Experience</h4>
+            <p>Brand and product designed for the shift to mobile and live streaming &#8212; built to perform where members actually were.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
+          <div>
+            <h4>Scalable Brand Guidelines</h4>
+            <p>A documented system built for handoff &#8212; clear enough to extend consistently without the original designer in the room.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-work-section">
+      <p class="footer-label">Work</p>
+      <div class="footer-grid">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="btki-casestudy-rdot.html">BTKi Education</a>        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html">EHE</a>
+        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
+    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+        <a href="#">Nickelodeon</a>      </div>
+    </div>
+    <div class="footer-pages-col">
+      <a href="rdot-home.html">Home</a>
+      <a href="about-rdot.html">About</a>
+      <a href="mailto:rashetda@rdotcambridge.com">Contact</a>
+      <a href="https://www.linkedin.com/in/rashetdacambridge/" target="_blank" class="linkedin-btn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav       = document.getElementById('siteNav');
+  var hamburger = document.getElementById('hamburger');
+  var panel     = document.getElementById('navPanel');
+
+  hamburger.addEventListener('click', function(){
+    var open = panel.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    nav.classList.toggle('panel-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fade-up').forEach(function(el){ observer.observe(el); });
+})();
+</script>
+</body>
+</html>
