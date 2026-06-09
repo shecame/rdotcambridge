@@ -145,7 +145,8 @@
       "Bash(git commit *)",
       "Bash(git remote *)",
       "Bash(git branch *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(sed -i '' 's/rdot-home\\\\.html/index.html/g' *.html)"
     ]
   }
 }
