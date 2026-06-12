@@ -34,11 +34,11 @@
 .meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
 .meta-item span{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--ink);font-weight:600}
 .hero-right{background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('Mid-hero.png') no-repeat center center;background-size:cover,cover;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden;min-height:100vh}
-.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.stat-cell{padding:44px 32px;background:transparent;border-right:1px solid rgba(255,255,255,0.25);transition:opacity .3s}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:transparent}
+.stat-cell{padding:44px 32px;background:transparent!important;border-right:1px solid rgba(255,255,255,0.25);transition:opacity .3s}
 .stat-cell:last-child{border-right:none}
-.stat-cell:hover{opacity:0.85}
-.stat-cell.accent{background:#add3f1}
+.stat-cell:hover{opacity:0.85;background:transparent!important}
+.stat-cell.accent{background:#add3f1!important}
 .stat-cell.accent:hover{background:#FEDB00!important;opacity:1}
 .stat-num{font-family:'Montserrat',sans-serif;font-size:48px;font-weight:800;line-height:1;color:#ffffff;margin-bottom:8px;letter-spacing:-0.03em}
 .stat-cell.accent .stat-num{color:#0C0C0C}
@@ -87,18 +87,16 @@
     <div class="hero-meta"><div class="meta-item"><label>Role</label><span>Brand &amp; Digital Design Lead</span></div><div class="meta-item"><label>Scope</label><span>Brand Identity &amp; Web Design</span></div><div class="meta-item"><label>Impact</label><span>Regional Brand Unification</span></div></div>
   </div>
   <div class="hero-right">
-    <div class="stat-grid" style="grid-template-columns:1fr;">
-      <div class="stat-cell accent" style="max-width:240px;">
+    <div class="stat-grid">
+      <div class="stat-cell accent">
         <div class="stat-num">95%</div>
         <div class="stat-label">Stakeholder Alignment</div>
       </div>
-    </div>
-    <div style="display:flex;gap:0;margin-top:0;border-top:1px solid rgba(255,255,255,0.15);">
-      <div style="padding:32px 32px 32px 0;">
+      <div class="stat-cell">
         <div class="stat-num">3×</div>
         <div class="stat-label">Faster Navigation to Key Content</div>
       </div>
-      <div style="padding:32px 32px;border-left:1px solid rgba(255,255,255,0.25);">
+      <div class="stat-cell">
         <div class="stat-num">Zero</div>
         <div class="stat-label">User Drop-Off at Launch</div>
       </div>
@@ -112,12 +110,12 @@
   <div class="container">
     <p class="section-label fade-up">Overview</p>
     <h2 class="section-title fade-up">One Microsite.<br/><span class="section-title-italic">Two Jobs to Do.</span></h2>
-    <p class="section-subtitle fade-up">A microsite built to boost awareness and guide stakeholders through a brand evolution &#8212; all while keeping the design clear and intuitive. The goal was to balance continuity and growth in one seamless experience.</p>
+    <p class="section-subtitle fade-up">A microsite built to boost awareness and guide stakeholders through a brand evolution, all while keeping the design clear and intuitive. The goal was to balance continuity and growth in one seamless experience.</p>
 
     <div class="two-col fade-up" style="margin-top:40px;">
       <div class="card">
         <h4>The Continuity Challenge</h4>
-        <p>Stakeholders needed to see the brand they already trusted &#8212; not a replacement, a progression. Every design decision had to feel earned, not imposed.</p>
+        <p>Stakeholders needed to see the brand they already trusted, not a replacement, a progression. Every design decision had to feel earned, not imposed.</p>
       </div>
       <div class="card">
         <h4>The Clarity Requirement</h4>
@@ -135,7 +133,7 @@
     <h2 class="section-title fade-up">Scroll for<br/><span class="section-title-italic">Change</span></h2>
     <div class="brand-layout fade-up">
       <div class="brand-left">
-        <p class="section-body">When it comes to digital design, it all starts with information architecture. Building a solid framework before diving into the visual execution is non-negotiable. After testing several iterations, infinite scroll emerged as the right pattern &#8212; its smooth jump-to links make it easy to move between sections, and users glide through content without hitting roadblocks.</p>
+        <p class="section-body">When it comes to digital design, it all starts with information architecture. Building a solid framework before diving into the visual execution is non-negotiable. After testing several iterations, infinite scroll emerged as the right pattern, with smooth jump-to links making it easy to move between sections, and users glide through content without hitting roadblocks.</p>
         <p class="section-body" style="margin-top:24px;">With a fluid layout, clear content flow, and intuitive interaction patterns, users never have to second-guess their next move. Every section was defined so that as they scrolled, they effortlessly absorbed updates and key information in the right order.</p>
       </div>
       <div class="brand-right">
@@ -180,8 +178,8 @@
   <div class="container">
     <p class="section-label fade-up">Solution</p>
     <h2 class="section-title fade-up">Seamless<br/><span class="section-title-italic">Transformation</span></h2>
-    <p class="section-body fade-up">The brief was clear: create a design that feels forward-thinking, progressive, and dynamic. Photography with depth of field drew users in and set the tone for the site&#8217;s vision. Illustrations were minimal and clean &#8212; just enough to support the message without overpowering it.</p>
-    <p class="section-body fade-up" style="margin-top:24px;">Every navigational touchpoint was chosen to reveal a transformational milestone as users moved through the site. The result was an experience where the act of scrolling itself felt like participating in the brand&#8217;s evolution &#8212; not just reading about it.</p>
+    <p class="section-body fade-up">The brief was clear: create a design that feels forward-thinking, progressive, and dynamic. Photography with depth of field drew users in and set the tone for the site&#8217;s vision. Illustrations were minimal and clean, just enough to support the message without overpowering it.</p>
+    <p class="section-body fade-up" style="margin-top:24px;">Every navigational touchpoint was chosen to reveal a transformational milestone as users moved through the site. The result was an experience where the act of scrolling itself felt like participating in the brand&#8217;s evolution, not just reading about it.</p>
     <img src="Mid-home.png" alt="Midcoast Website" style="width:100%;display:block;margin-top:48px;">
   </div>
 </section>
@@ -193,15 +191,9 @@
     <div class="brand-layout fade-up">
       <div class="brand-left">
         <h2 class="section-title">What the Microsite<br/><span class="section-title-italic">Delivered</span></h2>
+        <p class="section-subtitle" style="margin-top:24px;">Complex brand transitions rarely land cleanly. The microsite gave stakeholders a clear thread to follow, the transformation made sense without needing a room full of context to explain it.</p>
       </div>
       <div class="brand-right">
-        <div class="deliverable-item">
-          <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
-          <div>
-            <h4>Stakeholder Clarity</h4>
-            <p>Complex brand evolution communicated clearly &#8212; stakeholders could follow the transformation story without friction.</p>
-          </div>
-        </div>
         <div class="deliverable-item">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
           <div>
@@ -213,14 +205,14 @@
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
           <div>
             <h4>Visual Cohesion</h4>
-            <p>Photography and minimal illustration worked as a system &#8212; depth and clarity in the same frame.</p>
+            <p>Photography and minimal illustration worked as a system, depth and clarity in the same frame.</p>
           </div>
         </div>
         <div class="deliverable-item">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
           <div>
             <h4>Brand Continuity</h4>
-            <p>The design felt like a progression, not a replacement &#8212; trust in the existing brand carried forward into the new direction.</p>
+            <p>The design felt like a progression, not a replacement, and trust in the existing brand carried forward into the new direction.</p>
           </div>
         </div>
       </div>

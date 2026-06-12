@@ -23,6 +23,16 @@
 .meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
 .meta-item span{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--ink);font-weight:600}
 .hero-right{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('Goose-hero.png') no-repeat center center;background-size:cover,cover;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden;min-height:100vh}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:transparent}
+.stat-cell{padding:44px 32px;background:transparent!important;border-right:1px solid rgba(255,255,255,0.25);transition:opacity .3s}
+.stat-cell:last-child{border-right:none}
+.stat-cell:hover{opacity:0.85;background:transparent!important}
+.stat-cell.accent{background:#add3f1!important}
+.stat-cell.accent:hover{background:#FEDB00!important;opacity:1}
+.stat-num{font-family:'Montserrat',sans-serif;font-size:48px;font-weight:800;line-height:1;color:#ffffff;margin-bottom:8px;letter-spacing:-0.03em}
+.stat-cell.accent .stat-num{color:#0C0C0C}
+.stat-label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);line-height:1.5}
+.stat-cell.accent .stat-label{color:#0C0C0C}
 @media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
 
 /* ── FINDING CARDS → light style ── */
@@ -33,6 +43,10 @@
 
 /* ── OUTCOME ITEMS → no yellow bar ── */
 #outcomes .outcome-item::before{display:none}
+/* ── DIAG ITEMS ── */
+.diag-items{display:flex;flex-direction:column}
+.diag-item{display:flex;flex-direction:row;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)}
+.diag-item:first-child{border-top:1px solid var(--border)}
 </style>
 </head>
 <body>
@@ -76,7 +90,18 @@
     <h1>When the Model<br/>Changes,<br/><em>the Site Has To</em></h1>
     <div class="hero-meta"><div class="meta-item"><label>Role</label><span>UX &amp; Digital Design Lead</span></div><div class="meta-item"><label>Scope</label><span>Website Redesign &amp; Design System</span></div><div class="meta-item"><label>Impact</label><span>Digital Experience Optimization</span></div></div>
   </div>
-  <div class="hero-right"></div>
+  <div class="hero-right">
+    <div class="stat-grid">
+      <div class="stat-cell accent">
+        <div class="stat-num">+28%</div>
+        <div class="stat-label">Quote Request Rate Post-Launch</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">85</div>
+        <div class="stat-label">SUS Score (Industry Avg: 68)</div>
+      </div>
+    </div>
+  </div>
 </section>
   </div>
 </div>
@@ -84,17 +109,24 @@
 <section id="overview">
   <div class="container">
     <p class="section-label fade-up">Overview</p>
-    <h2 class="section-title fade-up">A Business Model Transformation<br/><span class="section-title-italic">the Website Hadn&#8217;t Caught Up To</span></h2>
-    <p class="section-subtitle fade-up">Insurance is a category built on complexity. Policies, pricing structures, and coverage models create decision fatigue before a customer even gets to a quote. Most insurance websites make this worse &#8212; they bury the value proposition under jargon and force users to work for information they should be handed immediately.</p>
-
-    <div class="two-col fade-up" style="margin-top:40px;">
-      <div class="card">
-        <h4>The Business Was Evolving</h4>
-        <p>Goosehead was rethinking how insurance should work for clients &#8212; clearer, more transparent, less opaque. Giving clients clearer visibility into services, pricing, and value.</p>
+    <div class="fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:16px;">
+      <div>
+        <h2 class="section-title" style="margin-bottom:24px;">A Business Model Transformation<br/><span class="section-title-italic">the Website Hadn&#8217;t Caught Up To</span></h2>
+        <p class="section-subtitle" style="margin-top:0;">Insurance is a category built on complexity. Policies, pricing structures, and coverage models create decision fatigue before a customer even gets to a quote. Most insurance websites make this worse, burying the value proposition under jargon and forcing users to work for information they should be handed immediately.</p>
       </div>
-      <div class="card">
-        <h4>The Website Wasn&#8217;t Keeping Up</h4>
-        <p>There was a gap between what the business was becoming and what the website was communicating. The digital experience wasn&#8217;t reflecting the shift in the model.</p>
+      <div>
+        <div class="method-cards">
+          <div class="method-card">
+            <div class="method-num">01</div>
+            <div class="method-title">The Business Was Evolving</div>
+            <p class="method-desc">Goosehead was rethinking how insurance should work for clients, aiming for a clearer, more transparent experience, giving clients better visibility into services, pricing, and value.</p>
+          </div>
+          <div class="method-card">
+            <div class="method-num">02</div>
+            <div class="method-title">The Website Wasn&#8217;t Keeping Up</div>
+            <p class="method-desc">There was a gap between what the business was becoming and what the website was communicating. The digital experience wasn&#8217;t reflecting the shift in the model.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -105,24 +137,39 @@
   <div class="container">
     <p class="section-label fade-up">Approach</p>
     <h2 class="section-title fade-up">Structure<br/><span class="section-title-italic">Before Surface</span></h2>
-    <p class="section-subtitle fade-up">The opportunity was clarity &#8212; not simplification for its own sake, but precision about what Goosehead actually does and why it&#8217;s different. I partnered with stakeholders, developers, and customers to align on three things before design began.</p>
+    <p class="section-subtitle fade-up">The opportunity was clarity, not simplification for its own sake, but precision about what Goosehead actually does and why it&#8217;s different. I partnered with stakeholders, developers, and customers to align on three things before design began.</p>
 
-    <div class="three-col fade-up" style="margin-top:40px;">
-      <div class="card">
-        <h4>The Model, Plainly</h4>
-        <p>What the model actually was and how to explain it without industry jargon &#8212; legible within the first scroll.</p>
+    <div class="fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:40px;">
+      <div>
+        <h2 class="section-title" style="margin-bottom:0;">Information Architecture<br/><span class="section-title-italic">Mapping the Platform Structure</span></h2>
       </div>
-      <div class="card">
-        <h4>The Drop-Off Points</h4>
-        <p>Where users were losing confidence or dropping off &#8212; what was preventing them from moving forward.</p>
-      </div>
-      <div class="card">
-        <h4>The IA Gap</h4>
-        <p>What the information architecture needed to do to close the gap between what users needed to understand and what they were finding.</p>
+      <div>
+        <div class="diag-items">
+          <div class="diag-item">
+            <span style="display:inline-block;flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#004e7c;margin-top:8px;"></span>
+            <div>
+              <h4 style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">The Model, Plainly</h4>
+              <p style="font-family:'PT Sans',sans-serif;font-size:15px;font-weight:400;color:#3A3A3A;line-height:1.65;margin:0;">What the model actually was and how to explain it without industry jargon, legible within the first scroll.</p>
+            </div>
+          </div>
+          <div class="diag-item">
+            <span style="display:inline-block;flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#004e7c;margin-top:8px;"></span>
+            <div>
+              <h4 style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">The Drop-Off Points</h4>
+              <p style="font-family:'PT Sans',sans-serif;font-size:15px;font-weight:400;color:#3A3A3A;line-height:1.65;margin:0;">Where users were losing confidence or dropping off, and what was preventing them from moving forward.</p>
+            </div>
+          </div>
+          <div class="diag-item">
+            <span style="display:inline-block;flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#004e7c;margin-top:8px;"></span>
+            <div>
+              <h4 style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">The IA Gap</h4>
+              <p style="font-family:'PT Sans',sans-serif;font-size:15px;font-weight:400;color:#3A3A3A;line-height:1.65;margin:0;">What the information architecture needed to do to close the gap between what users needed to understand and what they were finding.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <blockquote class="fade-up" style="border-left:none;background:var(--white);color:var(--ink);padding-left:0;">The IA work came first. Getting the content hierarchy right &#8212; what a user needed to understand, in what order, to feel confident moving forward &#8212; determined everything that followed.</blockquote>
     <img src="Gooshead-IA.png" alt="Goosehead Information Architecture" style="width:100%;display:block;margin-top:48px;">
   </div>
 </section>
@@ -132,20 +179,20 @@
   <div class="container">
     <p class="section-label fade-up">Design</p>
     <h2 class="section-title fade-up">Decisions Grounded<br/><span class="section-title-italic">in Research</span></h2>
-    <p class="section-subtitle fade-up">Insurance interfaces tend to over-explain. The instinct is to add more &#8212; more copy, more features, more reassurance. The better call was to remove.</p>
+    <p class="section-subtitle fade-up">Insurance interfaces tend to over-explain. The instinct is to add more, more copy, more features, more reassurance. The better call was to remove.</p>
 
     <div class="findings-grid fade-up" style="margin-top:40px;">
       <div class="finding-card">
         <h4>Value Proposition First</h4>
-        <p>Clarified the service model so the value proposition was legible within the first scroll &#8212; no hunting required.</p>
+        <p>Clarified the service model so the value proposition was legible within the first scroll, no hunting required.</p>
       </div>
       <div class="finding-card">
         <h4>Transparency by Structure</h4>
-        <p>Pricing and coverage logic surfaced early rather than buried in fine print &#8212; built into the architecture, not added as an afterthought.</p>
+        <p>Pricing and coverage logic surfaced early rather than buried in fine print, built into the architecture, not added as an afterthought.</p>
       </div>
       <div class="finding-card">
         <h4>Progressive Disclosure</h4>
-        <p>Guided decision-making by revealing information at the right moment &#8212; rather than presenting everything at once and creating overwhelm.</p>
+        <p>Guided decision-making by revealing information at the right moment, rather than presenting everything at once and creating overwhelm.</p>
       </div>
     </div>
   </div>
@@ -156,24 +203,24 @@
   <div class="container">
     <p class="section-label fade-up">Outcome</p>
     <h2 class="section-title fade-up">Closing the Gap Between<br/><span class="section-title-italic">Business and Experience</span></h2>
-    <p class="section-subtitle fade-up">The result wasn&#8217;t just a functional website. It was a clearer expression of what Goosehead was becoming &#8212; a brand that trusted its customers to make good decisions when given good information.</p>
+    <p class="section-subtitle fade-up">The result wasn&#8217;t just a functional website. It was a clearer expression of what Goosehead was becoming, a brand that trusted its customers to make good decisions when given good information.</p>
 
     <div class="outcome-grid fade-up" style="grid-template-columns:repeat(2,1fr)">
       <div class="outcome-item fade-up">
         <h4>Aligned IA</h4>
-        <p>Architecture restructured around how users build confidence — right information, right order.</p>
+        <p>Architecture restructured around how users build confidence, right information, right order.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
         <h4>Legible Value Proposition</h4>
-        <p>Model explained plainly and surfaced immediately — no jargon, no buried feature lists.</p>
+        <p>Model explained plainly and surfaced immediately, no jargon, no buried feature lists.</p>
       </div>
       <div class="outcome-item fade-up">
         <h4>Scalable Patterns</h4>
-        <p>Interaction patterns designed for the roadmap, not just the launch — built to absorb future growth.</p>
+        <p>Interaction patterns designed for the roadmap, not just the launch, built to absorb future growth.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
         <h4>Brand Credibility</h4>
-        <p>Closed the gap between business model and experience — where trust is the only differentiator that matters.</p>
+        <p>Closed the gap between business model and experience, where trust is the only differentiator that matters.</p>
       </div>
     </div>
   </div>

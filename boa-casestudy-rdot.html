@@ -859,7 +859,7 @@ footer a:hover{text-decoration:underline}
         <tr><td class="col-name">Recognition over recall</td><td>User should not need to remember info across the interface.</td><td style="text-align:center;color:var(--green);font-weight:700;">✓</td><td style="text-align:center;"><span class="badge badge-improv">Improve</span></td><td>Navigation does not always prominently highlight current location.</td></tr>
         <tr><td class="col-name">Flexibility &amp; efficiency</td><td>Design caters to both inexperienced and experienced users.</td><td style="text-align:center;color:var(--red);font-weight:700;">✗</td><td style="text-align:center;"><span class="badge badge-crit">Critical</span></td><td>Printing terminology needs descriptions; new users cannot understand requirements.</td></tr>
         <tr><td class="col-name">Aesthetic integrity</td><td>Interface does not contain irrelevant or rarely-needed information.</td><td style="text-align:center;color:var(--red);font-weight:700;">✗</td><td style="text-align:center;"><span class="badge badge-crit">Critical</span></td><td>Requestor and Admin roles need separate screens; Admin visible during requestor flows.</td></tr>
-        <tr><td class="col-name">Helps users</td><td>Error messages in plain language, precise and constructive.</td><td style="text-align:center;color:var(--green);font-weight:700;">✓</td><td style="text-align:center;"><span class="badge badge-ok">Success</span></td><td>Error messaging is clear and constructive — a genuine strength.</td></tr>
+        <tr><td class="col-name">Helps users</td><td>Error messages in plain language, precise and constructive.</td><td style="text-align:center;color:var(--green);font-weight:700;">✓</td><td style="text-align:center;"><span class="badge badge-ok">Success</span></td><td>Error messaging is clear and constructive, a genuine strength.</td></tr>
         <tr><td class="col-name">User support</td><td>Help documentation is easy to locate and search.</td><td style="text-align:center;color:var(--red);font-weight:700;">✗</td><td style="text-align:center;"><span class="badge badge-crit">Critical</span></td><td>No assistance aids can be located anywhere in the system.</td></tr>
       </tbody>
     </table>
@@ -871,7 +871,7 @@ footer a:hover{text-decoration:underline}
   <div class="container">
     <div class="section-label fade-up">Process Map</div>
     <h2 class="section-title fade-up">Service<br/><span class="section-title-italic">Blueprint</span></h2>
-    <p class="section-subtitle fade-up">Mapping user journeys, frontstage actions, backstage processes, and supporting systems across six phases — revealing where the workflow broke down and where future-state improvements would have the most impact.</p>
+    <p class="section-subtitle fade-up">Mapping user journeys, frontstage actions, backstage processes, and supporting systems across six phases, revealing where the workflow broke down and where future-state improvements would have the most impact.</p>
 
     <div class="bp2-legend">
       <div class="bp2-leg"><div class="bp2-swatch" style="background:#E1F5EE"></div>Frontstage / user action</div>
@@ -918,11 +918,11 @@ footer a:hover{text-decoration:underline}
         <tr>
           <td class="lane-label" style="background:#E6F1FB">Customer<br>journey<em>LOB / requestor</em></td>
           <td>
-            <div class="box box-teal">Submits print or fulfillment job via SSOS form — or daily automated batch triggers</div>
+            <div class="box box-teal">Submits print or fulfillment job via SSOS form, or daily automated batch triggers</div>
             <span class="flag flag-warn">wizard flow needed</span>
           </td>
           <td>
-            <div class="box box-gray">Receives email with file count — only available status update</div>
+            <div class="box box-gray">Receives email with file count, the only available status update</div>
             <span class="flag flag-crit">no in-app visibility</span>
           </td>
           <td class="empty">
@@ -937,7 +937,7 @@ footer a:hover{text-decoration:underline}
             <span class="flag flag-warn">manual billing process</span>
           </td>
           <td>
-            <div class="box box-gray">Must request reports from staff — cannot self-serve</div>
+            <div class="box box-gray">Must request reports from staff, cannot self-serve</div>
             <span class="flag flag-crit">no self-service reporting</span>
           </td>
         </tr>
@@ -952,12 +952,12 @@ footer a:hover{text-decoration:underline}
         <tr>
           <td class="lane-label" style="background:#E1F5EE">Frontstage<em>SSOS interface</em></td>
           <td>
-            <div class="box box-teal">SSOS displays request form — admin and requestor views combined on same screen</div>
+            <div class="box box-teal">SSOS displays request form, admin and requestor views combined on same screen</div>
             <span class="flag flag-crit">role conflict</span>
           </td>
           <td>
             <div class="box box-teal">Email notification sent to team with file count</div>
-            <span class="flag flag-warn">email only — no in-app status</span>
+            <span class="flag flag-warn">email only, no in-app status</span>
           </td>
           <td>
             <div class="box box-crit">No connection to QDirect; production data fully siloed from SSOS</div>
@@ -968,11 +968,11 @@ footer a:hover{text-decoration:underline}
             <span class="flag flag-crit">manual workaround</span>
           </td>
           <td>
-            <div class="box box-warn">Billing worksheet generated via manual Excel manipulation — 2–4 hrs daily</div>
+            <div class="box box-warn">Billing worksheet generated via manual Excel manipulation, 2–4 hrs daily</div>
             <span class="flag flag-crit">critical time cost</span>
           </td>
           <td>
-            <div class="box box-teal">15 report types available — all manually generated and pulled by staff</div>
+            <div class="box box-teal">15 report types available, all manually generated and pulled by staff</div>
             <span class="flag flag-warn">no email / download option</span>
           </td>
         </tr>
@@ -1011,11 +1011,11 @@ footer a:hover{text-decoration:underline}
         <tr>
           <td class="lane-label" style="background:#FAEEDA">Backstage<em>Operations · Print<br>Fulfillment · Inventory</em></td>
           <td>
-            <div class="box box-warn">Request info stored in QDirect; partitions created; super users train new staff — no in-app guidance</div>
+            <div class="box box-warn">Request info stored in QDirect; partitions created; super users train new staff, no in-app guidance</div>
             <span class="flag flag-crit">knowledge dependency</span>
           </td>
           <td>
-            <div class="box box-crit">Data extracted from QDirect via NotePad &amp; Excel, then manually loaded into SSOS. Inventory team enters new items into Tecsys AND The Vault separately — up to 30 new items per day</div>
+            <div class="box box-crit">Data extracted from QDirect via NotePad &amp; Excel, then manually loaded into SSOS. Inventory team enters new items into Tecsys AND The Vault separately, up to 30 new items per day</div>
             <span class="flag flag-crit">duplicate manual entry</span>
           </td>
           <td>
@@ -1046,19 +1046,19 @@ footer a:hover{text-decoration:underline}
         <tr>
           <td class="lane-label" style="background:#FAECE7">Support processes<em>Architecture · Compliance<br>Vendor management</em></td>
           <td>
-            <div class="box box-crit">SSOS on Classic ASP — not compliant with ADA/WCAG 2.1 or MRF (Monitoring Response &amp; Forensics) standards</div>
+            <div class="box box-crit">SSOS on Classic ASP, not compliant with ADA/WCAG 2.1 or MRF (Monitoring Response &amp; Forensics) standards</div>
             <span class="flag flag-crit">compliance risk · Rec: Refresh → ASP.NET</span>
           </td>
           <td>
-            <div class="box box-crit">No automated integration between any systems. CashBag and SSOS both on MS SQL Server 2012 — extended support ended 2022</div>
+            <div class="box box-crit">No automated integration between any systems. CashBag and SSOS both on MS SQL Server 2012, extended support ended 2022</div>
             <span class="flag flag-crit">tech debt · Rec: automate all data feeds</span>
           </td>
           <td>
-            <div class="box box-crit">QDirect on CentOS OS — not supported by bank monitoring tools. Confidential print data not encrypted in transit or at rest. Only 1 external support person globally</div>
+            <div class="box box-crit">QDirect on CentOS OS, not supported by bank monitoring tools. Confidential print data not encrypted in transit or at rest. Only 1 external support person globally</div>
             <span class="flag flag-crit">security gap · Rec: Buy → v6.0 + IPP</span>
           </td>
           <td>
-            <div class="box box-warn">Tecsys vendor relationship difficult — slow defect response. Tecsys–Vault integration incomplete; full encryption not possible. Keyboard navigation broken (WCAG gap)</div>
+            <div class="box box-warn">Tecsys vendor relationship difficult, slow defect response. Tecsys–Vault integration incomplete; full encryption not possible. Keyboard navigation broken (WCAG gap)</div>
             <span class="flag flag-warn">Rec: Update or Buy; engage vendor mgmt</span>
           </td>
           <td>
@@ -1066,7 +1066,7 @@ footer a:hover{text-decoration:underline}
             <span class="flag flag-crit">access risk · Rec: consolidate CashBag into SSOS</span>
           </td>
           <td>
-            <div class="box box-warn">Tecsys report writer capability undertrained; SSOS reporting architecture on legacy stack — hard to extend</div>
+            <div class="box box-warn">Tecsys report writer capability undertrained; SSOS reporting architecture on legacy stack, hard to extend</div>
             <span class="flag flag-warn">Rec: expand in-app reporting options</span>
           </td>
         </tr>
@@ -1087,13 +1087,13 @@ footer a:hover{text-decoration:underline}
             <div class="box box-green">Automate QDirect → SSOS data feed; eliminate NotePad/Excel handoff entirely. Decommission CashBag AIT; consolidate into SSOS (save ~$5,500/mo). Automate Tecsys ↔ Vault inventory sync</div>
           </td>
           <td>
-            <div class="box box-green">Production scheduling dashboard in SSOS hub pulling live QDirect data. Automated service alerts on equipment failure. QDirect upgrade to v6.0 — web client, SSO flow, WCAG 2.0 compliance</div>
+            <div class="box box-green">Production scheduling dashboard in SSOS hub pulling live QDirect data. Automated service alerts on equipment failure. QDirect upgrade to v6.0, web client, SSO flow, WCAG 2.0 compliance</div>
           </td>
           <td>
-            <div class="box box-green">Production calendar visible to all staff — no more morning emails. Tecsys customized user views to remove unused features. In-app + email notifications with user preference settings</div>
+            <div class="box box-green">Production calendar visible to all staff, no more morning emails. Tecsys customized user views to remove unused features. In-app + email notifications with user preference settings</div>
           </td>
           <td>
-            <div class="box box-green">Automated billing reconciliation — eliminate manual Excel charge-back. ARM-managed access controls for QDirect. CashBag data surfaced inline in SSOS dashboard</div>
+            <div class="box box-green">Automated billing reconciliation, eliminate manual Excel charge-back. ARM-managed access controls for QDirect. CashBag data surfaced inline in SSOS dashboard</div>
           </td>
           <td>
             <div class="box box-green">LOBs can self-pull reports from SSOS hub: email, download, and on-screen view. Centralized Support Services Hub delivers full end-to-end visibility for all roles and LOBs</div>
