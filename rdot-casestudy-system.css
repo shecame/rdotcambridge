@@ -944,7 +944,10 @@ footer a { text-decoration: none; }
   .persona-grid { grid-template-columns: 1fr; }
   footer { padding: 60px 40px 48px; }
   .footer-top { flex-direction: column; gap: 48px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid a { display: inline-block; width: fit-content; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .footer-pages-col a { display: inline-block; width: fit-content; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .footer-pages-col a.linkedin-btn { border-bottom: none; }
 }
 @media (max-width: 480px) {
   .hero-dark h1 { font-size: clamp(28px, 9vw, 40px); }
