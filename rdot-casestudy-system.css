@@ -209,6 +209,7 @@ p {
     padding-top: 12px;
     margin-top: 0;
   }
+  .meta-item + .meta-item { border-left: none !important; padding-left: 0 !important; }
   .meta-item:first-child { padding-top: 0; }
 }
 
