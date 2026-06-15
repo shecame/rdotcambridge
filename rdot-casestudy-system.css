@@ -198,6 +198,19 @@ p {
   .footer-pages-col a.linkedin-btn {
     border-bottom: none;
   }
+  .hero-meta { flex-direction: column !important; gap: 0 !important; align-items: flex-start; }
+  .meta-item {
+    display: inline-flex !important;
+    flex-direction: column;
+    width: fit-content;
+    border-left: none !important;
+    padding-left: 0 !important;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+  .meta-item:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+  .hero-dark .meta-item { border-top-color: rgba(255,255,255,0.12); }
 }
 
 /* ══ NAV: DROPDOWN (BOA reference pattern — kept for reference only) ═
@@ -924,13 +937,6 @@ footer a { text-decoration: none; }
   .hero-right { display: none; }
   .hero-dark { padding: 120px 0 56px; }
   .hero-dark h1 { font-size: clamp(32px, 8vw, 48px); }
-  .hero-meta { flex-direction: column !important; gap: 0 !important; }
-  .meta-item {
-    border-left: none !important; padding-left: 0 !important;
-    border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px;
-  }
-  .meta-item:first-child { border-top: none; padding-top: 0; margin-top: 0; }
-  .hero-dark .meta-item { border-top-color: rgba(255,255,255,0.12); }
   .role-col, .role-bg { padding: 28px 20px !important; }
   .role-grid { grid-template-columns: 1fr; }
   .stats-row { grid-template-columns: 1fr; }
