@@ -203,14 +203,13 @@ p {
     display: block !important;
     width: 100%;
     border-left: none !important;
+    border-top: none !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    border-top: 1px solid var(--border);
     padding-top: 12px;
-    margin-top: 12px;
+    margin-top: 0;
   }
-  .meta-item:first-child { border-top: none; padding-top: 0; margin-top: 0; }
-  .hero-dark .meta-item { border-top-color: rgba(255,255,255,0.12); }
+  .meta-item:first-child { padding-top: 0; }
 }
 
 /* ══ NAV: DROPDOWN (BOA reference pattern — kept for reference only) ═
