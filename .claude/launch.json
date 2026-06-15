@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "portfolio",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8765"],
+      "runtimeExecutable": "ruby",
+      "runtimeArgs": ["-e", "require 'webrick'; s=WEBrick::HTTPServer.new(:Port=>8765,:DocumentRoot=>'/Users/rashetdacambridge/Documents/Git'); trap('INT'){s.shutdown}; s.start"],
       "port": 8765
     }
   ]

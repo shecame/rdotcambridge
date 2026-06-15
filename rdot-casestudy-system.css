@@ -173,6 +173,24 @@ p {
 }
 .nav-panel-links a.linkedin-btn:hover { background: #0856a8; }
 
+@media (max-width: 1024px) {
+  .nav-panel-work {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-panel-work a {
+    display: inline-block;
+    width: fit-content;
+  }
+  footer { padding: 60px 40px 48px; }
+  .footer-top { flex-direction: column; gap: 48px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid a {
+    display: inline-block;
+    width: fit-content;
+  }
+}
+
 /* ══ NAV: DROPDOWN (BOA reference pattern — kept for reference only) ═
    plain nav + .nav-links + hamburger dropdown .nav-work-menu
    ═══════════════════════════════════════════════════════════════ */
