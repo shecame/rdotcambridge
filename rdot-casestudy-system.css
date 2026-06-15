@@ -198,13 +198,13 @@ p {
   .footer-pages-col a.linkedin-btn {
     border-bottom: none;
   }
-  .hero-meta { flex-direction: column !important; gap: 0 !important; align-items: flex-start; }
+  .hero-meta { display: inline-flex !important; flex-direction: column !important; gap: 0 !important; align-items: flex-start; }
   .meta-item {
-    display: inline-flex !important;
-    flex-direction: column;
-    width: fit-content;
+    display: block !important;
+    width: 100%;
     border-left: none !important;
     padding-left: 0 !important;
+    padding-right: 0 !important;
     border-top: 1px solid var(--border);
     padding-top: 12px;
     margin-top: 12px;
