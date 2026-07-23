@@ -448,44 +448,42 @@
       </div>
       <div class="skills-col reveal">
         <h3>TOOLS &amp; PLATFORMS</h3>
-        <div class="values" style="margin-bottom:32px;">
-          <span class="value-chip" data-tools="Figma,Confluence">Design &amp; Team Scaling</span>
-          <span class="value-chip" data-tools="Confluence,Jira">Performance Management</span>
-          <span class="value-chip" data-tools="Jira,Confluence">Cross-functional Team Management</span>
-          <span class="value-chip" data-tools="Loom,Confluence">Stakeholder Management</span>
-          <span class="value-chip" data-tools="Jira,Microsoft 365">Vendor Management</span>
-          <span class="value-chip" data-tools="Miro,Notion">UX Strategy</span>
-          <span class="value-chip" data-tools="Notion,Microsoft 365">Business Impact / ROI Metrics</span>
-          <span class="value-chip" data-tools="Zeroheight,Notion">Design Maturity Assessment</span>
-          <span class="value-chip" data-tools="Microsoft 365,Jira">Budget &amp; Resource Planning</span>
-          <span class="value-chip" data-tools="Figma,Zeroheight">Design Systems</span>
-          <span class="value-chip" data-tools="Figma,Claude/ChatGPT">AI-Integrated Design</span>
-          <span class="value-chip" data-tools="Figma,Sketch">Wireframing &amp; High-Fidelity Mockups</span>
-          <span class="value-chip" data-tools="Figma,Lucid">Information Architecture</span>
-          <span class="value-chip" data-tools="Mural,Lucid">Service Blueprinting</span>
-          <span class="value-chip" data-tools="UserZoom,Userbrain,Hotjar,Maze">A/B Testing &amp; Surveys</span>
-          <span class="value-chip" data-tools="Jira,Confluence">Direct Engineering Collaboration</span>
-          <span class="value-chip" data-tools="Miro,Mural">Workshop Facilitation</span>
-        </div>
         <div class="tool-tags">
-          <span class="tool-tag">Figma</span>
-          <span class="tool-tag">Sketch</span>
-          <span class="tool-tag">Lucid</span>
-          <span class="tool-tag">Mural</span>
-          <span class="tool-tag">UserZoom</span>
-          <span class="tool-tag">Userbrain</span>
-          <span class="tool-tag">Hotjar</span>
-          <span class="tool-tag">Confluence</span>
-          <span class="tool-tag">Jira</span>
+          <span class="tool-tag">A/B testing &amp; surveys</span>
           <span class="tool-tag">Adobe Creative Suite</span>
+          <span class="tool-tag">AI-integrated design</span>
+          <span class="tool-tag">Budget &amp; resource planning</span>
+          <span class="tool-tag">Business impact / ROI metrics</span>
+          <span class="tool-tag">Claude/ChatGPT</span>
+          <span class="tool-tag">Confluence</span>
+          <span class="tool-tag">Cross-functional team management</span>
+          <span class="tool-tag">Design &amp; team scaling</span>
+          <span class="tool-tag">Design maturity assessment</span>
+          <span class="tool-tag">Design systems</span>
+          <span class="tool-tag">Direct engineering collaboration</span>
+          <span class="tool-tag">Dovetail</span>
+          <span class="tool-tag">Figma</span>
+          <span class="tool-tag">Hotjar</span>
+          <span class="tool-tag">Information architecture</span>
+          <span class="tool-tag">Jira</span>
+          <span class="tool-tag">Loom</span>
+          <span class="tool-tag">Lucid</span>
+          <span class="tool-tag">Maze</span>
           <span class="tool-tag">Microsoft 365</span>
           <span class="tool-tag">Miro</span>
+          <span class="tool-tag">Mural</span>
           <span class="tool-tag">Notion</span>
-          <span class="tool-tag">Claude/ChatGPT</span>
+          <span class="tool-tag">Performance management</span>
+          <span class="tool-tag">Service blueprinting</span>
+          <span class="tool-tag">Sketch</span>
+          <span class="tool-tag">Stakeholder management</span>
+          <span class="tool-tag">Userbrain</span>
+          <span class="tool-tag">UserZoom</span>
+          <span class="tool-tag">UX strategy</span>
+          <span class="tool-tag">Vendor management</span>
+          <span class="tool-tag">Wireframing &amp; high-fidelity mockups</span>
+          <span class="tool-tag">Workshop facilitation</span>
           <span class="tool-tag">Zeroheight</span>
-          <span class="tool-tag">Loom</span>
-          <span class="tool-tag">Dovetail</span>
-          <span class="tool-tag">Maze</span>
         </div>
       </div>
     </div>
@@ -685,7 +683,7 @@ cases.forEach((c, i) => {
 });
 
 // ---- Skill -> tool hover filter ----
-document.querySelectorAll('.skill-item, .value-chip[data-tools]').forEach(item => {
+document.querySelectorAll('.skill-item').forEach(item => {
   const tools = (item.getAttribute('data-tools') || '').split(',').map(t => t.trim());
   item.addEventListener('mouseenter', () => {
     document.querySelectorAll('.tool-tag').forEach(tag => {
