@@ -115,8 +115,11 @@
   .story-grid p{color:var(--muted);margin-bottom:18px;font-size:16px;}
   .values{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
   .value-chip{border:1px solid var(--line);color:var(--ink);border-radius:4px;padding:10px 16px;font-family:'Montserrat';font-size:12.5px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;}
-  .companies{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;margin-top:24px;}
-  .company-name{font-family:'Montserrat';font-weight:800;font-size:20px;letter-spacing:-0.01em;}
+  .company-logos{display:flex;flex-wrap:wrap;align-items:flex-start;gap:16px;margin-top:24px;}
+  .company-logo-badge{background:#fff;border-radius:8px;padding:12px 20px;display:flex;align-items:center;justify-content:center;height:64px;box-sizing:border-box;transition:transform .2s ease;}
+  .company-logo-badge:hover{transform:translateY(-3px);}
+  .company-logo-badge img{width:auto;height:40px;display:block;mix-blend-mode:multiply;}
+  .company-logo-badge.text-badge{font-family:'Montserrat';font-weight:800;font-size:15px;color:#1a1446;letter-spacing:-0.01em;}
 
   /* LEADERSHIP */
   .lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -321,16 +324,16 @@
         <p>Over the last decade that craft scaled into leadership, directing global teams, owning research and strategy for Fortune 100 platforms, and sitting in the room where executive decisions get made. I don't just design experiences; I build the teams, systems, and evidence that make good design decisions repeatable.</p>
       </div>
       <div class="reveal">
-        <div class="companies">
-          <span class="company-name" style="color:#F2A900;">Liberty Mutual</span>
-          <span class="company-name" style="color:#00A8E0;">AT&amp;T</span>
-          <span class="company-name" style="color:#E31837;">Bank of America</span>
-          <span class="company-name" style="color:#1C6E5E;">Andela</span>
-          <span class="company-name" style="color:#2D6CDF;">Avlino</span>
-          <span class="company-name" style="color:#E4002B;">Ogilvy CommonHealth</span>
-          <span class="company-name" style="color:#F36F21;">Nickelodeon</span>
-          <span class="company-name" style="color:#C8102E;">Spike TV</span>
-          <span class="company-name" style="color:#0D62AB;">Comcast</span>
+        <div class="company-logos">
+          <div class="company-logo-badge" style="width:125px;"><img src="Liberty.svg" alt="Liberty Mutual" style="transform:scale(0.75);"></div>
+          <div class="company-logo-badge" style="width:86px;"><img src="AT%26T-logo.png" alt="AT&amp;T"></div>
+          <div class="company-logo-badge" style="width:173px;"><img src="BofA-logo.svg" alt="Bank of America" style="transform:scale(0.333);"></div>
+          <div class="company-logo-badge" style="width:132px;"><img src="Andela-logo.svg" alt="Andela" style="transform:scale(2);"></div>
+          <div class="company-logo-badge" style="width:111px;"><img src="Avlino-logo.png" alt="Avlino" style="transform:scale(0.5);"></div>
+          <div class="company-logo-badge" style="width:109px;"><img src="Ogilvy-logo.svg" alt="Ogilvy CommonHealth" style="transform:scale(1.5);"></div>
+          <div class="company-logo-badge" style="width:98px;"><img src="Nickelodeon-logo.svg" alt="Nickelodeon" style="transform:scale(1.25);"></div>
+          <div class="company-logo-badge" style="width:75px;"><img src="spike-tv-logo.svg" alt="Spike TV" style="transform:scale(0.5);"></div>
+          <div class="company-logo-badge" style="width:109px;"><img src="Comcast-logo.svg" alt="Comcast" style="transform:scale(1.5);"></div>
         </div>
       </div>
     </div>
