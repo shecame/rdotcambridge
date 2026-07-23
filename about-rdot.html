@@ -135,7 +135,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
 }
 
 /* Portrait — 25% smaller */
-.about-portrait { position: relative; width: 75%; overflow: hidden; }
+.about-portrait { position: relative; width: 75%; max-width: 480px; overflow: hidden; }
 
 .portrait-img {
   width: 100%;
@@ -239,7 +239,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
   margin-bottom: 20px;
   max-width: none;
 }
-.about-bio p:last-child { margin-bottom: 0; }
+.about-bio p:last-child { margin-bottom: 24px; }
 
 /* ══════════════════════════════════════════════════════════
    SECTION 3 — CTA BAND  (margin-top removed)
@@ -304,7 +304,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
       "portrait";
     gap: 40px;
   }
-  .about-portrait { align-self: auto; }
+  .about-portrait { align-self: auto; width: 55%; max-width: 280px; }
   .about-cta-band { padding: 56px 0; }
   .about-cta-inner { padding: 0 40px; }
 }
@@ -313,6 +313,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
   .about-container { padding: 0 24px; }
   .disciplines-grid { grid-template-columns: 1fr; }
   .logo-page { grid-template-columns: 1fr 1fr; }
+  .about-portrait { width: 55%; max-width: 200px; }
   .about-cta-text { font-size: clamp(28px, 7vw, 40px); }
   .about-cta-band { padding: 48px 0; }
   .about-cta-inner { padding: 0 24px; }
