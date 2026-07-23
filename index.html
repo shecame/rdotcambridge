@@ -247,9 +247,18 @@ html, body { margin:0; padding:0; overflow-x:hidden; }
 
   function updateTilts() {
     var vph = window.innerHeight;
-    items.forEach(function(item) {
+    var isMobile = window.innerWidth <= 768;
+    items.forEach(function(item, index) {
       var link = item.querySelector('.project-link');
       if (!link) return;
+
+      // On mobile, show the first graphic immediately instead of
+      // waiting for it to scroll into view.
+      if (isMobile && index === 0) {
+        link.style.transform = 'translate3d(0, 0, 0)';
+        link.style.opacity = '1';
+        return;
+      }
 
       // Rect of the untransformed parent — always accurate
       var rect = item.getBoundingClientRect();
