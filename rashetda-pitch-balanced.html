@@ -115,6 +115,8 @@
   .story-grid p{color:var(--muted);margin-bottom:18px;font-size:16px;}
   .values{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
   .value-chip{border:1px solid var(--line);color:var(--ink);border-radius:4px;padding:10px 16px;font-family:'Montserrat';font-size:12.5px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;}
+  .companies{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;margin-top:24px;}
+  .company-name{font-family:'Montserrat';font-weight:800;font-size:20px;letter-spacing:-0.01em;}
 
   /* LEADERSHIP */
   .lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -319,24 +321,16 @@
         <p>Over the last decade that craft scaled into leadership, directing global teams, owning research and strategy for Fortune 100 platforms, and sitting in the room where executive decisions get made. I don't just design experiences; I build the teams, systems, and evidence that make good design decisions repeatable.</p>
       </div>
       <div class="reveal">
-        <div class="values">
-          <span class="value-chip">Design &amp; Team Scaling</span>
-          <span class="value-chip">Performance Management</span>
-          <span class="value-chip">Cross-functional Team Management</span>
-          <span class="value-chip">Stakeholder Management</span>
-          <span class="value-chip">Vendor Management</span>
-          <span class="value-chip">UX Strategy</span>
-          <span class="value-chip">Business Impact / ROI Metrics</span>
-          <span class="value-chip">Design Maturity Assessment</span>
-          <span class="value-chip">Budget &amp; Resource Planning</span>
-          <span class="value-chip">Design Systems</span>
-          <span class="value-chip">AI-Integrated Design</span>
-          <span class="value-chip">Wireframing &amp; High-Fidelity Mockups</span>
-          <span class="value-chip">Information Architecture</span>
-          <span class="value-chip">Service Blueprinting</span>
-          <span class="value-chip">A/B Testing &amp; Surveys</span>
-          <span class="value-chip">Direct Engineering Collaboration</span>
-          <span class="value-chip">Workshop Facilitation</span>
+        <div class="companies">
+          <span class="company-name" style="color:#F2A900;">Liberty Mutual</span>
+          <span class="company-name" style="color:#00A8E0;">AT&amp;T</span>
+          <span class="company-name" style="color:#E31837;">Bank of America</span>
+          <span class="company-name" style="color:#1C6E5E;">Andela</span>
+          <span class="company-name" style="color:#2D6CDF;">Avlino</span>
+          <span class="company-name" style="color:#E4002B;">Ogilvy CommonHealth</span>
+          <span class="company-name" style="color:#F36F21;">Nickelodeon</span>
+          <span class="company-name" style="color:#C8102E;">Spike TV</span>
+          <span class="company-name" style="color:#0D62AB;">Comcast</span>
         </div>
       </div>
     </div>
@@ -451,6 +445,25 @@
       </div>
       <div class="skills-col reveal">
         <h3>TOOLS &amp; PLATFORMS</h3>
+        <div class="values" style="margin-bottom:32px;">
+          <span class="value-chip" data-tools="Figma,Confluence">Design &amp; Team Scaling</span>
+          <span class="value-chip" data-tools="Confluence,Jira">Performance Management</span>
+          <span class="value-chip" data-tools="Jira,Confluence">Cross-functional Team Management</span>
+          <span class="value-chip" data-tools="Loom,Confluence">Stakeholder Management</span>
+          <span class="value-chip" data-tools="Jira,Microsoft 365">Vendor Management</span>
+          <span class="value-chip" data-tools="Miro,Notion">UX Strategy</span>
+          <span class="value-chip" data-tools="Notion,Microsoft 365">Business Impact / ROI Metrics</span>
+          <span class="value-chip" data-tools="Zeroheight,Notion">Design Maturity Assessment</span>
+          <span class="value-chip" data-tools="Microsoft 365,Jira">Budget &amp; Resource Planning</span>
+          <span class="value-chip" data-tools="Figma,Zeroheight">Design Systems</span>
+          <span class="value-chip" data-tools="Figma,Claude/ChatGPT">AI-Integrated Design</span>
+          <span class="value-chip" data-tools="Figma,Sketch">Wireframing &amp; High-Fidelity Mockups</span>
+          <span class="value-chip" data-tools="Figma,Lucid">Information Architecture</span>
+          <span class="value-chip" data-tools="Mural,Lucid">Service Blueprinting</span>
+          <span class="value-chip" data-tools="UserZoom,Userbrain,Hotjar,Maze">A/B Testing &amp; Surveys</span>
+          <span class="value-chip" data-tools="Jira,Confluence">Direct Engineering Collaboration</span>
+          <span class="value-chip" data-tools="Miro,Mural">Workshop Facilitation</span>
+        </div>
         <div class="tool-tags">
           <span class="tool-tag">Figma</span>
           <span class="tool-tag">Sketch</span>
@@ -669,7 +682,7 @@ cases.forEach((c, i) => {
 });
 
 // ---- Skill -> tool hover filter ----
-document.querySelectorAll('.skill-item').forEach(item => {
+document.querySelectorAll('.skill-item, .value-chip[data-tools]').forEach(item => {
   const tools = (item.getAttribute('data-tools') || '').split(',').map(t => t.trim());
   item.addEventListener('mouseenter', () => {
     document.querySelectorAll('.tool-tag').forEach(tag => {
