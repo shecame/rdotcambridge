@@ -143,8 +143,10 @@ html, body { margin:0; padding:0; overflow-x:hidden; }
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .home_right { position: relative; width: 100%; height: auto; }
-  .home_left  { display: none; }
+  .home_left  { margin-left: 0; width: 100%; padding-top: 48px; padding-bottom: 48px; }
   .sticky_item { height: auto; padding: 80px 32px 56px; }
+  .project-link { height: 26em; }
+  .collection-item:not(:nth-child(2)) .project-link { height: 20em; }
 }
 </style>
 </head>
