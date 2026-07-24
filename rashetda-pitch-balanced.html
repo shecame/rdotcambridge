@@ -151,8 +151,9 @@
   .principle-card p{color:var(--muted);font-size:14.5px;line-height:1.6;}
 
   /* CASE STUDIES */
-  .tabs{display:flex;gap:24px;margin-bottom:40px;flex-wrap:wrap;width:100%;}
-  .tab-btn{flex:1;text-align:center;font-family:'Montserrat';font-weight:700;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;border-radius:30px;transition:all .2s;}
+  .tabs-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:50px;margin-bottom:40px;}
+  .tabs{display:flex;gap:8px;margin-bottom:0;flex-wrap:nowrap;width:100%;}
+  .tab-btn{flex:1;text-align:center;font-family:'Montserrat';font-weight:700;font-size:8px;letter-spacing:0;text-transform:uppercase;padding:8px 4px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;border-radius:30px;transition:all .2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .tab-btn.active{background:var(--ink);color:var(--bg);border-color:var(--ink);}
   .case-panel{display:none;}
   .case-panel.active{display:grid;grid-template-columns:0.9fr 1.1fr;gap:50px;}
@@ -234,6 +235,7 @@
     .lead-grid{grid-template-columns:1fr 1fr;}
     .principles-grid{grid-template-columns:1fr;}
     .case-panel.active{grid-template-columns:1fr;}
+    .tabs-grid{grid-template-columns:1fr;}
     .skills-grid{grid-template-columns:1fr;gap:34px;}
     .edu-grid{grid-template-columns:1fr;}
     .navlinks{display:none;}
@@ -411,7 +413,9 @@
       <div class="eyebrow">Selected Work</div>
       <h2>Case studies in <span class="accent-italic">measurable impact</span></h2>
     </div>
-    <div class="tabs reveal" id="tabList"></div>
+    <div class="tabs-grid">
+      <div class="tabs reveal" id="tabList"></div>
+    </div>
     <div id="casePanels"></div>
   </div>
 </section>
