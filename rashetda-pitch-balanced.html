@@ -240,8 +240,10 @@
     .edu-grid{grid-template-columns:1fr;}
     .navlinks{display:none;}
     .navbtn{display:flex;}
-    .tl-head{grid-template-columns:1fr 20px;}
-    .tl-dates{grid-column:1/2;}
+    .tl-head{grid-template-columns:1fr 20px;grid-template-rows:auto auto;column-gap:16px;row-gap:4px;}
+    .tl-dates{grid-column:1/2;grid-row:1;}
+    .tl-info{grid-column:1/2;grid-row:2;}
+    .tl-toggle{grid-column:2/3;grid-row:1/3;align-self:center;}
     .tl-body-inner p{padding-left:0;}
     section{padding:70px 0;}
     .wrap{padding:0 24px;}
@@ -350,14 +352,14 @@
     </div>
     <div class="lead-grid reveal">
       <div class="lead-card">
+        <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <div class="stat-num" data-count="100" data-prefix="$" data-suffix="M">$0M</div>
+        <div class="stat-label">Series D raised following brand and design system refresh</div>
+      </div>
+      <div class="lead-card">
         <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         <div class="stat-num">$50K – $250K</div>
         <div class="stat-label">Annual budget owned across design &amp; delivery across companies</div>
-      </div>
-      <div class="lead-card">
-        <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.5-4.5"/></svg>
-        <div class="stat-num" data-count="65" data-suffix="+">0+</div>
-        <div class="stat-label">Moderated research sessions directed, Bank of America</div>
       </div>
       <div class="lead-card">
         <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="11" rx="1.5"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
@@ -366,7 +368,7 @@
       </div>
     </div>
     <p class="reveal" style="margin-top:34px;max-width:720px;color:var(--muted);font-size:15.5px;">
-      I've facilitated executive-level alignment workshops, orchestrated cross-functional leadership across product, engineering and accessibility, and directed global creative teams across multiple markets. The title hasn't caught up to the scope, and that's what I'm solving for next.
+      Facilitated executive-level alignment workshops with C-suite, Marketing, and Engineering VP leaders, orchestrated cross-functional leadership across product, engineering, and business, and directed global and local creative teams across 4 markets and 16 people.
     </p>
   </div>
 </section>
@@ -428,7 +430,7 @@
     </div>
     <div class="skills-grid">
       <div class="skills-col reveal">
-        <h3>LEADERSHIP &amp; STRATEGY</h3>
+        <h3>Where Craft Meets Tools</h3>
         <div class="skill-item" data-tools="Miro,Notion">
           <h4>UX Strategy &amp; Vision</h4>
           <p>I run the workshop in Miro, then move the strategy and roadmap into Notion so it has a permanent home.</p>
@@ -451,7 +453,6 @@
         </div>
       </div>
       <div class="skills-col reveal">
-        <h3>TOOLS &amp; PLATFORMS</h3>
         <div class="tool-tags">
           <span class="tool-tag">A/B testing &amp; surveys</span>
           <span class="tool-tag">Adobe Creative Suite</span>
@@ -603,7 +604,7 @@ const cases = [
   {
     org:"Bank of America", tab:"Bank of America",
     title:"A research-driven vision for enterprise applications",
-    stats:[["$650K","Annual savings"],["65+","Research sessions"],["3","Platforms redefined"]],
+    stats:[["$650K","Annual savings"],["65+","moderated usability studies directed, Bank of America"],["3","Platforms redefined"]],
     problem:"Enterprise applications, including the employee mobile app, VoIP systems, and support service portal, lacked a research-backed strategy for adoption and usability.",
     role:"Led UX research and strategy end-to-end, directing 65+ moderated sessions and integrating quantitative methods (usability studies, A/B testing, surveys) with qualitative insight.",
     outcome:"Defined a research-driven vision that improved adoption and delivered $650K in annual savings, while facilitating cross-functional workshops that aligned stakeholders around user needs."
@@ -634,7 +635,7 @@ timeline.forEach((item, i) => {
   el.innerHTML = `
     <div class="tl-head">
       <div class="tl-dates">${item.dates}</div>
-      <div>
+      <div class="tl-info">
         <div class="tl-role">${item.role}</div>
         <div class="tl-org">${item.org}</div>
       </div>
