@@ -150,14 +150,24 @@ html, body { margin:0; padding:0; overflow-x:hidden; }
   max-width: 28em;
   margin: 36px 0 0;
 }
-.home-sub::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: rgb(130, 172, 206);
-  margin-bottom: 20px;
+.home-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 14px 22px;
+  background: var(--ink);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background .2s;
 }
+.home-cta:hover { background: #006699; }
 
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -217,7 +227,8 @@ html, body { margin:0; padding:0; overflow-x:hidden; }
         and AI<br>
         <em class="accent-blue">Platforms</em>
       </h1>
-      <p class="home-sub">I have spent 15 years leading design in insurance, banking, telecom, and pharma, building teams and products for companies like Liberty Mutual, AT&amp;T, and Bank of America.</p>
+      <p class="home-sub">Design leader for insurance, banking, telecom, and AI. 15 years, 3 teams built, $1.1M saved a year.</p>
+      <a class="home-cta" href="boa-casestudy-rdot.html">See the $650K decision <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 
