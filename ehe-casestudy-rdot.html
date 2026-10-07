@@ -478,242 +478,177 @@ blockquote{border-left:none!important;padding-left:0!important}
 
     <!-- IA DIAGRAM -->
     <div class="fade-up" style="margin-top:56px;">
+      <style>
+        .ia2{min-width:900px}
+        .ia2-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;color:var(--ink)}
+        .ia2-sub{font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);margin:4px 0 28px}
+        .ia2-area{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin:0 0 14px}
+        .ia2-card{width:104px;background:#EDEDEB;flex-shrink:0}
+        .ia2-bar{height:13px;font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;color:#fff;text-align:right;padding:0 6px;line-height:13px}
+        .ia2-body{font-family:'PT Sans',sans-serif;font-size:10.5px;color:#3A3A3A;text-align:center;padding:12px 8px;line-height:1.3;min-height:44px;display:flex;align-items:center;justify-content:center}
+        .ia2-pub .ia2-bar{background:#1A3A6B} .ia2-home .ia2-bar{background:#2D7FB8}
+        .ia2-gate .ia2-bar{background:#1A6B44} .ia2-app .ia2-bar{background:#7B3A2A} .ia2-dash .ia2-bar{background:#B5654F}
+        .ia2-pill{display:inline-flex;align-items:center;gap:10px;background:#5C5C5A;color:#fff;font-family:'PT Sans',sans-serif;font-size:10.5px;padding:5px 12px;border-radius:100px;white-space:nowrap}
+        .ia2-pill b{font-family:'Montserrat',sans-serif;font-size:8px}
+        .ia2-pill-gate{background:#1A6B44}
+        .ia2-tree{position:relative;display:flex;gap:10px;padding-top:18px;border-top:1px solid #9A9A94;margin-top:16px}
+        .ia2-col{position:relative}
+        .ia2-col::before{content:'';position:absolute;left:16px;top:-18px;height:14px;border-left:1px solid #9A9A94}
+        .ia2-col::after{content:'';position:absolute;left:13px;top:-6px;border:3px solid transparent;border-top:4px solid #9A9A94}
+        .ia2-branch{margin-left:16px;border-left:1px solid #9A9A94;padding:14px 0 0 0}
+        .ia2-branch .ia2-row:last-child{margin-bottom:0}
+        .ia2-row{display:flex;align-items:center;margin-bottom:14px;position:relative}
+        .ia2-row>.ia2-card{margin-left:22px}
+        .ia2-row::before{content:'';position:absolute;left:0;top:50%;width:18px;border-top:1px solid #9A9A94}
+        .ia2-row::after{content:'';position:absolute;left:16px;top:calc(50% - 3px);border:3px solid transparent;border-left:4px solid #9A9A94}
+        .ia2-arrow{width:18px;border-top:1px solid #9A9A94;position:relative;flex-shrink:0}
+        .ia2-arrow::after{content:'';position:absolute;right:-2px;top:-4px;border:3px solid transparent;border-left:4px solid #9A9A94}
+        .ia2-el{background:#fff;border:1px solid #8A8A86;font-family:'PT Sans',sans-serif;font-size:9px;color:#3A3A3A;padding:6px 10px;white-space:nowrap}
+        .ia2-home-wrap{display:flex;align-items:flex-end;gap:0}
+        .ia2-legend{border:1px solid #B5B5B0;padding:14px 18px;display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;margin-bottom:32px}
+        .ia2-legend h5{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;letter-spacing:0.04em;margin:0}
+        .ia2-legend .ia2-card{width:84px} .ia2-legend .ia2-body{font-size:9px;min-height:24px;padding:4px}
+        .ia2-foot{display:flex;align-items:center;gap:8px;font-family:'PT Sans',sans-serif;font-size:11px;color:#3A3A3A}
+        .ia2-foot span{background:#0C0C0C;color:#fff;font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;padding:5px 7px}
+        .ia2-flow{display:flex;align-items:center;margin-top:10px}
+        .ia2-divider{border-top:1px solid var(--border);margin:36px 0 28px}
+      </style>
 
-      <!-- Header (no box) -->
-      <div style="padding-top:20px;border-top:1px solid var(--border);padding-bottom:20px;border-bottom:1px solid var(--border);margin-bottom:32px;">
-        <div style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;letter-spacing:-0.01em;color:var(--ink);">EHE Health: Information Architecture</div>
-        <div style="font-family:'PT Sans',sans-serif;font-size:11px;color:var(--ink-mid);margin-top:4px;">Public website · Login gateway · Authenticated patient portal</div>
-        <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:14px;">
-          <div style="display:flex;align-items:center;gap:6px;font-family:'PT Sans',sans-serif;font-size:10px;color:var(--ink-mid);"><div style="width:11px;height:11px;background:#1A3A6B;flex-shrink:0;"></div>Home / global</div>
-          <div style="display:flex;align-items:center;gap:6px;font-family:'PT Sans',sans-serif;font-size:10px;color:var(--ink-mid);"><div style="width:11px;height:11px;background:#EEF2FA;border:1px solid #B0BFD8;flex-shrink:0;"></div>Primary nav</div>
-          <div style="display:flex;align-items:center;gap:6px;font-family:'PT Sans',sans-serif;font-size:10px;color:var(--ink-mid);"><div style="width:11px;height:11px;background:#EEF2FA;border:1px solid #B0BFD8;flex-shrink:0;"></div>Sub-pages</div>
-          <div style="display:flex;align-items:center;gap:6px;font-family:'PT Sans',sans-serif;font-size:10px;color:var(--ink-mid);"><div style="width:11px;height:11px;background:#fff;border:1px solid #C8C8C4;flex-shrink:0;"></div>Utility / login</div>
-          <div style="display:flex;align-items:center;gap:6px;font-family:'PT Sans',sans-serif;font-size:10px;color:var(--ink-mid);"><div style="width:11px;height:11px;background:#FAEDE8;border:2px solid #7B3A2A;flex-shrink:0;"></div>App pages</div>
-          <div style="display:flex;align-items:center;gap:6px;font-family:'PT Sans',sans-serif;font-size:10px;color:var(--ink-mid);"><div style="width:11px;height:11px;background:#E6F4EE;border:2px dashed #1A6B44;flex-shrink:0;"></div>Auth flow</div>
-        </div>
+      <div style="padding-top:20px;border-top:1px solid var(--border);margin-bottom:8px;">
+        <div class="ia2-title">EHE Health: Information Architecture</div>
+        <div class="ia2-sub">Public website · Login gateway · Authenticated patient portal</div>
       </div>
 
-      <!-- Three-panel diagram -->
-      <div style="display:grid;grid-template-columns:1fr 1px 130px 1px 1fr;gap:0;align-items:start;">
 
-        <!-- ── PUBLIC WEBSITE ── -->
-        <div style="padding:0 24px 0 0;">
-          <div style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#1A3A6B;margin-bottom:16px;text-align:center;">Public Website</div>
+      <!-- LEGEND -->
+      <div class="ia2-legend">
+        <h5>LEGEND</h5>
+        <div class="ia2-card ia2-home"><div class="ia2-bar">X.0</div><div class="ia2-body">Homepage</div></div>
+        <div class="ia2-card ia2-pub"><div class="ia2-bar">X.X</div><div class="ia2-body">Public page</div></div>
+        <div class="ia2-card ia2-gate"><div class="ia2-bar">0.0X</div><div class="ia2-body">Login / auth</div></div>
+        <div class="ia2-card ia2-app"><div class="ia2-bar">X.X</div><div class="ia2-body">App page</div></div>
+        <div class="ia2-pill">Navigation Label<b>X.X</b></div>
+        <div class="ia2-el">Page Element</div>
+        <div class="ia2-foot"><span>F.X</span>Footer Link</div>
+      </div>
 
-          <!-- 0.0 Home root -->
-          <div style="text-align:center;">
-            <div style="display:inline-block;background:transparent;color:#1A3A6B;border:1.5px solid #1A3A6B;font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;padding:3px 20px;border-radius:100px;">Home</div>
+      <div style="overflow-x:auto;">
+      <div class="ia2">
+        <div>
+
+          <!-- PUBLIC WEBSITE -->
+          <div class="ia2-area" style="color:#1A3A6B;">Public Website</div>
+          <div class="ia2-home-wrap">
+            <div class="ia2-card ia2-home"><div class="ia2-bar">0.0</div><div class="ia2-body">Home</div></div>
           </div>
-          <!-- Vertical drop -->
-          <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-          <!-- Horizontal connector spanning cols 1–6 -->
-          <div style="height:1px;background:#C8C8C4;margin:0 8.33%;"></div>
-
-          <!-- 6 nav columns -->
-          <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:4px;">
-
-            <!-- 1.0 About Us -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;padding:6px 4px;text-align:center;color:#1A3A6B;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-size:6.5px;font-weight:400;opacity:.7;margin-bottom:2px;">1.0</span>About Us</div>
-              <div style="width:1px;height:10px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">1.1</span>Commanders in Wellness</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">1.2</span>Locations</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">1.3</span>Careers</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">1.4</span>Contact</div>
+          <div class="ia2-tree">
+          <div class="ia2-col">
+            <div class="ia2-pill ia2-pill-pub">About Us<b>1.0</b></div>
+            <div class="ia2-branch">
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">1.1</div><div class="ia2-body">Commanders in Wellness</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">1.2</div><div class="ia2-body">Locations</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">1.3</div><div class="ia2-body">Careers</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">1.4</div><div class="ia2-body">Contact</div></div><span class="ia2-arrow"></span><div class="ia2-el">Form</div></div>
             </div>
-
-            <!-- 2.0 Preventive Care -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;padding:6px 4px;text-align:center;color:#1A3A6B;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-size:6.5px;font-weight:400;opacity:.7;margin-bottom:2px;">2.0</span>Preventive Care</div>
-              <div style="width:1px;height:10px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">2.1</span>Exam overview</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">2.2</span>Book an exam</div>
-            </div>
-
-            <!-- 3.0 Wellness Care -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;padding:6px 4px;text-align:center;color:#1A3A6B;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-size:6.5px;font-weight:400;opacity:.7;margin-bottom:2px;">3.0</span>Wellness Care</div>
-              <div style="width:1px;height:10px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">3.1</span>Coaching overview</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">3.2</span>Get a coach</div>
-            </div>
-
-            <!-- 4.0 Latest -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;padding:6px 4px;text-align:center;color:#1A3A6B;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-size:6.5px;font-weight:400;opacity:.7;margin-bottom:2px;">4.0</span>Latest</div>
-              <div style="width:1px;height:10px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">4.1</span>Article / post</div>
-            </div>
-
-            <!-- 5.0 Corporate -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;padding:6px 4px;text-align:center;color:#1A3A6B;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-size:6.5px;font-weight:400;opacity:.7;margin-bottom:2px;">5.0</span>Corporate</div>
-              <div style="width:1px;height:10px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">5.1</span>Corporate plans</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#EEF2FA;border:1px solid #B0BFD8;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:5px 4px;text-align:center;color:#2D5089;line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600;opacity:.8;margin-bottom:1px;">5.2</span>Request info</div>
-            </div>
-
-            <!-- 0.01 Login (utility) -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#fff;border:1px solid #C8C8C4;font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:600;padding:6px 4px;text-align:center;color:var(--ink);line-height:1.3;min-height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;"><span style="display:block;font-size:6.5px;font-weight:400;opacity:.6;margin-bottom:2px;">0.01</span>Login</div>
-            </div>
-
-          </div><!-- /6 nav columns -->
-
-          <!-- Global footer -->
-          <div style="margin-top:24px;padding-top:12px;border-top:1px solid var(--border);font-family:'PT Sans',sans-serif;font-size:9px;color:var(--ink-mid);text-align:center;">
-            Global footer: Latest · Careers · Contact · Locations · FAQ
           </div>
-        </div>
-
-        <!-- Divider -->
-        <div style="background:var(--border);"></div>
-
-        <!-- ── LOGIN GATEWAY ── -->
-        <div style="padding:0 12px;">
-          <div style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#1A6B44;margin-bottom:16px;text-align:center;">Login Gateway</div>
-
-          <!-- Root node -->
-          <div style="text-align:center;">
-            <div style="display:inline-block;background:transparent;color:#1A6B44;border:1.5px solid #1A6B44;font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;padding:3px 20px;text-align:center;border-radius:100px;">Login gateway</div>
+          <div class="ia2-col">
+            <div class="ia2-pill ia2-pill-pub">Preventive Care<b>2.0</b></div>
+            <div class="ia2-branch">
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">2.1</div><div class="ia2-body">Exam overview</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">2.2</div><div class="ia2-body">Book an exam</div></div><span class="ia2-arrow"></span><div class="ia2-el">Form</div></div>
+            </div>
           </div>
-          <!-- Connector line + nodes -->
-          <div style="width:1px;height:12px;background:#C8C8C4;margin:0 auto;"></div>
-          <div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:6px 8px;text-align:center;">
-            <div style="font-family:'Montserrat',sans-serif;font-size:6.5px;color:#1A6B44;opacity:.8;margin-bottom:2px;">0.01</div>
-            <div style="font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;color:#1A6B44;margin-bottom:2px;">Login, existing</div>
-            <div style="font-family:'PT Sans',sans-serif;font-size:7px;color:#1A6B44;">Returning patient</div>
+          <div class="ia2-col">
+            <div class="ia2-pill ia2-pill-pub">Wellness Care<b>3.0</b></div>
+            <div class="ia2-branch">
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">3.1</div><div class="ia2-body">Coaching overview</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">3.2</div><div class="ia2-body">Get a coach</div></div></div>
+            </div>
           </div>
-          <div style="width:1px;height:6px;background:#C8C8C4;margin:0 auto;"></div>
-          <div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:6px 8px;text-align:center;">
-            <div style="font-family:'Montserrat',sans-serif;font-size:6.5px;color:#1A6B44;opacity:.8;margin-bottom:2px;">0.02</div>
-            <div style="font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;color:#1A6B44;margin-bottom:2px;">Login, new</div>
-            <div style="font-family:'PT Sans',sans-serif;font-size:7px;color:#1A6B44;">New registration</div>
+          <div class="ia2-col">
+            <div class="ia2-pill ia2-pill-pub">Latest<b>4.0</b></div>
+            <div class="ia2-branch">
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">4.1</div><div class="ia2-body">Article / post</div></div></div>
+            </div>
           </div>
-          <div style="width:1px;height:6px;background:#C8C8C4;margin:0 auto;"></div>
-          <div style="background:#E6F4EE;border:1px solid #A3CEBC;padding:6px 8px;text-align:center;font-family:'PT Sans',sans-serif;font-size:7px;color:#1A6B44;">Forgot password</div>
-          <div style="width:1px;height:6px;background:#C8C8C4;margin:0 auto;"></div>
-          <div style="background:#1A6B44;color:#fff;font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;padding:7px 8px;text-align:center;">Session token issued</div>
-        </div>
-
-        <!-- Divider -->
-        <div style="background:var(--border);"></div>
-
-        <!-- ── AUTHENTICATED APP ── -->
-        <div style="padding:0 0 0 24px;">
-          <div style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#7B3A2A;margin-bottom:16px;text-align:center;">Authenticated App (EHE+me)</div>
-
-          <!-- Dashboard root -->
-          <div style="text-align:center;">
-            <div style="display:inline-block;background:transparent;color:#7B3A2A;border:1.5px solid #7B3A2A;font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:700;padding:3px 20px;border-radius:100px;">Dashboard, Health overview</div>
+          <div class="ia2-col">
+            <div class="ia2-pill ia2-pill-pub">Corporate<b>5.0</b></div>
+            <div class="ia2-branch">
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">5.1</div><div class="ia2-body">Corporate plans</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-pub"><div class="ia2-bar">5.2</div><div class="ia2-body">Request info</div></div><span class="ia2-arrow"></span><div class="ia2-el">Form</div></div>
+            </div>
           </div>
-          <!-- Vertical drop -->
-          <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-          <!-- Horizontal connector spanning cols 1–5 -->
-          <div style="height:1px;background:#C8C8C4;margin:0 10%;"></div>
+          </div>
+          </div>
+          <div style="display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;align-items:center;">
+            <div class="ia2-area" style="color:var(--ink-mid);margin:0;">Global Footer</div>
+            <div class="ia2-foot"><span>F.1</span>Latest</div><div class="ia2-foot"><span>F.2</span>Careers</div><div class="ia2-foot"><span>F.3</span>Contact</div><div class="ia2-foot"><span>F.4</span>Locations</div><div class="ia2-foot"><span>F.5</span>FAQ</div>
+          </div>
 
-          <!-- 5 app columns -->
-          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px;">
+          <div class="ia2-divider"></div>
 
-            <!-- Health record -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:2px solid #7B3A2A;padding:6px 4px;text-align:center;line-height:1.3;">
-                <div style="font-family:'Montserrat',sans-serif;font-size:7px;font-weight:700;color:#7B3A2A;">Health record</div>
-                <div style="font-family:'PT Sans',sans-serif;font-size:6.5px;color:#7B3A2A;opacity:.8;margin-top:2px;">Metrics &amp; history</div>
-              </div>
-              <div style="width:1px;height:10px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Blood sugar tracker</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Monthly chart</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Health score</div>
+          <!-- LOGIN GATEWAY -->
+          <div class="ia2-area" style="color:#1A6B44;">Login Gateway</div>
+          <div class="ia2-flow">
+            <div class="ia2-pill ia2-pill-gate">Login<b>0.01</b></div><span class="ia2-arrow"></span><div class="ia2-card ia2-gate"><div class="ia2-bar">0.01</div><div class="ia2-body">Login, existing</div></div><span class="ia2-arrow"></span><div class="ia2-card ia2-gate"><div class="ia2-bar">0.02</div><div class="ia2-body">Login, new</div></div><span class="ia2-arrow"></span><div class="ia2-card ia2-gate"><div class="ia2-bar">0.03</div><div class="ia2-body">Forgot password</div></div><span class="ia2-arrow"></span><div class="ia2-card ia2-gate"><div class="ia2-bar">0.04</div><div class="ia2-body">Session token issued</div></div><span class="ia2-arrow"></span><div class="ia2-pill" style="background:#7B3A2A;">To patient app<b>EHE+me</b></div>
+          </div>
+
+          <div class="ia2-divider"></div>
+
+          <!-- AUTHENTICATED APP -->
+          <div class="ia2-area" style="color:#7B3A2A;">Authenticated App (EHE+me)</div>
+          <div class="ia2-home-wrap">
+            <div class="ia2-card ia2-dash"><div class="ia2-bar">6.0</div><div class="ia2-body">Dashboard, Health overview</div></div>
+          </div>
+          <div class="ia2-tree">
+          <div class="ia2-col">
+            <div class="ia2-pill ia2-pill-app">Health Record<b>6.1</b></div>
+            <div class="ia2-branch">
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.1.1</div><div class="ia2-body">Blood sugar tracker</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.1.2</div><div class="ia2-body">Monthly chart</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.1.3</div><div class="ia2-body">Health score</div></div></div>
             </div>
-
-            <!-- Appointments -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:2px solid #7B3A2A;padding:6px 4px;text-align:center;line-height:1.3;">
-                <div style="font-family:'Montserrat',sans-serif;font-size:7px;font-weight:700;color:#7B3A2A;">Appointments</div>
-                <div style="font-family:'PT Sans',sans-serif;font-size:6.5px;color:#7B3A2A;opacity:.8;margin-top:2px;">Schedule / reschedule</div>
-              </div>
-              <div style="width:1px;height:10px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Upcoming exams</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Exam history</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Reschedule</div>
+          </div>
+          <div class="ia2-col">
+            <div class="ia2-pill ia2-pill-app">Appointments<b>6.2</b></div>
+            <div class="ia2-branch">
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.2.1</div><div class="ia2-body">Upcoming exams</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.2.2</div><div class="ia2-body">Exam history</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.2.3</div><div class="ia2-body">Reschedule</div></div></div>
             </div>
-
-            <!-- Physician match -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:2px solid #7B3A2A;padding:6px 4px;text-align:center;line-height:1.3;">
-                <div style="font-family:'Montserrat',sans-serif;font-size:7px;font-weight:700;color:#7B3A2A;">Physician match</div>
-                <div style="font-family:'PT Sans',sans-serif;font-size:6.5px;color:#7B3A2A;opacity:.8;margin-top:2px;">Browse &amp; book</div>
-              </div>
-              <div style="width:1px;height:10px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Physician profile</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Availability</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Booking confirm</div>
+          </div>
+          <div class="ia2-col">
+            <div class="ia2-pill ia2-pill-app">Physician Match<b>6.3</b></div>
+            <div class="ia2-branch">
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.3.1</div><div class="ia2-body">Physician profile</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.3.2</div><div class="ia2-body">Availability</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.3.3</div><div class="ia2-body">Booking confirm</div></div></div>
             </div>
-
-            <!-- Coaching -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:2px solid #7B3A2A;padding:6px 4px;text-align:center;line-height:1.3;">
-                <div style="font-family:'Montserrat',sans-serif;font-size:7px;font-weight:700;color:#7B3A2A;">Coaching</div>
-                <div style="font-family:'PT Sans',sans-serif;font-size:6.5px;color:#7B3A2A;opacity:.8;margin-top:2px;">Wellness programs</div>
-              </div>
-              <div style="width:1px;height:10px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Coach profile</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Session booking</div>
+          </div>
+          <div class="ia2-col">
+            <div class="ia2-pill ia2-pill-app">Coaching<b>6.4</b></div>
+            <div class="ia2-branch">
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.4.1</div><div class="ia2-body">Coach profile</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.4.2</div><div class="ia2-body">Session booking</div></div></div>
             </div>
-
-            <!-- Messages -->
-            <div style="text-align:center;">
-              <div style="width:1px;height:14px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:2px solid #7B3A2A;padding:6px 4px;text-align:center;line-height:1.3;">
-                <div style="font-family:'Montserrat',sans-serif;font-size:7px;font-weight:700;color:#7B3A2A;">Messages</div>
-                <div style="font-family:'PT Sans',sans-serif;font-size:6.5px;color:#7B3A2A;opacity:.8;margin-top:2px;">Inbox &amp; alerts</div>
-              </div>
-              <div style="width:1px;height:10px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Unread messages</div>
-              <div style="width:1px;height:4px;background:#C8C8C4;margin:0 auto;"></div>
-              <div style="background:#FAEDE8;border:1px solid #D4A090;font-family:'PT Sans',sans-serif;font-size:7px;padding:5px 4px;text-align:center;color:#7B3A2A;line-height:1.3;">Notifications</div>
+          </div>
+          <div class="ia2-col">
+            <div class="ia2-pill ia2-pill-app">Messages<b>6.5</b></div>
+            <div class="ia2-branch">
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.5.1</div><div class="ia2-body">Unread messages</div></div></div>
+            <div class="ia2-row"><div class="ia2-card ia2-app"><div class="ia2-bar">6.5.2</div><div class="ia2-body">Notifications</div></div></div>
             </div>
+          </div>
+          </div>
 
-          </div><!-- /5 app columns -->
-
-          <!-- Scheduling micro-flow -->
-          <div style="margin-top:20px;padding-top:14px;border-top:1px solid #D4A090;">
-            <div style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#7B3A2A;margin-bottom:8px;">Scheduling micro-flow</div>
-            <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:3px;">
-              <div style="background:#7B3A2A;color:#fff;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:6px 4px;text-align:center;line-height:1.3;">Search physician</div>
-              <div style="background:#7B3A2A;color:#fff;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:6px 4px;text-align:center;line-height:1.3;">View availability</div>
-              <div style="background:#7B3A2A;color:#fff;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:6px 4px;text-align:center;line-height:1.3;">Select time slot</div>
-              <div style="background:#7B3A2A;color:#fff;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:6px 4px;text-align:center;line-height:1.3;">Confirm booking</div>
-              <div style="background:#7B3A2A;color:#fff;font-family:'PT Sans',sans-serif;font-size:7.5px;padding:6px 4px;text-align:center;line-height:1.3;">Email confirmation</div>
-            </div>
+          <div style="margin-top:28px;">
+            <div class="ia2-area" style="color:#7B3A2A;margin:0;">Scheduling Micro-flow</div>
+            <div class="ia2-flow"><div class="ia2-el">Search physician</div><span class="ia2-arrow"></span><div class="ia2-el">View availability</div><span class="ia2-arrow"></span><div class="ia2-el">Select time slot</div><span class="ia2-arrow"></span><div class="ia2-el">Confirm booking</div><span class="ia2-arrow"></span><div class="ia2-el">Email confirmation</div></div>
           </div>
         </div>
 
-      </div><!-- /three panels -->
+      </div>
+      </div>
 
     </div>
   </div>
