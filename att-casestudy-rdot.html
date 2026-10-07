@@ -95,6 +95,8 @@
   <div class="hero-left">
     <p class="hero-label">AT&amp;T &nbsp;·&nbsp; Case Study</p>
     <h1>Privacy Controls<br/><em>and Dark<br/>Patterns</em></h1>
+    <p class="section-subtitle" style="margin-top:16px;margin-bottom:16px;">Setting the first privacy design standard at the company and building a control center for 50+ state laws.</p>
+    <p class="section-subtitle" style="margin-top:0;">New state privacy laws turned AT&amp;T's scattered privacy controls into a legal risk. I set the first privacy design standard at the company and brought 3 programs into one control center for 100 million customers.</p>
     <div class="hero-meta">
       <div class="meta-item"><label>Methods</label><span>Usability Testing · Legal &amp; Compliance Review · Constraint Mapping</span></div>
       <div class="meta-item"><label>Stakeholders</label><span>Legal &amp; Compliance, External Governing Authorities</span></div>
@@ -150,7 +152,7 @@
           </svg>
           <div>
             <h4>A Fragmented Interface</h4>
-            <p>Disconnected controls meant customers couldn&#8217;t meaningfully exercise their rights. It was becoming a legal liability, not just a UX problem.</p>
+            <p>Disconnected controls meant customers could not use their rights. That made it a legal risk as well as a design problem.</p>
           </div>
         </div>
       </div>
@@ -162,9 +164,27 @@
 <section id="approach" class="surface-bg">
   <div class="container">
     <p class="section-label fade-up">Approach</p>
-    <h2 class="section-title fade-up">A Change in Laws<br/><span class="section-title-italic">A Change in Patterns</span></h2>
-    <p class="section-subtitle fade-up">Privacy consent design looks simple until you&#8217;re inside the actual content: multiple programs, legal descriptions, layered consent states, compliance relationships, and a requirement that none of it feel coercive.</p>
-    <p class="section-body fade-up" style="margin-top:24px;">I evaluated three layout patterns against those constraints:</p>
+    <h2 class="section-title fade-up">A Change in Laws,<br/><span class="section-title-italic">Needs a Change in Patterns</span></h2>
+    <p class="section-subtitle fade-up" style="margin-bottom:16px;">Privacy consent design looks simple until you are inside the actual content.</p>
+    <p class="section-body fade-up" style="margin-top:0;">Legal needed every program fully disclosed, with no choice nudging customers either way. Product needed customers to stay opted in, on a page short enough to use. I set one guideline: no choice can look preferred over another.</p>
+  </div>
+</section>
+
+<!-- ══ FRAMEWORK ══ -->
+<section id="framework">
+  <div class="container">
+    <p class="section-label fade-up">Framework</p>
+    <h2 class="section-title fade-up">Leveraging a<br/><span class="section-title-italic">Familiar Framework</span></h2>
+    <p class="section-body fade-up" style="margin-top:24px;">In pharma I had dealt with a similar tension. Regulators accept a required amount of information up front, so not every regulatory detail has to be on the page, as long as the rest is easy to reach. I used that framework to make the case to legal: show customers what they need to decide, and keep the full legal detail one tap away. Each program shows what it does, what data it uses, and the customer&#8217;s current consent. Legal got complete disclosure. Product got a page customers could scan in seconds.</p>
+  </div>
+</section>
+
+<!-- ══ PATTERN EXPLORATIONS ══ -->
+<section id="patterns" class="surface-bg">
+  <div class="container">
+    <p class="section-label fade-up">Pattern Explorations</p>
+    <h2 class="section-title fade-up">Three Patterns,<br/><span class="section-title-italic">One Hybrid</span></h2>
+    <p class="section-body fade-up" style="margin-top:24px;">With the rule and the framework set, I designed and tested three layout patterns against both.</p>
     <div class="approach-cards fade-up">
       <div class="approach-card">
         <div class="approach-card-num">01</div>
@@ -173,7 +193,7 @@
       </div>
       <div class="approach-card">
         <div class="approach-card-num">02</div>
-        <div class="approach-card-title">Row-Based Layouts</div>
+        <div class="approach-card-title">Row Based Layouts</div>
         <p class="approach-card-desc">Lost the program relationships critical to compliance communication.</p>
       </div>
       <div class="approach-card">
@@ -182,10 +202,21 @@
         <p class="approach-card-desc">Collapsed under consent state complexity at scale.</p>
       </div>
     </div>
-    <p class="section-body fade-up" style="margin-top:24px;">None of them worked independently. The content needed a hybrid: rows and columns combined into a single framework that could hold programs, explanations, and consent states simultaneously without sacrificing readability.</p>
+    <p class="section-body fade-up" style="margin-top:24px;">None of them worked alone. The content needed a hybrid: rows and columns combined into one framework that could hold programs, explanations, and consent states at once without losing readability.</p>
     <div class="fade-up" style="margin-top:48px;">
       <img src="ATT-sketch.png" alt="AT&T Approach Sketch" style="width:120%;display:block;margin-left:-10%;">
     </div>
+  </div>
+</section>
+
+<!-- ══ HOW I LED ══ -->
+<section id="how-i-led" style="padding-bottom:0;">
+  <div class="container">
+    <p class="section-label fade-up">Influence Without Authority</p>
+    <h2 class="section-title fade-up">Getting Legal and Product<br/><span class="section-title-italic">to Yes</span></h2>
+    <p class="section-body fade-up" style="margin-top:24px;"><strong>Brought legal into the design work early.</strong> Most teams send finished screens to legal for review. I asked legal and compliance to help write the rule instead: no choice can look preferred over another. Once they shaped the standard, reviews moved faster because we were judging every screen against something we had agreed on together.</p>
+    <p class="section-body fade-up" style="margin-top:24px;">I used the pharma disclosure model as shared ground. Every program showed the same required information up front, with full legal detail one layer below. Teams stopped debating layouts and started checking their content against the standard.</p>
+    <p class="section-body fade-up" style="margin-top:24px;"><strong>Built it so the work could continue without me.</strong> New state laws were still passing. I documented the rule, the disclosure layers, and the hybrid table pattern so any team could add a new consent program without a redesign. The standard became the internal benchmark for ethical design at AT&amp;T.</p>
   </div>
 </section>
 
@@ -209,6 +240,7 @@
     <div class="fade-up" style="margin-top:48px;">
       <img src="ATT-image2.png" alt="AT&T Solution" style="width:100%;display:block;">
     </div>
+    <p class="section-body fade-up" style="margin-top:24px;">I tested the hybrid table with customers on desktop and mobile. Each person had to find a privacy program, understand what they had agreed to, and change a setting. The test also checked the rule: no choice could look preferred over another.</p>
 
   </div>
 </section>
@@ -236,7 +268,7 @@
       </div>
       <div class="outcome-item fade-up stagger-1">
         <h4>Pattern-Compliant Design</h4>
-        <p>Neutral interface that presents choices without steering them. Built to avoid the dark patterns regulators were scrutinizing.</p>
+        <p>Neutral interface that presents choices without steering them. It became the internal benchmark for ethical design.</p>
       </div>
       <div class="outcome-item fade-up">
         <h4>Scalable Architecture</h4>
@@ -247,6 +279,14 @@
         <p>A consent system built to absorb new state privacy laws without starting over.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ══ WHAT I LEARNED ══ -->
+<section id="learned">
+  <div class="container">
+    <p class="section-label fade-up">What I Learned</p>
+    <p class="section-subtitle fade-up">Compliance work moves faster when legal helps write the rule instead of only reviewing the result.</p>
   </div>
 </section>
 
