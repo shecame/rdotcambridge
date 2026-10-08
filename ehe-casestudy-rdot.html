@@ -255,18 +255,21 @@ blockquote{border-left:none!important;padding-left:0!important}
 <style>
 .ws-tabs{position:sticky;top:58px;z-index:200;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 0}
 .ws-tabs .container{display:flex}
-.ws-track{display:inline-flex;gap:6px;padding:6px;border-radius:100px;background:#EEF1F5;box-shadow:inset 0 2px 5px rgba(12,12,12,0.12),inset 0 -1px 0 rgba(255,255,255,0.9)}
-.ws-tab{appearance:none;background:#fff;border:2px solid #004e7c;border-radius:100px;padding:10px 22px;margin:0;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#004e7c;transition:background .2s,color .2s}
-.ws-tab:hover{background:#F7F9FC}
-.ws-tab[aria-selected="true"]{background:#004e7c;color:#fff;box-shadow:0 3px 8px rgba(0,78,124,0.35),inset 0 1px 0 rgba(255,255,255,0.18)}
-.ws-tab:focus-visible{outline:2px solid #fedb00;outline-offset:3px}
+.ws-track{position:relative;display:inline-flex;padding:5px;border-radius:16px;background:#EEF1F5;border:1px solid #C9CED6;box-shadow:inset 0 2px 6px rgba(12,12,12,0.14)}
+.ws-indicator{position:absolute;top:5px;bottom:5px;left:5px;width:0;border-radius:11px;background:#004e7c;box-shadow:0 2px 6px rgba(0,78,124,0.35),inset 0 1px 0 rgba(255,255,255,0.18);transition:left .28s ease,width .28s ease;z-index:0}
+.ws-tab{position:relative;z-index:1;appearance:none;background:transparent;border:0;border-radius:11px;padding:12px 26px;margin:0;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#004e7c;transition:color .2s,background .2s}
+.ws-tab[aria-selected="false"]:hover{background:rgba(0,78,124,0.07)}
+.ws-tab[aria-selected="true"]{color:#fff}
+.ws-track:not(.has-indicator) .ws-tab[aria-selected="true"]{background:#004e7c}
+.ws-tab:focus-visible{outline:2px solid #fedb00;outline-offset:2px}
 .ws-panel[hidden]{display:none}
-@media(max-width:768px){.ws-tabs{padding:24px 0}.ws-track{display:flex;width:100%;gap:4px;padding:4px}.ws-tab{flex:1 1 0;font-size:10px;letter-spacing:0.06em;padding:11px 8px;white-space:nowrap}}
+@media(max-width:768px){.ws-tabs{padding:24px 0}.ws-track{display:flex;width:100%;padding:4px}.ws-indicator{top:4px;bottom:4px}.ws-tab{flex:1 1 0;font-size:10px;letter-spacing:0.06em;padding:11px 8px;white-space:nowrap}}
 @media(max-width:360px){.ws-tab{font-size:9px;letter-spacing:0.02em;padding:10px 6px}}
 </style>
 <div class="ws-tabs">
   <div class="container">
     <div class="ws-track" role="tablist" aria-label="Case study workstreams">
+      <span class="ws-indicator" aria-hidden="true"></span>
       <button class="ws-tab" role="tab" id="tab-brand" aria-controls="panel-brand" aria-selected="true">Building the Brand</button>
       <button class="ws-tab" role="tab" id="tab-product" aria-controls="panel-product" aria-selected="false" tabindex="-1">Building the Product</button>
     </div>
@@ -943,6 +946,8 @@ blockquote{border-left:none!important;padding-left:0!important}
     var tabs=[].slice.call(document.querySelectorAll('.ws-tab'));
     var bar=document.querySelector('.ws-tabs');
     var hashes={'tab-brand':'#build-brand','tab-product':'#build-product'};
+    var track=document.querySelector('.ws-track'), ind=document.querySelector('.ws-indicator');
+    function place(tab){ if(!ind) return; ind.style.left=tab.offsetLeft+'px'; ind.style.width=tab.offsetWidth+'px'; }
     function show(tab,scroll){
       tabs.forEach(function(t){
         var on=t===tab;
@@ -950,6 +955,7 @@ blockquote{border-left:none!important;padding-left:0!important}
         t.tabIndex=on?0:-1;
         document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
       });
+      place(tab);
       if(history.replaceState) history.replaceState(null,'',hashes[tab.id]);
       if(scroll && window.scrollY>bar.offsetTop) window.scrollTo(0,bar.offsetTop);
     }
@@ -970,6 +976,14 @@ blockquote{border-left:none!important;padding-left:0!important}
       c.querySelectorAll('.fade-up').forEach(function(el){ el.classList.remove('visible'); observer.observe(el); });
     }
     if(nav) bar.style.top=nav.offsetHeight+'px';
+    if(ind){
+      ind.style.transition='none';
+      place(document.querySelector('.ws-tab[aria-selected="true"]'));
+      track.classList.add('has-indicator');
+      requestAnimationFrame(function(){ ind.style.transition=''; });
+      window.addEventListener('resize',function(){ place(document.querySelector('.ws-tab[aria-selected="true"]')); });
+      if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ place(document.querySelector('.ws-tab[aria-selected="true"]')); });
+    }
     if(location.hash==='#build-product'){show(tabs[1],false);setTimeout(function(){window.scrollTo(0,bar.offsetTop)},50);}
     else if(location.hash==='#build-brand'){setTimeout(function(){window.scrollTo(0,bar.offsetTop)},50);}
   })();
