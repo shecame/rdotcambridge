@@ -240,11 +240,11 @@ blockquote{border-left:none!important;padding-left:0!important}
   <div class="container">
     <div class="ehe-split fade-up" style="margin-top:0;align-items:stretch;gap:24px;">
       <div style="background:var(--surface);padding:32px;">
-        <h2 class="section-title" style="margin:0 0 16px;"><span class="section-title-italic">My Call</span></h2>
+        <p style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin:0 0 12px;">My Call</p>
         <p style="font-family:'PT Sans',sans-serif;font-size:14.5px;color:var(--ink-mid);line-height:1.7;margin:0;">The old platform treated employers and employees as one user. I split the experience into two journeys under one brand, and every IA decision tied back to that call.</p>
       </div>
       <div style="background:var(--surface);padding:32px;">
-        <h2 class="section-title" style="margin:0 0 16px;"><span class="section-title-italic">Constraints</span></h2>
+        <p style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin:0 0 12px;">Constraints</p>
         <p style="font-family:'PT Sans',sans-serif;font-size:14.5px;color:var(--ink-mid);line-height:1.7;margin:0;">Health data had to stay private and secure. The brand was 100 years old, and results lived across disconnected portals the app had to replace.</p>
       </div>
     </div>
@@ -253,14 +253,15 @@ blockquote{border-left:none!important;padding-left:0!important}
 
 <!-- ══ WORKSTREAM TABS ══ -->
 <style>
-.ws-tabs{position:sticky;top:58px;z-index:200;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.ws-tabs .container{display:flex;gap:40px}
-.ws-tab{appearance:none;background:none;border:0;border-bottom:3px solid transparent;padding:20px 0 17px;margin:0;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted,#6B6B6B);transition:color .2s,border-color .2s}
-.ws-tab:hover{color:var(--ink)}
-.ws-tab[aria-selected="true"]{color:var(--ink);border-bottom-color:#fedb00}
-.ws-tab:focus-visible{outline:2px solid #006699;outline-offset:4px}
+.ws-tabs{position:sticky;top:58px;z-index:200;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0}
+.ws-tabs .container{display:flex;gap:12px;flex-wrap:wrap}
+.ws-tab{appearance:none;background:#fff;border:2px solid #004e7c;border-radius:100px;padding:14px 28px;margin:0;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;transition:background .2s,color .2s}
+.ws-tab:hover{background:#EEF2FA}
+.ws-tab[aria-selected="true"]{background:#004e7c;color:#fff}
+.ws-tab:focus-visible{outline:2px solid #fedb00;outline-offset:3px}
 .ws-panel[hidden]{display:none}
-@media(max-width:768px){.ws-tabs .container{gap:24px}.ws-tab{font-size:11px;letter-spacing:0.08em}}
+@media(max-width:768px){.ws-tabs{padding:12px 0}.ws-tabs .container{gap:8px;flex-wrap:nowrap}.ws-tab{flex:1 1 0;font-size:10px;letter-spacing:0.06em;padding:11px 8px;white-space:nowrap}}
+@media(max-width:360px){.ws-tab{font-size:9px;letter-spacing:0.02em;padding:10px 6px}}
 </style>
 <div class="ws-tabs">
   <div class="container" role="tablist" aria-label="Case study workstreams">
