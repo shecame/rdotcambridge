@@ -166,6 +166,7 @@ footer a{text-decoration:none}
 <style>
 /* Mobile stacking */
 @media(max-width:768px){.m-stack{grid-template-columns:1fr!important;gap:32px!important}}
+@media(max-width:768px){.wide-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.wide-scroll img{width:820px!important;max-width:none!important}.wide-hint{display:block!important}}
 </style>
 </head>
 <body>
@@ -343,7 +344,8 @@ footer a{text-decoration:none}
     <p class="section-body">
       The brand system needed proof of range. I built a campaign around a single client case study, one story told three ways, each built for a different moment in the consideration journey. A launch video for awareness, a landing page for context, and a downloadable ebook for the leaders ready to go deeper. Enterprise engineering leaders and CTOs don't respond to broad strokes so every asset was built to be specific, credible, and consistent with the same system logic governing everything else Andela put in market.
     </p>
-    <img loading="lazy" decoding="async" src="And-eco.png" alt="Andela Content Ecosystem" style="width:100%;display:block;margin-top:48px;">
+    <div class="wide-scroll" style="margin-top:48px;"><img loading="lazy" decoding="async" src="And-eco.png" alt="Andela Content Ecosystem" style="width:100%;display:block;"></div>
+    <p class="wide-hint" style="display:none;font-family:'PT Sans',sans-serif;font-size:12px;color:var(--ink-muted,#6B6B6B);margin:12px 0 0;">Swipe to see the full diagram &rarr;</p>
   </div>
 </section>
 
