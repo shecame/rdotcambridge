@@ -167,9 +167,9 @@ footer a{text-decoration:none}
 /* Mobile stacking */
 @media(max-width:768px){.m-stack{grid-template-columns:1fr!important;gap:32px!important}}
 @media(max-width:768px){.eco-desktop{display:none}.eco-mobile{display:block!important;margin-top:40px}}
-.eco-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.eco-track{display:flex;align-items:center;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .eco-track::-webkit-scrollbar{display:none}
-.eco-track img{flex:0 0 100%;scroll-snap-align:start}
+.eco-track img{flex:0 0 100%;scroll-snap-align:start;height:auto;max-height:280px;object-fit:contain}
 .eco-dots{display:flex;gap:8px;justify-content:center;margin-top:16px}
 .eco-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#C9CED6;cursor:pointer}
 .eco-dots button.on{background:var(--blue)}
