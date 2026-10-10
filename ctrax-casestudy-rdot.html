@@ -53,6 +53,10 @@
 .bp-dot{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--page-accent);transform:translateX(-50%);z-index:1}
 @media(max-width:640px){.bp-wrap{padding:32px 20px}.bp-box{width:80px;font-size:8px;padding:8px 4px}.bp-dot{width:7px;height:7px}}
 </style>
+<style>
+/* Mobile stacking */
+@media(max-width:768px){.wide-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.wide-scroll img{width:820px!important;max-width:none!important}.wide-hint{display:block!important}}
+</style>
 </head>
 <body>
 
@@ -183,7 +187,8 @@
     <p class="section-subtitle fade-up">Before any screens were designed, the product structure needed to be mapped. Two distinct products, POS and inventory management, serving three different user segments required a clear architecture to define how content, navigation, and user flows would connect across the platform.</p>
     <p class="section-body fade-up" style="margin-top:24px;">The IA work established the hierarchy of information across both products, identified shared patterns that could be unified under one design system, and defined the entry points for each user segment without creating friction between them.</p>
     <div class="fade-up" style="margin-top:48px;">
-      <img loading="lazy" decoding="async" src="c-trax-IA.png" alt="CTRAX Information Architecture" style="width:100%;display:block;">
+      <div class="wide-scroll"><img loading="lazy" decoding="async" src="c-trax-IA.png" alt="CTRAX Information Architecture" style="width:100%;display:block;"></div>
+      <p class="wide-hint" style="display:none;font-family:'PT Sans',sans-serif;font-size:12px;color:var(--ink-muted,#6B6B6B);margin:12px 0 0;">Swipe to see the full diagram &rarr;</p>
     </div>
   </div>
 </section>

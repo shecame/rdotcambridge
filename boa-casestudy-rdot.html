@@ -627,6 +627,12 @@ footer a{text-decoration:none}
 <style>
 .si{display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;color:currentColor}
 </style>
+<style>
+/* Mobile stacking */
+@media(max-width:768px){.m-stack{grid-template-columns:1fr!important;gap:32px!important}}
+@media(max-width:768px){.approach-layout,.method-cards,.findings-grid,.reflection-layout{grid-template-columns:1fr!important;gap:32px!important}.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.table-scroll .heuristic-table{min-width:640px}}
+@media(max-width:480px){.section-title{font-size:32px!important}}
+</style>
 </head>
 <body>
 
@@ -764,7 +770,7 @@ footer a{text-decoration:none}
     <p class="section-subtitle fade-up">Each persona represents a distinct relationship with the tools, and a distinct failure mode. Together, they revealed a system held together by institutional knowledge rather than usability.</p>
 
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px;">
+    <div class="m-stack" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px;">
 
       <!-- Bradley -->
       <div class="fade-up">
@@ -836,7 +842,8 @@ footer a{text-decoration:none}
     <div class="section-label fade-up">What We Found</div>
     <h2 class="section-title fade-up">Heuristic<br/><span class="section-title-italic">Review</span></h2>
     <p class="section-subtitle fade-up">Where the survey said users were comfortable, the heuristic said the product was failing them. Four critical issues, six improvement areas, one success.</p>
-    <table class="heuristic-table fade-up">
+    <div class="table-scroll fade-up">
+    <table class="heuristic-table">
       <thead>
         <tr>
           <th style="width:168px;">Principle</th>
@@ -859,6 +866,7 @@ footer a{text-decoration:none}
         <tr><td class="col-name">User support</td><td>Help documentation is easy to locate and search.</td><td style="text-align:center;color:var(--red);font-weight:700;">✗</td><td style="text-align:center;"><span class="badge badge-crit">Critical</span></td><td>No assistance aids can be located anywhere in the system.</td></tr>
       </tbody>
     </table>
+    </div>
   </div>
 </section>
 
@@ -1175,7 +1183,7 @@ footer a{text-decoration:none}
     <div class="section-label fade-up">Before the Design Work</div>
     <h2 class="section-title fade-up">The Design<br/><span class="section-title-italic">Principles</span></h2>
     <p class="section-subtitle fade-up" style="margin-top:18px;">Before I started solving anything, I wrote down what we were optimizing for and why, then brought the three teams together for a quick session to define it together. A shared set of principles kept every cross team conversation focused on the same problem, so tradeoffs got decided by what we valued, not by whoever argued loudest. I typically land on three to five per engagement. Here are three that shaped this one.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:56px;" class="fade-up">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:56px;" class="fade-up m-stack">
       <!-- Card 1: User / reduce dependency -->
       <div style="background:transparent;padding:44px 36px;border:1px solid var(--border);">
         <div style="margin-bottom:24px;">

@@ -163,6 +163,10 @@ footer a{text-decoration:none}
 .diag-item{display:flex;flex-direction:row;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)}
 .diag-item:first-child{border-top:1px solid var(--border)}
 </style>
+<style>
+/* Mobile stacking */
+@media(max-width:768px){.m-stack{grid-template-columns:1fr!important;gap:32px!important}}
+</style>
 </head>
 <body>
 
@@ -348,7 +352,7 @@ footer a{text-decoration:none}
   <div class="container">
     <p class="section-label">Website Redesign</p>
     <h2 class="section-title">Credibility Doesn&#8217;t<br/>Translate Itself</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:40px;">
+    <div class="m-stack" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:40px;">
       <div>
         <p class="section-subtitle" style="margin-top:0;">The site had to serve two distinct audiences simultaneously: clients evaluating whether to trust Andela with their engineering pipeline, and engineers deciding whether Andela was worth their ambition.</p>
         <p class="section-subtitle" style="margin-top:20px;">Two audiences, two conversion goals, one cohesive system.</p>

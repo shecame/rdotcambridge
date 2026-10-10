@@ -133,6 +133,10 @@ blockquote{border-left:none!important;padding-left:0!important}
 .hero-right{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('EHE-hero2-1600.jpg') no-repeat center center;background-size:cover,cover;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden;min-height:100vh}
 @media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
 </style>
+<style>
+/* Mobile stacking */
+@media(max-width:768px){.m-stack{grid-template-columns:1fr!important;gap:32px!important}}
+</style>
 </head>
 <body>
 
@@ -201,7 +205,7 @@ blockquote{border-left:none!important;padding-left:0!important}
   <div class="container">
     <p class="section-label fade-up">Overview</p>
     <h2 class="section-title fade-up">Everything<br/><span class="section-title-italic">Needed to Change</span></h2>
-    <div class="fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:0;">
+    <div class="fade-up m-stack" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:0;">
       <div>
         <p class="section-subtitle" style="margin-top:0;">EHE Health is a 100-year-old preventive care company operating in a category where trust, warmth, and clinical credibility have to coexist. The existing brand and website had aged out of that balance.</p>
         <p class="section-subtitle" style="margin-top:20px;">The deeper problem was structural. EHE&#8217;s value flows through two completely different people, the employer who funds access and the employee who uses it. Those two people have nothing in common in how they evaluate, decide, or engage. The existing platform treated them as variations of the same user. They are not.</p>

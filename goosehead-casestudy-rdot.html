@@ -49,6 +49,11 @@
 .diag-item{display:flex;flex-direction:row;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)}
 .diag-item:first-child{border-top:1px solid var(--border)}
 </style>
+<style>
+/* Mobile stacking */
+@media(max-width:768px){.m-stack{grid-template-columns:1fr!important;gap:32px!important}}
+@media(max-width:768px){.wide-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.wide-scroll img{width:820px!important;max-width:none!important}.wide-hint{display:block!important}}
+</style>
 </head>
 <body>
 
@@ -112,7 +117,7 @@
 <section id="overview">
   <div class="container">
     <p class="section-label fade-up">Overview</p>
-    <div class="fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:16px;">
+    <div class="fade-up m-stack" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:16px;">
       <div>
         <h2 class="section-title" style="margin-bottom:24px;">A Business Model Transformation<br/><span class="section-title-italic">the Website Hadn&#8217;t Caught Up To</span></h2>
         <p class="section-subtitle" style="margin-top:0;">Insurance is a category built on complexity. Policies, pricing structures, and coverage models create decision fatigue before a customer even gets to a quote. Most insurance websites make this worse, burying the value proposition under jargon and forcing users to work for information they should be handed immediately.</p>
@@ -142,7 +147,7 @@
     <h2 class="section-title fade-up">Structure<br/><span class="section-title-italic">Before Surface</span></h2>
     <p class="section-subtitle fade-up">The opportunity was clarity, not simplification for its own sake, but precision about what Goosehead actually does and why it&#8217;s different. I partnered with stakeholders, developers, and customers to align on three things before design began.</p>
 
-    <div class="fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:40px;">
+    <div class="fade-up m-stack" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:40px;">
       <div>
         <h2 class="section-title" style="margin-bottom:0;">Information Architecture<br/><span class="section-title-italic">Mapping the Platform Structure</span></h2>
       </div>
@@ -173,7 +178,8 @@
       </div>
     </div>
 
-    <img loading="lazy" decoding="async" src="Gooshead-IA.png" alt="Goosehead Information Architecture" style="width:100%;display:block;margin-top:48px;">
+    <div class="wide-scroll" style="margin-top:48px;"><img loading="lazy" decoding="async" src="Gooshead-IA.png" alt="Goosehead Information Architecture" style="width:100%;display:block;"></div>
+    <p class="wide-hint" style="display:none;font-family:'PT Sans',sans-serif;font-size:12px;color:var(--ink-muted,#6B6B6B);margin:12px 0 0;">Swipe to see the full diagram &rarr;</p>
   </div>
 </section>
 
