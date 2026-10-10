@@ -166,7 +166,13 @@ footer a{text-decoration:none}
 <style>
 /* Mobile stacking */
 @media(max-width:768px){.m-stack{grid-template-columns:1fr!important;gap:32px!important}}
-@media(max-width:768px){.eco-desktop{display:none}.eco-mobile{display:grid!important;gap:40px;margin-top:40px}}
+@media(max-width:768px){.eco-desktop{display:none}.eco-mobile{display:block!important;margin-top:40px}}
+.eco-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.eco-track::-webkit-scrollbar{display:none}
+.eco-track img{flex:0 0 100%;scroll-snap-align:start}
+.eco-dots{display:flex;gap:8px;justify-content:center;margin-top:16px}
+.eco-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#C9CED6;cursor:pointer}
+.eco-dots button.on{background:var(--blue)}
 </style>
 </head>
 <body>
@@ -346,10 +352,23 @@ footer a{text-decoration:none}
     </p>
     <div class="eco-desktop" style="margin-top:48px;"><img loading="lazy" decoding="async" src="And-eco.png" alt="Andela Content Ecosystem" style="width:100%;display:block;"></div>
     <div class="eco-mobile" style="display:none;">
-      <img loading="lazy" decoding="async" src="And-eco-1.png" alt="Content ecosystem: Video, The Process" style="width:100%;display:block;">
-      <img loading="lazy" decoding="async" src="And-eco-2.png" alt="Content ecosystem: Case Study, Landing Page" style="width:100%;display:block;">
-      <img loading="lazy" decoding="async" src="And-eco-3.png" alt="Content ecosystem: ebook" style="width:100%;display:block;">
+      <div class="eco-track" aria-label="Content ecosystem, 3 flows">
+        <img loading="lazy" decoding="async" src="And-eco-1.png" alt="Content ecosystem: Video, The Process" style="width:100%;display:block;">
+        <img loading="lazy" decoding="async" src="And-eco-2.png" alt="Content ecosystem: Case Study, Landing Page" style="width:100%;display:block;">
+        <img loading="lazy" decoding="async" src="And-eco-3.png" alt="Content ecosystem: ebook" style="width:100%;display:block;">
+      </div>
+      <div class="eco-dots"><button class="on" aria-label="Show flow 1"></button><button aria-label="Show flow 2"></button><button aria-label="Show flow 3"></button></div>
+      <p style="font-family:'PT Sans',sans-serif;font-size:12px;color:var(--ink-muted);margin:12px 0 0;text-align:center;">Swipe to see all three flows &rarr;</p>
     </div>
+    <script>
+    (function(){
+      var t=document.querySelector('.eco-track'); if(!t) return;
+      var dots=[].slice.call(document.querySelectorAll('.eco-dots button'));
+      function cur(){ return Math.round(t.scrollLeft/(t.clientWidth+16)); }
+      t.addEventListener('scroll',function(){ var i=cur(); dots.forEach(function(d,j){ d.classList.toggle('on',i===j); }); },{passive:true});
+      dots.forEach(function(d,j){ d.addEventListener('click',function(){ t.scrollTo({left:j*(t.clientWidth+16),behavior:'smooth'}); }); });
+    })();
+    </script>
   </div>
 </section>
 
