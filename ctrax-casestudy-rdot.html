@@ -22,7 +22,7 @@
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
 .hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
 .hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
-.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-left h1 em{font-style:italic;color:#006699;font-weight:300;text-transform:none;letter-spacing:0}
 .hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
 .meta-item{flex:1;padding-right:24px}.meta-item+.meta-item{padding-left:24px;border-left:1px solid var(--border)}
 .meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
@@ -57,8 +57,11 @@
 /* Mobile stacking */
 @media(max-width:768px){.wide-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.wide-scroll img{width:820px!important;max-width:none!important}.wide-hint{display:block!important}}
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- PROGRESS BAR -->
 
@@ -94,6 +97,7 @@
 </div>
 
 <!-- ══ HERO ══ -->
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="hero-left">
     <p class="hero-label">CTRAX &nbsp;·&nbsp; Brand &amp; Systems Design</p>
@@ -134,17 +138,17 @@
     <div class="three-col fade-up">
       <div class="card">
         <div style="font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:var(--blue);line-height:1;margin-bottom:16px;letter-spacing:-0.02em;">01</div>
-        <h4>Operators</h4>
+        <h4 aria-level="3">Operators</h4>
         <p>Evaluating an inventory management and seed-to-sale POS platform. They needed credibility signals before anything else.</p>
       </div>
       <div class="card">
         <div style="font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:var(--blue);line-height:1;margin-bottom:16px;letter-spacing:-0.02em;">02</div>
-        <h4>Retailers</h4>
+        <h4 aria-level="3">Retailers</h4>
         <p>Assessing fit and pricing. Their decision process was different in pace and depth from operators, but just as deliberate.</p>
       </div>
       <div class="card">
         <div style="font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:var(--blue);line-height:1;margin-bottom:16px;letter-spacing:-0.02em;">03</div>
-        <h4>New Customers</h4>
+        <h4 aria-level="3">New Customers</h4>
         <p>Entering the purchase flow for the first time. They needed guidance, not a feature tour.</p>
       </div>
     </div>
@@ -231,27 +235,27 @@
 
     <div class="outcome-grid fade-up">
       <div class="outcome-item fade-up">
-        <h4>Structured Entry Funnels</h4>
+        <h4 aria-level="3">Structured Entry Funnels</h4>
         <p>Distinct pathways aligned to operator, retailer, and customer intent, each with its own starting point and progression logic.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
-        <h4>Sticky Navigation</h4>
+        <h4 aria-level="3">Sticky Navigation</h4>
         <p>Orientation reinforced at every scroll depth across the full experience, users always knew where they were.</p>
       </div>
       <div class="outcome-item fade-up">
-        <h4>Resource Hub</h4>
+        <h4 aria-level="3">Resource Hub</h4>
         <p>Built for trust-building with operators and retailers, with educational content structured as deliberate credibility-building, not marketing copy.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
-        <h4>Cart &amp; Checkout</h4>
+        <h4 aria-level="3">Cart &amp; Checkout</h4>
         <p>Streamlined with advanced payment handling, a non-trivial problem in cannabis commerce given payment processing constraints.</p>
       </div>
       <div class="outcome-item fade-up">
-        <h4>Cohesive Interaction Language</h4>
+        <h4 aria-level="3">Cohesive Interaction Language</h4>
         <p>Consistent across both POS and inventory modules, with micro-interactions handling state changes, progress indicators, and transition cues.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
-        <h4>Brand Identity</h4>
+        <h4 aria-level="3">Brand Identity</h4>
         <p>Professional enough for enterprise buyers and distinct from generic SaaS platforms.</p>
       </div>
     </div>
@@ -259,6 +263,7 @@
 </section>
 
 <!-- ══ FOOTER ══ -->
+</main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">

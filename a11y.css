@@ -1,0 +1,17 @@
+/* Shared accessibility layer. Loaded after each page's own styles. */
+
+/* Skip link: hidden until focused with the keyboard */
+.skip-link{position:absolute;left:16px;top:-100px;z-index:1000;padding:12px 18px;background:#0C0C0C;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.04em;text-decoration:none}
+.skip-link:focus{top:16px;outline:2px solid #FEDB00;outline-offset:2px}
+main:focus{outline:none}
+
+/* Closed menus are hidden from keyboard and screen readers, not just faded out */
+.nav-panel:not(.open){visibility:hidden;transition:opacity .35s ease,visibility 0s linear .35s}
+.nav-panel.open{visibility:visible;transition:opacity .35s ease,visibility 0s}
+.mobile-menu:not(.open){visibility:hidden}
+
+/* Respect the system "reduce motion" setting */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+  .fade-up,.reveal{opacity:1!important;transform:none!important}
+}

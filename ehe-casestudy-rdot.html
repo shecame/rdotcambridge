@@ -125,7 +125,7 @@ blockquote{border-left:none!important;padding-left:0!important}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
 .hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
 .hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
-.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-left h1 em{font-style:italic;color:#006699;font-weight:300;text-transform:none;letter-spacing:0}
 .hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
 .meta-item{flex:1;padding-right:24px}.meta-item+.meta-item{padding-left:24px;border-left:1px solid var(--border)}
 .meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
@@ -137,8 +137,11 @@ blockquote{border-left:none!important;padding-left:0!important}
 /* Mobile stacking */
 @media(max-width:768px){.m-stack{grid-template-columns:1fr!important;gap:32px!important}}
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- PROGRESS BAR -->
 
@@ -174,6 +177,7 @@ blockquote{border-left:none!important;padding-left:0!important}
 </div>
 
 <!-- ══ HERO ══ -->
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="hero-left">
     <p class="hero-label">EHE &nbsp;·&nbsp; Brand &amp; Systems Design</p>
@@ -216,21 +220,21 @@ blockquote{border-left:none!important;padding-left:0!important}
           <div class="diag-item">
             <span style="display:inline-block;flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#006699;margin-top:8px;"></span>
             <div>
-              <h4 style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">Identity</h4>
+              <h4 aria-level="3" style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">Identity</h4>
               <p style="font-family:'PT Sans',sans-serif;font-size:15px;font-weight:400;color:#3A3A3A;line-height:1.65;margin:0;">The visual identity felt institutional, communicating obligation rather than care at every touchpoint.</p>
             </div>
           </div>
           <div class="diag-item">
             <span style="display:inline-block;flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#006699;margin-top:8px;"></span>
             <div>
-              <h4 style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">Content</h4>
+              <h4 aria-level="3" style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">Content</h4>
               <p style="font-family:'PT Sans',sans-serif;font-size:15px;font-weight:400;color:#3A3A3A;line-height:1.65;margin:0;">The content was dense, built around EHE's service offering rather than how either audience actually evaluates or decides.</p>
             </div>
           </div>
           <div class="diag-item">
             <span style="display:inline-block;flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#006699;margin-top:8px;"></span>
             <div>
-              <h4 style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">Experience</h4>
+              <h4 aria-level="3" style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">Experience</h4>
               <p style="font-family:'PT Sans',sans-serif;font-size:15px;font-weight:400;color:#3A3A3A;line-height:1.65;margin:0;">The experience communicated obligation, not care, and neither employers nor employees were being met where they were.</p>
             </div>
           </div>
@@ -297,7 +301,7 @@ blockquote{border-left:none!important;padding-left:0!important}
           <circle cx="22" cy="22" r="6"/>
           <circle cx="34" cy="14" r="2" fill="currentColor" stroke="none"/>
         </svg>
-        <h4>Photography Direction</h4>
+        <h4 aria-level="3">Photography Direction</h4>
         <p>Curated direction toward warm, real, human imagery, deliberately avoiding the clinical stock photography standard in the category.</p>
       </div>
       <div class="brand-card">
@@ -307,14 +311,14 @@ blockquote{border-left:none!important;padding-left:0!important}
           <path d="M14 34l-4 1 1-4"/>
           <path d="M26 14l4 4"/>
         </svg>
-        <h4>Illustration System</h4>
+        <h4 aria-level="3">Illustration System</h4>
         <p>Redesigned to complement the photography rather than compete with it, supporting the warmth of the brand, not contradicting it.</p>
       </div>
       <div class="brand-card">
         <svg width="40" height="40" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
           <path d="M10 14h24M10 22h18M10 30h12"/>
         </svg>
-        <h4>Supportive Tone</h4>
+        <h4 aria-level="3">Supportive Tone</h4>
         <p>Visual hierarchy and copy calibrated to feel supportive across every surface, something people wanted to engage with, not something HR mandated.</p>
       </div>
     </div>
@@ -462,7 +466,7 @@ blockquote{border-left:none!important;padding-left:0!important}
             <path d="M22 14v8l5 5"/>
           </svg>
           <div>
-            <h4>Employer Decision Points</h4>
+            <h4 aria-level="3">Employer Decision Points</h4>
             <p>Where employers were making decisions and what information they needed to act, mapped to specific moments in the evaluation journey.</p>
           </div>
         </div>
@@ -473,7 +477,7 @@ blockquote{border-left:none!important;padding-left:0!important}
             <path d="M16 22c0-3.31 2.69-6 6-6M22 16V8M22 36v-8"/>
           </svg>
           <div>
-            <h4>Employee Drop-Off</h4>
+            <h4 aria-level="3">Employee Drop-Off</h4>
             <p>Where employees were dropping off and the behavioral triggers that stopped them from engaging.</p>
           </div>
         </div>
@@ -681,8 +685,8 @@ blockquote{border-left:none!important;padding-left:0!important}
 
 
       <!-- LEGEND -->
-      <div class="ia2-legend">
-        <h5>LEGEND</h5>
+      <div class="ia2-legend" tabindex="0" role="region" aria-label="Diagram legend, scrolls sideways on small screens">
+        <h5 aria-level="3">LEGEND</h5>
         <div class="ia2-card ia2-home"><div class="ia2-bar">X.0</div><div class="ia2-body">Homepage</div></div>
         <div class="ia2-card ia2-pub"><div class="ia2-bar">X.X</div><div class="ia2-body">Public page</div></div>
         <div class="ia2-card ia2-gate"><div class="ia2-bar">0.0X</div><div class="ia2-body">Login / auth</div></div>
@@ -692,7 +696,7 @@ blockquote{border-left:none!important;padding-left:0!important}
         <div class="ia2-foot"><span>F.X</span>Footer Link</div>
       </div>
 
-      <div style="overflow-x:auto;">
+      <div style="overflow-x:auto;" tabindex="0" role="region" aria-label="EHE information architecture diagram, scrolls sideways">
       <div class="ia2">
         <div>
 
@@ -838,7 +842,7 @@ blockquote{border-left:none!important;padding-left:0!important}
           <rect x="8" y="6" width="28" height="32" rx="2"/>
           <path d="M14 16h16M14 22h16M14 28h10"/>
         </svg>
-        <h4>Exam Booking</h4>
+        <h4 aria-level="3">Exam Booking</h4>
         <p>Members schedule their annual Pulse Exam directly in the application, ending the fragmented experience of navigating separate systems.</p>
       </div>
       <div class="webapp-feature">
@@ -846,7 +850,7 @@ blockquote{border-left:none!important;padding-left:0!important}
           <circle cx="22" cy="22" r="16"/>
           <path d="M22 16v6h6"/>
         </svg>
-        <h4>Results and Health Records</h4>
+        <h4 aria-level="3">Results and Health Records</h4>
         <p>Lab results, biomarker data, and physician notes in one place, readable, contextual, and actionable for a non-clinician.</p>
       </div>
       <div class="webapp-feature">
@@ -854,7 +858,7 @@ blockquote{border-left:none!important;padding-left:0!important}
           <rect x="6" y="6" width="32" height="32" rx="2"/>
           <path d="M14 28l6-6 5 5 9-10"/>
         </svg>
-        <h4>Personalized Health Dashboard</h4>
+        <h4 aria-level="3">Personalized Health Dashboard</h4>
         <p>Goal tracking scoped to each member's individual screening results, not generic wellness content.</p>
       </div>
       <div class="webapp-feature">
@@ -864,7 +868,7 @@ blockquote{border-left:none!important;padding-left:0!important}
           <circle cx="30" cy="30" r="6"/>
           <path d="M20 22h4M24 14H20M24 30H20"/>
         </svg>
-        <h4>Follow-Up Care and Referrals</h4>
+        <h4 aria-level="3">Follow-Up Care and Referrals</h4>
         <p>Specialist referrals and ongoing health coaching built into the core flow, not buried in a separate portal.</p>
       </div>
     </div>
@@ -898,6 +902,7 @@ blockquote{border-left:none!important;padding-left:0!important}
 </div>
 
 <!-- ══ FOOTER ══ -->
+</main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">

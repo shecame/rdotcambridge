@@ -28,7 +28,7 @@
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
 .hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
 .hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
-.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-left h1 em{font-style:italic;color:#006699;font-weight:300;text-transform:none;letter-spacing:0}
 .hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
 .meta-item{flex:1;padding:28px 20px;border-right:1px solid var(--border)}
 .meta-item:last-child{border-right:none}
@@ -37,8 +37,11 @@
 .hero-right{background:#1a1a1a;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden}
 @media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <!-- ══ DRAFT BANNER ══ -->
 <div style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#FEDB00;color:#0C0C0C;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-align:center;padding:10px 16px;display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
   <span>&#9679; Draft — Picato — Not Published &nbsp;·&nbsp; Hidden from navigation &amp; footer &nbsp;·&nbsp; Remove this banner before publishing</span>
@@ -79,6 +82,7 @@
 </div>
 
 <!-- ══ HERO ══ -->
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="hero-left">
     <p class="hero-label">Picato &nbsp;·&nbsp; Experience &amp; Website Design</p>
@@ -99,11 +103,11 @@
 
     <div class="two-col fade-up" style="margin-top:40px;">
       <div class="card">
-        <h4>Compliance Without Friction</h4>
+        <h4 aria-level="3">Compliance Without Friction</h4>
         <p>Important safety information had to remain clearly visible at all times, without overwhelming the interface or burying the content patients actually needed.</p>
       </div>
       <div class="card">
-        <h4>Mobile-First Clarity</h4>
+        <h4 aria-level="3">Mobile-First Clarity</h4>
         <p>Content restructured to read clearly on smaller devices, a non-trivial problem when ISI requirements limit how much can be collapsed or hidden.</p>
       </div>
     </div>
@@ -128,7 +132,7 @@
             <path d="M28 26l4 4-4 4" stroke-width="1.75"/>
           </svg>
           <div>
-            <h4>ISI Integration</h4>
+            <h4 aria-level="3">ISI Integration</h4>
             <p>Safety information positioned within the content flow, visible without dominating, compliant without being disruptive.</p>
           </div>
         </div>
@@ -138,7 +142,7 @@
             <path d="M16 16h12M16 22h8M16 28h10"/>
           </svg>
           <div>
-            <h4>Content Restructuring</h4>
+            <h4 aria-level="3">Content Restructuring</h4>
             <p>Hierarchy rebuilt for mobile, content reads clearly at every screen size without sacrificing regulatory requirements.</p>
           </div>
         </div>
@@ -148,7 +152,7 @@
             <path d="M10 38c0-6.627 5.373-12 12-12s12 5.373 12 12"/>
           </svg>
           <div>
-            <h4>Patient-Centered Pathways</h4>
+            <h4 aria-level="3">Patient-Centered Pathways</h4>
             <p>Clearer journeys to the resources patients actually needed, with fewer dead ends and more direct access to support.</p>
           </div>
         </div>
@@ -175,27 +179,27 @@
 
     <div class="outcome-grid fade-up">
       <div class="outcome-item fade-up">
-        <h4>Improved Patient Experience</h4>
+        <h4 aria-level="3">Improved Patient Experience</h4>
         <p>Clearer pathways and better content hierarchy across both mobile and desktop, patients reached what they needed faster.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
-        <h4>Higher Search Ranking</h4>
+        <h4 aria-level="3">Higher Search Ranking</h4>
         <p>Increased Google ranking and organic search visibility after technical fixes addressed structural SEO issues.</p>
       </div>
       <div class="outcome-item fade-up">
-        <h4>Traffic &amp; Conversions</h4>
+        <h4 aria-level="3">Traffic &amp; Conversions</h4>
         <p>Higher traffic and stronger conversion rates driven by improved content clarity and user flow.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
-        <h4>Patient Engagement</h4>
+        <h4 aria-level="3">Patient Engagement</h4>
         <p>Stronger engagement through clearer pathways to critical medical resources and support tools.</p>
       </div>
       <div class="outcome-item fade-up">
-        <h4>Accessibility Improvements</h4>
+        <h4 aria-level="3">Accessibility Improvements</h4>
         <p>Refined content hierarchy improved accessibility, with compliance requirements and accessibility goals aligned, not in tension.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
-        <h4>Business Performance</h4>
+        <h4 aria-level="3">Business Performance</h4>
         <p>Stronger business results downstream of a better patient experience, trust and usability translated directly to outcomes.</p>
       </div>
     </div>
@@ -203,6 +207,7 @@
 </section>
 
 <!-- ══ FOOTER ══ -->
+</main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">

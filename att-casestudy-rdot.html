@@ -18,14 +18,14 @@
 .blockquote-pull{border-left-color:var(--page-accent)}
 .pull-quote{border-left-color:var(--page-accent)}
 .outcome-item::before{display:none}
-.section-title-italic{font-style:italic;text-transform:none;letter-spacing:0;color:#82acce}
+.section-title-italic{font-style:italic;text-transform:none;letter-spacing:0;color:#006699}
 
 /* ── HERO ── */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
 .hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
 .hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
-.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-left h1 em{font-style:italic;color:#006699;font-weight:300;text-transform:none;letter-spacing:0}
 .hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
 .meta-item{flex:1;padding:28px 20px;border-right:1px solid var(--border)}
 .meta-item:last-child{border-right:none}
@@ -60,8 +60,11 @@
 @media(min-width:769px) and (max-width:1100px){#patterns .wide-scroll img,#outcomes img{width:100%!important;margin-left:0!important}}
 @media(max-width:768px){#approach img{width:100%!important}#outcomes img{width:100%!important;margin-left:0!important}.wide-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.wide-scroll img{width:820px!important;max-width:none!important;margin-left:0!important}.wide-hint{display:block!important}}
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- PROGRESS BAR -->
 
@@ -97,6 +100,7 @@
 </div>
 
 <!-- ══ HERO ══ -->
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="hero-left">
     <p class="hero-label">AT&amp;T &nbsp;·&nbsp; Case Study</p>
@@ -144,7 +148,7 @@
             <circle cx="34" cy="10" r="5" fill="currentColor" stroke="none" style="color:#e53"/>
           </svg>
           <div>
-            <h4>New State Privacy Laws</h4>
+            <h4 aria-level="3">New State Privacy Laws</h4>
             <p>Raising the bar on transparency, sensitive data use, and consumer consent. Regulators were actively scrutinizing dark patterns.</p>
           </div>
         </div>
@@ -157,7 +161,7 @@
             <path d="M20 13h4M13 20v4M31 20v4M20 31h4" stroke-dasharray="2 2"/>
           </svg>
           <div>
-            <h4>A Fragmented Interface</h4>
+            <h4 aria-level="3">A Fragmented Interface</h4>
             <p>Disconnected controls meant customers could not use their rights. That made it a legal risk as well as a design problem.</p>
           </div>
         </div>
@@ -243,11 +247,11 @@
 
     <div class="two-col fade-up" style="margin-top:40px;">
       <div class="card">
-        <h4>Desktop</h4>
+        <h4 aria-level="3">Desktop</h4>
         <p>Programs sit side by side. Customers scan across and compare options. Consent states are immediately visible without expanding anything.</p>
       </div>
       <div class="card">
-        <h4>Mobile</h4>
+        <h4 aria-level="3">Mobile</h4>
         <p>The table shifts into stacked modules. Each program becomes a contained section that expands to reveal detail. Same information, different spatial logic, readable at every screen size without a separate mobile design.</p>
       </div>
     </div>
@@ -265,31 +269,31 @@
     <p class="section-label fade-up">Outcomes</p>
     <h2 class="section-title fade-up">Built to Absorb<br/><span class="section-title-italic">What&#8217;s Coming</span></h2>
     <p class="section-subtitle fade-up">The regulatory environment isn&#8217;t settled. New state laws keep passing. New consent programs will need to be added. The framework was designed with that in mind.</p>
-    <img loading="lazy" decoding="async" src="ATT-lap.gif" alt="AT&T Privacy Framework" style="width:125%;display:block;margin-top:48px;margin-bottom:48px;margin-left:-12.5%;">
+    <img loading="lazy" decoding="async" src="ATT-lap.gif" alt="Animation of the redesigned AT&amp;T Privacy Choices page on a laptop. The Wireless account lists each phone line with separate on and off toggles for the Personalized Plus and Personalized programs. Turning a program on opens a Heads Up dialog explaining that opting in lets AT&amp;T share and sell personal information, with Cancel and Confirm buttons." style="width:125%;display:block;margin-top:48px;margin-bottom:48px;margin-left:-12.5%;">
 
     <div class="outcome-grid fade-up">
       <div class="outcome-item fade-up">
-        <h4>Consolidated Controls</h4>
+        <h4 aria-level="3">Consolidated Controls</h4>
         <p>All privacy controls in one navigable experience.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
-        <h4>Hybrid Table Framework</h4>
+        <h4 aria-level="3">Hybrid Table Framework</h4>
         <p>Holds program relationships, legal content, and consent states in one structure without losing readability.</p>
       </div>
       <div class="outcome-item fade-up">
-        <h4>Responsive by Compliance</h4>
+        <h4 aria-level="3">Responsive by Compliance</h4>
         <p>Desktop comparison view shifts to mobile stacked modules. Same information, different spatial logic.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
-        <h4>Pattern-Compliant Design</h4>
+        <h4 aria-level="3">Pattern-Compliant Design</h4>
         <p>Neutral interface that presents choices without steering them. It became the internal benchmark for ethical design.</p>
       </div>
       <div class="outcome-item fade-up">
-        <h4>Scalable Architecture</h4>
+        <h4 aria-level="3">Scalable Architecture</h4>
         <p>New consent programs slot into the existing structure as legislation evolves. No redesign required.</p>
       </div>
       <div class="outcome-item fade-up stagger-1">
-        <h4>Reduced Regulatory Risk</h4>
+        <h4 aria-level="3">Reduced Regulatory Risk</h4>
         <p>A consent system built to absorb new state privacy laws without starting over.</p>
       </div>
     </div>
@@ -305,6 +309,7 @@
 </section>
 
 <!-- ══ FOOTER ══ -->
+</main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">

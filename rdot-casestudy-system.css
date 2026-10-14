@@ -149,7 +149,7 @@ p {
 .nav-panel-work a {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px; font-weight: 700;
-  color: rgba(255,255,255,0.45); text-decoration: none;
+  color: rgba(255,255,255,0.55); text-decoration: none;
   padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
   transition: color .2s, padding-left .2s;
 }
@@ -877,7 +877,7 @@ footer {
 .footer-grid a {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px; font-weight: 700;
-  color: rgba(255,255,255,0.45); text-decoration: none;
+  color: rgba(255,255,255,0.55); text-decoration: none;
   padding: 16px 0; display: block; transition: color .2s, padding-left .2s;
 }
 .footer-grid a:hover { color: var(--white); padding-left: 8px; }
@@ -885,7 +885,7 @@ footer {
 .footer-pages-col a {
   font-family: 'Montserrat', sans-serif;
   font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
-  color: rgba(255,255,255,0.45); text-decoration: none;
+  color: rgba(255,255,255,0.55); text-decoration: none;
   padding: 10px 0; display: block; transition: color .2s, padding-left .2s;
 }
 .footer-pages-col a:hover { color: var(--white); padding-left: 8px; }

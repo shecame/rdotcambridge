@@ -28,7 +28,7 @@
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
 .hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
 .hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
-.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-left h1 em{font-style:italic;color:#006699;font-weight:300;text-transform:none;letter-spacing:0}
 .hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
 .meta-item{flex:1;padding:28px 20px;border-right:1px solid var(--border)}
 .meta-item:last-child{border-right:none}
@@ -37,8 +37,11 @@
 .hero-right{background:#1a1a1a;display:flex;flex-direction:column;justify-content:center;padding:144px 56px 80px;position:relative;overflow:hidden}
 @media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <!-- ══ DRAFT BANNER ══ -->
 <div style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#FEDB00;color:#0C0C0C;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-align:center;padding:10px 16px;display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
   <span>&#9679; Draft — Physique 57 — Not Published &nbsp;·&nbsp; Hidden from navigation &amp; footer &nbsp;·&nbsp; Remove this banner before publishing</span>
@@ -79,6 +82,7 @@
 </div>
 
 <!-- ══ HERO ══ -->
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="hero-left">
     <p class="hero-label">Physique 57 &nbsp;·&nbsp; Brand Development &amp; UX Design</p>
@@ -99,11 +103,11 @@
 
     <div class="two-col fade-up" style="margin-top:40px;">
       <div class="card">
-        <h4>The Transition Challenge</h4>
+        <h4 aria-level="3">The Transition Challenge</h4>
         <p>A pandemic-driven shift to live streaming required an entirely new asset set and product experience, built on top of an existing brand identity rather than replacing it.</p>
       </div>
       <div class="card">
-        <h4>The Brand Constraint</h4>
+        <h4 aria-level="3">The Brand Constraint</h4>
         <p>The refresh had to feel energetic and modern without abandoning the signature studio personality that loyal members already connected with.</p>
       </div>
     </div>
@@ -129,7 +133,7 @@
             <path d="M14 8l2 4M30 8l-2 4M8 14l4 2M36 14l-4 2"/>
           </svg>
           <div>
-            <h4>Refined Color Palette</h4>
+            <h4 aria-level="3">Refined Color Palette</h4>
             <p>Modernized to carry the signature studio energy across digital surfaces, vibrant without being harsh, refined without losing heat.</p>
           </div>
         </div>
@@ -141,7 +145,7 @@
             <rect x="24" y="24" width="14" height="14" rx="2"/>
           </svg>
           <div>
-            <h4>New Icon System</h4>
+            <h4 aria-level="3">New Icon System</h4>
             <p>A consistent icon set built for cross-platform use, with app, web, and streaming surfaces all speaking the same visual language.</p>
           </div>
         </div>
@@ -153,7 +157,7 @@
             <path d="M12 20c-3.314 0-6 2.686-6 6"/>
           </svg>
           <div>
-            <h4>Custom Illustrations</h4>
+            <h4 aria-level="3">Custom Illustrations</h4>
             <p>Elevated storytelling across the product and brand, with illustrations designed to feel personal and energetic, not generic.</p>
           </div>
         </div>
@@ -163,7 +167,7 @@
             <path d="M14 16h16M14 22h12M14 28h8"/>
           </svg>
           <div>
-            <h4>Updated Brand Guidelines</h4>
+            <h4 aria-level="3">Updated Brand Guidelines</h4>
             <p>Documented for clarity and scalability, a system the team could hand off, extend, and apply consistently across every channel.</p>
           </div>
         </div>
@@ -194,28 +198,28 @@
         <div class="deliverable-item">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
           <div>
-            <h4>Visual System Revitalization</h4>
+            <h4 aria-level="3">Visual System Revitalization</h4>
             <p>Complete brand refresh, energetic, cohesive, and aligned with the studio&#8217;s core personality across all digital touchpoints.</p>
           </div>
         </div>
         <div class="deliverable-item">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
           <div>
-            <h4>Cross-Platform Icon System</h4>
+            <h4 aria-level="3">Cross-Platform Icon System</h4>
             <p>Consistent iconography deployed across app, web, and streaming surfaces, one language across every product surface.</p>
           </div>
         </div>
         <div class="deliverable-item">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
           <div>
-            <h4>Mobile-First Experience</h4>
+            <h4 aria-level="3">Mobile-First Experience</h4>
             <p>Brand and product designed for the shift to mobile and live streaming, built to perform where members actually were.</p>
           </div>
         </div>
         <div class="deliverable-item">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
           <div>
-            <h4>Scalable Brand Guidelines</h4>
+            <h4 aria-level="3">Scalable Brand Guidelines</h4>
             <p>A documented system built for handoff, clear enough to extend consistently without the original designer in the room.</p>
           </div>
         </div>
@@ -225,6 +229,7 @@
 </section>
 
 <!-- ══ FOOTER ══ -->
+</main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">

@@ -128,7 +128,7 @@ html, body { margin:0; padding:0; overflow-x:hidden; }
 .home-title .accent-blue {
   font-style: italic;
   font-weight: 300;
-  color: rgb(130, 172, 206);
+  color: #006699;
   text-transform: none;
   letter-spacing: 0;
 }
@@ -181,8 +181,11 @@ html, body { margin:0; padding:0; overflow-x:hidden; }
   .collection-item:not(:nth-child(2)) .project-link { height: 20em; }
 }
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ── NAV ────────────────────────────────────────────────────── -->
 <header class="site-nav" id="siteNav">
@@ -216,6 +219,7 @@ html, body { margin:0; padding:0; overflow-x:hidden; }
 </div>
 
 <!-- ── MAIN LAYOUT ──────────────────────────────────────────────── -->
+<main id="main" tabindex="-1">
 <div class="home-wrapper">
 
   <!-- LEFT: Fixed text — never moves -->
@@ -239,18 +243,19 @@ html, body { margin:0; padding:0; overflow-x:hidden; }
   <div class="home_left">
     <div class="collection-list-wrapper">
       <div class="collection-list">
-        <div class="collection-item"><a class="project-link" href="midcoast-casestudy-rdot.html"><div class="project_img img1"></div></a></div>
-        <div class="collection-item"><a class="project-link" href="picato-casestudy-rdot.html"><div class="project_img img2"></div></a></div>
-        <div class="collection-item"><a class="project-link" href="goosehead-casestudy-rdot.html"><div class="project_img img3"></div></a></div>
-        <div class="collection-item"><a class="project-link" href="ctrax-casestudy-rdot.html"><div class="project_img img4"></div></a></div>
-        <div class="collection-item"><a class="project-link" href="andela-casestudy-rdot.html"><div class="project_img img5"></div></a></div>
-        <div class="collection-item"><a class="project-link" href="boa-casestudy-rdot.html"><div class="project_img img6"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="midcoast-casestudy-rdot.html" aria-label="Midcoast Energy case study"><div class="project_img img1"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="picato-casestudy-rdot.html" aria-label="Picato case study"><div class="project_img img2"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="goosehead-casestudy-rdot.html" aria-label="Goosehead case study"><div class="project_img img3"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="ctrax-casestudy-rdot.html" aria-label="CTRAX case study"><div class="project_img img4"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="andela-casestudy-rdot.html" aria-label="Andela case study"><div class="project_img img5"></div></a></div>
+        <div class="collection-item"><a class="project-link" href="boa-casestudy-rdot.html" aria-label="Bank of America case study"><div class="project_img img6"></div></a></div>
       </div>
     </div>
   </div>
 
 </div>
 
+</main>
 <script>
 (function(){
 
@@ -279,6 +284,7 @@ html, body { margin:0; padding:0; overflow-x:hidden; }
   function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
 
   var items = document.querySelectorAll('.collection-item');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function updateTilts() {
     var vph = window.innerHeight;
@@ -286,6 +292,12 @@ html, body { margin:0; padding:0; overflow-x:hidden; }
     items.forEach(function(item, index) {
       var link = item.querySelector('.project-link');
       if (!link) return;
+
+      if (reduceMotion) {
+        link.style.transform = 'none';
+        link.style.opacity = '1';
+        return;
+      }
 
       // On mobile, show the first graphic immediately instead of
       // waiting for it to scroll into view.

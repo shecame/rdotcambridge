@@ -45,7 +45,7 @@ img{mix-blend-mode:multiply}
 .nav-panel-label{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:700;margin-bottom:16px;margin-top:40px}
 .nav-panel-label:first-of-type{margin-top:0}
 .nav-panel-work{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.nav-panel-work a{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.45);text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .2s,padding-left .2s}
+.nav-panel-work a{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .2s,padding-left .2s}
 .nav-panel-work a:hover{color:var(--white);padding-left:8px}
 .nav-panel-work a.current{color:var(--yellow)}
 .nav-panel-links{display:flex;flex-direction:row;align-items:center;gap:16px;margin-top:auto;flex-wrap:wrap;padding-top:48px}
@@ -492,7 +492,7 @@ footer{background:var(--ink);padding:80px 80px 64px;border-top:1px solid rgba(25
 .footer-work-section{flex:1}
 .footer-label{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:700;margin:0 0 16px;max-width:none}
 .footer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
-.footer-grid a{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.45);text-decoration:none;padding:16px 0;display:block;transition:color .2s,padding-left .2s}
+.footer-grid a{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 0;display:block;transition:color .2s,padding-left .2s}
 .footer-grid a:hover{color:#fff;padding-left:8px}
 .footer-grid a.current{color:var(--yellow)}
 .footer-pages-col a{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;padding:10px 0;display:block;transition:color .2s,padding-left .2s}
@@ -634,8 +634,11 @@ footer a{text-decoration:none}
 @media(max-width:480px){.section-title{font-size:32px!important}}
 @media(max-width:768px){.wide-hint{display:block!important}}
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- PROGRESS BAR -->
 
@@ -671,6 +674,7 @@ footer a{text-decoration:none}
 </div>
 
 <!-- HERO -->
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="hero-left">
     <div class="eyebrow">Bank of America · Case Study</div>
@@ -843,7 +847,7 @@ footer a{text-decoration:none}
     <div class="section-label fade-up">What We Found</div>
     <h2 class="section-title fade-up">Heuristic<br/><span class="section-title-italic">Review</span></h2>
     <p class="section-subtitle fade-up">Where the survey said users were comfortable, the heuristic said the product was failing them. Four critical issues, six improvement areas, one success.</p>
-    <div class="table-scroll fade-up">
+    <div class="table-scroll fade-up" tabindex="0" role="region" aria-label="Heuristic review table, scrolls sideways">
     <table class="heuristic-table">
       <thead>
         <tr>
@@ -888,7 +892,7 @@ footer a{text-decoration:none}
     </div>
 
     <div class="bp2-wrap">
-    <div class="bp2-scroll">
+    <div class="bp2-scroll" tabindex="0" role="region" aria-label="Service blueprint table, scrolls sideways">
     <table>
       <colgroup>
         <col class="c-label">
@@ -1251,7 +1255,7 @@ footer a{text-decoration:none}
     <div class="fade-up" style="margin-top:72px;">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:20px;">Working Prototype</div>
       <div style="position:relative;width:100%;border:1px solid var(--border);overflow:hidden;background:var(--surface);">
-        <iframe loading="lazy"
+        <iframe loading="lazy" title="Bank of America Support Service Hub, interactive Figma prototype"
           style="display:block;width:100%;height:720px;border:none;"
           src="https://www.figma.com/embed?embed_host=share&bg-color=FFFFFF&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FA1sSwvFc5hIwFvvDrrksHr%2FBofa-Support-Service-Hub%3Fnode-id%3D1-21%26viewport%3D321%252C1838%252C0.25%26t%3D8w9Av1iROwni7SdR-1%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26starting-point-node-id%3D1%253A24%26page-id%3D0%253A1"
           allowfullscreen
@@ -1289,6 +1293,7 @@ footer a{text-decoration:none}
 </section>
 
 <!-- ══ FOOTER ══ -->
+</main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">

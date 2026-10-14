@@ -33,7 +33,7 @@ body{font-family:'PT Sans',sans-serif;background:var(--white);color:var(--ink);l
 .nav-panel-label{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:700;margin-bottom:16px;margin-top:40px}
 .nav-panel-label:first-of-type{margin-top:0}
 .nav-panel-work{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.nav-panel-work a{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.45);text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .2s,padding-left .2s}
+.nav-panel-work a{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .2s,padding-left .2s}
 .nav-panel-work a:hover{color:var(--white);padding-left:8px}
 .nav-panel-work a.current{color:var(--yellow)}
 .nav-panel-links{display:flex;flex-direction:row;align-items:center;gap:16px;margin-top:auto;flex-wrap:wrap;padding-top:48px}
@@ -47,7 +47,7 @@ body{font-family:'PT Sans',sans-serif;background:var(--white);color:var(--ink);l
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
 .hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);margin-bottom:28px;font-weight:700}
 .hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:600px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
-.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-left h1 em{font-style:italic;color:#006699;font-weight:300;text-transform:none;letter-spacing:0}
 .hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
 .meta-item{flex:1;padding-right:24px}
 .meta-item+.meta-item{padding-left:24px;border-left:1px solid var(--border)}
@@ -123,7 +123,7 @@ footer{background:var(--ink);padding:80px 80px 64px;border-top:1px solid rgba(25
 .footer-work-section{flex:1}
 .footer-label{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:700;margin:0 0 16px;max-width:none}
 .footer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
-.footer-grid a{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.45);text-decoration:none;padding:16px 0;display:block;transition:color .2s,padding-left .2s}
+.footer-grid a{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 0;display:block;transition:color .2s,padding-left .2s}
 .footer-grid a:hover{color:#fff;padding-left:8px}
 .footer-grid a.current{color:var(--yellow)}
 .footer-pages-col a{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;padding:10px 0;display:block;transition:color .2s,padding-left .2s}
@@ -174,8 +174,11 @@ footer a{text-decoration:none}
 .eco-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#C9CED6;cursor:pointer}
 .eco-dots button.on{background:var(--blue)}
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 
 <!-- ══ NAV ══ -->
@@ -211,6 +214,7 @@ footer a{text-decoration:none}
 </div>
 
 <!-- ══ HERO ══ -->
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="hero-left">
     <p class="hero-label">Andela &nbsp;·&nbsp; Brand &amp; Systems Design</p>
@@ -300,7 +304,7 @@ footer a{text-decoration:none}
             <path d="M22 6v4M22 34v4M6 22h4M34 22h4"/>
           </svg>
           <div>
-            <h4>Color Architecture</h4>
+            <h4 aria-level="3">Color Architecture</h4>
             <p>A personality-driven palette that modernized Andela&#8217;s brand and gave regional teams a consistent, deployable foundation.</p>
           </div>
         </div>
@@ -309,7 +313,7 @@ footer a{text-decoration:none}
             <path d="M8 36l6-2 20-20-4-4-20 20-2 6z"/><path d="M30 10l4 4"/><path d="M14 34l-4 1 1-4"/>
           </svg>
           <div>
-            <h4>Illustration Language</h4>
+            <h4 aria-level="3">Illustration Language</h4>
             <p>A scalable system built on intentional hue variation, expressive enough to feel human, systematic enough to localize.</p>
           </div>
         </div>
@@ -320,7 +324,7 @@ footer a{text-decoration:none}
             <circle cx="34" cy="14" r="2" fill="currentColor" stroke="none"/>
           </svg>
           <div>
-            <h4>Photography Library</h4>
+            <h4 aria-level="3">Photography Library</h4>
             <p>On-site shoots across Nigeria and Kenya, replacing stock imagery with authentic representation from real communities.</p>
           </div>
         </div>
@@ -332,7 +336,7 @@ footer a{text-decoration:none}
             <path d="M22 6c4 4 6 10 6 16s-2 12-6 16"/>
           </svg>
           <div>
-            <h4>Marketing Site</h4>
+            <h4 aria-level="3">Marketing Site</h4>
             <p>Redesigned to communicate universal connection and convert senior engineering talent into applicants at global scale.</p>
           </div>
         </div>
@@ -387,14 +391,14 @@ footer a{text-decoration:none}
           <div class="diag-item">
             <span style="display:inline-block;flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#006699;margin-top:8px;"></span>
             <div>
-              <h4 style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">For Clients</h4>
+              <h4 aria-level="3" style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">For Clients</h4>
               <p style="font-family:'PT Sans',sans-serif;font-size:15px;font-weight:400;color:#3A3A3A;line-height:1.65;margin:0;">Credibility fast. What Andela does, who they work with, why the talent quality holds. Every content decision mapped to a conversion path: skepticism to conversation, conversation to contract.</p>
             </div>
           </div>
           <div class="diag-item">
             <span style="display:inline-block;flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#006699;margin-top:8px;"></span>
             <div>
-              <h4 style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">For Engineers</h4>
+              <h4 aria-level="3" style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#0C0C0C;margin:0 0 6px;">For Engineers</h4>
               <p style="font-family:'PT Sans',sans-serif;font-size:15px;font-weight:400;color:#3A3A3A;line-height:1.65;margin:0;">Opportunity, rigor, growth. A different funnel entirely, built on aspiration and trust rather than ROI and capability proof.</p>
             </div>
           </div>
@@ -414,22 +418,22 @@ footer a{text-decoration:none}
     <p class="section-body">The rebrand put 40+ markets on one system and raised qualified engineer applications 28%.</p>
     <div class="outcome-grid">
       <div class="outcome-item">
-        <h4>Series D raised</h4>
+        <h4 aria-level="3">Series D raised</h4>
         <p style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:800;color:var(--ink);line-height:1;margin:12px 0;">$100M+</p>
         <p>Brand system contributed directly to investor confidence and market readiness.</p>
       </div>
       <div class="outcome-item">
-        <h4>Talent pipeline reached</h4>
+        <h4 aria-level="3">Talent pipeline reached</h4>
         <p style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:800;color:var(--ink);line-height:1;margin:12px 0;">100K+</p>
         <p>Applicants screened across Africa, the pipeline the brand was built to make legible at enterprise scale.</p>
       </div>
       <div class="outcome-item">
-        <h4>Market opportunity addressed</h4>
+        <h4 aria-level="3">Market opportunity addressed</h4>
         <p style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:800;color:var(--ink);line-height:1;margin:12px 0;">1.4M</p>
         <p>Unfilled software jobs, the core problem anchoring every campaign and sales asset in the system.</p>
       </div>
     </div>
-    <img loading="lazy" decoding="async" src="Gortex-Generation-Announcement.gif" alt="Andela Generation Announcement" style="width:100%;display:block;margin-top:48px;">
+    <img loading="lazy" decoding="async" src="Gortex-Generation-Announcement.gif" alt="Animated announcement on a deep blue background. Yellow headline reads: The future of Andela is. Below it, a large word cycles with glitch transitions through Evolving, Growing, Achieving and Thriving. Footer line reads: Series D led by Generation." style="width:100%;display:block;margin-top:48px;">
 
   </div>
 </section>
@@ -450,6 +454,7 @@ footer a{text-decoration:none}
 
 <!-- ══ FOOTER ══ -->
 <!-- ══ FOOTER ══ -->
+</main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">

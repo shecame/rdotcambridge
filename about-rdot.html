@@ -64,7 +64,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
 .about-location .accent-blue {
   font-style: italic;
   font-weight: 300;
-  color: rgb(130, 172, 206);
+  color: #006699;
   text-transform: none;
   letter-spacing: 0;
 }
@@ -322,8 +322,11 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
 
 /* ── FOOTER: handled by rdot-casestudy-system.css ── */
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ── NAV ──────────────────────────────────────────────────── -->
 <header class="site-nav" id="siteNav">
@@ -357,6 +360,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
 </div>
 
 <!-- ── PAGE ──────────────────────────────────────────────────── -->
+<main id="main" tabindex="-1">
 <div class="about-page">
 
   <!-- ── HERO ───────────────────────────────────────────────── -->
@@ -382,27 +386,27 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
         <div class="about-col-left">
           <div class="disciplines-grid">
             <div class="discipline-item">
-              <h5 class="discipline-title">Design Leadership</h5>
+              <h5 aria-level="2" class="discipline-title">Design Leadership</h5>
               <p class="discipline-desc">Building and mentoring design teams, setting standards that scale</p>
             </div>
             <div class="discipline-item">
-              <h5 class="discipline-title">Design Strategy</h5>
+              <h5 aria-level="2" class="discipline-title">Design Strategy</h5>
               <p class="discipline-desc">Translating business goals into a design roadmap teams can execute against</p>
             </div>
             <div class="discipline-item">
-              <h5 class="discipline-title">Art Direction</h5>
+              <h5 aria-level="2" class="discipline-title">Art Direction</h5>
               <p class="discipline-desc">Setting the visual and emotional direction teams design toward</p>
             </div>
             <div class="discipline-item">
-              <h5 class="discipline-title">User Experience &amp; Interface Design</h5>
+              <h5 aria-level="2" class="discipline-title">User Experience &amp; Interface Design</h5>
               <p class="discipline-desc">Aligning user, business, and technology needs into interaction standards teams design against</p>
             </div>
             <div class="discipline-item">
-              <h5 class="discipline-title">Accessible &amp; AI-Integrated Design</h5>
+              <h5 aria-level="2" class="discipline-title">Accessible &amp; AI-Integrated Design</h5>
               <p class="discipline-desc">Embedding accessibility standards and AI workflows into scalable systems</p>
             </div>
             <div class="discipline-item">
-              <h5 class="discipline-title">User Research</h5>
+              <h5 aria-level="2" class="discipline-title">User Research</h5>
               <p class="discipline-desc">Directing research programs that shape what teams design for</p>
             </div>
           </div>
@@ -480,6 +484,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
 </div>
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
+</main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">

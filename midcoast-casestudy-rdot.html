@@ -29,7 +29,7 @@
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
 .hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
 .hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
-.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-left h1 em{font-style:italic;color:#006699;font-weight:300;text-transform:none;letter-spacing:0}
 .hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
 .meta-item{flex:1;padding-right:24px}.meta-item+.meta-item{padding-left:24px;border-left:1px solid var(--border)}
 .meta-item label{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:6px}
@@ -47,8 +47,11 @@
 .stat-cell.accent .stat-label{color:#0C0C0C}
 @media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ══ NAV ══ -->
 <header class="site-nav" id="siteNav">
@@ -81,6 +84,7 @@
 </div>
 
 <!-- ══ HERO ══ -->
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="hero-left">
     <p class="hero-label">Midcoast Energy &nbsp;·&nbsp; Brand &amp; Digital Design</p>
@@ -117,11 +121,11 @@
 
     <div class="two-col fade-up" style="margin-top:40px;">
       <div class="card">
-        <h4>The Continuity Challenge</h4>
+        <h4 aria-level="3">The Continuity Challenge</h4>
         <p>Stakeholders needed to see the brand they already trusted, moving forward. Every design decision had to feel earned, not imposed.</p>
       </div>
       <div class="card">
-        <h4>The Clarity Requirement</h4>
+        <h4 aria-level="3">The Clarity Requirement</h4>
         <p>Complex organizational change needed to read simply. The experience had to guide users through a transformation story without making them work for it.</p>
       </div>
     </div>
@@ -148,7 +152,7 @@
             <path d="M22 34v4M18 38h8"/>
           </svg>
           <div>
-            <h4>Information Architecture First</h4>
+            <h4 aria-level="3">Information Architecture First</h4>
             <p>Content hierarchy mapped before any visual decisions, ensuring each section served a clear purpose in the transformation story.</p>
           </div>
         </div>
@@ -158,7 +162,7 @@
             <path d="M10 18h6M28 18h6"/>
           </svg>
           <div>
-            <h4>Infinite Scroll Pattern</h4>
+            <h4 aria-level="3">Infinite Scroll Pattern</h4>
             <p>Jump-to navigation anchors let stakeholders move freely while maintaining orientation throughout the experience.</p>
           </div>
         </div>
@@ -168,7 +172,7 @@
             <path d="M16 22l4 4 8-8"/>
           </svg>
           <div>
-            <h4>Zero Friction Progression</h4>
+            <h4 aria-level="3">Zero Friction Progression</h4>
             <p>Fluid layout and consistent interaction patterns kept users moving through the content without confusion or dead ends.</p>
           </div>
         </div>
@@ -201,21 +205,21 @@
         <div class="deliverable-item">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
           <div>
-            <h4>Intuitive Navigation</h4>
+            <h4 aria-level="3">Intuitive Navigation</h4>
             <p>Infinite scroll with jump-to anchors gave users full control over how they moved through the content.</p>
           </div>
         </div>
         <div class="deliverable-item">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
           <div>
-            <h4>Visual Cohesion</h4>
+            <h4 aria-level="3">Visual Cohesion</h4>
             <p>Photography and minimal illustration worked as a system, depth and clarity in the same frame.</p>
           </div>
         </div>
         <div class="deliverable-item">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--page-accent);margin-top:8px;"></div>
           <div>
-            <h4>Brand Continuity</h4>
+            <h4 aria-level="3">Brand Continuity</h4>
             <p>Trust in the existing brand carried into the new direction.</p>
           </div>
         </div>
@@ -225,6 +229,7 @@
 </section>
 
 <!-- ══ FOOTER ══ -->
+</main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">

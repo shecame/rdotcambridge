@@ -23,7 +23,7 @@
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:144px 60px 80px 72px;background:#fff;position:relative}
 .hero-label{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#004e7c;margin-bottom:28px;font-weight:700}
 .hero-left h1{font-family:'Montserrat',sans-serif;font-size:54px;line-height:1.0;font-weight:800;max-width:520px;margin-bottom:40px;text-transform:uppercase;letter-spacing:-0.02em;color:var(--ink)}
-.hero-left h1 em{font-style:italic;color:#82acce;font-weight:300;text-transform:none;letter-spacing:0}
+.hero-left h1 em{font-style:italic;color:#006699;font-weight:300;text-transform:none;letter-spacing:0}
 .hero-meta{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0}
 .meta-item{flex:1;padding:28px 20px;border-right:1px solid var(--border)}
 .meta-item:last-child{border-right:none}
@@ -49,8 +49,11 @@
 .brand-right .deliverable-item h4{margin-bottom:6px}
 @media(max-width:768px){.brand-layout{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- PROGRESS BAR -->
 
@@ -86,6 +89,7 @@
 </div>
 
 <!-- ══ HERO ══ -->
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="hero-left">
     <p class="hero-label">BTKi Education &nbsp;·&nbsp; Brand &amp; Systems Design</p>
@@ -124,11 +128,11 @@
 
     <div class="two-col fade-up" style="margin-top:40px;">
       <div class="card">
-        <h4>The Science Challenge</h4>
+        <h4 aria-level="3">The Science Challenge</h4>
         <p>BTK&#8217;s role in B-cell malignancies involves mechanisms that can&#8217;t be simplified without losing clinical accuracy. The design problem was sequencing and framing, not dumbing down.</p>
       </div>
       <div class="card">
-        <h4>The Compliance Constraint</h4>
+        <h4 aria-level="3">The Compliance Constraint</h4>
         <p>Everything had to clear medical, legal, and regulatory review. That limits options fast, and every creative decision had a compliance gate attached to it.</p>
       </div>
     </div>
@@ -154,7 +158,7 @@
             <rect x="6" y="6" width="64" height="64" rx="3"/>
           </svg>
           <div>
-            <h4>Compliant by Default</h4>
+            <h4 aria-level="3">Compliant by Default</h4>
             <p>Every element cleared medical, legal, and regulatory review at every stage.</p>
           </div>
         </div>
@@ -165,7 +169,7 @@
             <path d="M6 17h32"/>
           </svg>
           <div>
-            <h4>Scientific Artwork Integration</h4>
+            <h4 aria-level="3">Scientific Artwork Integration</h4>
             <p>Scientific artwork translated into a cohesive interactive system, designed as part of the experience rather than dropped in as illustration.</p>
           </div>
         </div>
@@ -175,7 +179,7 @@
             <path d="M16 18l6 8 6-8"/>
           </svg>
           <div>
-            <h4>Educate, Don&#8217;t Advocate</h4>
+            <h4 aria-level="3">Educate, Don&#8217;t Advocate</h4>
             <p>BTK&#8217;s role clarified through structured visuals that inform without making arguments for the HCP.</p>
           </div>
         </div>
@@ -193,11 +197,11 @@
     <p class="section-subtitle fade-up">The microsite was the primary educational destination, a self-contained experience designed to deliver BTK mechanism education without the noise of a branded environment. Every design decision was made with one user in mind: an HCP between patients, scanning for information they could act on.</p>
     <div class="two-col fade-up" style="margin-top:40px;">
       <div class="card">
-        <h4>Learning Milestones</h4>
+        <h4 aria-level="3">Learning Milestones</h4>
         <p>Content structured around how HCPs actually process information, scanning before reading, absorbing hierarchy before detail, entering at the right point for their level of understanding.</p>
       </div>
       <div class="card">
-        <h4>No Brand Noise</h4>
+        <h4 aria-level="3">No Brand Noise</h4>
         <p>The unbranded environment removed the incentive to discount the content. Clinical education delivered without the sales layer, allowing the science to speak without an argument attached.</p>
       </div>
     </div>
@@ -213,11 +217,11 @@
     <p class="section-subtitle fade-up">Display ads in clinical and pharmaceutical environments are easy to ignore. HCPs have seen enough static placements to filter them out entirely. The strategy was motion, variation, and a clear message: drive HCPs to the microsite where the science could do the real work.</p>
     <div class="two-col fade-up" style="margin-top:40px;">
       <div class="card">
-        <h4>Dynamic Ad Units</h4>
+        <h4 aria-level="3">Dynamic Ad Units</h4>
         <p>18+ ad unit variations built to interrupt banner blindness through motion and message variation, designed to stand out in clinical placements without breaking the compliance framework.</p>
       </div>
       <div class="card">
-        <h4>Microsite as Destination</h4>
+        <h4 aria-level="3">Microsite as Destination</h4>
         <p>Every ad unit had one job: move the HCP to the microsite. The campaign wasn't trying to educate in the banner, it was creating enough curiosity to earn the click into the deeper experience.</p>
       </div>
     </div>
@@ -238,28 +242,28 @@
         <div class="deliverable-item" style="border-bottom-color:rgba(255,255,255,0.12);">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--yellow);margin-top:8px;"></div>
           <div>
-            <h4 style="color:var(--white);">Faster Comprehension</h4>
+            <h4 aria-level="3" style="color:var(--white);">Faster Comprehension</h4>
             <p style="color:rgba(255,255,255,0.6);">Complex mechanisms digestible without losing clinical accuracy.</p>
           </div>
         </div>
         <div class="deliverable-item" style="border-bottom-color:rgba(255,255,255,0.12);">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--yellow);margin-top:8px;"></div>
           <div>
-            <h4 style="color:var(--white);">Higher Engagement</h4>
+            <h4 aria-level="3" style="color:var(--white);">Higher Engagement</h4>
             <p style="color:rgba(255,255,255,0.6);">Structured learning milestones kept HCPs in the experience longer than linear scroll would have.</p>
           </div>
         </div>
         <div class="deliverable-item" style="border-bottom-color:rgba(255,255,255,0.12);">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--yellow);margin-top:8px;"></div>
           <div>
-            <h4 style="color:var(--white);">Compliance Maintained</h4>
+            <h4 aria-level="3" style="color:var(--white);">Compliance Maintained</h4>
             <p style="color:rgba(255,255,255,0.6);">Zero unbranded violations across medical, legal, and regulatory review.</p>
           </div>
         </div>
         <div class="deliverable-item" style="border-bottom-color:rgba(255,255,255,0.12);">
           <div style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--yellow);margin-top:8px;"></div>
           <div>
-            <h4 style="color:var(--white);">Ad Performance</h4>
+            <h4 aria-level="3" style="color:var(--white);">Ad Performance</h4>
             <p style="color:rgba(255,255,255,0.6);">Dynamic units outperformed static formats across clinical placements.</p>
           </div>
         </div>
@@ -269,6 +273,7 @@
 </section>
 
 <!-- ══ FOOTER ══ -->
+</main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">

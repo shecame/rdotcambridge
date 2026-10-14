@@ -166,7 +166,7 @@ a.logo{text-decoration:none;}
   .case-stat:last-child{border-right:none;margin-right:0;padding-right:0;}
   .case-stat .stat-num{font-size:22px;}
   .case-stat .stat-label{font-size:11px;}
-  .case-detail h4{font-size:13px;letter-spacing:1.5px;color:var(--accent);margin-bottom:10px;}
+  .case-detail h4{font-size:13px;letter-spacing:1.5px;color:#006699;margin-bottom:10px;}
   .case-detail p{color:var(--muted);margin-bottom:22px;font-size:15.5px;}
 
   /* SKILLS */
@@ -255,8 +255,11 @@ a.logo{text-decoration:none;}
 @media(max-width:600px){.case-stats{flex-direction:column;gap:18px}.case-stat{border-right:none!important;margin-right:0!important;padding:0 0 18px!important;border-bottom:1px solid var(--line)}.case-stat:last-child{border-bottom:none;padding-bottom:0!important}.contact-links{flex-direction:column;gap:20px}.contact-links a{flex-direction:row;width:auto;gap:16px;text-align:left;white-space:normal}}
 @media(max-width:600px){.hero-panel{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.hero-panel .stat-card{padding:20px 16px}.hero-panel .stat-num{font-size:30px}.hero-panel .stat-label{font-size:12px;margin-top:6px}}
 </style>
+<link rel="stylesheet" href="a11y.css"/>
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header>
   <nav>
@@ -277,7 +280,7 @@ a.logo{text-decoration:none;}
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </div>
-    <button class="navbtn" id="navBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="navbtn" id="navBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#story">Story</a>
@@ -290,6 +293,7 @@ a.logo{text-decoration:none;}
   </div>
 </header>
 
+<main id="main" tabindex="-1">
 <section class="hero section-light">
   <div class="wrap">
     <div>
@@ -399,17 +403,17 @@ a.logo{text-decoration:none;}
     <div class="principles-grid reveal">
       <div class="principle-card">
         <svg class="principle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="7" r="4"/><path d="M4 21c0-4 2.7-7 6-7"/><path d="M14 16l2 2 4-4"/></svg>
-        <h4>Reduce Support Dependency</h4>
+        <h4 aria-level="3">Reduce Support Dependency</h4>
         <p>New users complete requests without calling anyone.</p>
       </div>
       <div class="principle-card">
         <svg class="principle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v15H6z"/><path d="M9 9h6M9 13h4"/><circle cx="16" cy="17" r="3"/><path d="M14.7 17l1 1 2-2"/></svg>
-        <h4>Eliminate Workarounds</h4>
+        <h4 aria-level="3">Eliminate Workarounds</h4>
         <p>If users need side notes, the system has failed.</p>
       </div>
       <div class="principle-card">
         <svg class="principle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"/><path d="M12 9v5"/><circle cx="12" cy="17" r="0.8" fill="currentColor" stroke="none"/></svg>
-        <h4>Surface Critical Information Early</h4>
+        <h4 aria-level="3">Surface Critical Information Early</h4>
         <p>Users should know what matters before operations are impacted.</p>
       </div>
     </div>
@@ -546,6 +550,7 @@ a.logo{text-decoration:none;}
   </div>
 </section>
 
+</main>
 <footer>&copy; 2026 Rashetda Cambridge. Design direction built on trust, earned through experience.</footer>
 
 <script>
