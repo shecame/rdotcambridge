@@ -96,6 +96,7 @@ p {
   color: var(--ink);
 }
 .site-nav.panel-open .nav-wordmark { color: var(--white); }
+.site-nav .nav-name { line-height: normal; margin-left: -4px; white-space: nowrap; }
 .site-nav .nav-dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--ink); display: inline-block; margin-right: 8px; flex-shrink: 0;
