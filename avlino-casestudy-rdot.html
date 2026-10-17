@@ -48,6 +48,7 @@
 .ehe-takeaway-list li strong{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--white);display:block;margin-bottom:4px}
 .ehe-takeaway-list li::before{content:'';position:absolute;left:0;top:28px;width:6px;height:6px;border-radius:50%;background:var(--yellow)}
 .ehe-reflection-section blockquote{margin:48px 0 0;max-width:820px}
+#product-outcomes blockquote,#brand-outcomes blockquote{border-left:none;padding-left:0}
 
 /* ── HERO ── */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
@@ -85,6 +86,7 @@
 .disc-sub{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);margin:0 0 12px}
 .disc-statement{font-family:'PT Sans',sans-serif;font-size:17px;font-weight:700;color:var(--ink);line-height:1.6;margin:16px 0 0;max-width:760px}
 .disc-body{font-family:'PT Sans',sans-serif;font-size:16px;color:var(--ink-mid);line-height:1.75;margin:0;max-width:760px}
+.disc-wrap{margin:40px 0 0;max-width:760px}
 .disc-before{font-family:'PT Sans',sans-serif;font-size:15px;color:#8A8A86;line-height:1.65;margin:16px 0 0;max-width:760px}
 .disc-statement span,.disc-before span{display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#6B6B6B;margin-bottom:4px}
 @media(max-width:768px){.disc-list>li{grid-template-columns:44px 1fr;gap:14px;padding:24px 0}.disc-icon{width:32px;height:32px}}
@@ -286,7 +288,7 @@
 /* Research methods */
 .methods{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
 .method-item{background:#fff;padding:28px 24px}
-.method-no{font-family:'Montserrat',sans-serif;font-size:28px;font-weight:800;color:var(--yellow);line-height:1;margin-bottom:12px;letter-spacing:-0.02em}
+.method-ic{display:block;color:var(--page-accent);margin-bottom:14px}
 .method-item h4{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);margin:0 0 8px}
 .method-item p{font-family:'PT Sans',sans-serif;font-size:14px;color:var(--ink-mid);line-height:1.6;margin:0}
 .persona-sheet{display:block;width:100%;height:auto;border:1px solid var(--border)}
@@ -360,7 +362,7 @@
   <div class="hero-left">
     <p class="hero-label">Avlino &nbsp;·&nbsp; Brand &amp; Product Design</p>
     <h1>The Cue<br/><em>to Act</em></h1>
-    <p class="section-subtitle" style="margin-top:16px;">Avlino&#8217;s AI could see berth conflicts, yard congestion, and equipment failures before they happened. I built the brand and the product that turned each prediction into a clear cue a terminal team could act on, before the delay.</p>
+    <p class="section-subtitle" style="margin-top:16px;">Before AI was everywhere, Avlino was building its own. Its models could see berth conflicts, yard congestion, and equipment failures before they happened. I designed the brand and the product that turned each prediction into a clear cue a terminal team could act on, before the delay.</p>
     <div class="hero-meta">
       <div class="meta-item"><label>Role</label><span>Brand &amp; Product Design Lead</span></div>
       <div class="meta-item"><label>Scope</label><span>Brand, Website, AI Product, Design System, Research</span></div>
@@ -389,7 +391,7 @@
     <div class="fade-up m-stack" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;">
       <div>
         <p class="section-subtitle" style="margin-top:0;">Container terminals ran on reaction. A crane broke down and the schedule fell apart. A vessel arrived late and the yard had no plan for it. Every surprise meant idle equipment, extra container moves, and missed berth windows.</p>
-        <p class="section-subtitle" style="margin-top:20px;">Avlino had machine learning models that could see some of these problems coming. It did not have a way to sell that, or a way for anyone on a terminal to use it. A prediction nobody sees in time is just a report.</p>
+        <p class="section-subtitle" style="margin-top:20px;">Avlino was building toward a different way to run a terminal, one that predicts problems instead of reacting to them. The models could already see some of these problems coming. What it did not have was a way to sell that, or a way for anyone on a terminal to use it. A prediction nobody sees in time is just a report.</p>
       </div>
       <div class="diag-items">
         <div class="diag-item">
@@ -403,7 +405,7 @@
           <span class="diag-dot"></span>
           <div>
             <h4 aria-level="3">Product</h4>
-            <p>Demos built around what stakeholders wanted to see. Nobody had defined who would use the product on a shift.</p>
+            <p>Tools on the market solved pieces of the problem. Nothing connected the prediction, the trust to act on it, and the person on shift who had to make the call.</p>
           </div>
         </div>
         <div class="diag-item">
@@ -490,7 +492,7 @@
         <svg class="disc-icon" width="40" height="40" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="28" height="28" rx="2"/><path d="M14 16h16M14 22h16M14 28h10"/></svg>
         <div>
           <h3 class="disc-title">Positioning Statement</h3>
-          <p class="disc-body">Avlino&#8217;s starting positioning promised &#8220;high quality, cost effective, and efficient intelligence solutions.&#8221; Using Geoffrey Moore&#8217;s positioning framework, we filled in the statement, and it showed the gap. The old version described what Avlino used, not why a buyer should choose it. The website now leads with the operational challenge before the technology.</p>
+          <p class="disc-body">Avlino&#8217;s starting positioning promised &#8220;high quality, cost effective, and efficient intelligence solutions.&#8221; Using Geoffrey Moore&#8217;s positioning framework, we filled in the statement, and it showed the gap. The old version described what Avlino used, not why a buyer should choose it.</p>
           <p class="disc-before"><span>Before</span>High quality, cost effective, and efficient intelligence solutions that integrate business strategy, data science, and domain knowledge.</p>
           <p class="disc-statement"><span>After</span>For [terminal operators] who [need to stop finding problems after they happen], Avlino is [AI decision support] that [gives each prediction a clear next move].</p>
         </div>
@@ -512,6 +514,8 @@
         </div>
       </li>
     </ol>
+
+    <p class="section-subtitle fade-up disc-wrap">Together, these gave Avlino a brand that could earn trust before it asked anyone to change. Memorable got it noticed. Credible got it in the room. Trusted got it onto the terminal.</p>
   </div>
 </section>
 
@@ -522,8 +526,8 @@
       <div>
         <p class="section-label">The Logo</p>
         <h2 class="section-title" style="margin-bottom:24px;">Brilliant Minds<br/><span class="section-title-italic">as the Hero</span></h2>
-        <p class="section-subtitle" style="margin:0;">The logo came out of the personality work. Unpacking who Avlino was kept landing on its people. The data scientists and engineers were brilliant minds, and the way they could see a problem before it happened felt almost superhuman.</p>
-        <p class="section-subtitle" style="margin:20px 0 0;">So I built the mark from two worlds: the math symbols and equations those minds work in, and the emblem of a superhero. The final mark is one symbol that carries both.</p>
+        <p class="section-subtitle" style="margin:0;">The logo came out of the personality work. Unpacking who Avlino was kept landing on its people. Its data scientists and engineers were building machine learning models that could predict berth conflicts, yard congestion, and equipment failures before they happened. Seeing a problem before it happened felt almost superhuman.</p>
+        <p class="section-subtitle" style="margin:20px 0 0;">So I built the mark from two worlds: the math and equations behind those models, and the emblem of a superhero. The final mark is one symbol that carries both.</p>
         <p class="section-subtitle" style="margin:20px 0 0;">For the wordmark, I started from an existing typeface rather than drawing from scratch, then altered and customized the letterforms and spacing so the wordmark and the mark read as one system.</p>
       </div>
       <div class="logo-steps">
@@ -537,7 +541,7 @@
         </div>
         <div class="logo-step">
           <div class="method-num">03</div>
-          <div><h4 aria-level="3">The Hero</h4><p>The symbol sits inside a circle like a hero&#8217;s crest, in brand yellow. It gives the intelligence a face buyers can remember.</p></div>
+          <div><h4 aria-level="3">The Hero</h4><p>The symbol sits inside a circle like a hero&#8217;s crest, in Cyber Yellow. It gives the intelligence a face buyers can remember.</p></div>
         </div>
       </div>
     </div>
@@ -570,14 +574,14 @@
       <div class="id-text">
         <p class="sub-label">Color</p>
         <h4 aria-level="3">Color With a Job</h4>
-        <p>Four core colors, each named for its job: navigation black, brand yellow, operational navy, and data cyan. Each one has tints and shades so charts and status views stay on brand.</p>
+        <p>Four core colors: Black Onyx, Cyber Yellow, Space Blue, and Data Cyan. Each one has tints and shades so charts and status views stay on brand.</p>
       </div>
       <div class="id-visual">
         <div class="swatches">
-          <div class="swatch"><div class="swatch-chip" style="background:#000000;"></div><div class="swatch-name">Navigation black</div><div class="swatch-meta">#000000</div><div class="swatch-tier">Dark</div></div>
-          <div class="swatch"><div class="swatch-chip" style="background:#FCDA0E;"></div><div class="swatch-name">Brand yellow</div><div class="swatch-meta">#FCDA0E</div><div class="swatch-tier">Base</div></div>
-          <div class="swatch"><div class="swatch-chip" style="background:#18406F;"></div><div class="swatch-name">Operational navy</div><div class="swatch-meta">#18406F</div><div class="swatch-tier">Base</div></div>
-          <div class="swatch"><div class="swatch-chip" style="background:#00ABCF;"></div><div class="swatch-name">Data cyan</div><div class="swatch-meta">#00ABCF</div><div class="swatch-tier">Base</div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#000000;"></div><div class="swatch-name">Black Onyx</div><div class="swatch-meta">#000000</div><div class="swatch-tier">Dark</div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#FCDA0E;"></div><div class="swatch-name">Cyber Yellow</div><div class="swatch-meta">#FCDA0E</div><div class="swatch-tier">Base</div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#18406F;"></div><div class="swatch-name">Space Blue</div><div class="swatch-meta">#18406F</div><div class="swatch-tier">Base</div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#00ABCF;"></div><div class="swatch-name">Data Cyan</div><div class="swatch-meta">#00ABCF</div><div class="swatch-tier">Base</div></div>
         </div>
       </div>
     </div>
@@ -598,8 +602,8 @@
     <div class="id-row fade-up">
       <div class="id-text">
         <p class="sub-label">Icons</p>
-        <h4 aria-level="3">Icons Built Like Equipment</h4>
-        <p>A 4 point stroke, mostly squared corners, one or two rounded at 10px, and accent color on the details. The geometry matches the industrial world these buyers work in.</p>
+        <h4 aria-level="3">Hard Edges, Easy Reads</h4>
+        <p>Simple, single stroke icons built at 4pt. Mostly squared corners for precision, with one or two rounded at 10px for warmth. Stroke weight scales with size so the set stays consistent across product and marketing. Accent color highlights key details.</p>
       </div>
       <div class="id-visual">
         <div class="icon-row">
@@ -608,6 +612,14 @@
           <div class="icon-cell"><div class="icon-disc"><img loading="lazy" decoding="async" src="Avlino-icon-set-34.png" alt=""/></div><div class="icon-name">Expand</div></div>
           <div class="icon-cell"><div class="icon-disc"><img loading="lazy" decoding="async" src="Avlino-icon-set-33.png" alt=""/></div><div class="icon-name">Map</div></div>
         </div>
+      </div>
+    </div>
+    <div class="id-row id-row-stack fade-up">
+      <div class="id-text">
+        <p class="sub-label">Photography</p>
+        <h4 aria-level="3">Order Inside the Chaos</h4>
+        <p>The photography looks for the patterns hiding in a terminal. Shot close up or from a bird&#8217;s eye view, stacked containers, crane lines, and yard grids turn into rows, repeats, and geometry.</p>
+        <p style="margin-top:16px;">That ties straight back to the brand. Avlino&#8217;s people worked in math and patterns every day. The photos show the same thing they saw in the data: order inside what looks like chaos.</p>
       </div>
     </div>
   </div>
@@ -758,10 +770,10 @@
         <p>I had no direct access to terminal users at first, so I built the picture from everything I could reach.</p>
       </div>
       <div class="methods">
-        <div class="method-item"><div class="method-no">01</div><h4 aria-level="3">Phone and Virtual Interviews</h4><p>Interviews with industry experts, using a discussion guide I developed.</p></div>
-        <div class="method-item"><div class="method-no">02</div><h4 aria-level="3">Sourced Web Articles</h4><p>Maritime traffic articles to understand the operational landscape.</p></div>
-        <div class="method-item"><div class="method-no">03</div><h4 aria-level="3">Industry Specific Surveys</h4><p>Research on the habits and workflows teams relied on day to day.</p></div>
-        <div class="method-item"><div class="method-no">04</div><h4 aria-level="3">Behavioral Data</h4><p>Behavioral stats, time lost and error rates, compared across the fragmented tools already in use.</p></div>
+        <div class="method-item"><svg class="method-ic" width="36" height="36" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 8h8l3 8-4 3a20 20 0 0 0 8 8l3-4 8 3v8a3 3 0 0 1-3 3C18 37 7 26 7 11a3 3 0 0 1 3-3z"/></svg><h4 aria-level="3">Phone and Virtual Interviews</h4><p>Interviews with industry experts, using a discussion guide I developed.</p></div>
+        <div class="method-item"><svg class="method-ic" width="36" height="36" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="22" cy="22" r="15"/><path d="M7 22h30M22 7c4 4 6 9 6 15s-2 11-6 15M22 7c-4 4-6 9-6 15s2 11 6 15"/></svg><h4 aria-level="3">Sourced Web Articles</h4><p>Maritime traffic articles to understand the operational landscape.</p></div>
+        <div class="method-item"><svg class="method-ic" width="36" height="36" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="7" width="26" height="30" rx="2"/><path d="M15 16l2 2 4-4M15 25l2 2 4-4M25 16h5M25 25h5"/></svg><h4 aria-level="3">Industry Specific Surveys</h4><p>Research on the habits and workflows teams relied on day to day.</p></div>
+        <div class="method-item"><svg class="method-ic" width="36" height="36" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 37h30"/><path d="M12 31v-8M20 31V15M28 31v-11M36 31V9" stroke-width="2.5"/></svg><h4 aria-level="3">Behavioral Data</h4><p>Behavioral stats, time lost and error rates, compared across the fragmented tools already in use.</p></div>
       </div>
     </div>
 
@@ -883,7 +895,7 @@
   <div class="container">
     <p class="section-label fade-up">The Product</p>
     <h2 class="section-title fade-up">Designing<br/><span class="section-title-italic">the Cue to Act</span></h2>
-    <p class="section-subtitle fade-up" style="margin-bottom:0;max-width:760px;">A prediction only matters if it reaches the person who can act on it. So the cue does not live in a separate AI panel. It shows up where the operator already works: on the module card, on the terminal map at the exact crane, and on the schedule as the slots it affects.</p>
+    <p class="section-subtitle fade-up" style="margin-bottom:0;max-width:760px;">A prediction only matters if it reaches the person who can act on it. So the cue does not live in a separate AI panel. It shows up where the operator already works, on the module card, on the terminal map at the exact crane, and on the schedule as the slots it affects.</p>
 
   </div>
 </section>
