@@ -235,13 +235,13 @@
 
 /* PortFlow IA, pill tree */
 .ia3-scroll{overflow-x:auto;background:#fff;padding:32px 48px 28px;-webkit-overflow-scrolling:touch}
-.ia3{min-width:760px;position:relative;--ia-yellow:#FCDA0E;--ia-pale:#FDF0A6;--ia-tan:#CDBB9C;--ia-cyan:#00ABCF;--ia-line:#B5B5B0;--col:calc((100% - 50px)/6.4);--gap:10px;--drop:18px}
+.ia3{min-width:760px;position:relative;--ia-yellow:#FCDA0E;--ia-pale:#FDF0A6;--ia-tan:#CDBB9C;--ia-cyan:#00ABCF;--ia-line:#B5B5B0;--col:calc((100% - 40px)/5.4);--gap:10px;--drop:18px}
 .ia3-num{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#fff;color:#8A8A86;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:600}
 /* Home sits over the first column so its line drops straight onto the bar */
 .ia3-home{display:flex;align-items:center;gap:10px;width:var(--col);background:#000;color:#fff;border-radius:22px;padding:4px 12px 4px 4px;position:relative;box-sizing:border-box}
 .ia3-home .ia3-name{flex:1;text-align:center;font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:800;line-height:1.25}
 .ia3-home::after{content:'';position:absolute;left:50%;top:100%;height:var(--drop);border-left:1.5px solid var(--ia-line)}
-.ia3-cols{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) minmax(0,1.4fr);gap:var(--gap);margin-top:calc(var(--drop) * 2);position:relative;align-items:start}
+.ia3-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.4fr);gap:var(--gap);margin-top:calc(var(--drop) * 2);position:relative;align-items:start}
 .ia3-cols::before{content:'';position:absolute;top:calc(var(--drop) * -1);left:calc(var(--col) / 2);right:calc(var(--col) * 0.9);border-top:1.5px solid var(--ia-line)}
 .ia3-col{position:relative}
 .ia3-col::before{content:'';position:absolute;left:50%;top:calc(var(--drop) * -1);height:var(--drop);border-left:1.5px solid var(--ia-line)}
@@ -837,10 +837,10 @@
 
     <div class="ps-step fade-up">
       <div class="ps-lockup"><span class="ps-num">03</span><h3 class="ps-title">Map</h3></div>
-      <p class="ps-lede">Yard was mapped in full for the first release. Berth, Port, and Equipment were held for later releases. Current State and Configure supported every module from the start.</p>
+      <p class="ps-lede">Yard and Equipment were mapped in full for the first release. Berth and Port were held for later releases. Configure supported every module from the start.</p>
       <figure style="margin:24px 0 0;">
         <div class="ia3-scroll" tabindex="0" role="region" aria-label="PortFlow product sitemap, scrolls sideways on small screens">
-          <div class="ia3" role="img" aria-label="PortFlow product sitemap. Home leads to six level one items: Yard, Berth, Port, and Equipment, which are later releases except Yard, plus Current State and Configure, an external link to Yard Editor, User and Account Management, and PowerBI Reports. Yard holds Performance Metrics, System Status, Access and Utilization, and Support. System Status holds Canary Messaging, Decking Request, Decking Response, and Optimization.">
+          <div class="ia3" role="img" aria-label="PortFlow product sitemap. Home leads to five level one items: Yard, Berth, Port, Equipment, and Configure. Berth and Port are later releases. Yard holds Performance Metrics, System Status, Access and Utilization, and Support. System Status holds Canary Messaging, Decking Request, Decking Response, and Optimization. Configure, an external link, holds Yard Editor, User and Account Management, and PowerBI Reports.">
             <div class="ia3-home"><span class="ia3-num">0.0.0</span><span class="ia3-name">Home</span></div>
             <div class="ia3-cols">
               <div class="ia3-col">
@@ -860,8 +860,7 @@
               </div>
               <div class="ia3-col"><div class="ia3-pill is-later"><span class="ia3-num">2.0.0</span><span class="ia3-name">Berth</span></div></div>
               <div class="ia3-col"><div class="ia3-pill is-later"><span class="ia3-num">3.0.0</span><span class="ia3-name">Port</span></div></div>
-              <div class="ia3-col"><div class="ia3-pill is-later"><span class="ia3-num">4.0.0</span><span class="ia3-name">Equipment</span></div></div>
-              <div class="ia3-col"><div class="ia3-pill"><span class="ia3-num">5.0.0</span><span class="ia3-name">Current State</span></div></div>
+              <div class="ia3-col"><div class="ia3-pill"><span class="ia3-num">4.0.0</span><span class="ia3-name">Equipment</span></div></div>
               <div class="ia3-col">
                 <div class="ia3-pill is-ext"><span class="ia3-num">6.0.0</span><span class="ia3-name">Configure<span class="ia3-arrow" aria-hidden="true">&#8599;</span></span></div>
                 <ul class="ia3-l2">
@@ -876,7 +875,7 @@
               <div class="ia3-legend-row">
                 <span><i class="lg-pill"></i>Level 1</span>
                 <span><i class="lg-dot2"></i>Level 2</span>
-                <span><i class="lg-dot3"></i>Level 3</span>
+                <span><i class="lg-dot3"></i>Alerts</span>
                 <span><i class="lg-ext">&#8599;</i>External Link</span>
                 <span><i class="lg-later"></i>Later Release</span>
               </div>
