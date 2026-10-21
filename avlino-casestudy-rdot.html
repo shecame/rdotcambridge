@@ -303,6 +303,16 @@
 .product-hero{background:#fff;padding:140px 0}
 .product-hero .container{max-width:1440px}
 .product-hero .section-title{font-size:52px}
+.pf-devices{position:relative;margin-top:64px;padding-right:12%}
+.pf-devices img{mix-blend-mode:normal}
+.pf-mobile{position:absolute;right:0;bottom:-4%;width:21%;z-index:2}
+.pf-mobile img{display:block;width:100%;height:auto;position:relative;z-index:1}
+.pf-desktop{display:block;width:100%;height:auto;position:relative;z-index:1}
+.pf-mobile::before,.pf-mobile::after{content:'';position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+/* ground shadows: a tight dark contact line plus a flat soft spread */
+.pf-mobile::before{left:-55%;right:-18%;bottom:-24px;height:26px;background:radial-gradient(ellipse at center,rgba(0,0,0,0.32) 0%,rgba(0,0,0,0.12) 45%,rgba(0,0,0,0) 70%);filter:blur(8px)}
+.pf-mobile::after{left:3%;right:3%;bottom:-6px;height:12px;background:radial-gradient(ellipse at center,rgba(0,0,0,0.72) 0%,rgba(0,0,0,0.3) 50%,rgba(0,0,0,0) 74%);filter:blur(2px)}
+@media(max-width:768px){.pf-devices{margin-top:40px;padding-right:14%}.pf-mobile{width:23%}}
 
 
 
@@ -906,6 +916,10 @@
     <p class="section-label fade-up">The Product</p>
     <h2 class="section-title fade-up">Designing<br/><span class="section-title-italic">the Cue to Act</span></h2>
     <p class="section-subtitle fade-up" style="margin-bottom:0;max-width:760px;">A prediction only matters if it reaches the person who can act on it. So the cue does not live in a separate AI panel. It shows up where the operator already works, on the module card, on the terminal map at the exact crane, and on the schedule as the slots it affects. The product was built to plug into the terminal&#8217;s existing operating system, equipment, and sensors, so the cue arrived in real time without asking anyone to change tools.</p>
+    <div class="pf-devices fade-up">
+      <img class="pf-desktop" loading="lazy" decoding="async" src="avlino-portflow-desktop-v2.png" width="1440" height="900" alt="PortFlow desktop operations dashboard: a dark sidebar of modules, a refresh configuration notice, and cards for Yard View with crane alerts, Vessels with a vessel warning, Warehouse, Dispatch Hub, and Reports and Logs"/>
+      <div class="pf-mobile"><img loading="lazy" decoding="async" src="avlino-portflow-mobile-v2.png" width="390" height="844" alt="PortFlow mobile operations home screen with the same module cards, crane and vessel alerts, and a bottom bar for Dashboard, Reports and Logs, Alerts, and Profile"/></div>
+    </div>
 
   </div>
 </section>
