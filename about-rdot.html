@@ -73,8 +73,8 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
   letter-spacing: 0;
 }
 @media (min-width: 769px) {
-  .about-location { max-width: 65%; }
-  .about-location .accent-blue { white-space: nowrap; }
+  .about-location { font-size: min(50px, 3.5vw); }
+  .about-location .hl-line { white-space: nowrap; }
 }
 
 .about-tagline {
@@ -378,7 +378,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
     <section class="about-hero">
       <div class="about-hero-grid">
         <div class="about-hero-left">
-          <h1 class="about-location">Brooklyn <em class="accent-blue">made.</em><br>Where others see failure, <em class="accent-blue">I see version two.</em> Where others see chaos, <em class="accent-blue">I find the flow.</em></h1>
+          <h1 class="about-location"><span class="hl-line">Brooklyn <em class="accent-blue">made.</em></span><br><span class="hl-line">Where others see failure, <em class="accent-blue">I see version two.</em></span><br><span class="hl-line">Where others see chaos, <em class="accent-blue">I find the flow.</em></span></h1>
         </div>
         <div class="about-hero-right">
         </div>
