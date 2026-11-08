@@ -52,7 +52,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
 
 .about-location {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(44px, 4.6vw, 66px);
+  font-size: min(54px, 5vw);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: -0.02em;
@@ -61,12 +61,17 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .about-location { font-size: clamp(34px, 11vw, 44px); }
+}
+
 .about-location .accent-blue {
   font-style: italic;
   font-weight: 300;
   color: #006699;
   text-transform: none;
   letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .about-tagline {
@@ -370,7 +375,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
     <section class="about-hero">
       <div class="about-hero-grid">
         <div class="about-hero-left">
-          <h1 class="about-location">Created in <em class="accent-blue">Brooklyn</em>, building complex brand and product systems into clear experiences <em class="accent-blue">for over 15 years.</em></h1>
+          <h1 class="about-location"><em class="accent-blue">Brooklyn</em> made.<br>Where others see failure, I see <em class="accent-blue">version two.</em><br>Where others hear noise, I hear <em class="accent-blue">flow.</em></h1>
         </div>
         <div class="about-hero-right">
         </div>
