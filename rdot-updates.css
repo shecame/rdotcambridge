@@ -49,9 +49,19 @@ footer a:focus-visible {
   .footer-work-groups .footer-work-links {
     display: flex; flex-direction: column; align-items: flex-start;
   }
+  /* Every menu line runs the full width, so all the rules match */
+  .nav-panel-groups .nav-panel-work { align-items: stretch; }
   .nav-panel-groups .nav-panel-work a {
-    display: inline-block; width: fit-content; min-height: 44px;
+    display: block; width: 100%; min-height: 44px;
   }
+}
+
+/* Mobile: the same space between the header and the first line of every case study hero */
+@media (max-width: 768px) {
+  main > .hero:first-child { margin-top: 0 !important; padding-top: 0 !important; }
+  main > .hero:first-child .hero-left { padding-top: 120px !important; } /* 64px header + 56px */
+  /* Same 24px side margins as the page, on every page */
+  .nav-panel { padding: 100px 24px 48px; }
 }
 
 /* ── 2. SUMMARY BLOCK ──────────────────────────────────────────── */
