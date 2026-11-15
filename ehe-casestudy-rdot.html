@@ -165,18 +165,18 @@ blockquote{border-left:none!important;padding-left:0!important}
       <p class="nav-panel-label" id="navGroupXD">Experience Design</p>
       <div class="nav-panel-work">
         <a href="att-casestudy-rdot.html">AT&amp;T</a>
-        <a href="avlino-casestudy-rdot.html" aria-label="Avlino, Experience Design">Avlino</a>
+        <a href="avlino-casestudy-rdot.html#build-product" aria-label="Avlino, Experience Design">Avlino</a>
         <a href="boa-casestudy-rdot.html">Bank of America</a>
-        <a href="ehe-casestudy-rdot.html" aria-label="EHE, Experience Design" class="current">EHE</a>
+        <a href="ehe-casestudy-rdot.html#build-product" aria-label="EHE, Experience Design" class="current">EHE</a>
       </div>
     </div>
     <div class="nav-panel-group" role="group" aria-labelledby="navGroupBD">
       <p class="nav-panel-label" id="navGroupBD">Brand Development</p>
       <div class="nav-panel-work">
         <a href="andela-casestudy-rdot.html">Andela</a>
-        <a href="avlino-casestudy-rdot.html" aria-label="Avlino, Brand Development">Avlino</a>
+        <a href="avlino-casestudy-rdot.html#build-brand" aria-label="Avlino, Brand Development">Avlino</a>
         <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-        <a href="ehe-casestudy-rdot.html" aria-label="EHE, Brand Development" class="current">EHE</a>
+        <a href="ehe-casestudy-rdot.html#build-brand" aria-label="EHE, Brand Development" class="current">EHE</a>
         <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
       </div>
     </div>
@@ -286,13 +286,13 @@ blockquote{border-left:none!important;padding-left:0!important}
   <div class="container">
     <div class="ws-track" role="tablist" aria-label="Case study workstreams">
       <span class="ws-indicator" aria-hidden="true"></span>
-      <button class="ws-tab" role="tab" id="tab-brand" aria-controls="panel-brand" aria-selected="true">Building the Brand</button>
-      <button class="ws-tab" role="tab" id="tab-product" aria-controls="panel-product" aria-selected="false" tabindex="-1">Building the Product</button>
+      <button class="ws-tab" role="tab" id="tab-product" aria-controls="panel-product" aria-selected="true">Building the Product</button>
+      <button class="ws-tab" role="tab" id="tab-brand" aria-controls="panel-brand" aria-selected="false" tabindex="-1">Building the Brand</button>
     </div>
   </div>
 </div>
 
-<div class="ws-panel" id="panel-brand" role="tabpanel" aria-labelledby="tab-brand">
+<div class="ws-panel" id="panel-brand" role="tabpanel" aria-labelledby="tab-brand" hidden>
 
 <!-- ══ SUMMARY ══ -->
 <section class="cs-summary" aria-label="Brand summary">
@@ -438,7 +438,7 @@ blockquote{border-left:none!important;padding-left:0!important}
 
 </div>
 
-<div class="ws-panel" id="panel-product" role="tabpanel" aria-labelledby="tab-product" hidden>
+<div class="ws-panel" id="panel-product" role="tabpanel" aria-labelledby="tab-product">
 
 <!-- ══ SUMMARY ══ -->
 <section class="cs-summary" aria-label="Product summary">
@@ -922,18 +922,18 @@ blockquote{border-left:none!important;padding-left:0!important}
           <p class="footer-label" id="footGroupXD">Experience Design</p>
           <div class="footer-grid">
             <a href="att-casestudy-rdot.html">AT&amp;T</a>
-            <a href="avlino-casestudy-rdot.html" aria-label="Avlino, Experience Design">Avlino</a>
+            <a href="avlino-casestudy-rdot.html#build-product" aria-label="Avlino, Experience Design">Avlino</a>
             <a href="boa-casestudy-rdot.html">Bank of America</a>
-            <a href="ehe-casestudy-rdot.html" aria-label="EHE, Experience Design">EHE</a>
+            <a href="ehe-casestudy-rdot.html#build-product" aria-label="EHE, Experience Design">EHE</a>
           </div>
         </div>
         <div class="footer-work-group" role="group" aria-labelledby="footGroupBD">
           <p class="footer-label" id="footGroupBD">Brand Development</p>
           <div class="footer-grid">
             <a href="andela-casestudy-rdot.html">Andela</a>
-            <a href="avlino-casestudy-rdot.html" aria-label="Avlino, Brand Development">Avlino</a>
+            <a href="avlino-casestudy-rdot.html#build-brand" aria-label="Avlino, Brand Development">Avlino</a>
             <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-            <a href="ehe-casestudy-rdot.html" aria-label="EHE, Brand Development">EHE</a>
+            <a href="ehe-casestudy-rdot.html#build-brand" aria-label="EHE, Brand Development">EHE</a>
             <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
           </div>
         </div>
@@ -1015,7 +1015,15 @@ blockquote{border-left:none!important;padding-left:0!important}
       window.addEventListener('resize',function(){ place(document.querySelector('.ws-tab[aria-selected="true"]')); });
       if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ place(document.querySelector('.ws-tab[aria-selected="true"]')); });
     }
-    if(location.hash==='#build-product'){show(tabs[1],false);}
+    // Product is the default tab. The menu link sets the tab: #build-product
+    // from Experience Design, #build-brand from Brand Development.
+    function fromHash(){
+      if(location.hash==='#build-brand') show(document.getElementById('tab-brand'),false);
+      else if(location.hash==='#build-product') show(document.getElementById('tab-product'),false);
+    }
+    window.addEventListener('hashchange',fromHash);
+    if(location.hash) fromHash();
+    else if(history.replaceState) history.replaceState(null,'','#build-product');
   })();
 })();
 </script>
