@@ -2,9 +2,8 @@
    rdot-updates.css
    Shared additions, loaded after each page's own styles:
    1. Nav panel and footer: Experience Design + Brand Development groups
-   2. Case study summary block (The bet / The team / My hands / The result)
+   2. Case study summary block (Role and team / Decision / Methods / Impact)
    3. "What the team built from this" section
-   4. Placeholders and flags to fill in before publishing
    ═══════════════════════════════════════════════════════════════ */
 
 /* ── 1. NAV PANEL: TWO WORK GROUPS ─────────────────────────────── */
@@ -68,8 +67,8 @@ footer a:focus-visible {
 .cs-summary-label {
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  color: #004e7c; margin: 0 0 10px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #004e7c; margin: 0 0 6px;
 }
 .cs-summary-item p {
   font-family: 'PT Sans', sans-serif;
@@ -88,33 +87,3 @@ footer a:focus-visible {
   font-size: 18px; line-height: 1.7; color: var(--ink-mid, #3A3A3A);
   max-width: 760px; margin: 0;
 }
-
-/* ── 4. PLACEHOLDERS AND FLAGS ─────────────────────────────────── */
-/* Everything in these styles is unfinished content. Search the HTML for
-   "cs-ph" and "cs-gaps" to find each one. Remove before publishing. */
-.cs-ph {
-  background: rgba(254,219,0,0.38);
-  outline: 1px dashed #8A7600; outline-offset: 1px;
-  padding: 0 3px; border-radius: 2px;
-  color: inherit; font-style: normal;
-}
-.cs-gaps-wrap { padding: 72px 0; }
-.cs-gaps-wrap.on-dark { padding-top: 0; }
-.cs-gaps {
-  border: 2px dashed #8A7600; background: rgba(254,219,0,0.12);
-  padding: 28px 32px; max-width: 760px;
-}
-.cs-gaps-label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  color: #0C0C0C; margin: 0 0 14px; max-width: none;
-}
-.cs-gaps ul { margin: 0; padding-left: 20px; }
-.cs-gaps li {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 15px; line-height: 1.6; color: #0C0C0C; margin: 0 0 6px;
-}
-.cs-gaps-wrap.on-dark { background: var(--ink, #0C0C0C); }
-.cs-gaps-wrap.on-dark .cs-gaps { background: rgba(254,219,0,0.10); border-color: #FEDB00; }
-.cs-gaps-wrap.on-dark .cs-gaps-label,
-.cs-gaps-wrap.on-dark .cs-gaps li { color: #FFFFFF; }
