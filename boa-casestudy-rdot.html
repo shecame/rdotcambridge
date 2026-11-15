@@ -638,6 +638,7 @@ footer a{text-decoration:none}
 @media(max-width:768px){.wide-hint{display:block!important}}
 </style>
 <link rel="stylesheet" href="a11y.css"/>
+<link rel="stylesheet" href="rdot-updates.css"/>
 <script src="a11y.js" defer></script>
 </head>
 <body>
@@ -659,17 +660,27 @@ footer a{text-decoration:none}
 </header>
 
 <div class="nav-panel" id="navPanel">
-  <p class="nav-panel-label">Work</p>
-  <div class="nav-panel-work">
-    <a href="andela-casestudy-rdot.html">Andela</a>
-    <a href="att-casestudy-rdot.html">AT&amp;T</a>
-    <a href="avlino-casestudy-rdot.html">Avlino</a>
-    <a class="current" href="boa-casestudy-rdot.html">Bank of America</a>
-    <a href="btki-casestudy-rdot.html">BTKi Education</a>
-    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-    <a href="ehe-casestudy-rdot.html">EHE</a>
-    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-groups">
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupXD">
+      <p class="nav-panel-label" id="navGroupXD">Experience Design</p>
+      <div class="nav-panel-work">
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+        <a href="boa-casestudy-rdot.html" class="current">Bank of America</a>
+        <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+      </div>
+    </div>
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupBD">
+      <p class="nav-panel-label" id="navGroupBD">Brand Development</p>
+      <div class="nav-panel-work">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      </div>
+    </div>
+  </div>
   <div class="nav-panel-links">
     <a href="index.html">Home</a>
     <a href="about-rdot.html">About</a>
@@ -720,6 +731,18 @@ footer a{text-decoration:none}
         <div class="stat-num">4</div>
         <div class="stat-label">Critical Failures</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SUMMARY ══ -->
+<section class="cs-summary" aria-label="Project summary">
+  <div class="container">
+    <div class="cs-summary-grid">
+      <div class="cs-summary-item"><p class="cs-summary-label">The bet</p><p>Judge each of the three tools on its own, using buy, build, or refresh, instead of one fix for all three.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The team</p><p>Three teams, executive sponsors, IT architects, and business operations leads, with engineering architects as design partners from the start. <span class="cs-ph">[my title]</span></p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">My hands</p><p>I ran three months of discovery: 27+ moderated sessions, shadowing four roles, a usability survey, and a heuristic review. I built the six phase service blueprint and a working prototype, and tested it with all four personas.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The result</p><p>$650K in annual savings and one integrated support hub. The prototype test showed <span class="cs-ph">[what users could do without help]</span>.</p></div>
     </div>
   </div>
 </section>
@@ -851,7 +874,7 @@ footer a{text-decoration:none}
   <div class="container">
     <div class="section-label fade-up">What We Found</div>
     <h2 class="section-title fade-up">Heuristic<br/><span class="section-title-italic">Review</span></h2>
-    <p class="section-subtitle fade-up">Where the survey said users were comfortable, the heuristic said the product was failing them. Four critical issues, six improvement areas, one success.</p>
+    <p class="section-subtitle fade-up">Where the survey said users were comfortable, the heuristic said the product was failing them. Four critical issues, six improvement areas, one success. <span class="cs-ph">[Flag: the table below shows five Improve rows, not six. Change this to five, or add the missing row.]</span></p>
     <div class="table-scroll fade-up" tabindex="0" role="region" aria-label="Heuristic review table, scrolls sideways">
     <table class="heuristic-table">
       <thead>
@@ -1267,9 +1290,33 @@ footer a{text-decoration:none}
         ></iframe>
       </div>
       <p class="outcome-body" style="margin-top:24px;">I tested the working prototype with users from all four roles: the super user, the data coordinator, the new user, and the operations lead. The test that mattered most was the new user. Could someone like Tabatha submit a request through the new wizard without finding a super user first? That was the proof the design reduced support dependency.</p>
+      <p class="outcome-body" style="margin-top:16px;">I tested the prototype with users from all four personas, including a new user with no training. <span class="cs-ph">[What they were able to do without help.]</span> <span class="cs-ph">[Where they still got stuck, and what that told us.]</span> Those sessions gave leadership the evidence to move forward with the integrated hub.</p>
     </div>
   </div>
 </section>
+
+<!-- ══ WHAT THE TEAM BUILT FROM THIS ══ -->
+<section class="cs-built" aria-labelledby="csBuiltLabel">
+  <div class="container">
+    <p class="section-label" id="csBuiltLabel">What the team built from this</p>
+    <p class="cs-built-body">The buy, build, or refresh framework, and the design principles the three teams agreed on.</p>
+  </div>
+</section>
+
+<!-- ══ PLACEHOLDER: CONTENT TO ADD (remove before publishing) ══ -->
+<div class="cs-gaps-wrap">
+  <div class="container">
+    <div class="cs-gaps" role="note">
+      <p class="cs-gaps-label">Placeholder: content to add before publishing</p>
+      <ul>
+        <li><span class="cs-ph">[My title on the project]</span></li>
+        <li><span class="cs-ph">[Team size]</span></li>
+        <li><span class="cs-ph">[Final design screens or prototype images (the page has the live Figma embed, but no static screens)]</span></li>
+        <li><span class="cs-ph">[How the $650K in annual savings was calculated]</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <!-- REFLECTION -->
 <section class="reflection-section" id="reflection">
@@ -1302,17 +1349,26 @@ footer a{text-decoration:none}
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">
-      <p class="footer-label">Work</p>
-      <div class="footer-grid">
-        <a href="andela-casestudy-rdot.html">Andela</a>
-        <a href="att-casestudy-rdot.html">AT&amp;T</a>
-        <a href="avlino-casestudy-rdot.html">Avlino</a>
-        <a href="boa-casestudy-rdot.html">Bank of America</a>
-        <a href="btki-casestudy-rdot.html">BTKi Education</a>
-        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-        <a href="ehe-casestudy-rdot.html">EHE</a>
-        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      <div class="footer-work-groups">
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupXD">
+          <p class="footer-label" id="footGroupXD">Experience Design</p>
+          <div class="footer-grid">
+            <a href="att-casestudy-rdot.html">AT&amp;T</a>
+            <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+            <a href="boa-casestudy-rdot.html">Bank of America</a>
+            <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+          </div>
+        </div>
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupBD">
+          <p class="footer-label" id="footGroupBD">Brand Development</p>
+          <div class="footer-grid">
+            <a href="andela-casestudy-rdot.html">Andela</a>
+            <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+            <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+            <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+            <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-pages-col">

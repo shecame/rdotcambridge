@@ -48,6 +48,7 @@
 @media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 24px 48px}.hero-right{display:none}}
 </style>
 <link rel="stylesheet" href="a11y.css"/>
+<link rel="stylesheet" href="rdot-updates.css"/>
 <script src="a11y.js" defer></script>
 </head>
 <body>
@@ -67,16 +68,27 @@
 </header>
 
 <div class="nav-panel" id="navPanel">
-  <p class="nav-panel-label">Work</p>
-  <div class="nav-panel-work">
-    <a href="andela-casestudy-rdot.html">Andela</a>
-    <a href="att-casestudy-rdot.html">AT&amp;T</a>
-    <a href="avlino-casestudy-rdot.html">Avlino</a>
-    <a href="boa-casestudy-rdot.html">Bank of America</a>
-    <a href="btki-casestudy-rdot.html">BTKi Education</a>
-    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-    <a href="ehe-casestudy-rdot.html">EHE</a>
-    <a href="goosehead-casestudy-rdot.html">Goosehead</a>    <a href="midcoast-casestudy-rdot.html" class="current">Midcoast Energy</a>  </div>
+  <div class="nav-panel-groups">
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupXD">
+      <p class="nav-panel-label" id="navGroupXD">Experience Design</p>
+      <div class="nav-panel-work">
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+      </div>
+    </div>
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupBD">
+      <p class="nav-panel-label" id="navGroupBD">Brand Development</p>
+      <div class="nav-panel-work">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+        <a href="midcoast-casestudy-rdot.html" class="current">Midcoast Energy</a>
+      </div>
+    </div>
+  </div>
   <div class="nav-panel-links">
     <a href="index.html">Home</a>
     <a href="about-rdot.html">About</a>
@@ -114,6 +126,18 @@
 </section>
   </div>
 </div>
+<!-- ══ SUMMARY ══ -->
+<section class="cs-summary" aria-label="Project summary">
+  <div class="container">
+    <div class="cs-summary-grid">
+      <div class="cs-summary-item"><p class="cs-summary-label">The bet</p><p>Show the brand change as a progression, not a replacement, in one scroll with jump links.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The team</p><p>Midcoast stakeholders, who tested the layout patterns with me. <span class="cs-ph">[anyone else]</span></p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">My hands</p><p>I mapped the content hierarchy, tested the layout patterns, and designed the wireframes and the microsite.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The result</p><p><span class="cs-ph">[95% stakeholder alignment, 3x faster navigation to key content, and zero drop off at launch, each with how it was measured]</span></p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ OVERVIEW ══ -->
 <section id="overview">
   <div class="container">
@@ -230,22 +254,53 @@
   </div>
 </section>
 
+<!-- ══ WHAT THE TEAM BUILT FROM THIS ══ -->
+<section class="cs-built" aria-labelledby="csBuiltLabel">
+  <div class="container">
+    <p class="section-label" id="csBuiltLabel">What the team built from this</p>
+    <p class="cs-built-body"><span class="cs-ph">[what the Midcoast team kept using]</span></p>
+  </div>
+</section>
+
+<!-- ══ PLACEHOLDER: CONTENT TO ADD (remove before publishing) ══ -->
+<div class="cs-gaps-wrap">
+  <div class="container">
+    <div class="cs-gaps" role="note">
+      <p class="cs-gaps-label">Placeholder: content to add before publishing</p>
+      <ul>
+        <li><span class="cs-ph">[Why the brand changed]</span></li>
+        <li><span class="cs-ph">[Logo, color, and type]</span></li>
+        <li><span class="cs-ph">[A before and after of the brand]</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <!-- ══ FOOTER ══ -->
 </main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">
-      <p class="footer-label">Work</p>
-      <div class="footer-grid">
-        <a href="andela-casestudy-rdot.html">Andela</a>
-        <a href="att-casestudy-rdot.html">AT&amp;T</a>
-        <a href="avlino-casestudy-rdot.html">Avlino</a>
-        <a href="boa-casestudy-rdot.html">Bank of America</a>
-        <a href="btki-casestudy-rdot.html">BTKi Education</a>
-        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-        <a href="ehe-casestudy-rdot.html">EHE</a>
-        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      <div class="footer-work-groups">
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupXD">
+          <p class="footer-label" id="footGroupXD">Experience Design</p>
+          <div class="footer-grid">
+            <a href="att-casestudy-rdot.html">AT&amp;T</a>
+            <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+            <a href="boa-casestudy-rdot.html">Bank of America</a>
+            <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+          </div>
+        </div>
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupBD">
+          <p class="footer-label" id="footGroupBD">Brand Development</p>
+          <div class="footer-grid">
+            <a href="andela-casestudy-rdot.html">Andela</a>
+            <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+            <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+            <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+            <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-pages-col">

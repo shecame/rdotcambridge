@@ -138,6 +138,7 @@ blockquote{border-left:none!important;padding-left:0!important}
 @media(max-width:768px){.m-stack{grid-template-columns:1fr!important;gap:32px!important}}
 </style>
 <link rel="stylesheet" href="a11y.css"/>
+<link rel="stylesheet" href="rdot-updates.css"/>
 <script src="a11y.js" defer></script>
 </head>
 <body>
@@ -159,17 +160,27 @@ blockquote{border-left:none!important;padding-left:0!important}
 </header>
 
 <div class="nav-panel" id="navPanel">
-  <p class="nav-panel-label">Work</p>
-  <div class="nav-panel-work">
-    <a href="andela-casestudy-rdot.html">Andela</a>
-    <a href="att-casestudy-rdot.html">AT&amp;T</a>
-    <a href="avlino-casestudy-rdot.html">Avlino</a>
-    <a href="boa-casestudy-rdot.html">Bank of America</a>
-    <a href="btki-casestudy-rdot.html">BTKi Education</a>
-    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-    <a href="ehe-casestudy-rdot.html" class="current">EHE</a>
-    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-groups">
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupXD">
+      <p class="nav-panel-label" id="navGroupXD">Experience Design</p>
+      <div class="nav-panel-work">
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design" class="current">EHE</a>
+      </div>
+    </div>
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupBD">
+      <p class="nav-panel-label" id="navGroupBD">Brand Development</p>
+      <div class="nav-panel-work">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development" class="current">EHE</a>
+        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      </div>
+    </div>
+  </div>
   <div class="nav-panel-links">
     <a href="index.html">Home</a>
     <a href="about-rdot.html">About</a>
@@ -215,7 +226,6 @@ blockquote{border-left:none!important;padding-left:0!important}
       <div>
         <p class="section-subtitle" style="margin-top:0;">EHE Health is a 100-year-old preventive care company operating in a category where trust, warmth, and clinical credibility have to coexist. The existing brand and website had aged out of that balance.</p>
         <p class="section-subtitle" style="margin-top:20px;">The deeper problem was structural. EHE&#8217;s value flows through two completely different people, the employer who funds access and the employee who uses it. Those two people have nothing in common in how they evaluate, decide, or engage. The existing platform treated them as variations of the same user. They are not.</p>
-        <p class="section-subtitle" style="margin-top:20px;">EHE already had strong clinic results, an 84 NPS and 98% of patients saying results were clear. The digital experience did not match them.</p>
       </div>
       <div>
         <div class="diag-items">
@@ -277,7 +287,7 @@ blockquote{border-left:none!important;padding-left:0!important}
 @media(max-width:768px){.ws-tabs{padding:24px 0}.ws-track{display:flex;width:100%;padding:4px}.ws-indicator{top:4px;bottom:4px}.ws-tab{flex:1 1 0;font-size:10px;letter-spacing:0.06em;padding:11px 8px;white-space:nowrap}}
 @media(max-width:360px){.ws-tab{font-size:9px;letter-spacing:0.02em;padding:10px 6px}}
 </style>
-<div class="ws-tabs">
+<div class="ws-tabs" id="brand">
   <div class="container">
     <div class="ws-track" role="tablist" aria-label="Case study workstreams">
       <span class="ws-indicator" aria-hidden="true"></span>
@@ -289,8 +299,21 @@ blockquote{border-left:none!important;padding-left:0!important}
 
 <div class="ws-panel" id="panel-brand" role="tabpanel" aria-labelledby="tab-brand">
 
+<!-- ══ SUMMARY ══ -->
+<section class="cs-summary" aria-label="Brand summary">
+  <div class="container">
+    <div class="cs-summary-grid">
+      <div class="cs-summary-item"><p class="cs-summary-label">The bet</p><p>Move EHE from clinical to human, with &#8220;The Art of Health&#8221; as the brand platform.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The team</p><p><span class="cs-ph">[my team and partners]</span></p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">My hands</p><p>I created the brand platform, the photography direction, the illustration system, and the tone.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The result</p><p><span class="cs-ph">[one measured brand result, or a stakeholder quote]</span></p></div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ══ BRAND ══ -->
-<section id="brand">
+<section id="brand-platform">
   <div class="container">
     <p class="section-label fade-up">Brand</p>
     <h2 class="section-title fade-up">The Art of Health<br/><span class="section-title-italic">as Strategic Platform</span></h2>
@@ -333,7 +356,7 @@ blockquote{border-left:none!important;padding-left:0!important}
 </div>
 
 <!-- ══ PRODUCT ══ -->
-<section id="product" class="surface-bg">
+<section id="marketing-site" class="surface-bg">
   <div class="container">
     <div class="mktsite-layout fade-up">
 
@@ -397,21 +420,6 @@ blockquote{border-left:none!important;padding-left:0!important}
       <!-- RIGHT: stacked donut metrics -->
       <div class="donut-stack" style="margin-top:0;max-width:none;">
 
-      <!-- 84 NPS -->
-      <div class="donut-stack-item">
-        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Net Promoter Score: 84" flex-shrink="0" style="flex-shrink:0">
-          <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="7"/>
-          <circle cx="50" cy="50" r="42" fill="none" stroke="#FEDB00" stroke-width="7"
-            stroke-dasharray="221.67 263.89" stroke-linecap="round"
-            transform="rotate(-90 50 50)"/>
-          <text x="50" y="54" text-anchor="middle" font-family="Montserrat,sans-serif"
-            font-size="22" font-weight="800" fill="#FFFFFF">84</text>
-        </svg>
-        <div>
-          <span class="donut-stack-label">Net Promoter Score</span>
-        </div>
-      </div>
-
       <!-- 95% -->
       <div class="donut-stack-item">
         <svg viewBox="0 0 100 100" width="100" height="100" aria-label="95%" style="flex-shrink:0">
@@ -427,30 +435,43 @@ blockquote{border-left:none!important;padding-left:0!important}
         </div>
       </div>
 
-      <!-- 98% -->
-      <div class="donut-stack-item">
-        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="98%" style="flex-shrink:0">
-          <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="7"/>
-          <circle cx="50" cy="50" r="42" fill="none" stroke="#FEDB00" stroke-width="7"
-            stroke-dasharray="258.61 263.89" stroke-linecap="round"
-            transform="rotate(-90 50 50)"/>
-          <text x="50" y="54" text-anchor="middle" font-family="Montserrat,sans-serif"
-            font-size="20" font-weight="800" fill="#FFFFFF">98%</text>
-        </svg>
-        <div>
-          <span class="donut-stack-label">Say their results were communicated clearly</span>
-        </div>
-      </div>
-
       </div><!-- /donut-stack = right col -->
     </div><!-- /ehe-split -->
 
   </div>
 </section>
 
+<!-- ══ PLACEHOLDER: CONTENT TO ADD (remove before publishing) ══ -->
+<div class="cs-gaps-wrap on-dark">
+  <div class="container">
+    <div class="cs-gaps" role="note">
+      <p class="cs-gaps-label">Placeholder: brand content to add before publishing</p>
+      <ul>
+        <li><span class="cs-ph">[Logo, color, and type]</span></li>
+        <li><span class="cs-ph">[Illustration examples]</span></li>
+        <li><span class="cs-ph">[A before and after of the brand]</span></li>
+        <li><span class="cs-ph">[How the brand rolled out]</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 </div>
 
 <div class="ws-panel" id="panel-product" role="tabpanel" aria-labelledby="tab-product" hidden>
+
+<!-- ══ SUMMARY ══ -->
+<section class="cs-summary" aria-label="Product summary">
+  <div class="container">
+    <div class="cs-summary-grid">
+      <div class="cs-summary-item"><p class="cs-summary-label">The bet</p><p>Stop treating employers and members as one user. Split the experience into two journeys under one brand.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The team</p><p><span class="cs-ph">[my team and partners]</span>. A 9 person stakeholder study, employer benefits leads who reviewed the site, and members who tested booking and results.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">My hands</p><p>I built the service blueprint and the information architecture, restructured the marketing site around how employers evaluate, and designed myEHE: booking, results, the dashboard, and referrals.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The result</p><p>NPS of 84. 98% said results were communicated clearly. 95% felt they had the right amount of time with the doctor. <span class="cs-ph">[Source of these figures, such as EHE member surveys, and the time period.]</span></p></div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ══ RESEARCH ══ -->
 <section id="research" class="surface-bg">
@@ -489,7 +510,7 @@ blockquote{border-left:none!important;padding-left:0!important}
 
     <blockquote class="fade-up">The service blueprint became the foundation the entire product was designed against, and every architecture decision tied back to it.</blockquote>
 
-    <div class="fade-up" style="margin-top:56px;">
+    <div class="fade-up" id="product" style="margin-top:56px;">
       <p style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--page-accent);margin-bottom:6px;">Service Blueprint</p>
       <p style="font-family:'PT Sans',sans-serif;font-size:14px;color:var(--ink-mid);margin-bottom:24px;">Two journeys: employer plan purchase and employee preventive care enrollment and delivery</p>
 
@@ -894,31 +915,61 @@ blockquote{border-left:none!important;padding-left:0!important}
     <h2 class="section-title fade-up">Built Around<br/><span class="section-title-italic">the Member</span></h2>
     <div class="fade-up" style="margin-top:48px;max-width:680px;">
       <ul class="ehe-takeaway-list">
-          <li><strong>Employee Engagement</strong>: Platform engagement increased meaningfully after launch, particularly on mobile, where behavioral triggers were built in from the start.</li>
+          <li><strong>Employee Engagement</strong>: I left the project as myEHE launched, so I do not have post launch engagement data. What I can show is what the design was built to move: <span class="cs-ph">[what members did in the booking and results tests, and what changed because of it]</span>.</li>
           <li><strong>Reduced Friction</strong>: The dual-journey structure reduced friction for both audiences, employers moved through decisions more confidently, employees returned more consistently.</li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- ══ PLACEHOLDER: CONTENT TO ADD (remove before publishing) ══ -->
+<div class="cs-gaps-wrap on-dark">
+  <div class="container">
+    <div class="cs-gaps" role="note">
+      <p class="cs-gaps-label">Placeholder: product content to add before publishing</p>
+      <ul>
+        <li><span class="cs-ph">[Team size and timeline]</span></li>
+        <li><span class="cs-ph">[Before and after numbers for the employer site]</span></li>
+      </ul>
+    </div>
+  </div>
 </div>
+
+</div>
+
+<!-- ══ WHAT THE TEAM BUILT FROM THIS ══ -->
+<section class="cs-built" aria-labelledby="csBuiltLabel">
+  <div class="container">
+    <p class="section-label" id="csBuiltLabel">What the team built from this</p>
+    <p class="cs-built-body">The service blueprint, one information architecture serving two audiences, and the drop off risk checklist.</p>
+  </div>
+</section>
 
 <!-- ══ FOOTER ══ -->
 </main>
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">
-      <p class="footer-label">Work</p>
-      <div class="footer-grid">
-        <a href="andela-casestudy-rdot.html">Andela</a>
-        <a href="att-casestudy-rdot.html">AT&amp;T</a>
-        <a href="avlino-casestudy-rdot.html">Avlino</a>
-        <a href="boa-casestudy-rdot.html">Bank of America</a>
-        <a href="btki-casestudy-rdot.html">BTKi Education</a>
-        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-        <a href="ehe-casestudy-rdot.html">EHE</a>
-        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      <div class="footer-work-groups">
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupXD">
+          <p class="footer-label" id="footGroupXD">Experience Design</p>
+          <div class="footer-grid">
+            <a href="att-casestudy-rdot.html">AT&amp;T</a>
+            <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+            <a href="boa-casestudy-rdot.html">Bank of America</a>
+            <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+          </div>
+        </div>
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupBD">
+          <p class="footer-label" id="footGroupBD">Brand Development</p>
+          <div class="footer-grid">
+            <a href="andela-casestudy-rdot.html">Andela</a>
+            <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+            <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+            <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+            <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-pages-col">
@@ -980,7 +1031,7 @@ blockquote{border-left:none!important;padding-left:0!important}
       });
     });
     // Show the IA diagram in the Brand tab too, focused on the public website
-    var ia=document.getElementById('ia'), mkt=document.getElementById('product');
+    var ia=document.getElementById('ia'), mkt=document.getElementById('marketing-site');
     if(ia && mkt){
       var c=ia.cloneNode(true);
       c.id='ia-brand';
@@ -997,7 +1048,23 @@ blockquote{border-left:none!important;padding-left:0!important}
       window.addEventListener('resize',function(){ place(document.querySelector('.ws-tab[aria-selected="true"]')); });
       if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ place(document.querySelector('.ws-tab[aria-selected="true"]')); });
     }
-    if(location.hash==='#build-product'){show(tabs[1],false);setTimeout(function(){window.scrollTo(0,bar.offsetTop)},50);}
+    // Section anchors from the menu: #brand opens the brand half, #product the service blueprint
+    function jump(h,first){
+      var navH=nav?nav.offsetHeight:0, el;
+      if(h==='#brand'){ show(tabs[0],false); el=bar; }
+      else if(h==='#product'){ show(tabs[1],false); el=document.getElementById('product'); }
+      else return false;
+      function go(){
+        var y=el===bar?bar.offsetTop:el.getBoundingClientRect().top+window.scrollY-navH-bar.offsetHeight-24;
+        window.scrollTo({top:y,behavior:first?'instant':'smooth'});
+      }
+      setTimeout(go,50);
+      if(first) window.addEventListener('load',function(){ setTimeout(go,50); });
+      return true;
+    }
+    window.addEventListener('hashchange',function(){ jump(location.hash,false); });
+    if(jump(location.hash,true)){}
+    else if(location.hash==='#build-product'){show(tabs[1],false);setTimeout(function(){window.scrollTo(0,bar.offsetTop)},50);}
     else if(location.hash==='#build-brand'){setTimeout(function(){window.scrollTo(0,bar.offsetTop)},50);}
   })();
 })();

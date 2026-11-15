@@ -331,6 +331,7 @@
 @media(max-width:768px){.m-stack{grid-template-columns:1fr!important;gap:32px!important}}
 </style>
 <link rel="stylesheet" href="a11y.css"/>
+<link rel="stylesheet" href="rdot-updates.css"/>
 <script src="a11y.js" defer></script>
 </head>
 <body>
@@ -350,17 +351,26 @@
 </header>
 
 <div class="nav-panel" id="navPanel">
-  <p class="nav-panel-label">Work</p>
-  <div class="nav-panel-work">
-    <a href="andela-casestudy-rdot.html">Andela</a>
-    <a href="att-casestudy-rdot.html">AT&amp;T</a>
-    <a href="avlino-casestudy-rdot.html" class="current">Avlino</a>
-    <a href="boa-casestudy-rdot.html">Bank of America</a>
-    <a href="btki-casestudy-rdot.html">BTKi Education</a>
-    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-    <a href="ehe-casestudy-rdot.html">EHE</a>
-    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+  <div class="nav-panel-groups">
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupXD">
+      <p class="nav-panel-label" id="navGroupXD">Experience Design</p>
+      <div class="nav-panel-work">
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design" class="current">Avlino</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+      </div>
+    </div>
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupBD">
+      <p class="nav-panel-label" id="navGroupBD">Brand Development</p>
+      <div class="nav-panel-work">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development" class="current">Avlino</a>
+        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      </div>
+    </div>
   </div>
   <div class="nav-panel-links">
     <a href="index.html">Home</a>
@@ -466,7 +476,7 @@
 @media(max-width:768px){.ws-tabs{padding:24px 0}.ws-track{display:flex;width:100%;padding:4px}.ws-indicator{top:4px;bottom:4px}.ws-tab{flex:1 1 0;font-size:10px;letter-spacing:0.06em;padding:11px 8px;white-space:nowrap}}
 @media(max-width:360px){.ws-tab{font-size:9px;letter-spacing:0.02em;padding:10px 6px}}
 </style>
-<div class="ws-tabs">
+<div class="ws-tabs" id="brand">
   <div class="container">
     <div class="ws-track" role="tablist" aria-label="Case study workstreams">
       <span class="ws-indicator" aria-hidden="true"></span>
@@ -478,6 +488,19 @@
 
 <!-- ════════════════ TAB 1 · BUILDING THE BRAND ════════════════ -->
 <div class="ws-panel" id="panel-brand" role="tabpanel" aria-labelledby="tab-brand">
+
+<!-- ══ SUMMARY ══ -->
+<section class="cs-summary" aria-label="Brand summary">
+  <div class="container">
+    <div class="cs-summary-grid">
+      <div class="cs-summary-item"><p class="cs-summary-label">The bet</p><p>Design the brand and the product as one system, so the identity runs straight into the product.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The team</p><p>Avlino leadership, through five brand working sessions. <span class="cs-ph">[anyone else]</span></p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">My hands</p><p>I led the positioning work and designed the logo, the color, type, and icon systems, the photography direction, and the marketing site.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The result</p><p>One brand across marketing and product, and a clear point of view in place of a technical story. <span class="cs-ph">[one measured brand result, if I have one]</span></p></div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ══ BRAND DISCOVERY ══ -->
 <section id="discovery">
@@ -735,10 +758,36 @@
   </div>
 </section>
 
+<!-- ══ PLACEHOLDER: CONTENT TO ADD (remove before publishing) ══ -->
+<div class="cs-gaps-wrap on-dark">
+  <div class="container">
+    <div class="cs-gaps" role="note">
+      <p class="cs-gaps-label">Placeholder: brand content to add before publishing</p>
+      <ul>
+        <li><span class="cs-ph">[The logo as a static image (the page has the animated logo reveal only)]</span></li>
+        <li><span class="cs-ph">[A before and after of the old interim wordmark next to the new logo]</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 </div>
 
 <!-- ════════════════ TAB 2 · BUILDING THE PRODUCT ════════════════ -->
 <div class="ws-panel" id="panel-product" role="tabpanel" aria-labelledby="tab-product" hidden>
+
+<!-- ══ SUMMARY ══ -->
+<section class="cs-summary" aria-label="Product summary">
+  <div class="container">
+    <div class="cs-summary-grid">
+      <div class="cs-summary-item"><p class="cs-summary-label">The bet</p><p>Put the AI predictions inside the views operators already use, not in a separate AI panel. Ship Yard and Equipment first.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The team</p><p>I led a UX developer and a designer. I worked with the Director of Engineering, engineering leads, data science, a business analyst, and the CTO.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">My hands</p><p>I framed the research, wrote the interview guide, built the personas and the product map, ran the prioritization workshops, and designed the PortFlow dashboards for desktop and mobile.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The result</p><p>Five modules on one design system, a prioritized MVP roadmap, and a 15% modeled reduction in container rehandles.</p></div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ══ RESEARCH ══ -->
 <section id="research" class="surface-bg">
@@ -747,7 +796,7 @@
     <h2 class="section-title fade-up">Learning the Brain<br/><span class="section-title-italic">of the Product</span></h2>
     <p class="section-subtitle fade-up" style="margin-bottom:0;max-width:760px;">PortFlow is a cloud based suite of cross functional modules for container terminals, with Avlino&#8217;s AI optimization technology as the brain underneath it. Before I designed a screen, I sat with data science to learn what each model predicted, what data it needed, and where it was weak. Those limits shaped the design as much as the users did.</p>
 
-    <div class="step-grid fade-up">
+    <div class="step-grid fade-up" id="platform">
       <div class="step-cell">
         <div class="step-num">Data In</div>
         <h4 aria-level="3">What the Models Read</h4>
@@ -949,7 +998,31 @@
   </div>
 </section>
 
+<!-- ══ PLACEHOLDER: CONTENT TO ADD (remove before publishing) ══ -->
+<div class="cs-gaps-wrap on-dark">
+  <div class="container">
+    <div class="cs-gaps" role="note">
+      <p class="cs-gaps-label">Placeholder: product content to add before publishing</p>
+      <ul>
+        <li><span class="cs-ph">[Timeline]</span></li>
+        <li><span class="cs-ph">[How the 15% modeled reduction in rehandles was modeled: data, method, and who ran it]</span></li>
+        <li><span class="cs-ph">[Any testing with terminal operators]</span></li>
+        <li><span class="cs-ph">[Launch or adoption status]</span></li>
+        <li><span class="cs-ph">[How the interface shows model confidence]</span></li>
+      </ul>
+    </div>
+  </div>
 </div>
+
+</div>
+
+<!-- ══ WHAT THE TEAM BUILT FROM THIS ══ -->
+<section class="cs-built" aria-labelledby="csBuiltLabel">
+  <div class="container">
+    <p class="section-label" id="csBuiltLabel">What the team built from this</p>
+    <p class="cs-built-body">One design system across brand and product, and the complexity versus business value framework for deciding what to build next.</p>
+  </div>
+</section>
 
 <!-- ══ REFLECTION ══ -->
 <section id="reflection" class="ehe-reflection-section reflection-close">
@@ -964,17 +1037,26 @@
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">
-      <p class="footer-label">Work</p>
-      <div class="footer-grid">
-        <a href="andela-casestudy-rdot.html">Andela</a>
-        <a href="att-casestudy-rdot.html">AT&amp;T</a>
-        <a href="avlino-casestudy-rdot.html">Avlino</a>
-        <a href="boa-casestudy-rdot.html">Bank of America</a>
-        <a href="btki-casestudy-rdot.html">BTKi Education</a>
-        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-        <a href="ehe-casestudy-rdot.html">EHE</a>
-        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      <div class="footer-work-groups">
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupXD">
+          <p class="footer-label" id="footGroupXD">Experience Design</p>
+          <div class="footer-grid">
+            <a href="att-casestudy-rdot.html">AT&amp;T</a>
+            <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+            <a href="boa-casestudy-rdot.html">Bank of America</a>
+            <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+          </div>
+        </div>
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupBD">
+          <p class="footer-label" id="footGroupBD">Brand Development</p>
+          <div class="footer-grid">
+            <a href="andela-casestudy-rdot.html">Andela</a>
+            <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+            <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+            <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+            <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-pages-col">
@@ -1050,7 +1132,23 @@
       if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ place(document.querySelector('.ws-tab[aria-selected="true"]')); });
     }
     var productTab=document.getElementById('tab-product');
-    if(location.hash==='#build-product'){show(productTab,false);setTimeout(function(){window.scrollTo(0,bar.offsetTop)},50);}
+    // Section anchors from the menu: #brand opens the brand half, #platform the product half
+    function jump(h,first){
+      var navH=nav?nav.offsetHeight:0, el;
+      if(h==='#brand'){ show(tabs[0],false); el=bar; }
+      else if(h==='#platform'){ show(productTab,false); el=document.getElementById('platform'); }
+      else return false;
+      function go(){
+        var y=el===bar?bar.offsetTop:el.getBoundingClientRect().top+window.scrollY-navH-bar.offsetHeight-24;
+        window.scrollTo({top:y,behavior:first?'instant':'smooth'});
+      }
+      setTimeout(go,50);
+      if(first) window.addEventListener('load',function(){ setTimeout(go,50); });
+      return true;
+    }
+    window.addEventListener('hashchange',function(){ jump(location.hash,false); });
+    if(jump(location.hash,true)){}
+    else if(location.hash==='#build-product'){show(productTab,false);setTimeout(function(){window.scrollTo(0,bar.offsetTop)},50);}
     else if(location.hash==='#build-brand'){setTimeout(function(){window.scrollTo(0,bar.offsetTop)},50);}
     else if(history.replaceState){history.replaceState(null,'','#build-brand');}
   })();

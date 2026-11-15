@@ -15,9 +15,16 @@
       btn.setAttribute('aria-label', open ? 'Close menu' : openLabel);
       if (open) { panel.removeAttribute('inert'); panel.removeAttribute('aria-hidden'); }
       else { panel.setAttribute('inert', ''); panel.setAttribute('aria-hidden', 'true'); }
+      /* The page must not scroll behind the open panel, on every page */
+      document.documentElement.style.overflow = open ? 'hidden' : '';
     }
     sync();
     new MutationObserver(sync).observe(panel, { attributes: true, attributeFilter: ['class'] });
+
+    /* Tapping a link closes the panel, including same-page section links */
+    panel.addEventListener('click', function(e){
+      if (e.target.closest('a') && panel.classList.contains('open')) btn.click();
+    });
 
     document.addEventListener('keydown', function(e){
       if (e.key === 'Escape' && panel.classList.contains('open')) { btn.click(); btn.focus(); }

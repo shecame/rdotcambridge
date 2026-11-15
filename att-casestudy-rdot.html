@@ -61,6 +61,7 @@
 @media(max-width:768px){#approach img{width:100%!important}#outcomes img{width:100%!important;margin-left:0!important}.wide-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.wide-scroll img{width:820px!important;max-width:none!important;margin-left:0!important}.wide-hint{display:block!important}}
 </style>
 <link rel="stylesheet" href="a11y.css"/>
+<link rel="stylesheet" href="rdot-updates.css"/>
 <script src="a11y.js" defer></script>
 </head>
 <body>
@@ -82,17 +83,27 @@
 </header>
 
 <div class="nav-panel" id="navPanel">
-  <p class="nav-panel-label">Work</p>
-  <div class="nav-panel-work">
-    <a href="andela-casestudy-rdot.html">Andela</a>
-    <a href="att-casestudy-rdot.html" class="current">AT&amp;T</a>
-    <a href="avlino-casestudy-rdot.html">Avlino</a>
-    <a href="boa-casestudy-rdot.html">Bank of America</a>
-    <a href="btki-casestudy-rdot.html">BTKi Education</a>
-    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-    <a href="ehe-casestudy-rdot.html">EHE</a>
-    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-groups">
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupXD">
+      <p class="nav-panel-label" id="navGroupXD">Experience Design</p>
+      <div class="nav-panel-work">
+        <a href="att-casestudy-rdot.html" class="current">AT&amp;T</a>
+        <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+      </div>
+    </div>
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupBD">
+      <p class="nav-panel-label" id="navGroupBD">Brand Development</p>
+      <div class="nav-panel-work">
+        <a href="andela-casestudy-rdot.html">Andela</a>
+        <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      </div>
+    </div>
+  </div>
   <div class="nav-panel-links">
     <a href="index.html">Home</a>
     <a href="about-rdot.html">About</a>
@@ -129,6 +140,18 @@
         <div class="stat-num">1</div>
         <div class="stat-label">Unified Control Center</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SUMMARY ══ -->
+<section class="cs-summary" aria-label="Project summary">
+  <div class="container">
+    <div class="cs-summary-grid">
+      <div class="cs-summary-item"><p class="cs-summary-label">The bet</p><p>One rule for every privacy choice: no option can look preferred over another. I brought Legal in to write that rule with me, not just review finished screens.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The team</p><p>Legal and Compliance, Product, and outside governing authorities. <span class="cs-ph">[my title and team size]</span></p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">My hands</p><p>I designed three layout patterns, the hybrid table, and the desktop and mobile versions, then ran usability tests with <span class="cs-ph">[number]</span> customers on both.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The result</p><p>Three privacy programs became one control center for 100 million customers, built to meet 50+ state privacy laws. In testing, <span class="cs-ph">[number]</span> of <span class="cs-ph">[number]</span> participants <span class="cs-ph">[found and changed a privacy choice without help]</span>, compared to <span class="cs-ph">[result on the old page, if known]</span>.</p></div>
     </div>
   </div>
 </section>
@@ -261,6 +284,7 @@
       <img loading="lazy" decoding="async" src="ATT-image2.png" alt="AT&T Solution" style="width:100%;display:block;">
     </div>
     <p class="section-body fade-up" style="margin-top:24px;">I tested the hybrid table with customers on desktop and mobile. Each person had to find a privacy program, understand what they had agreed to, and change a setting. The test also checked the rule: no choice could look preferred over another.</p>
+    <p class="section-body fade-up" style="margin-top:24px;">I tested the patterns with <span class="cs-ph">[number]</span> customers on desktop and mobile. <span class="cs-ph">[What participants understood or could do that they could not do before.]</span> <span class="cs-ph">[Where they still struggled, and what we changed.]</span> Those findings settled the debate between Legal and Product and decided which hybrid pattern we shipped.</p>
 
   </div>
 </section>
@@ -302,6 +326,30 @@
   </div>
 </section>
 
+<!-- ══ WHAT THE TEAM BUILT FROM THIS ══ -->
+<section class="cs-built" aria-labelledby="csBuiltLabel">
+  <div class="container">
+    <p class="section-label" id="csBuiltLabel">What the team built from this</p>
+    <p class="cs-built-body">The no preferred choice rule, the disclosure layers, and the hybrid table pattern. They were documented so teams could add new consent programs without a redesign, and the standard became the internal benchmark for ethical design at AT&amp;T.</p>
+  </div>
+</section>
+
+<!-- ══ PLACEHOLDER: CONTENT TO ADD (remove before publishing) ══ -->
+<div class="cs-gaps-wrap">
+  <div class="container">
+    <div class="cs-gaps" role="note">
+      <p class="cs-gaps-label">Placeholder: content to add before publishing</p>
+      <ul>
+        <li><span class="cs-ph">[My title on the project]</span></li>
+        <li><span class="cs-ph">[Team size and timeline]</span></li>
+        <li><span class="cs-ph">[A measured result, and how it was measured]</span></li>
+        <li><span class="cs-ph">[The number behind &#8220;Dark Pattern Risk Mitigation&#8221; in the hero]</span></li>
+        <li><span class="cs-ph">[Proof that other teams adopted the standard, such as which teams, or how many consent programs were added with it]</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <!-- ══ WHAT I LEARNED ══ -->
 <section id="learned">
   <div class="container">
@@ -315,17 +363,26 @@
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">
-      <p class="footer-label">Work</p>
-      <div class="footer-grid">
-        <a href="andela-casestudy-rdot.html">Andela</a>
-        <a href="att-casestudy-rdot.html">AT&amp;T</a>
-        <a href="avlino-casestudy-rdot.html">Avlino</a>
-        <a href="boa-casestudy-rdot.html">Bank of America</a>
-        <a href="btki-casestudy-rdot.html">BTKi Education</a>
-        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-        <a href="ehe-casestudy-rdot.html">EHE</a>
-        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      <div class="footer-work-groups">
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupXD">
+          <p class="footer-label" id="footGroupXD">Experience Design</p>
+          <div class="footer-grid">
+            <a href="att-casestudy-rdot.html">AT&amp;T</a>
+            <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+            <a href="boa-casestudy-rdot.html">Bank of America</a>
+            <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+          </div>
+        </div>
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupBD">
+          <p class="footer-label" id="footGroupBD">Brand Development</p>
+          <div class="footer-grid">
+            <a href="andela-casestudy-rdot.html">Andela</a>
+            <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+            <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+            <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+            <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-pages-col">

@@ -176,6 +176,7 @@ footer a{text-decoration:none}
 .eco-dots button.on{background:var(--blue)}
 </style>
 <link rel="stylesheet" href="a11y.css"/>
+<link rel="stylesheet" href="rdot-updates.css"/>
 <script src="a11y.js" defer></script>
 </head>
 <body>
@@ -197,17 +198,27 @@ footer a{text-decoration:none}
 
 <!-- Nav Panel -->
 <div class="nav-panel" id="navPanel">
-  <p class="nav-panel-label">Work</p>
-  <div class="nav-panel-work">
-    <a class="current" href="andela-casestudy-rdot.html">Andela</a>
-    <a href="att-casestudy-rdot.html">AT&amp;T</a>
-    <a href="avlino-casestudy-rdot.html">Avlino</a>
-    <a href="boa-casestudy-rdot.html">Bank of America</a>
-    <a href="btki-casestudy-rdot.html">BTKi Education</a>
-    <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-    <a href="ehe-casestudy-rdot.html">EHE</a>
-    <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-    <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>  </div>
+  <div class="nav-panel-groups">
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupXD">
+      <p class="nav-panel-label" id="navGroupXD">Experience Design</p>
+      <div class="nav-panel-work">
+        <a href="att-casestudy-rdot.html">AT&amp;T</a>
+        <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+        <a href="boa-casestudy-rdot.html">Bank of America</a>
+        <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+      </div>
+    </div>
+    <div class="nav-panel-group" role="group" aria-labelledby="navGroupBD">
+      <p class="nav-panel-label" id="navGroupBD">Brand Development</p>
+      <div class="nav-panel-work">
+        <a href="andela-casestudy-rdot.html" class="current">Andela</a>
+        <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+        <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      </div>
+    </div>
+  </div>
   <div class="nav-panel-links">
     <a href="index.html">Home</a>
     <a href="about-rdot.html">About</a>
@@ -252,6 +263,18 @@ footer a{text-decoration:none}
   </div>
 </section>
 
+<!-- ══ SUMMARY ══ -->
+<section class="cs-summary" aria-label="Project summary">
+  <div class="container">
+    <div class="cs-summary-grid">
+      <div class="cs-summary-item"><p class="cs-summary-label">The bet</p><p>Map the brand architecture before any visual work, and build one brand that works for both businesses and engineers, each with its own funnel.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The team</p><p>I directed a team of <span class="cs-ph">[six or seven]</span> across Lagos, Nairobi, and New York.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">My hands</p><p>I led the creative direction and brand architecture, and created the campaign concept that turned one client story into a video, a landing page, and an ebook.</p></div>
+      <div class="cs-summary-item"><p class="cs-summary-label">The result</p><p>40+ markets on one brand system and a 28% increase in qualified engineer applications. <span class="cs-ph">[add the 23% campaign efficiency gain and 30% faster design to development time if they belong here]</span></p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ OVERVIEW ══ -->
 <section id="overview">
   <div class="container">
@@ -265,6 +288,9 @@ footer a{text-decoration:none}
     </p>
     <p class="section-body" style="margin-top:16px;">
       The brand launched as Andela raised a $100M+ Series D and screened 100K+ applicants across Africa.
+    </p>
+    <p class="section-body" style="margin-top:16px;">
+      Market opportunity: 1.4M unfilled software jobs, the core problem anchoring every campaign and sales asset in the system.
     </p>
     <p class="section-body" style="margin-top:16px;">
       Andela needed one brand that could win enterprise clients and attract senior engineers in every market it entered.
@@ -294,7 +320,7 @@ footer a{text-decoration:none}
           Before any visual work began, I mapped the brand architecture: positioning, system components, and market rollout strategy. That foundation determined whether the system would scale or stall in a new region.
         </p>
         <p class="section-body" style="margin-top:16px;">
-          I directed the full refresh, covering creative direction, system architecture, and stakeholder alignment across a global team of six spanning brand designers, content designers, UX practitioners, and production leads, keeping consistency across every market.
+          I directed the full refresh, covering creative direction, system architecture, and stakeholder alignment across a global team of six spanning brand designers, content designers, UX practitioners, and production leads, keeping consistency across every market. <span class="cs-ph">[Flag: this team mix differs from the one in &#8220;Leading a Global Team&#8221; below (illustrators there, content designers here). Pick one.]</span>
         </p>
         <p class="section-body" style="margin-top:16px;">
           Color, typography, tone of voice, illustration, and photography were all anchored to Andela&#8217;s mission of connecting brilliance to opportunity. Illustrations used hue variation for depth, photography featured real people in real locations, and graphic elements anchored headlines.
@@ -430,23 +456,41 @@ footer a{text-decoration:none}
         <p style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:800;color:var(--ink);line-height:1;margin:12px 0;">100K+</p>
         <p>Applicants screened across Africa, the pipeline the brand was built to make legible at enterprise scale.</p>
       </div>
-      <div class="outcome-item">
-        <h4 aria-level="3">Market opportunity addressed</h4>
-        <p style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:800;color:var(--ink);line-height:1;margin:12px 0;">1.4M</p>
-        <p>Unfilled software jobs, the core problem anchoring every campaign and sales asset in the system.</p>
-      </div>
     </div>
     <img loading="lazy" decoding="async" src="Gortex-Generation-Announcement.gif" alt="Animated announcement on a deep blue background. Yellow headline reads: The future of Andela is. Below it, a large word cycles with glitch transitions through Evolving, Growing, Achieving and Thriving. Footer line reads: Series D led by Generation." style="width:100%;display:block;margin-top:48px;">
 
   </div>
 </section>
 
+<!-- ══ WHAT THE TEAM BUILT FROM THIS ══ -->
+<section class="cs-built" aria-labelledby="csBuiltLabel">
+  <div class="container">
+    <p class="section-label" id="csBuiltLabel">What the team built from this</p>
+    <p class="cs-built-body">The brand system, the color architecture, the illustration language, and shared governance across markets.</p>
+  </div>
+</section>
+
+<!-- ══ PLACEHOLDER: CONTENT TO ADD (remove before publishing) ══ -->
+<div class="cs-gaps-wrap">
+  <div class="container">
+    <div class="cs-gaps" role="note">
+      <p class="cs-gaps-label">Placeholder: content to add before publishing</p>
+      <ul>
+        <li><span class="cs-ph">[The positioning statement]</span></li>
+        <li><span class="cs-ph">[A before and after of the brand]</span></li>
+        <li><span class="cs-ph">[The identity system shown: logo, color, and type (the page shows the illustration system only)]</span></li>
+        <li><span class="cs-ph">[How the 28% increase in qualified engineer applications was measured]</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <!-- ══ REFLECTION ══ -->
 <div class="dark-band">
   <div class="container">
     <p class="section-label">Leading a Global Team</p>
     <h2 class="section-title" style="max-width:600px;">The coordination challenge was as significant as the design challenge</h2>
-    <p class="section-body">Across both workstreams, I directed a team of 6: brand designers, UX practitioners, illustrators, and production leads operating across Lagos, Nairobi, and New York. I owned the creative brief, design system governance, cross-functional stakeholder alignment, and final quality review across every deliverable.</p>
+    <p class="section-body">Across both workstreams, I directed a team of 6: brand designers, UX practitioners, illustrators, and production leads operating across Lagos, Nairobi, and New York. <span class="cs-ph">[Flag: this team mix differs from the one in &#8220;Brand System&#8221; above (content designers there, illustrators here). Pick one.]</span> I owned the creative brief, design system governance, cross-functional stakeholder alignment, and final quality review across every deliverable.</p>
     <p class="section-body" style="margin-top:16px;">Keeping a distributed team aligned on system standards, managing creative review across time zones, and ensuring business strategy translated into coherent design decisions at every level. That's the work that made the system actually deployable at scale.</p>
     <p class="section-body" style="margin-top:16px;">I set one shared workflow for every market and ran post mortems after major campaigns so the team improved with each one.</p>
     <div class="dark-band-quote">
@@ -461,17 +505,26 @@ footer a{text-decoration:none}
 <footer>
   <div class="footer-top">
     <div class="footer-work-section">
-      <p class="footer-label">Work</p>
-      <div class="footer-grid">
-        <a href="andela-casestudy-rdot.html">Andela</a>
-        <a href="att-casestudy-rdot.html">AT&amp;T</a>
-        <a href="avlino-casestudy-rdot.html">Avlino</a>
-        <a href="boa-casestudy-rdot.html">Bank of America</a>
-        <a href="btki-casestudy-rdot.html">BTKi Education</a>
-        <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-        <a href="ehe-casestudy-rdot.html">EHE</a>
-        <a href="goosehead-casestudy-rdot.html">Goosehead</a>
-        <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+      <div class="footer-work-groups">
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupXD">
+          <p class="footer-label" id="footGroupXD">Experience Design</p>
+          <div class="footer-grid">
+            <a href="att-casestudy-rdot.html">AT&amp;T</a>
+            <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+            <a href="boa-casestudy-rdot.html">Bank of America</a>
+            <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+          </div>
+        </div>
+        <div class="footer-work-group" role="group" aria-labelledby="footGroupBD">
+          <p class="footer-label" id="footGroupBD">Brand Development</p>
+          <div class="footer-grid">
+            <a href="andela-casestudy-rdot.html">Andela</a>
+            <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+            <a href="ctrax-casestudy-rdot.html">CTRAX</a>
+            <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+            <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-pages-col">
