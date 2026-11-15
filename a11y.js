@@ -30,4 +30,19 @@
       if (e.key === 'Escape' && panel.classList.contains('open')) { btn.click(); btn.focus(); }
     });
   });
+
+  /* Every page opens at the top: no restored scroll position on reload,
+     back, or forward, and a link to the page you are on goes to the top. */
+  function toTop(){ window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.addEventListener('pageshow', function(e){ if (e.persisted) toTop(); });
+
+  function pageKey(path){ return path.replace(/\.html$/, '').replace(/\/(index)?$/, '/'); }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href]');
+    if (!a || a.target === '_blank' || (a.getAttribute('href') || '').charAt(0) === '#') return;
+    if (a.origin !== location.origin || pageKey(a.pathname) !== pageKey(location.pathname)) return;
+    /* Same page: let the menu close and any tab switch first, then go to the top */
+    setTimeout(toTop, 0);
+  });
 })();
