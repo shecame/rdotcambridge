@@ -356,18 +356,18 @@
       <p class="nav-panel-label" id="navGroupXD">Experience Design</p>
       <div class="nav-panel-work">
         <a href="att-casestudy-rdot.html">AT&amp;T</a>
-        <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design" class="current">Avlino</a>
+        <a href="avlino-casestudy-rdot.html" aria-label="Avlino, Experience Design" class="current">Avlino</a>
         <a href="boa-casestudy-rdot.html">Bank of America</a>
-        <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+        <a href="ehe-casestudy-rdot.html" aria-label="EHE, Experience Design">EHE</a>
       </div>
     </div>
     <div class="nav-panel-group" role="group" aria-labelledby="navGroupBD">
       <p class="nav-panel-label" id="navGroupBD">Brand Development</p>
       <div class="nav-panel-work">
         <a href="andela-casestudy-rdot.html">Andela</a>
-        <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development" class="current">Avlino</a>
+        <a href="avlino-casestudy-rdot.html" aria-label="Avlino, Brand Development" class="current">Avlino</a>
         <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-        <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+        <a href="ehe-casestudy-rdot.html" aria-label="EHE, Brand Development">EHE</a>
         <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
       </div>
     </div>
@@ -471,7 +471,7 @@
 @media(max-width:768px){.ws-tabs{padding:24px 0}.ws-track{display:flex;width:100%;padding:4px}.ws-indicator{top:4px;bottom:4px}.ws-tab{flex:1 1 0;font-size:10px;letter-spacing:0.06em;padding:11px 8px;white-space:nowrap}}
 @media(max-width:360px){.ws-tab{font-size:9px;letter-spacing:0.02em;padding:10px 6px}}
 </style>
-<div class="ws-tabs" id="brand">
+<div class="ws-tabs">
   <div class="container">
     <div class="ws-track" role="tablist" aria-label="Case study workstreams">
       <span class="ws-indicator" aria-hidden="true"></span>
@@ -778,7 +778,7 @@
     <h2 class="section-title fade-up">Learning the Brain<br/><span class="section-title-italic">of the Product</span></h2>
     <p class="section-subtitle fade-up" style="margin-bottom:0;max-width:760px;">PortFlow is a cloud based suite of cross functional modules for container terminals, with Avlino&#8217;s AI optimization technology as the brain underneath it. Before I designed a screen, I sat with data science to learn what each model predicted, what data it needed, and where it was weak. Those limits shaped the design as much as the users did.</p>
 
-    <div class="step-grid fade-up" id="platform">
+    <div class="step-grid fade-up">
       <div class="step-cell">
         <div class="step-num">Data In</div>
         <h4 aria-level="3">What the Models Read</h4>
@@ -1008,18 +1008,18 @@
           <p class="footer-label" id="footGroupXD">Experience Design</p>
           <div class="footer-grid">
             <a href="att-casestudy-rdot.html">AT&amp;T</a>
-            <a href="avlino-casestudy-rdot.html#platform" aria-label="Avlino, Experience Design">Avlino</a>
+            <a href="avlino-casestudy-rdot.html" aria-label="Avlino, Experience Design">Avlino</a>
             <a href="boa-casestudy-rdot.html">Bank of America</a>
-            <a href="ehe-casestudy-rdot.html#product" aria-label="EHE, Experience Design">EHE</a>
+            <a href="ehe-casestudy-rdot.html" aria-label="EHE, Experience Design">EHE</a>
           </div>
         </div>
         <div class="footer-work-group" role="group" aria-labelledby="footGroupBD">
           <p class="footer-label" id="footGroupBD">Brand Development</p>
           <div class="footer-grid">
             <a href="andela-casestudy-rdot.html">Andela</a>
-            <a href="avlino-casestudy-rdot.html#brand" aria-label="Avlino, Brand Development">Avlino</a>
+            <a href="avlino-casestudy-rdot.html" aria-label="Avlino, Brand Development">Avlino</a>
             <a href="ctrax-casestudy-rdot.html">CTRAX</a>
-            <a href="ehe-casestudy-rdot.html#brand" aria-label="EHE, Brand Development">EHE</a>
+            <a href="ehe-casestudy-rdot.html" aria-label="EHE, Brand Development">EHE</a>
             <a href="midcoast-casestudy-rdot.html">Midcoast Energy</a>
           </div>
         </div>
@@ -1098,24 +1098,7 @@
       if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ place(document.querySelector('.ws-tab[aria-selected="true"]')); });
     }
     var productTab=document.getElementById('tab-product');
-    // Section anchors from the menu: #brand opens the brand half, #platform the product half
-    function jump(h,first){
-      var navH=nav?nav.offsetHeight:0, el;
-      if(h==='#brand'){ show(tabs[0],false); el=bar; }
-      else if(h==='#platform'){ show(productTab,false); el=document.getElementById('platform'); }
-      else return false;
-      function go(){
-        var y=el===bar?bar.offsetTop:el.getBoundingClientRect().top+window.scrollY-navH-bar.offsetHeight-24;
-        window.scrollTo({top:y,behavior:first?'instant':'smooth'});
-      }
-      setTimeout(go,50);
-      if(first) window.addEventListener('load',function(){ setTimeout(go,50); });
-      return true;
-    }
-    window.addEventListener('hashchange',function(){ jump(location.hash,false); });
-    if(jump(location.hash,true)){}
-    else if(location.hash==='#build-product'){show(productTab,false);setTimeout(function(){window.scrollTo(0,bar.offsetTop)},50);}
-    else if(location.hash==='#build-brand'){setTimeout(function(){window.scrollTo(0,bar.offsetTop)},50);}
+    if(location.hash==='#build-product'){show(productTab,false);}
     else if(history.replaceState){history.replaceState(null,'','#build-brand');}
   })();
 })();
